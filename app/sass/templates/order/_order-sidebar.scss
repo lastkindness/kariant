@@ -1,0 +1,79 @@
+//order-sidebar start
+.order__sidebar {
+  width: 400px;
+  flex-grow: 0;
+  background-color: transparentize($elements, 0.9);
+  margin-bottom: 0;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  order: 2;
+  .btn {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  &-title {
+    margin-bottom: 30px;
+  }
+  .title {
+    margin: 0;
+  }
+  &-info {
+    border-bottom: 1px solid $elements;
+    margin-bottom: 50px;
+    &-total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      .goods {
+        margin: 0 5px;
+      }
+      .total {
+        font-weight: 500;
+      }
+    }
+    &-discount {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 15px;
+      .title,
+      span {
+        margin: 0;
+      }
+      .total {
+        span {
+          color: $attention;
+        }
+        margin: 0 5px;
+      }
+    }
+  }
+  &-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    @include respond-to(xs) {
+      flex-wrap: wrap;
+    }
+    .total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: transparentize($accent, 0.6);
+      padding: 5px;
+    }
+  }
+  @include respond-to(md) {
+    width: 100%;
+  }
+}
+//order-sidebar end

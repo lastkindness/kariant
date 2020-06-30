@@ -1,0 +1,27 @@
+include ../../components/_product-item
+include ../../components/_button
+
+section.main-sale
+    .container
+        .main-sale__title
+            h2 Распродажа
+            .main-sale__controls
+                .swiper-arrows
+                    .swiper-button-prev
+                    .swiper-button-next
+        .main-sale__slider.swiper-container.js-main-sale
+            .swiper-wrapper
+                - var img = ["5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg"]
+                - var itemTitle = ["Амалия Фиолетовый", "Зимняя куртка Plus Size Лолита Фиолетовый", "Зимняя куртка Plus Size", "Куртка демисезонная Plus Size", "Куртка Plus Size", "Осенняя куртка Plus Size", "Осенняя утепленная куртка Plus Size"]
+                - var price= ["142 402", "29 755", "45 794", "25 742", "25 742", "29 755", "45 794"]
+                - var classItem= ["product-item_stock product-item_old product-item_slide swiper-slide", "product-item_slide swiper-slide", "product-item_slide swiper-slide", "product-item_slide swiper-slide", "product-item_missing product-item_slide swiper-slide", "product-item_slide swiper-slide", "product-item_stock product-item_old product-item_slide swiper-slide"]
+                - var priceOld= ["146 502", "", "", "", "", "", "47 782"]
+                - var label= ["", "топ", "new", "", "", "", "топ"]
+                - var sale= ["-15", "", "", "", "", "", "-20"]
+                - var classLabel= ["", "label-status_top", "label-status_new", "", "", "", "label-status_top"]
+                - var missing= [false, false, false, false, true, false, true]
+                - for (var i = 0; i < img.length; i++)
+                    +product-item(img, itemTitle, price, priceOld, classItem, vendor, sale, label, classLabel, missing)
+        +button('Смотреть больше', 'a')(href="#")
+
+

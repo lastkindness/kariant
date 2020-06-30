@@ -1,0 +1,30 @@
+doctype html
+html
+    include components/_head
+    body
+        noscript
+            div
+                strong Для полной функциональности этого сайта необходимо включить JavaScript. Вот
+                a(href='https://support.google.com/adsense/answer/12654?hl=ru', target='_blank') инструкции,
+                | как включить JavaScript в вашем браузере.
+                link(rel='stylesheet', type='text/css', href='css/without-js.css')
+        .wrapper.error-page
+            include components/_header
+            .container
+                main.main
+                    section.error-wrapper
+                        .container
+                            .error__content
+                                .error__image
+                                    img(data-src="images/services/lock.svg" alt="imageTitleError" title="imageTitleError")
+                                .error__text
+                                    .title 404
+                                    .subtitle Запрашиваемая страница не найдена
+                                    p.
+                                        Извините, но страница, которую вы ищете не найдена. Убедитесь, что вы ввели правильный URL
+                                    include components/_button
+                                    +button('Перейти на главную', 'a')(href="http://html.myapp.com.ua/vashkluch/index.html")
+
+            include components/_footer
+            include components/_popup
+        include components/_footer-include

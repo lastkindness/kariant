@@ -1,0 +1,22 @@
+.main-category {
+  position: relative;
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  .category {
+    &-item {
+      &:first-child {
+        margin-right: 6.8vw;
+      }
+    }
+  }
+  &__dacorate {
+    position: absolute;
+    right: 38px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+

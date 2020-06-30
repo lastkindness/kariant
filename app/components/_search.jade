@@ -1,0 +1,71 @@
+include _button
+
+form.search.js_validate
+    .input-container
+        .search__input-container
+            input.search__input.validate(type='text', placeholder='Что вы ищете?', name='search', required='required', data-validate='text', data-error-wrong='Недопустимые символы', data-error-empty='Введите запрос (2-100)', data-minsign='2', data-maxsign='100')
+            +button('', 'button')(class="icon icon-search")
+            //.delete
+            .text-error Введите запрос (2-100)
+        .search__suggestions-container
+            //если ничего не найдено
+            .search__suggestions-none
+                span по вашему запросу ничего не найдено
+            //или если найдено
+            .search__suggestions-category
+                span.search__suggestions-category-title Найдено в категориях:
+                a(href="/kariant/catalog.html" title='Верхняя одежда').title Верхняя одежда
+                a(href="/kariant/catalog.html" title='Куртки').title Куртки
+                a(href="/kariant/catalog.html" title='Шубы').title Шубы
+                a(href="/kariant/catalog.html" title='Одежда').title Одежда
+                a(href="/kariant/catalog.html" title='Верхняя одежда').title Верхняя одежда
+            ul.search__suggestions-list
+                li.search__suggestions-item
+                    a(href='/kariant/card.html' title="Амалия Белая")
+                        .search__suggestions-wrapper
+                            img.search__suggestions-img(data-src="images/products/12.jpg" alt='Амалия Белая' title="Амалия Белая")
+                            span.title.search__suggestions-title Амалия Белая
+                        .search__suggestions-price
+                            span.value 7 875
+                            span.currency грн
+                li.search__suggestions-item
+                    a(href='/kariant/card.html' title="Толстовка снежно-белая")
+                        .search__suggestions-wrapper
+                            img.search__suggestions-img(data-src="images/products/5.jpg" alt='Толстовка снежно-белая' title="Толстовка снежно-белая")
+                            span.title.search__suggestions-title Толстовка снежно-белая
+                        .search__suggestions-price
+                            span.value 375
+                            span.currency грн
+                li.search__suggestions-item
+                    a(href='/kariant/card.html' title="Куртка демесезонная отделка белый мех")
+                        .search__suggestions-wrapper
+                            img.search__suggestions-img(data-src="images/products/6.jpg" alt='Куртка демесезонная отделка белый мех' title="Куртка демесезонная отделка белый мех")
+                            span.title.search__suggestions-title Куртка демесезонная отделка белый мех
+                        .search__suggestions-price
+                            span.value 72 875
+                            span.currency грн
+                li.search__suggestions-item
+                    a(href='/kariant/card.html' title="Шуба зима белая")
+                        .search__suggestions-wrapper
+                            img.search__suggestions-img(data-src="images/products/7.jpg" alt='Шуба зима белая' title="Шуба зима белая")
+                            span.title.search__suggestions-title Шуба зима белая
+                        .search__suggestions-price
+                            span.value 756 875
+                            span.currency грн
+                li.search__suggestions-item
+                    a(href='/kariant/card.html' title="Пальто отделка Белка")
+                        .search__suggestions-wrapper
+                            img.search__suggestions-img(data-src="images/products/8.jpg" alt='Пальто отделка Белка' title="Пальто отделка Белка")
+                            span.title.search__suggestions-title Пальто отделка Белка
+                        .search__suggestions-price
+                            span.value 75
+                            span.currency грн
+                li.search__suggestions-item
+                    a(href='/kariant/card.html' title="Амалия Белая")
+                        .search__suggestions-wrapper
+                            img.search__suggestions-img(data-src="images/products/12.jpg" alt='Амалия Белая' title="Амалия Белая")
+                            span.title.search__suggestions-title Амалия Белая
+                        .search__suggestions-price
+                            span.value 7 875
+                            span.currency грн
+

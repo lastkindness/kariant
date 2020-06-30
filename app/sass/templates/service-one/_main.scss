@@ -1,0 +1,124 @@
+.service-one {
+  &-page {
+    .main {
+      &-services {
+        .main-page__title {
+          display: none;
+        }
+      }
+    }
+    section {
+      margin-bottom: 40px;
+    }
+  }
+  &__main {
+    margin: 45px 0;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include respond-to(sm) {
+      flex-wrap: wrap;
+    }
+  }
+  &__content {
+    img {
+      width: 50%;
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      @include respond-to(sm) {
+        width: 100%;
+        float: left;
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__advantages {
+    width: calc(65% - 30px);
+    margin: 0;
+    padding: 0;
+    padding-right: 10%;
+    @include respond-to(lg-1200) {
+      width: calc(55% - 30px);
+      padding: 0;
+    }
+    @include respond-to(sm) {
+      width: 100%;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      &:before {
+        display: none;
+      }
+      .icon {
+        width: 60px !important;
+        margin-right: 20px;
+        max-width: unset;
+        height: 60px;
+        object-fit: contain;
+        object-position: 50% 50%;
+      }
+      .title {
+        color: $elements;
+      }
+    }
+  }
+  &__prices {
+    width: calc(35%);
+  }
+  &__phone {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    background-color: transparentize($elements, 0.9);
+    .header__phone {
+      padding: 10px;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .btn {
+      flex-grow: 0;
+    }
+  }
+  &__slider {
+    width: 100%;
+    &-wrapper {
+      .slick-list {
+        margin: 0 -10px;
+      }
+      .slick-track {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+      }
+    }
+    &-item {
+      margin: 0 10px;
+      height: auto;
+      overflow: hidden;
+      a {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          height: 100%;
+          max-width: unset;
+          @include respond-to(lg-1200) {
+            height: 115%;
+          }
+          @include respond-to(xs) {
+            height: 120%;
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,26 @@
+include ../../components/_button
+aside.order__sidebar
+    .order__sidebar-main
+        .order__sidebar-title
+            .title Итого
+        .order__sidebar-info
+            .order__sidebar-info-total
+                .quantity
+                    span.value 400
+                    span.goods товаров
+                    span на сумму:
+                .total
+                    span.value 34200
+                    span.currency грн
+            .order__sidebar-info-discount
+                .title У вас действующая скидка
+                .total
+                    span.value 20
+                    span.currency %
+        .order__sidebar-total
+            .title К оплате
+            .total
+                span.value 27360
+                span.currency грн
+    +button('Подтвердить заказ', 'a')(class="" href="http://html.myapp.com.ua/vashkluch/order-success.html")
+    //+button('Подтвердить заказ', 'button')(class="") для бека, раскомментить, кнопку со ссылкой - удалить, это для визуала-перехода на страницу успешного оформления заказа

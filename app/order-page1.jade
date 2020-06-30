@@ -1,0 +1,69 @@
+doctype html
+html
+    include components/_head
+    body
+        noscript
+            div
+                strong Для полной функциональности этого сайта необходимо включить JavaScript. Вот
+                a(href='https://support.google.com/adsense/answer/12654?hl=ru', target='_blank') инструкции,
+                | как включить JavaScript в вашем браузере.
+                link(rel='stylesheet', type='text/css', href='css/without-js.css')
+        .wrapper.order-page
+            include components/_header
+            .container
+                main.main
+                    section.page__header
+                        .page__header-wrapper
+                            include components/_breadcrumbs
+                            +breadcrumbs('Главная', 'Оформление заказа - шаг 1')
+                        .title.page__header-title
+                            | Оформление заказа - шаг 1
+                    section.order-wrapper
+                        .container
+                            .order.order_contacts
+                                section.order_content
+                                    .order_content__title.block-title
+                                        span.value
+                                            strong 01
+                                            | /02
+                                        span.subtitle Контактные данные
+                                    .order_content__form
+                                        form.contacts(action='#').js_validate
+                                            .input-container
+                                                label.req(for="name") Имя
+                                                input(type="text" name="name" id="name" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100").validate
+                                                .delete
+                                                .text-error Поле  не заполнено
+                                            .input-container
+                                                label.req(for="lastname") Фамилия
+                                                input(type="text" name="lastname" id="lastname" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100").validate
+                                                .delete
+                                                .text-error Поле  не заполнено
+                                            .input-container
+                                                label.req(for="phone") Телефон
+                                                input(type="tel" id="phone" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)").validate
+                                                .delete
+                                                .text-error Поле  не заполнено
+                                            .input-container
+                                                label.req(for="email1") Email
+                                                input(type="email" name="email" id="email1" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено", data-error-min='Email: не менее 6 символов', data-error-max='Email: не более 30 символов').validate
+                                                .delete
+                                                .text-error Поле «Email» не заполнено
+                                            .input-container
+                                                textarea(name="comment" id="comment" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100").validate
+                                                label(for="comment") Сообщение
+                                                .delete
+                                                .text-error Введите сообщение
+                                            +button('Cледующий шаг', 'a')(class="js__steptwo disabled" href="http://html.myapp.com.ua/vashkluch/order-page2.html")
+                                            //+button('Cледующий шаг', 'button')(class="js__steptwo") для бека, раскомментить, кнопку со ссылкой - удалить, это для визуала-перехода на страницу 2 оформления заказа, button type="submit" - нужна для того чтоб отработала фронт - валидация
+                                    a.order_content__title.block-title.disabled(href="http://html.myapp.com.ua/vashkluch/order-page2.html")
+                                        span.value
+                                            strong 02
+                                            | /02
+                                        span.subtitle Выбор способов доставки и оплаты
+                                include templates/order/_order-sidebar1
+
+            include components/_footer
+            include components/_popup
+        include components/_footer-include
+

@@ -1,0 +1,105 @@
+doctype html
+html
+    include components/_head
+    body
+        noscript
+            div
+                strong Для полной функциональности этого сайта необходимо включить JavaScript. Вот
+                a(href='https://support.google.com/adsense/answer/12654?hl=ru', target='_blank') инструкции,
+                | как включить JavaScript в вашем браузере.
+                link(rel='stylesheet', type='text/css', href='css/without-js.css')
+        .wrapper.contacts-page
+            include components/_header
+            .container
+                main.main
+                    section.page__header
+                        .page__header-wrapper
+                            include components/_breadcrumbs
+                            +breadcrumbs('Главная', 'Контакты')
+                        .title.page__header-title
+                            | Контакты
+                    section.contacts__main
+                        include components/_button
+                        section.contacts__content
+                            .contacts__info
+                                ul.contacts__info-list
+                                    li.contacts__info-li.contacts__info-phone
+                                        .contacts__info-title
+                                            .icon.icon-phone
+                                            span Телефоны
+                                        .contacts__info-content
+                                            a(href="tel:+380487755585") +38 (067) 484-14-50
+                                            a(href="tel:+380487001717") +38 (048) 700-17-17
+                                            a(href="tel:+380487755585") +38 (048) 775-55-85
+                                    li.contacts__info-li.contacts__info-adress
+                                        .contacts__info-title
+                                            .icon.icon-map
+                                            span Наши адреса
+                                        .contacts__info-content
+                                            span.adress Торговая, 26 (Новый рынок)
+                                            span.schedule Пн-Сб: с 8.00 до 18.00 (без обеда)
+                                        .contacts__info-content
+                                            span.adress Конная\ Коблевская (Новый рынок)
+                                            span.schedule Пн-Вс: с 8.00 до 18.00 (без обеда, без выходных)
+                                        .contacts__info-content
+                                            span.adress Новый рынок (вход с Конной)
+                                            span.schedule Пн-Вс: с 8.00 до 18.00 (без обеда)
+                                        .contacts__info-content
+                                            span.adress Генерала Бочарова, 60 к2 (КЛ-19 павильон, Котовский рынок)
+                                            span.phone тел. +380 (48) 794−90−60 (круглосуточный)
+                                            span.schedule Вт-Вс: с 8.30 до 18.00 (без обеда)
+                                        .contacts__info-content
+                                            span.adress Днепропетровская дорога, 133 (напротив рынка "Котовский")
+                                            span.phone тел. +380 (48) 706−20−05
+                                            span.schedule Вт-Вс: с 8.00 до 19.00 (без обеда, без выходных)
+                                        .contacts__info-content
+                                            span.adress Добровольского проспект, 98 к2
+                                            span.phone тел. +380 (48) 700−84−04
+                                            span.schedule Пн-Сб: с 8.00 до 18.00 (без обеда)
+                                        .contacts__info-content
+                                            span.adress Преображенская, 71
+                                            span.phone тел. +380 (48) 734−20−40 (круглосуточный)
+                                            span.schedule Пн-Сб: с 8.30 до 19.00 (без обеда)
+                                        .contacts__info-content
+                                            span.adress Привозная, 14 (рынок Привоз)
+                                            span.phone тел. +380 98-226-48-80 (круглосуточный)
+                                            span.schedule Пн-Вс: с 8.00 до 18.00 (без обеда, без выходных)
+                                        .contacts__info-content
+                                            span.adress Рынок Привоз (вход с ул. Преображенской)
+                                            span.schedule Пн-Вс: с 8.00 до 18.00 (без обеда, без выходных)
+                                        .contacts__info-content
+                                            span.adress Рынок Привоз (Вход со стороны Автостанции)
+                                            span.schedule Пн-Вс: с 8.00 до 18.00 (без обеда, без выходных)
+
+                            .contacts__form-wrapper
+                                .contacts__form-form
+                                    .contacts__form-title Обратная связь
+                                    form.contacts__form.js_validate
+                                        .input-container
+                                            label.req(for='name') Имя
+                                            input#name.validate(type='text', name='name', required='required', data-validate='text', data-error-wrong='Недопустимые символы', data-error-empty='Введите колличество символов (2-100)', data-minsign='2', data-maxsign='100')
+                                            .text-error Поле  не заполнено
+                                        .input-container
+                                            label.req(for='phone') Телефон
+                                            input#phone.validate(type='tel', required='required', data-validate='phone', data-error-wrong='Поле «Телефон» заполнено не верно', data-error-empty='Введите колличество символов(17)')
+                                            .text-error Поле  не заполнено
+                                        .input-container
+                                            label(for='email') E-mail
+                                            input#email.validate(type='email', name='email', data-validate='email', data-error-wrong='Поле «Email» заполнено не верно', data-error-empty='Поле «Email» не заполнено', data-error-min='Email: не менее 6 символов', data-error-max='Email: не более 37 символов')
+                                            .text-error Поле «Email» не заполнено
+                                        .input-container
+                                            textarea(name="comment" id="comment" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100").validate
+                                            label(for="comment") Сообщение
+                                            .delete
+                                            .text-error Введите сообщение
+                                        +button('Отправить', 'button')(data-target="mail" class="btn-blue")
+                                .contacts__maps
+                                    //#map(data-coords='49.814503, 24.078222')
+                                    iframe(width='100%', height='550', src='https://maps.google.com/maps?width=100%&height=435&hl=en&coord=46.47219710431272, 30.730701684951786&q=%D1%83%D0%BB.%20%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%2C%2071%2C%20%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%B0%2C%20%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%20%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0%2C%2065000+(%D0%92%D0%B0%D1%88%D0%9A%D0%BB%D1%8E%D1%87)&ie=UTF8&t=&z=19&iwloc=B&output=embed', frameborder='0', scrolling='no', marginheight='0', marginwidth='0') <a href="https://www.maps.ie/coordinates.html">find my location</a>
+
+
+            include components/_footer
+            include components/_popup
+        include components/_footer-include
+
+

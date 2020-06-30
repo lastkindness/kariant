@@ -1,0 +1,203 @@
+//dropdown start
+.dropdown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: auto;
+  font-size: inherit;
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    li {
+      margin: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+  select {
+    outline: transparentize($elements, 1);
+  }
+  &__text {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    @include anim;
+    &:hover,
+    &:active,
+    &:focus {
+      @include anim;
+      text-decoration: unset;
+    }
+  }
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:before {
+      @include anim;
+      order: 2;
+      margin-left: 5px;
+    }
+    &-item {
+      order: 0;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &+img {
+        order: 1;
+      }
+    }
+  }
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    @include anim;
+    &>span {
+      margin-right: 5px;
+    }
+    &:before {
+      @include anim;
+      font-weight: 600;
+      margin-right: 5px;
+    }
+    &.active {
+      .icon {
+        &::before {
+          transform: rotate(180deg);
+          @include anim;
+          z-index: 0;
+        }
+      }
+      .dropdown__header {
+        @include anim;
+        color: transparentize($textDark, 0.5);
+      }
+    }
+  }
+  &__dropdown {
+    position: absolute;
+    top: 25px;
+    box-sizing: border-box;
+    left: 0;
+    display: none;
+    width: 100%;
+    min-width: 80px;
+    background-color: $white;
+    z-index: 15;
+    padding: 24px;
+    max-height: 310px;
+    overflow-y: auto;
+    border: 1px solid $gray3;
+  }
+  &__item {
+    padding-bottom: 16px;
+    @include anim;
+    &:hover,
+    &:active,
+    &:focus {
+      @include anim;
+    }
+    &.active {
+      color: $elements;
+      @include anim;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: pointer;
+    @include anim;
+  }
+  &_select {
+    .icon {
+      &:before {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 0;
+        @include anim;
+      }
+    }
+  }
+  &_center {
+    .dropdown__dropdown {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .dropdown__text {
+      justify-content: left;
+    }
+  }
+}
+
+
+.select2,
+.select2-container {
+  width: 100% !important;
+  min-width: 150px !important;
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+.select2-container {
+  &--open {
+    .select2-dropdown {
+      border-radius: 0px;
+      background-color: $white;
+      border: 1px solid $black;
+    }
+  }
+}
+
+.select2-results__option {
+  background-color: transparent;
+  @include anim;
+  .select2-results__option--highlighted {
+    background-color: $gray3;
+    @include anim;
+
+  }
+}
+
+.select2-container--default {
+  .select2-results__option--highlighted[aria-selected] {
+    background-color: $gray3;
+    @include anim;
+  }
+  .select2-results__option {
+    padding: 5px;
+    &:first-child {
+      border-radius: 0;
+    }
+  }
+  .select2-selection--single {
+    .select2-selection__rendered {
+      text-align: center;
+    }
+  }
+}
+
+//dropdown end

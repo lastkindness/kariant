@@ -1,0 +1,5 @@
+mixin category-item(img, title, classItem, color)
+    a.category-item(href="#" class=classItem[i])
+        .category-item__img(style='background-color:' + color[i] + ';')
+            img(data-src="images/products/"+img[i] alt= title[i] title= title[i])
+        h2.title= title[i]

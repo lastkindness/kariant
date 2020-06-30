@@ -1,0 +1,179 @@
+include _button
+
+// popup SECTION
+.popup-overlay
+    .popup.popup__order(data-target="popup-order")
+        .popup-header
+            h3.title Ваш заказ успешно оформлен!
+        .popup-content
+            .content В ближайшее время мы свяжемся с Вами
+        .close-btn.icon.icon-close
+
+    .popup.popup__cart(data-target="popup-cart")
+        .popup-header
+            h3.title Спасибо!
+        .popup-content
+            .content
+                | Товар добавлен
+                +button('в корзину', 'a')(class="btn-link" title='корзина' href="/cart.html")
+        .close-btn.close
+            .close-container
+                .leftright
+                .rightleft
+                .text закрыть
+
+    .popup.popup__favorite(data-target="popup-favorite")
+        .popup-header
+            h3.title Спасибо!
+        .popup-content
+            .content
+                | Товар Осенняя утепленная куртка Plus Size добавлен
+                +button('в избранное', 'a')(class="btn-link" title='избранное' href="/favorite.html")
+        .close-btn.close
+            .close-container
+                .leftright
+                .rightleft
+                .text закрыть
+
+    .popup.popup__favorite-del(data-target="popup-favorite-del")
+        .popup-header
+            h3.title Товар Осенняя утепленная куртка Plus Size
+        .popup-content
+            .content
+                | удален из
+                +button('избранного', 'a')(class="btn-link" title='избранное' href="/favorite.html")
+        .close-btn.close
+            .close-container
+                .leftright
+                .rightleft
+                .text закрыть
+
+    .popup.popup__product-delete(data-target="popup-product-delete")
+        .popup-header
+            h3.title Удаление товара
+        .popup-content
+            .content
+                | Данный товар будет удален
+                .popup-buttons
+                    +button('удалить', 'button')(class="js__product-delete btn-transparent btn-small")
+                    +button('не удалять', 'button')(class="js__product-delete-reset btn-small")
+
+    .popup.popup__call(data-target="popup-call")
+        form.popup-content.js_validate
+            .popup-header
+                h3.title В ближайшее время мы Вам перезвоним
+            .input-container
+                label.req(for="name-call") Имя
+                input(type="text" name="name" id="name-call" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100").validate
+                .text-error Поле  не заполнено
+            .input-container
+                label.req(for="phone") Телефон
+                input(type="tel" id="phone" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)").validate
+                .text-error Поле  не заполнено
+            +button('перезвоните мне', 'button')
+        .close-btn.close
+            .close-container
+                .leftright
+                .rightleft
+                .text закрыть
+
+    .popup.popup__one-click(data-target="popup-one-click")
+        form.popup-content.js_validate
+            .popup-header
+                h3.title Заказать тоар Осенняя утепленная куртка Plus Size
+            .input-container
+                label.req(for="name-one-click") Имя
+                input(type="text" name="name" id="name-one-click" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100").validate
+                .text-error Поле  не заполнено
+            .input-container
+                label.req(for="email-one-click") Email
+                input(type="email" name="email" id="email-one-click" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено").validate
+                .text-error Поле «Email» не заполнено
+            .input-container
+                label.req(for="phone-one-click") Телефон
+                input(type="tel" id="phone-one-click" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)").validate
+                .text-error Поле  не заполнено
+            +button('оформить заказ', 'button')
+        .close-btn.close
+            .close-container
+                .leftright
+                .rightleft
+                .text закрыть
+
+    .popup.popup__call(data-target="popup-missing")
+        form.popup-content.js_validate
+            .popup-header
+                h3.title В ближайшее время мы пришлём Вам уведомление о наличии
+            .popup-content
+                .content
+                    | Пожалуйста, оставьте свой контактный
+                    br
+                    | e-mail.
+                .content Мы оповестим вас о наличии интересующего вас товара, как только данный товар поступит на склад.
+            .input-container
+                label.req(for="name") Имя
+                input(type="text" name="name" id="name" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100").validate
+                .text-error Поле  не заполнено
+            .input-container
+                label.req(for="email") Email
+                input(type="email" name="email" id="email" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено").validate
+                .text-error Поле «Email» не заполнено
+            +button('сообщите мне о наличии товара', 'button')
+        .close-btn.close
+            .close-container
+                .leftright
+                .rightleft
+                .text закрыть
+
+    .popup.popup__mail(data-target="popup-mail")
+        .popup-header
+            h3.title Спасибо!
+        .popup-content
+            .content Ваше сообщение отправлено успешно!
+        .close-btn.close
+            .close-container
+                .leftright
+                .rightleft
+                .text закрыть
+
+    .popup.popup__phone(data-target="popup-phone")
+        .popup-header
+            h3.title Контактные телефоны
+        .popup-content
+            .subtitle Консультации и заказ по телефонам
+            a.btn-link-unline(href="tel:+380676236049") + 38 067 623 60 49
+            a.btn-link-unline(href="tel:+380507396878") + 38 050 739 68 78
+            a.btn-link-unline(href="tel:+380931704799") + 38 093 170 47 99
+            a.btn-link-unline(href="tel:+380443347863") + 38 044 334 78 63
+        .popup-content
+            .subtitle График работы интернет-магазина
+            ul
+                li
+                    | ПН-ПТ
+                li
+                    span с
+                    span 9:00
+                    span до
+                    span 18:00
+
+        .close-btn.close
+            .close-container
+                .leftright
+                .rightleft
+                .text закрыть
+
+    .popup.popup__mail(data-target="popup-recover")
+        .popup-header
+            h3.title Забыли пароль?
+        form.popup-content.js_validate
+            .content Введите email, на который зарегестрирован ваш профиль и мы вышлем вам новый пароль.
+            .input-container
+                label.req(for="email2") Email
+                input(type="email" name="email" id="email2" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено").validate
+                .text-error Поле «Email» не заполнено
+            +button('Получить новый пароль', 'button')
+        .close-btn.close
+            .close-container
+                .leftright
+                .rightleft
+                .text закрыть

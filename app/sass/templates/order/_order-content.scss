@@ -1,0 +1,237 @@
+//order-content start
+.order_content {
+  width: auto;
+  flex-grow: 1;
+  border: 1px solid $black;
+  margin-right: 30px;
+  margin-bottom: 0;
+  padding: 30px;
+  @include respond-to(md) {
+    width: 100%;
+    margin-right: 0;
+  }
+  @include respond-to(xs-600) {
+    padding: 10px 15px;
+  }
+  &__form {
+    padding: 30px 50px;
+    @include respond-to(xs-600) {
+      padding: 0;
+    }
+    form {
+      @include respond-to(xs-600) {
+        margin-bottom: 30px;
+      }
+    }
+    .contacts {
+      .btn_send {
+        display: inline;
+        width: auto;
+      }
+    }
+    .dropdown {
+      &_select {
+        width: 100%;
+        color: $text;
+        .icon {
+          &:before {
+            right: 15px;
+          }
+        }
+      }
+      &__wrapper {
+        border-radius: unset;
+        justify-content: flex-start;
+        min-height: 38px;
+        padding: 0;
+        width: 100%;
+        align-items: stretch;
+        //border: none;
+        & > span {
+          display: none;
+        }
+        .select2,
+        .select2-container {
+          margin-right: 0;
+          color: $text;
+          width: 100%;
+          display: block;
+          padding-right: 5px;
+          border: 1px solid $elements;
+          overflow: hidden;
+          @include respond-to(xs-600) {
+            padding-right: 40px;
+          }
+          .select2-selection__arrow {
+            height: 100%;
+          }
+        }
+      }
+    }
+    .delivery {
+      &-adress {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @include respond-to(xs-600) {
+          flex-wrap: wrap;
+        }
+        .title,
+        .city {
+          margin: 10px 0;
+        }
+        .title {
+          margin-right: 5px;
+        }
+      }
+      .card-info__sidebar-item {
+        .select2-container--default {
+          .select2-selection--single {
+            .select2-selection__rendered {
+            }
+          }
+        }
+        .dropdown_select {
+          width: auto;
+          @include respond-to(xs-600) {
+            width: 100%;
+          }
+          .dropdown__wrapper {
+            @include respond-to(xs-600) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .select2-container--default {
+      .select2-selection--single {
+        background-color: transparent;
+        outline: transparent;
+        border: none;
+        height: 100%;
+        border-radius: unset;
+        .select2-selection__rendered {
+          color: $text;
+          height: 100%;
+          outline: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        .select2-selection__arrow {
+          b {
+            border-color: $text transparent transparent;
+            @include anim;
+          }
+        }
+      }
+      &.select2-container--open {
+        &.select2-container--below {
+          .select2-selection--single,
+          .select2-selection--multiple {
+            outline: transparentize($elements, 1);
+          }
+        }
+        .select2-selection--single {
+          .select2-selection__arrow {
+            b {
+              border-color: transparent transparent $text;
+              @include anim;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__title {
+    margin-right: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include anim;
+    @include respond-to(xs-600) {
+      flex-wrap: wrap;
+      margin-right: 0px;
+      margin-bottom: 10px;
+    }
+    .value {
+      margin-right: 5px;
+      display: inline-flex;
+      strong {
+        color: $elements;
+      }
+    }
+    &.disabled {
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    &.active {
+      color: $accent;
+      .subtitle {
+        @include anim;
+        color: $accent;
+        position: relative;
+        padding-right: 25px;
+        margin-right: 30px;
+        &:after {
+          display: block;
+          font-family:$icon_font_name;
+          content:'\E005';
+          color: $accent;
+          position: absolute;
+          right: 0;
+          top: calc(50%);
+          transform: translateY(-50%);
+          @include anim;
+        }
+      }
+      strong {
+        @include anim;
+        color: $accent;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        @include anim;
+        color: darken($accent, 20%);
+        .subtitle {
+          @include anim;
+          color: darken($accent, 20%);
+        }
+        strong {
+          @include anim;
+          color: darken($accent, 20%);
+        }
+      }
+    }
+  }
+  &__wrapper {
+    overflow: hidden;
+    .form-group-radio {
+      margin-bottom: 30px;
+    }
+  }
+  &__delivery {
+   &-item {
+     .btn {
+       margin-left: 10px;
+     }
+   }
+  }
+  a {
+    &.order_content__title {
+      &:hover,
+      &:active,
+      &:focus {
+        .subtitle {
+          @include anim;
+          color: $elements;
+        }
+      }
+    }
+  }
+}
+//order-content end

@@ -1,0 +1,22 @@
+.search {
+  &-empty-page {
+    .catalog__grid {
+      display: block;
+    }
+    .search-block {
+      span {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+      .title {
+        margin-top: 0;
+      }
+    }
+    &-page {
+      .catalog__grid,
+      .catalog__grid-wrapper {
+        width: 100%;
+      }
+    }
+  }
+}

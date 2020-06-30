@@ -1,0 +1,103 @@
+doctype html
+html
+  include components/_head
+  body
+    noscript
+      div
+        strong Для полной функциональности этого сайта необходимо включить JavaScript. Вот
+        a(href='https://support.google.com/adsense/answer/12654?hl=ru', target='_blank') инструкции,
+        | как включить JavaScript в вашем браузере.
+        link(rel='stylesheet', type='text/css', href='css/without-js.css')
+    .wrapper.profile-page
+      include components/_header
+      .container
+        main.main.tub-block
+          section.page__header
+              .title.page__header-title
+                | Личный кабинет: Потапенко Иван Иванович
+            section.profile.main_cont
+              .tub_filter
+                aside.profile-sidebar
+                  ul.profile-sidebar__wrapper
+                    a#console(href="http://html.myapp.com.ua/vashkluch/prodfile.html#console").profile-sidebar__item Консоль
+                      .icon.icon-check
+                    a#orders(href="http://html.myapp.com.ua/vashkluch/prodfile.html#orders").profile-sidebar__item Заказы
+                      .icon.icon-cart
+                    a#downloads(href="http://html.myapp.com.ua/vashkluch/prodfile.html#downloads").profile-sidebar__item Загрузки
+                      .icon.icon-doc
+                    a#addresses(href="http://html.myapp.com.ua/vashkluch/prodfile.html#addresses").profile-sidebar__item.active Адреса
+                      .icon.icon-map
+                    a#details(href="http://html.myapp.com.ua/vashkluch/prodfile.html#details").profile-sidebar__item Детали учетной записи
+                      .icon.icon-user
+                    a#logoff(href="http://html.myapp.com.ua/vashkluch/prodfile.html#logoff").profile-sidebar__item Выйти
+                      .icon.icon-close
+                .profile-wrapper
+                  .tub_body(style='display: flex;' name="details")
+                    .title.profile__title Смена адреса доставки
+                    .profile__item
+                        form.profile-details__form.js_validate
+                            .subtitle Смена личных данных для доставки
+                            .input-container
+                                label.req(for='employee') ФИО
+                                input#employee.validate(type='text', name='employee', required='required', data-validate='text', data-error-wrong='Недопустимые символы', data-error-empty='Введите колличество символов (2-100)', data-minsign='2', data-maxsign='100')
+                                .text-error Поле  не заполнено
+                            .input-container
+                                label.req(for='phone') Контактный телефон
+                                input#phone.validate(type='tel', required='required', data-validate='phone', data-error-wrong='Поле «Телефон» заполнено не верно', data-error-empty='Введите колличество символов(17)')
+                                .text-error Поле  не заполнено
+                            .input-container
+                                label.req(for='email') E-mail
+                                input#email.validate(type='email', name='email', required='required', data-validate='email', data-error-wrong='Поле «Email» заполнено не верно', data-error-empty='Поле «Email» не заполнено', data-error-min='Email: не менее 6 символов', data-error-max='Email: не более 37 символов')
+                                .text-error Поле «Email» не заполнено
+                            .input-container
+                                label(for='company') Название компании
+                                input#company(type='text', name='company', data-validate='text', data-error-wrong='Недопустимые символы', data-error-empty='Введите колличество символов (2-100)', data-minsign='2', data-maxsign='100')
+                                .text-error Поле  не заполнено
+                            input.btn(value='Сохранить изменения', type='submit')
+                        form.profile-details__form.js_validate
+                            .subtitle Смена адреса доставки
+                            .input-container.js_valid_select
+                                include components/_dropdown
+                                - var text= ["Страна*", "Украина", "Израиль", "Эстония"]
+                                +dropdown("dropdown_select_first", text, "", "sort-country", "")
+                                .text-error Поле  не заполнено
+                            .input-container.js_valid_select
+                                include components/_dropdown
+                                - var text= ["Область*", "Одесская", "Киевская", "Херсонская"]
+                                +dropdown("dropdown_select_first", text, "", "sort-region", "")
+                                .text-error Поле  не заполнено
+                            .input-container.js_valid_select
+                                include components/_dropdown
+                                - var text= ["Город/Нас.пункт*", "Черкассы", "Киев", "Тель Авив", "Винница", "Кропивницкий (Кировоград)", "Полтава", "Харьков", "Днепр (Днепропетровск)", "Луганск", "Ровно", "Херсон", "Донецк", "Луцк", "Симферополь", "Хмельницкий", "Житомир", "Львов"]
+                                +dropdown("dropdown_select_first", text, "", "sort-city", "")
+                                .text-error Поле  не заполнено
+                            .input-container
+                                label.req(for="index") Почтовый индекс
+                                input(type="text" name="index" id="index" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (1-100)" data-minsign="1" data-maxsign="100").validate
+                                .delete
+                                .text-error Поле «индекс» не заполнено
+                            .input-container
+                                label.req(for="street") Улица
+                                input(type="text" name="street" id="street" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100").validate
+                                .delete
+                                .text-error Поле «Улица» не заполнено
+                            .input-container
+                                label.req(for="house") Дом
+                                input(type="text" name="house" id="house" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (1-100)" data-minsign="1" data-maxsign="100").validate
+                                .delete
+                                .text-error Поле «Дом» не заполнено
+                            .input-container
+                                label(for="apartment") Квартира
+                                input(type="text" name="apartment" id="apartment" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100")
+                                .delete
+                                .text-error Поле «Квартира» не заполнено
+                            .input-container.js_valid_select
+                                include components/_dropdown
+                                - var text= ["Выбор отделения НП*", "Отделение №1, ул. Полевая, д. 67", "Отделение №2, ул. Луговая, д. 135", "Отделение №3, ул. Цветочная, д. 28"]
+                                +dropdown("dropdown_select_first", text, "", "sort-np", "")
+                                .text-error Поле  не заполнено
+                            input.btn(value='Сохранить изменения', type='submit')
+
+      include components/_footer
+      include components/_popup
+    include components/_footer-include

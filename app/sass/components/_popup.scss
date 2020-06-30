@@ -1,0 +1,167 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .5s;
+  display: none;
+  z-index: 101;
+  width: 570px;
+  height: auto;
+  background-color: $white;
+  text-align: left;
+  padding: 36px 56px 36px 36px;
+  @include respond-to(xs) {
+    width: 100%;
+    padding: 66px 16px 36px 16px;
+  }
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($text, .5);
+    display: none;
+    z-index: 100;
+  }
+  .title {
+    margin: 0;
+  }
+  .subtitle {
+    @include fb;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.4px;
+    color: $text;
+    margin-bottom: 12px;
+  }
+  &-header {
+    margin-bottom: 24px;
+  }
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    &:before {
+      display: none;
+    }
+  }
+  ul {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 5px;
+    span {
+      margin-right: 5px;
+      display: inline-block;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+  &-content {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    a {
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .basket-item {
+      border: unset;
+      border-top: 1px solid $black;
+      @include anim;
+      &:hover,
+      &:active,
+      &:focus {
+        border: unset;
+        border-top: 1px solid transparent;
+        @include anim;
+      }
+    }
+    p,
+    .content {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+  }
+  &__phone {
+    @include respond-to(xs) {
+      height: 100vh;
+    }
+  }
+  &__call {
+    &-mobile {
+      padding: 0;
+      .popup-header,
+      .popup-body {
+        padding: 30px;
+      }
+      .popup-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          color: $text;
+          margin-bottom: 20px;
+          text-decoration: unset;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .popup-body {
+        background-color: $gray3;
+        border-top: 1px solid $black;
+      }
+      .input-container {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  &-buttons {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    &-link {
+      margin-left: 5px;
+    }
+  }
+  .close-btn {
+    right: 36px;
+    left: unset;
+    margin: 0;
+    top: 36px;
+    position: absolute;
+    @include anim;
+    @include respond-to(xs) {
+      top: 21px;
+      right: 21px;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: pointer;
+      @include anim;
+    }
+  }
+}

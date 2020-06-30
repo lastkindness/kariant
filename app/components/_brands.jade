@@ -1,0 +1,13 @@
+.brands
+    .back
+        .icon.icon-arr
+        span Назад
+    ul.brands__list
+        - var img = ["acura.png", "alfa-romeo.png", "audi.png", "bentley.png", "bmw-mini.png", "buik.png", "byd.png", "cadillack.png", "chery.png", "chevrolet.png", "chrysler.png", "citroen.png", "dacia.png", "daewoo.png", "daihatsu.png", "dodge.png", "ducati.png", "fiat.png", "ford.png", "geely.png", "acura.png", "alfa-romeo.png", "audi.png", "bentley.png", "bmw-mini.png", "buik.png", "byd.png"]
+        - var itemTitle = ["acura", "alfa-romeo", "audi", "bentley", "bmw-mini", "buik", "byd", "cadillack", "chery", "chevrolet", "chrysler", "citroen", "dacia", "daewoo", "daihatsu", "dodge", "ducati", "fiat", "ford", "geely", "acura", "alfa-romeo", "audi", "bentley", "bmw-mini", "buik", "byd"]
+        - for (var i = 0; i < img.length; i++)
+            li.brands__li
+                a(href="http://html.myapp.com.ua/vashkluch/catalog-brands.html").brands__link
+                    .brands__img
+                        img(src="images/brands/" + img[i] alt=itemTitle[i] title=itemTitle[i])
+                    .brands__title= itemTitle[i]

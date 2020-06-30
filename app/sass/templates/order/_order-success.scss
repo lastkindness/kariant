@@ -1,0 +1,50 @@
+//order-success start
+.order-success {
+  .main {
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.92) 43.85%, rgba(255, 255, 255, 0.81) 100%), url(../../../images/banners/image11.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  &__content {
+    padding: 0 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    .btn {
+      padding: 20px;
+    }
+    @include respond-to(xs-600) {
+      padding: 0;
+    }
+    .icon {
+      color: $accent;
+      border: 6px solid $accent;
+      border-radius: 50%;
+      width: 92px;
+      height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .title {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .subtitle {
+      margin: 0 auto 50px;
+      color: $textLight;
+    }
+  }
+  &__wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+//order-success end

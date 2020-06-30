@@ -1,0 +1,74 @@
+doctype html
+html
+  include components/_head
+  body
+    noscript
+      div
+        strong Для полной функциональности этого сайта необходимо включить JavaScript. Вот
+        a(href='https://support.google.com/adsense/answer/12654?hl=ru', target='_blank') инструкции,
+        | как включить JavaScript в вашем браузере.
+        link(rel='stylesheet', type='text/css', href='css/without-js.css')
+    .wrapper.error-page
+      include components/_header
+      .container
+        main.main
+          section.page__header
+            .page__header-wrapper
+              include components/_breadcrumbs
+              +breadcrumbs('Главная', 'Карта сайта')
+            .title.page__header-title
+              | Карта сайта
+          section.mapsite
+            .mapsite-wrapper
+              .container
+                .mapsite__content
+                  ul.mapsite__list
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/index.html') Главная
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/services.html') Услуги
+                      ul.mapsite__list
+                        li.mapsite__li
+                          a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/service-one.html') Аварийное открытие замков
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/catalog-brands.html') Каталог бренды
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/catalog.html') Каталог
+                      ul.mapsite__list
+                        li.mapsite__li
+                          a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/card.html') 1 страница товара
+                        li.mapsite__li
+                          a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/card.html') 2 страница товара
+                        li.mapsite__li
+                          a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/card-missing.html') 3 страница товара (нет в наличии)
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/cart.html') Корзина зарегестрированного пользователя
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/cart-unregistered.html') Корзина НЕзарегестрированного пользователя
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/order-page1.html') Оформление заказа ШАГ 1 (если не учитывать ввода данных на корзине)
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/order-page2.html') Оформление заказа ШАГ 2
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/order-success.html') Оформление заказа УСПЕХ
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/search.html') Поиск по запросу “PK RENAULT NE72 2кн”
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/search-empty.html') Пустая страница поиска (ничего не найдено)
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/contacts.html') Контакты
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/content-page.html') Контентная страница без картинки
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/content-page-img.html') Контентная страница с картинкой
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/profile.html') Личный кабинет
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/profile-new-adress.html') Личный кабинет страница редактирования адреса доставки
+                    li.mapsite__li
+                      a.mapsite__link(href='http://html.myapp.com.ua/vashkluch/error.html') 404 страница
+
+      include components/_footer
+      include components/_popup
+    include components/_footer-include
+

@@ -1,0 +1,546 @@
+doctype html
+html
+  include components/_head
+  body
+    noscript
+      div
+        strong Для полной функциональности этого сайта необходимо включить JavaScript. Вот
+        a(href='https://support.google.com/adsense/answer/12654?hl=ru', target='_blank') инструкции,
+        | как включить JavaScript в вашем браузере.
+        link(rel='stylesheet', type='text/css', href='css/without-js.css')
+    .wrapper.profile-page
+      include components/_header
+      .container
+        main.main.tub-block
+          section.page__header
+              .title.page__header-title
+                | Личный кабинет: Потапенко Иван Иванович
+            section.profile.main_cont
+              .tub_filter
+                aside.profile-sidebar.tub_header
+                  ul.profile-sidebar__wrapper
+                    li#console.profile-sidebar__item.active
+                      span Консоль
+                      .icon.icon-check
+                    li#orders.profile-sidebar__item
+                      span Заказы
+                      .icon.icon-cart
+                    li#downloads.profile-sidebar__item
+                      span Загрузки
+                      .icon.icon-doc
+                    li#addresses.profile-sidebar__item
+                      span Адреса
+                      .icon.icon-map
+                    li#details.profile-sidebar__item
+                      span Детали учетной записи
+                      .icon.icon-user
+                    li#logoff.profile-sidebar__item
+                      span Выйти
+                      .icon.icon-close
+                .profile-wrapper.main_cont
+                  .tub_body(style='display: flex;' name="console")
+                    .title.profile__title Консоль
+                    .profile__item
+                      p
+                        | Добро пожаловать,
+                        strong user
+                        | ( не
+                        strong user
+                        | ?
+                        a(href="") Выйти
+                        | )
+                      p
+                        | Из главной страницы аккаунта вы можете посмотреть ваши
+                        a(href="http://html.myapp.com.ua/vashkluch/registration.html#orders") недавние заказы
+                        a(href="http://html.myapp.com.ua/vashkluch/registration.html#addresses") настроить платежный адрес и адрес доставки
+                        | , а также
+                        a(href="http://html.myapp.com.ua/vashkluch/registration.html#details") изменить пароль и основную информацию.
+                  .tub_body(style='display: none;' name="orders")
+                    .title.profile__title Заказы
+                    .profile__item
+                      table(align='left', cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;', class="main-table")
+                        tbody
+                          tr(align='left', cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;')
+                          tr(height='150', style='line-height:0; font-size:0;text-align: center;')
+                            td(width='1%')
+                            td
+                              table(align='left', cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;margin-bottom: 15px;')
+                                tbody
+                                  tr
+                                    th(colspan='2', style='text-align: center;font-size:16px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:center; padding: 5px;font-weight: 600;', width='600')
+                                      | Инофрмация о заказе:
+                                  tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                      | Заказ №:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                      a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                        | 543
+                                  tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                      | Дата оформления заказа:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                      a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                        | 15.10.2019
+                                  tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                      | ФИО:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                      a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                        | Иванов Иван Иванович
+                                  tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                      | Телефон:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                      | +38093000020
+                                  tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                    | E-mail:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                    | test2@test.com
+                                  tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                      | Статус:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                      | Отправлен
+                                  tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                      | Метод оплаты:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                      | Прямой банковский перевод
+                                  tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                      | Доставка:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                      | Новая Почта (Согласно тарифам)
+                                  tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                      | Адрес:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                      | г. Одесса НП № 56
+                                  tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                      | Фисксированная стоимость доставки:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                      | 200грн.
+                                  tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                      | Итого:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                      | 5938грн.
+                                      | за 2 позиции
+                                  tr
+                                    td(style="text-align: center;" colspan="2")
+                                        button(data-hidden='Скрыть детали', data-show='Смотреть детали', class="details" style='background: #22297A; color: #fff !important; border-radius: 5px; border: 1px solid #22297A; font-size: 14px; padding: 14px 10px 13px; width: auto; cursor: pointer; vertical-align: middle; letter-spacing: 0.1em;display: inline-block;margin: 0 auto;text-align: center;') Смотреть детали
+                              table(cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;', class='order-table')
+                                tbody
+                                  tr
+                                    td(width='400')
+                                      table(align='left', cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;')
+                                        tbody
+                                          tr
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                              | Товар:
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                              a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                                | Выкидной ключ hyundai i20,i30 3кн id60(6f) 433mhz rke-4f04 с 2012г
+                                          tr
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                              | Вес:
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                              | 200гр.
+                                          tr
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                              | Дополнительный функционал:
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                              | Вкладыш
+                                          tr
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                              | Артикул:
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                              | 7x757
+                                          tr
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                              | Кол-во:
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                              | 300шт.
+                                          tr
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                              | Стоимость:
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                              | 2738грн.
+                                    td(width='200', style='vertical-align: top; background-color: #ffffff;')
+                                      a(href='http://html.myapp.com.ua/vashkluch/card.html', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                        img(src='/images/keys/key3.jpeg', alt='ВЫКИДНОЙ КЛЮЧ HYUNDAI I20,I30 3КН ID60(6F) 433MHZ RKE-4F04 С 2012Г', title='ВЫКИДНОЙ КЛЮЧ HYUNDAI I20,I30 3КН ID60(6F) 433MHZ RKE-4F04 С 2012Г', style='display: block; width: 90%; margin: 0 auto;')
+                                  tr(height='10', style='line-height:0; font-size:0;')
+                              table(cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;', class='order-table')
+                                tbody
+                                  tr
+                                    td(width='400')
+                                      table(align='left', cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;')
+                                        tbody
+                                          tr
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                              | Товар:
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                              a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                                | pk mercedes benz 3кн черный до 1998г с механический ключом
+                                          tr
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                              | Вес:
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                              | 300гр.
+                                          tr
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                              | Дополнительный функционал:
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                              | Нет
+                                          tr
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                              | Артикул:
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                              | 45881257
+                                          tr
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                              | Кол-во:
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                              | 200шт.
+                                          tr
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                              | Стоимость:
+                                            td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                              | 3258грн.
+                                    td(width='200', style='vertical-align: top; background-color: #ffffff;')
+                                      a(href='http://html.myapp.com.ua/vashkluch/card.html', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                        img(src='/images/keys/key1.jpeg', alt='pk mercedes benz 3кн черный до 1998г с механический ключом', title='pk mercedes benz 3кн черный до 1998г с механический ключом', style='display: block; width: 90%; margin: 0 auto;')
+                                  tr(height='10', style='line-height:0; font-size:0;')
+                            td(width='1%')
+
+                      table(align='left', cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;', class="main-table")
+                          tbody
+                              tr(align='left', cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;')
+                              tr(height='150', style='line-height:0; font-size:0;text-align: center;')
+                                  td(width='1%')
+                                  td
+                                      table(align='left', cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;margin-bottom: 15px;')
+                                          tbody
+                                              tr
+                                                  th(colspan='2', style='text-align: center;font-size:16px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:center; padding: 5px;font-weight: 600;', width='600')
+                                                      | Инофрмация о заказе:
+                                              tr
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                      | Заказ №:
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                      a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                                          | 364
+                                              tr
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                      | Дата оформления заказа:
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                      a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                                          | 23.06.2019
+                                              tr
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                      | ФИО:
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                      a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                                          | Иванов Иван Иванович
+                                              tr
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                      | Телефон:
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                      | +38093000020
+                                              tr
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                      | Статус:
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                      | На удержании
+                                              tr
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                      | Метод оплаты:
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                      | Наложенный платёж
+                                              tr
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                      | Доставка:
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                      | Курьер Новая Почта
+                                              tr
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                      | Адрес:
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                      | г. Одесса ул. Пушкинская 71 кв. 45
+                                              tr
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                      | Фисксированная стоимость доставки:
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                      | 195грн.
+                                              tr
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                      | Итого:
+                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                      | 1938грн.
+                                                      | за 1 позицию
+                                              tr
+                                                  td(style="text-align: center;" colspan="2")
+                                                      button(data-hidden='Скрыть детали', data-show='Смотреть детали', class="details" style='background: #22297A; color: #fff !important; border-radius: 5px; border: 1px solid #22297A; font-size: 14px; padding: 14px 10px 13px; width: auto; cursor: pointer; vertical-align: middle; letter-spacing: 0.1em;display: inline-block;margin: 0 auto;text-align: center;') Смотреть детали
+                                      table(cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;', class='order-table')
+                                          tbody
+                                              tr
+                                                  td(width='400')
+                                                      table(align='left', cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;')
+                                                          tbody
+                                                              tr
+                                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                                      | Товар:
+                                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                                      a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                                                          | Ключ CLA3G JMA
+                                                              tr
+                                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                                      | Вес:
+                                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                                      | 50гр.
+                                                              tr
+                                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                                      | Дополнительный функционал:
+                                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                                      | Вкладыш
+                                                              tr
+                                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                                      | Артикул:
+                                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                                      | 7x759903
+                                                              tr
+                                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                                      | Кол-во:
+                                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                                      | 50шт.
+                                                              tr
+                                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                                                      | Стоимость:
+                                                                  td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                                                      | 1738грн.
+                                                  td(width='200', style='vertical-align: top; background-color: #ffffff;')
+                                                      a(href='http://html.myapp.com.ua/vashkluch/card.html', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                                          img(src='images/keys/key2.jpeg', alt='CLA3G JMA', title='CLA3G JMA', style='display: block; width: 90%; margin: 0 auto;')
+                                              tr(height='10', style='line-height:0; font-size:0;')
+                                  td(width='1%')
+                  .tub_body(style='display: none;' name="downloads")
+                    .title.profile__title Загрузки
+                    .profile__item
+                        table(align='left', cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;margin-bottom: 15px;')
+                            tbody
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;border: 1px solid #22297A;', width='600')
+                                        | Счёт-фактура №:
+                                        a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;') 364
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;;border: 1px solid #22297A;', width='600')
+                                        | Дата формирования счёта:
+                                        | 23.06.2019
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;;border: 1px solid #22297A;', width='600')
+                                        | Статус:
+                                        | Оплачен
+                                    td(style="text-align: center;" colspan="2")
+                                        a(href="https://formz.ru/media/formz/samples/invoice.pdf", download, style='background: #22297A; color: #fff !important; border-radius: 5px; border: 1px solid #22297A; font-size: 14px; padding: 14px 10px 13px; width: auto; cursor: pointer; vertical-align: middle; letter-spacing: 0.1em;display: inline-block;margin: 0 auto;text-align: center;') Загрузить
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;border: 1px solid #22297A;', width='600')
+                                        | Счёт-фактура №:
+                                        a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;') 444
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;;border: 1px solid #22297A;', width='600')
+                                        | Дата формирования счёта:
+                                        | 11.08.2019
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;;border: 1px solid #22297A;', width='600')
+                                        | Статус:
+                                        | Не оплачен
+                                    td(style="text-align: center;" colspan="2")
+                                        a(href="https://formz.ru/media/formz/samples/invoice.pdf", download, style='background: #22297A; color: #fff !important; border-radius: 5px; border: 1px solid #22297A; font-size: 14px; padding: 14px 10px 13px; width: auto; cursor: pointer; vertical-align: middle; letter-spacing: 0.1em;display: inline-block;margin: 0 auto;text-align: center;') Загрузить
+
+                        table(align='left', cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;margin-bottom: 15px;')
+                            tbody
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;border: 1px solid #22297A;', width='600')
+                                        | Пока нет доступных загрузок.
+                                    td(style="text-align: center;" colspan="2")
+                                        a(href="http://html.myapp.com.ua/vashkluch/catalog.html", download, style='background: #22297A; color: #fff !important; border-radius: 5px; border: 1px solid #22297A; font-size: 14px; padding: 14px 10px 13px; width: auto; cursor: pointer; vertical-align: middle; letter-spacing: 0.1em;display: inline-block;margin: 0 auto;text-align: center;') Перейти в магазин
+                  .tub_body(style='display: none;' name="addresses")
+                    .title.profile__title Адреса
+                    .profile__item
+                        table(align='left', cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;margin-bottom: 15px;')
+                            tbody
+                                tr
+                                    th(colspan='2', style='text-align: center;font-size:16px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:center; padding: 5px;font-weight: 600;', width='600')
+                                        | Адрес № 1:
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | ФИО:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                            | Иванов Иван Иванович
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Название компании:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                            | ООО "Центурион"
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Страна:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | Украина
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Область:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | Одесская
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Город/Нас. пункт:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | Одесса
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Улица:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | ул. Цветочная
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Дом, квартира:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | д.71 кв. 45
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Отделение НП:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | № 47
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Почтовый индекс:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | 68007
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Телефон:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | +38093000020
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | E-mail:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | test2@test.com
+                                tr
+                                    td(style="text-align: center;" colspan="2")
+                                        a(href="http://html.myapp.com.ua/vashkluch/profile-new-adress.html", style='background: #22297A; color: #fff !important; border-radius: 5px; border: 1px solid #22297A; font-size: 14px; padding: 14px 10px 13px; width: auto; cursor: pointer; vertical-align: middle; letter-spacing: 0.1em;display: inline-block;margin: 0 auto;text-align: center;') Изменить адрес
+
+                        table(align='left', cellpadding='0', cellspacing='0', style='border-collapse:collapse;vertical-align:top;margin-bottom: 15px;')
+                            tbody
+                                tr
+                                    th(colspan='2', style='text-align: center;font-size:16px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:center; padding: 5px;font-weight: 600;', width='600')
+                                        | Адрес № 2:
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | ФИО:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                            | Иванов Иван Иванович
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Название компании:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        a(href='#', target='_blank', style='height: auto; display: inline-block; width: 100%;')
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Страна:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | Украина
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Область:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | Киевская
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Город/Нас. пункт:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | Киев
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Улица:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | ул. Радужная
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Дом, квартира:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | д.33 кв. 56
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Отделение НП:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | № 123
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Почтовый индекс:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | 68005
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | Телефон:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | +38093045365
+                                tr
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;font-weight: 600;', width='600')
+                                        | E-mail:
+                                    td(style='font-size:14px;line-height: 19px;color:#787878; font-family:Arial,sans-serif; text-align:left; padding: 5px;', width='600')
+                                        | test2@test.com
+                                tr
+                                    td(style="text-align: center;" colspan="2")
+                                        a(href="http://html.myapp.com.ua/vashkluch/profile-new-adress.html", style='background: #22297A; color: #fff !important; border-radius: 5px; border: 1px solid #22297A; font-size: 14px; padding: 14px 10px 13px; width: auto; cursor: pointer; vertical-align: middle; letter-spacing: 0.1em;display: inline-block;margin: 0 auto;text-align: center;') Изменить адрес
+
+                  .tub_body(style='display: none;' name="details")
+                    .title.profile__title Детали учетной записи
+                    .profile__item
+                        form.profile-details__form.js_validate
+                            .subtitle Смена учетных данных
+                            .input-container
+                                label.req(for='login') Логин (так ваше имя будет отображаться в разделе учётной записи и при просмотрах)
+                                input#login.validate(type='text', name='login', required='required', data-validate='text', data-error-wrong='Недопустимые символы', data-error-empty='Введите колличество символов (2-100)', data-minsign='2', data-maxsign='100')
+                                .text-error Поле  не заполнено
+                            .input-container
+                                label.req(for='employee') ФИО
+                                input#employee.validate(type='text', name='employee', required='required', data-validate='text', data-error-wrong='Недопустимые символы', data-error-empty='Введите колличество символов (2-100)', data-minsign='2', data-maxsign='100')
+                                .text-error Поле  не заполнено
+                            .input-container
+                                label.req(for='phone') Контактный телефон
+                                input#phone.validate(type='tel', required='required', data-validate='phone', data-error-wrong='Поле «Телефон» заполнено не верно', data-error-empty='Введите колличество символов(17)')
+                                .text-error Поле  не заполнено
+                            .input-container
+                                label.req(for='email') E-mail
+                                input#email.validate(type='email', name='email', required='required', data-validate='email', data-error-wrong='Поле «Email» заполнено не верно', data-error-empty='Поле «Email» не заполнено', data-error-min='Email: не менее 6 символов', data-error-max='Email: не более 37 символов')
+                                .text-error Поле «Email» не заполнено
+                            .input-container
+                                label(for='site') Web-Site
+                                input#site(type='text', name='site', data-validate='text', data-error-wrong='Недопустимые символы', data-error-empty='Введите колличество символов (2-100)', data-minsign='2', data-maxsign='100')
+                                .text-error Поле  не заполнено
+                            input.btn(value='Сохранить изменения', type='submit')
+                        form.profile-details__form.js_validate
+                            .subtitle Смена пароля
+                            .input-container
+                                label.req(for='password') Старый пароль
+                                input.validate.password_old(id="password", type='password', name='password', required='required', data-validate='passold', data-error-wrong-back='Не совпадение с действующим паролем', data-error-wrong-old="Старый и новый пароль совападают. Придумайте другой!", data-error-wrong='Поле заполнено не верно', data-error-empty='Поле не заполнено', data-error-min='Пароль: не менее 6 символов', data-error-max='Пароль: не более 20 символов')
+                                .text-error Поле не заполнено
+                            .input-container
+                                label.req(for='password2') Новый пароль
+                                input.validate.password_new.password(id="password2", type='password', name='password', required='required', data-validate='pass', data-error-wrong-old="Старый и новый пароль совападают. Придумайте другой!", data-error-wrong-new="Новый пароль и подтверждение не совпадают", data-error-wrong='Поле заполнено не верно', data-error-empty='Поле не заполнено', data-error-min='Пароль: не менее 6 символов', data-error-max='Пароль: не более 20 символов')
+                                .text-error Поле не заполнено
+                            .input-container
+                                label.req(for='password3') Повторите новый пароль
+                                input.validate.password_new.password_1(id="password3", type='password', name='password', required='required', data-validate='pass1', data-error-wrong-old="Старый и новый пароль совападают. Придумайте другой!", data-error-wrong-new="Новый пароль и подтверждение не совпадают", data-error-wrong='Поле заполнено не верно', data-error-empty='Поле не заполнено', data-error-min='Пароль: не менее 6 символов', data-error-max='Пароль: не более 20 символов')
+                                .text-error Поле не заполнено
+                            input.btn(value='Сохранить изменения', type='submit')
+                  .tub_body(style='display: none;' name="logoff")
+                    .title.profile__title Выйти
+                    a(href="http://html.myapp.com.ua/vashkluch/index.html").subtitle Выход из личного кабинета
+
+      include components/_footer
+      include components/_popup
+    include components/_footer-include

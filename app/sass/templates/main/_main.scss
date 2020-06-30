@@ -1,0 +1,9 @@
+.main {
+  &-page {
+    .header {
+      &__wrapper {
+        border-bottom: none;
+      }
+    }
+  }
+}

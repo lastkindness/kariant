@@ -1,0 +1,28 @@
+include _input-number
+
+mixin basket-item(basketImg, basketItemTitle, basketPrice, basketPriceOld, basketClassItem, basketVendor, basketCategory)
+    a.basket-item(class=basketClassItem[z] href="/card.html")
+        .basket-item__wrapper
+            .basket-item__img
+                img.image(src="images/keys/"+basketImg[z] alt= basketItemTitle[z] title= basketItemTitle[z])
+            .basket-item__info
+                .basket-item__vendor-code
+                    span.title Артикул:
+                    span.value= basketVendor[z]
+                .basket-item__name
+                    h3.subtitle= basketItemTitle[z]
+                .basket-item__category
+                    span.value= basketCategory[z]
+            .basket-item__price
+                span.value= basketPrice[z]
+                span.currency грн
+            .basket-item__old-price
+                span.value= basketPriceOld[z]
+                span.currency грн
+            .basket-item__quantity
+                +input-number
+            .basket-item__all
+                span.value= basketPrice[z]
+                span.currency грн
+            .basket-item__remove(data-target="product-delete")
+                .icon.icon-close

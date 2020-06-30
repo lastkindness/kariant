@@ -1,0 +1,99 @@
+.main {
+  &-slider {
+    &__item {
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      margin-right: -20vw;
+      padding: 20px 0 0 100px;
+      background-color: $elements;
+    }
+    &__contant {
+      width: calc(55% - 30px - 10vw);
+      margin-right: 30px;
+      margin-top: 116px;
+      margin-bottom: 44px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-bottom: 1px solid $textDark;
+      @include respond-to(lg-1200) {
+        margin-top: 50px;
+      }
+      h2 {
+        margin-bottom: 36px;
+        color: $textDark;
+      }
+    }
+    &__img {
+      width: calc(45% - 10vw);
+    }
+    &__controls {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .swiper {
+      &-slide {
+        opacity: 0;
+        @include anim;
+        &-active {
+          opacity: 1;
+          @include anim;
+        }
+      }
+      &-pagination {
+        position: static;
+        width: auto;
+        font-size: 22px;
+        color: $textDark;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+        margin-bottom: 14px;
+        span {
+          &:before {
+            content: '0';
+          }
+        }
+        &-total {
+          font-size: 18px;
+          font-weight: 300;
+        }
+      }
+      &-button {
+        &-next,
+        &-prev {
+          position: static;
+          width: auto;
+          height: auto;
+          margin-bottom: 0;
+          &:after {
+            font-family: 'Icons';
+            font-size: 16px;
+            line-height: 16px;
+            color: $textDark;
+          }
+        }
+        &-next {
+          &:after {
+            content:'\E00B';
+          }
+        }
+        &-prev {
+          margin-right: 12px;
+          &:after {
+            content:'\E008';
+          }
+        }
+      }
+      &-arrows {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+

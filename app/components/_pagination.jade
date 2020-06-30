@@ -1,0 +1,28 @@
+include _button
+
+mixin pagination()
+    .pagination_wrapper(class = attributes.class)
+        ul.pagination
+            //li.pagination_item.hide.prev
+                a(href='#').pagination_link.icon.icon-small-left
+            li.pagination_item.prev
+                a(href='#').pagination_link.icon.icon-arr
+            li.pagination_item.active
+                a(href='#').pagination_link= 1
+            - for (var i = 2; i <= 3; i++)
+            li.pagination_item
+                a(href='#').pagination_link= i
+            li.pagination_item.more
+                a(href='#').pagination_link ...
+            li.pagination_item
+                a(href='#').pagination_link 10
+            li.pagination_item.next
+                a(href='#').pagination_link.icon.icon-arr
+            li.pagination_item.next.last
+                a(href='#').pagination_link.icon.icon-arr
+        .page__header-sort
+            include _dropdown
+            - var text= ["12", "24", "36"]
+            +dropdown("dropdown_select", text, "Товаров на странице:", "sort-value", "")
+            - var text= ["По популярности", "По цене", "По новизне"]
+            +dropdown("dropdown_select", text, "Сортировка:", "sort-quantity", "")

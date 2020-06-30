@@ -1,0 +1,42 @@
+.main-about {
+  a,
+  strong,
+  i {
+    margin: 0 5px;
+    display: inline;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  p {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  a {
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include respond-to(md){
+      flex-wrap: wrap;
+    }
+    &-img {
+      width: calc(50% - 45px);
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+      @include respond-to(md){
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+    &-text {
+      width: 50%;
+      @include respond-to(md){
+        width: 100%;
+      }
+    }
+  }
+}
