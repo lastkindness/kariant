@@ -1,15 +1,10 @@
-section.banners
-    a(href="").banners__item
-        img(src="images/banners/banner6.jpeg" alt="Vashkluch alt" title="Vashkluch title")
-    a(href="").banners__item
-        img(src="images/banners/banner7.jpeg" alt="Vashkluch alt" title="Vashkluch title")
-    a(href="").banners__item.banners__item-big
-        img(src="images/banners/banner10.jpeg" alt="Vashkluch alt" title="Vashkluch title")
-    a(href="").banners__item
-        img(src="images/banners/banner8.jpeg" alt="Vashkluch alt" title="Vashkluch title")
-    a(href="").banners__item
-        img(src="images/banners/banner9.jpeg" alt="Vashkluch alt" title="Vashkluch title")
-    a(href="").banners__item
-        img(src="images/banners/banner12.jpeg" alt="Vashkluch alt" title="Vashkluch title")
-    a(href="").banners__item
-        img(src="images/banners/banner11.jpeg" alt="Vashkluch alt" title="Vashkluch title")
+include ../../components/_button
+section.main-banner
+    .container
+        .main-banner__wrapper
+            .main-banner__img
+                img(data-src="images/other/Box.png" alt="kariant" title="kariant")
+            .main-banner__text
+                h2.title Опт и дроппшипинг
+                p Заробатывайте вместе с нами
+                +button('Перейти', 'a', '')
