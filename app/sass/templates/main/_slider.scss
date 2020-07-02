@@ -44,55 +44,6 @@
           @include anim;
         }
       }
-      &-pagination {
-        position: static;
-        width: auto;
-        font-size: 22px;
-        color: $textDark;
-        font-weight: 400;
-        letter-spacing: 0.4px;
-        margin-bottom: 14px;
-        span {
-          &:before {
-            content: '0';
-          }
-        }
-        &-total {
-          font-size: 18px;
-          font-weight: 300;
-        }
-      }
-      &-button {
-        &-next,
-        &-prev {
-          position: static;
-          width: auto;
-          height: auto;
-          margin-bottom: 0;
-          &:after {
-            font-family: 'Icons';
-            font-size: 16px;
-            line-height: 16px;
-            color: $textDark;
-          }
-        }
-        &-next {
-          &:after {
-            content:'\E00B';
-          }
-        }
-        &-prev {
-          margin-right: 12px;
-          &:after {
-            content:'\E008';
-          }
-        }
-      }
-      &-arrows {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
     }
   }
 }

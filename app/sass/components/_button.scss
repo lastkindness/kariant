@@ -11,6 +11,7 @@
   color: $white;
   background-color: $textDark;
   position: relative;
+  text-align: center;
   @include fb;
   @include anim;
   &:after {

@@ -8,14 +8,16 @@ html
         a(href='https://support.google.com/adsense/answer/12654?hl=ru', target='_blank') инструкции,
         | как включить JavaScript в вашем браузере.
         link(rel='stylesheet', type='text/css', href='css/without-js.css')
-    .wrapper.main-page
+    .wrapper.category-page
       include components/_header
       main.main
         include components/_text-content
-        include templates/main/_slider
-        include templates/main/_category
-        include templates/main/_sale
-        include templates/main/_products
+        section.page__header.catalog__header
+          .container
+            include components/_breadcrumbs
+            +breadcrumbs('Главная', 'Женщинам')
+            .page__header-wrapper
+              h1.title.page__header-title Женщинам
       include components/_footer
       include components/_popup
     include components/_footer-include

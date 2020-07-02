@@ -1,8 +1,19 @@
 .main {
   &-page {
     .header {
+      background-color: $white;
       &__wrapper {
         border-bottom: none;
+      }
+      &__menu {
+        &-list {
+          &-wrapper {
+            background-color: $white;
+          }
+          &-sub {
+            background-color: $white;
+          }
+        }
       }
     }
   }
