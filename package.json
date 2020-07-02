@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "@zeitiger/elevatezoom": "^2.5.4",
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.7",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
@@ -29,7 +29,7 @@
     "gulp-watch": "^4.3.11",
     "jquery-mask-plugin": "^1.14.15",
     "jqueryui": "^1.11.1",
-    "jshint": "^2.9.5",
+    "jshint": "^2.11.1",
     "jshint-stylish": "^2.2.1",
     "magnific-popup": "^1.1.0",
     "select2": "^4.0.7"
@@ -45,6 +45,7 @@
     "jquery-ui-slider": "^1.12.1",
     "jquery.transit": "^0.9.12",
     "magnifier": "^0.4.0",
+    "natives": "^1.1.6",
     "node-sass": "^4.14.1",
     "npm-i": "0.0.2",
     "select2": "^4.0.7",

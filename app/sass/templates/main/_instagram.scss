@@ -1,25 +1,52 @@
-.main-services {
-  &-items {
-    &.services__grid {
-      display: flex;
-      align-items: stretch;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      .service-item {
-        width: calc(25% - 10px);
-        margin-bottom: 20px;
-        @include respond-to(md){
-          width: calc(33.3% - 10px);
+.main-instagram {
+  &__img{
+    align-items: stretch;
+    display: flex;
+    margin: 0 -15px;
+    padding: 0;
+    li{
+      opacity: 1;
+      @include anim;
+      width: calc(25% - 30px);
+      margin: 0 15px;
+      padding: 0;
+      &:before{
+        display: none;
+      }
+      a{
+        height: 100%;
+        width: 100%;
+        &:after{
+          display: none;
         }
-        @include respond-to(md){
-          width: calc(33.3% - 10px);
+        img{
+          object-fit: cover;
         }
-        @include respond-to(sm){
-          width: calc(50% - 10px);
-        }
-        @include respond-to(xs){
-          width: 100%;
-        }
+      }
+      &:hover,
+      &:active,
+      &:focus{
+        opacity: 0.4;
+        @include anim;
+      }
+    }
+  }
+  &__header {
+    margin-bottom: 28px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    &-title {
+      span {
+        margin-bottom: 12px;
+        display: inline-block;
+        font-size: 24px;
+        letter-spacing: 1.6px;
+        color: $accent;
+        @include fb;
+      }
+      h2{
+        margin-bottom: 0;
       }
     }
   }
