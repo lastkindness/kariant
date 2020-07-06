@@ -12,12 +12,16 @@ html
       include components/_header
       main.main
         include components/_text-content
-        section.page__header.catalog__header
+        section.page__header
           .container
             include components/_breadcrumbs
             +breadcrumbs('Главная', 'Женщинам')
             .page__header-wrapper
               h1.title.page__header-title Женщинам
+        include templates/category/_category
+        include templates/main/_sale
+        include templates/category/_new
+        include templates/category/_publications
       include components/_footer
       include components/_popup
     include components/_footer-include

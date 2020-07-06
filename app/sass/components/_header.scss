@@ -1042,6 +1042,7 @@
     }
     .header__wrapper {
       padding-top: 0;
+      border-bottom: 1px solid transparent;
       @include anim;
     }
     .header__offer {

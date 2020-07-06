@@ -1,102 +1,26 @@
 //catalog main start
 .catalog {
   margin-bottom: 0;
-  &-brands {
-    &-page {
-      .brands {
-        margin-bottom: 50px;
-      }
-    }
-  }
   &__wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     position: relative;
     margin-bottom: 0;
-    @include respond-to(tablet-1030){
-      flex-wrap: wrap;
-    }
-  }
-  &__header {
-    .page {
-      &__header {
-        &-wrapper {
-          flex-wrap: nowrap;
-          @include respond-to(sm){
-            flex-wrap: wrap;
-          }
-        }
-        &-title {
-          width: 50%;
-          @include respond-to(sm){
-            width: 100%
-          }
-        }
-        &-sort {
-          width: 50%;
-          @include respond-to(sm){
-            width: 100%
-          }
-        }
-      }
-    }
   }
   &__filter {
-    width: 20%;
-    @include respond-to(lg){
-      width: 25%;
-    }
-    @include respond-to(lg-1200){
-      width: 35%
-    }
-    @include respond-to(tablet-1030){
-      width: 100%;
-    }
-    &+.catalog__grid-wrapper {
-      width: calc(75% - 30px);
-      @include respond-to(lg-1200){
-        width: calc(65% - 30px);
-      }
-      @include respond-to(tablet-1030){
-        width: 100%;
-      }
-    }
+    width: 23%;
   }
-}
-
-.main-page,
-.catalog-page {
-  .catalog {
-    &__grid {
-      width: calc(80% - 0px);
-      @include respond-to(lg){
-        width: calc(75% - 0px);
-      }
-      @include respond-to(lg-1200){
-        margin: 0;
-      }
-      @include respond-to(tablet-1030){
-        width: 100%;
-        margin: 0;
-      }
-      &.main-products-item {
-        .product-item {
-          width: calc(20% - 20px);
-          margin: 0 10px 20px;
-          @include respond-to(lg-1250){
-            width: calc(33.3% - 20px);
-          }
-          @include respond-to(tablet-1030){
-            width: calc(50% - 20px);
-            flex-wrap: wrap;
-          }
-          @include respond-to(xs-600){
-            width: 100%;
-            margin: 0 0 20px;
-          }
-        }
-      }
+  &__grid {
+    width: calc(77% - 10px);
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+    .product-item {
+      width: calc(33.3% - 30px);
+      margin: 0 15px 44px;
     }
   }
 }

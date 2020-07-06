@@ -52,4 +52,15 @@
       margin-top: 0;
     }
   }
+  &_small {
+    .title {
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 16px;
+      letter-spacing: 2px;
+      &:after {
+        height: 1px;
+      }
+    }
+  }
 }

@@ -53,9 +53,22 @@
       }
     }
   }
+  &__main {
+    @include anim;
+    flex-grow: 1;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   &__wrapper {
     width: 100%;
-    padding-bottom: 11px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    position: relative;
   }
   &__drop {
     position: absolute;
@@ -166,9 +179,6 @@
     justify-content: flex-end;
     font-size: 30px;
   }
-  &__wrapper {
-    position: relative;
-  }
   &__img {
     height: 374px;
     background-color: $white;
@@ -234,22 +244,6 @@
       }
       &__img {
         padding: 0 15px;
-      }
-      &__main {
-        @include anim;
-        flex-grow: 1;
-        display: flex;
-        align-items: stretch;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      &__wrapper {
-        height: 100%;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: stretch;
       }
     }
     &.active {

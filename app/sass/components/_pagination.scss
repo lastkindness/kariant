@@ -1,167 +1,92 @@
 //pagination start
 .pagination {
-  list-style-type: none;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  list-style: none;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1em;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  @include fb;
+  &__wrapper {
+    width: 100%;
+  }
+  li,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    &:after {
+      bottom: 0;
+    }
+  }
   li {
-    margin-bottom: 0;
     &:before {
       display: none;
     }
   }
-  &_link {
-    width: 100%;
-    height: 100%;
-    color: $black;
-    @include anim;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  &_item {
-    width: 30px;
-    height: 30px;
-    visibility: visible;
-    @include anim;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 25px;
-    background-color: transparent;
-    &_link {
-      display: inline-block;
-      width: 100%;
-      color: $text;
-    }
-    &.hide {
-      @include anim;
-      display: none;
-    }
-    &.more {
-      border: none;
-      .pagination_link {
-        color: $text;
-      }
-    }
-    &.active {
-      background-color: transparent;
-      @include anim;
-      .pagination_link {
-        color: $elements;
-      }
-      &:hover,
-      &:active,
-      &:focus {
-        @include anim;
-        background-color: transparent;
-        .pagination_link {
-          @include anim;
-          color: $dark;
-        }
-      }
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      @include anim;
-      cursor: pointer;
-      color: $elements;
-      .pagination_link {
-        @include anim;
-        color: $elements;
-      }
-    }
+  &__item {
     &.prev,
     &.next {
-      background-color: $elements;
-      border: none;
-      transform: rotate(90deg);
-      .pagination_link {
-        @include anim;
-        color: $white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      &:hover,
-      &:active,
-      &:focus,
-      &.active {
-        @include anim;
-        background-color: $dark;
-        color: $white;
-        .pagination_link {
-          @include anim;
-          color: $accent;
+      a {
+        &:after {
+          display: none;
         }
+      }
+    }
+    &.prev {
+      span {
+        margin-left: 12px;
       }
     }
     &.next {
-      margin-right: 0;
-      transform: rotate(-90deg);
-      &.last {
-        margin-left: 10px;
-        .icon-arr {
-          position: relative;
-          &:after,
-          &:before {
-            position: absolute;
-            top: calc(50% + 5px);
-            left: calc(50%);
-            transform: translate(-50%, -50%);
-          }
-          &:after {
-            font-family: "Icons";
-            font-style: normal;
-            font-variant: normal;
-            top: calc(50% - 5px);
-            content: '\E001';
-            display: inline-block;
-            font-weight: normal;
-            text-decoration: none;
-            text-transform: none;
-          }
-        }
+      span {
+        margin-right: 12px;
+        order: 0;
       }
-    }
-    &.more {
-      &:hover,
-      &:active,
-      &:focus,
-      &.active {
-        @include anim;
-        border: none;
-        .pagination_link {
-          @include anim;
-          color: $elements;
+      .icon {
+        &:before {
+          order: 1;
         }
       }
     }
   }
-  &_wrapper {
+  &__link {
+
+  }
+  &__list,
+  a,
+  li {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    margin: 50px 0;
-    @include respond-to(tablet-1030){
-      margin: 35px 0;
-    }
-    @include respond-to(sm){
-      margin: 25px 0;
-      flex-wrap: wrap;
-    }
-    .page__header-sort {
-      @include respond-to(sm){
-        margin-top: 15px;
-        justify-content: center;
+  }
+  &__list {
+    font-size: 16px;
+    li {
+      padding: 0 12px;
+      a {
+        color: $textLight;
+        @include anim;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      &:hover,
+      &:active,
+      &:focus,
+      .active {
+        a {
+          color: $textDark;
+          @include anim;
+        }
       }
     }
   }

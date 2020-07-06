@@ -1,1 +1,16 @@
- 
+.category {
+  &-category {
+    &__wrapper {
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      margin: 0 -15px;
+      flex-wrap: wrap;
+      .category-item {
+        padding: 0 15px;
+        width: calc(33.3% - 30px);
+        margin-bottom: 68px;
+      }
+    }
+  }
+}

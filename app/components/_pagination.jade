@@ -1,28 +1,21 @@
 include _button
 
 mixin pagination()
-    .pagination_wrapper(class = attributes.class)
+    .pagination__wrapper(class = attributes.class)
         ul.pagination
-            //li.pagination_item.hide.prev
-                a(href='#').pagination_link.icon.icon-small-left
-            li.pagination_item.prev
-                a(href='#').pagination_link.icon.icon-arr
-            li.pagination_item.active
-                a(href='#').pagination_link= 1
-            - for (var i = 2; i <= 3; i++)
-            li.pagination_item
-                a(href='#').pagination_link= i
-            li.pagination_item.more
-                a(href='#').pagination_link ...
-            li.pagination_item
-                a(href='#').pagination_link 10
-            li.pagination_item.next
-                a(href='#').pagination_link.icon.icon-arr
-            li.pagination_item.next.last
-                a(href='#').pagination_link.icon.icon-arr
-        .page__header-sort
-            include _dropdown
-            - var text= ["12", "24", "36"]
-            +dropdown("dropdown_select", text, "Товаров на странице:", "sort-value", "")
-            - var text= ["По популярности", "По цене", "По новизне"]
-            +dropdown("dropdown_select", text, "Сортировка:", "sort-quantity", "")
+            li.pagination__item.prev
+                a(href='#').pagination__link.icon-left
+                    span Предыдущая
+            ul.pagination__list
+                li.pagination__item.active
+                    a(href='#').pagination__link.reverse= 1
+                - for (var i = 2; i <= 3; i++)
+                    li.pagination__item
+                        a(href='#').pagination__link.reverse= i
+                li.pagination__item.more
+                    a(href='#').pagination__link.reverse ...
+                li.pagination__item
+                    a(href='#').pagination__link.reverse 8
+            li.pagination__item.next.last
+                a(href='#').pagination_link.icon.icon-right
+                    span Следующая

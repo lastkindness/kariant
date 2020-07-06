@@ -1,1 +1,10 @@
- 
+include ../../components/_catrgory-item
+section.category-category
+    .container
+        .category-category__wrapper
+            - var img= ["15.png", "1.png", "15.png", "1.png", "15.png"]
+            - var title= ["Верхняя одежда", "Платья", "Футболки", "Костюмы", "Брюки"]
+            - var classItem= ["category-item_small", "category-item_small", "category-item_small", "category-item_small", "category-item_small"]
+            - var color= ["#CFC6C3", "#CEB499", "#EFEFEF", "#EBE1DD", "#CFC6C3"]
+            - for (var i = 0; i < img.length; i++)
+                +category-item(img, title, classItem, color)
