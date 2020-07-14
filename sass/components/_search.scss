@@ -1,0 +1,244 @@
+//search start
+.search {
+  position: relative;
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      &:before {
+        display: none;
+      }
+    }
+  }
+  @include respond-to(xs) {
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 1.6px;
+  }
+  &__input {
+    background-color: transparent;
+    border: none;
+    padding: 8px 16px;
+    @include anim;
+    color: $textDark;
+    @include fb;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    max-width: 100%;
+    overflow: hidden;
+    opacity: 1;
+    @include respond-to(sm) {
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 1px;
+      padding: 8px;
+    }
+    &-container {
+      border-bottom: 1px solid $text;
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-end;
+      height: 44px;
+      @include anim;
+      .text-error {
+        font-size: 12px;
+        top: calc(100% - 5px);
+        @include respond-to(md) {
+          top: calc(100% + 5px);
+        }
+      }
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+    }
+    &::placeholder {
+      color: $textLight;
+    }
+  }
+  &__example {
+    span {
+      display: inline-block;
+    }
+    .text {
+      margin-right: 5px;
+      color: $black;
+    }
+  }
+  .input-container {
+    margin-bottom: 0;
+  }
+  .btn {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: unset;
+    padding: 0 0 0 10px;
+    @include fl;
+    letter-spacing: 0.4px;
+    @include respond-to(md) {
+      padding: 0;
+    }
+    span {
+      color: $textDark;
+      margin-left: 12px;
+      display: none;
+      @include anim;
+    }
+    &:before {
+      font-weight: 500;
+      color: $textDark;
+      content:'\E00D';
+      background-color: transparent;
+      @include anim;
+      margin: 0;
+      font-size: 25px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 25px;
+      position: static;
+      transform: none;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      &:before {
+        color: transparentize($textDark, 0.5);
+        @include anim;
+      }
+    }
+  }
+  &__suggestions {
+    &-container {
+      display:none;
+      position:absolute;
+      background:#fff;
+      z-index:10;
+      width:100%;
+      font-size: 13px;
+      &-open {
+        display: block !important;
+      }
+      &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 40px;
+        width: 100%;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) -41.61%, #FFFFFF 100%);
+      }
+    }
+    &-list {
+      padding: 0;
+      margin: 0;
+      list-style:none;
+      max-height: 390px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    &-analogs {
+      list-style:none;
+      display: block;
+      margin-left:2rem;
+      margin-top: 10px;
+    }
+    &-none {
+      letter-spacing: 0.4px;
+      text-align: center;
+      color: $textLight;
+      padding: 16px;
+    }
+    &-item {
+      padding: 0 5% 0 0;
+      margin: 0 0 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    &-img {
+      margin-right: 20px;
+      width: 50px;
+      height: 70px;
+      @include respond-to(xs){
+        margin-right: 12px;
+      }
+    }
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-price {
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-left: 10px;
+    }
+    &-title {
+      @include fb;
+      @include respond-to(xs){
+        margin: 8px 0;
+      }
+    }
+    &-category {
+      margin: 24px -12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      @include respond-to(xs){
+        margin: 16px 0;
+      }
+      &-title {
+        margin: 0 0 10px 12px;
+        color: $textLight;
+      }
+      .title {
+        margin: 0 0 10px 12px;
+        @include fb;
+        @include respond-to(xs){
+          margin: 0 0 8px 12px;
+        }
+      }
+    }
+  }
+  &.hide {
+    .search {
+      &__input {
+        max-width: 0;
+        opacity: 0;
+        display: none;
+        @include anim;
+        &-container {
+          border-bottom: 1px solid transparent;
+          @include anim;
+        }
+      }
+    }
+    .btn {
+      span {
+        display: inline-block;
+        @include anim;
+      }
+    }
+    .text-error {
+      display: none;
+    }
+  }
+}
+//search end

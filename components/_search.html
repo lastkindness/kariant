@@ -1,0 +1,38 @@
+
+<form class="search js_validate">
+  <div class="input-container">
+    <div class="search__input-container">
+      <input type="text" placeholder="Что вы ищете?" name="search" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите запрос (2-100)" data-minsign="2" data-maxsign="100" class="search__input validate"/>
+      <button type="submit" class="btn icon icon-search"><span></span>
+      </button>
+      <!--.delete-->
+      <div class="text-error">Введите запрос (2-100)</div>
+    </div>
+    <div class="search__suggestions-container">
+      <!--если ничего не найдено-->
+      <div class="search__suggestions-none"><span>по вашему запросу ничего не найдено</span></div>
+      <!--или если найдено-->
+      <div class="search__suggestions-category"><span class="search__suggestions-category-title">Найдено в категориях:</span><a href="/kariant/catalog.html" title="Верхняя одежда" class="title">Верхняя одежда</a><a href="/kariant/catalog.html" title="Куртки" class="title">Куртки</a><a href="/kariant/catalog.html" title="Шубы" class="title">Шубы</a><a href="/kariant/catalog.html" title="Одежда" class="title">Одежда</a><a href="/kariant/catalog.html" title="Верхняя одежда" class="title">Верхняя одежда</a></div>
+      <ul class="search__suggestions-list">
+        <li class="search__suggestions-item"><a href="/kariant/card.html" title="Амалия Белая">
+            <div class="search__suggestions-wrapper"><img data-src="images/products/12.jpg" alt="Амалия Белая" title="Амалия Белая" class="search__suggestions-img"/><span class="title search__suggestions-title">Амалия Белая</span></div>
+            <div class="search__suggestions-price"><span class="value">7 875</span><span class="currency">грн</span></div></a></li>
+        <li class="search__suggestions-item"><a href="/kariant/card.html" title="Толстовка снежно-белая">
+            <div class="search__suggestions-wrapper"><img data-src="images/products/5.jpg" alt="Толстовка снежно-белая" title="Толстовка снежно-белая" class="search__suggestions-img"/><span class="title search__suggestions-title">Толстовка снежно-белая</span></div>
+            <div class="search__suggestions-price"><span class="value">375</span><span class="currency">грн</span></div></a></li>
+        <li class="search__suggestions-item"><a href="/kariant/card.html" title="Куртка демесезонная отделка белый мех">
+            <div class="search__suggestions-wrapper"><img data-src="images/products/6.jpg" alt="Куртка демесезонная отделка белый мех" title="Куртка демесезонная отделка белый мех" class="search__suggestions-img"/><span class="title search__suggestions-title">Куртка демесезонная отделка белый мех</span></div>
+            <div class="search__suggestions-price"><span class="value">72 875</span><span class="currency">грн</span></div></a></li>
+        <li class="search__suggestions-item"><a href="/kariant/card.html" title="Шуба зима белая">
+            <div class="search__suggestions-wrapper"><img data-src="images/products/7.jpg" alt="Шуба зима белая" title="Шуба зима белая" class="search__suggestions-img"/><span class="title search__suggestions-title">Шуба зима белая</span></div>
+            <div class="search__suggestions-price"><span class="value">756 875</span><span class="currency">грн</span></div></a></li>
+        <li class="search__suggestions-item"><a href="/kariant/card.html" title="Пальто отделка Белка">
+            <div class="search__suggestions-wrapper"><img data-src="images/products/8.jpg" alt="Пальто отделка Белка" title="Пальто отделка Белка" class="search__suggestions-img"/><span class="title search__suggestions-title">Пальто отделка Белка</span></div>
+            <div class="search__suggestions-price"><span class="value">75</span><span class="currency">грн</span></div></a></li>
+        <li class="search__suggestions-item"><a href="/kariant/card.html" title="Амалия Белая">
+            <div class="search__suggestions-wrapper"><img data-src="images/products/12.jpg" alt="Амалия Белая" title="Амалия Белая" class="search__suggestions-img"/><span class="title search__suggestions-title">Амалия Белая</span></div>
+            <div class="search__suggestions-price"><span class="value">7 875</span><span class="currency">грн</span></div></a></li>
+      </ul>
+    </div>
+  </div>
+</form>

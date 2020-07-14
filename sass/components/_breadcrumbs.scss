@@ -1,0 +1,74 @@
+//breadcrumbs start
+.breadcrumbs {
+  width: auto;
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+  }
+  li {
+    margin: 0;
+    padding: 0;
+    &:before {
+      position: static;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+    }
+  }
+  a {
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0;
+    &:after {
+      display: none;
+    }
+  }
+  &__wrapper {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 0 0 12px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px !important;
+    border-left: 1px solid $textLight;
+    a {
+      padding-top: 2px;
+    }
+    &:hover,
+    &:active,
+    &:focus,
+    &.active{
+      .breadcrumbs__link {
+        color: $textLight;
+        @include anim;
+      }
+    }
+    &:first-child {
+      padding-left: 0 !important;
+      border-left: none;
+      a {
+        padding-top: 0;
+      }
+    }
+    &:last-child {
+      padding-right: 0 !important;
+    }
+    .icon-home {
+      font-size: 18px;
+      line-height: 1em;
+    }
+  }
+  &__link {
+    @include anim;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    color: $text;
+  }
+}
+//breadcrumbs end

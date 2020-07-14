@@ -1,2 +1,0 @@
-# vashkluch
-vashkluch project

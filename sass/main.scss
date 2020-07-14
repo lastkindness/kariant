@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import "variables";
+@import "fonts";
+@import "reset";
+@import "icons";
+@import "global";
+
+//components
+@import "components/_button";
+@import "components/_header";
+@import "components/_footer";
+@import "components/_burger";
+@import "components/_product-item";
+@import "components/_service-item";
+@import "components/_text-content";
+@import "components/_brands";
+@import "components/_breadcrumbs";
+@import "components/_pagination";
+@import "components/_dropdown";
+@import "components/_popup";
+@import "components/_tub-block";
+@import "components/_input-number";
+@import "components/_search";
+@import "components/_basket-item";
+@import "components/_category-item";
+
+//templates
+//main
+@import "templates/main/main";
+@import "templates/main/slider";
+@import "templates/main/banner";
+@import "templates/main/category";
+@import "templates/main/instagram";
+@import "templates/main/sale";
+@import "templates/main/products";
+
+//catalog
+@import "templates/catalog/main";
+@import "templates/catalog/filter";
+
+//card
+@import "templates/card/main";
+@import "templates/card/card-info";
+@import "templates/card/card-sidebar";
+
+//cart
+@import "templates/cart/main";
+@import "templates/cart/slider";
+@import "templates/cart/aside";
+
+//order
+@import "templates/order/main";
+@import "templates/order/order-content";
+@import "templates/order/order-sidebar";
+@import "templates/order/order-success";
+
+//services
+@import "templates/services/main";
+
+//contacts
+@import "templates/contacts/main";
+
+//error
+@import "templates/error/main";
+
+//error
+@import "templates/search/main";
+
+//service-one
+@import "templates/service-one/main";
+
+//service-one
+@import "templates/content/main";
+
+//registration
+@import "templates/registration/main";
+
+//profile
+@import "templates/profile/main";
+
+//mapsite
+@import "templates/mapsite/main";
+
+//promotions
+@import "templates/promotions/main";
+
+//category
+@import "templates/category/publications";
+@import "templates/category/category";
+@import "templates/category/publications";

@@ -1,0 +1,32 @@
+.main-sale {
+  text-align: center;
+  .product-item {
+    width: 25%;
+  }
+  &__slider {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 60px;
+  }
+  &__controls {
+    position: relative;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .swiper {
+      &-button {
+        &-prev,
+        &-next {
+          position: static;
+        }
+      }
+      &-arrows {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

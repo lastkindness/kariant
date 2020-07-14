@@ -1,0 +1,207 @@
+//footer start
+.footer {
+  background-color: $elements;
+  padding: 80px 0 40px;
+  @include respond-to(sm) {
+    padding: 44px 0;
+  }
+  a {
+    &:after {
+      width: 0;
+    }
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+  &__list {
+    @include respond-to(sm) {
+      border-bottom: 1px solid $textLight;
+      margin-top: 14px;
+    }
+    &:last-of-type {
+      @include respond-to(sm) {
+        margin-bottom: 28px;
+      }
+    }
+    &:first-of-type {
+      @include respond-to(sm) {
+        margin-top: 0;
+      }
+    }
+    &.active {
+      ul {
+        @include respond-to(sm) {
+          max-height: 700px;
+          @include anim5;
+        }
+      }
+      .title {
+        &:before {
+          transform: rotate(-90deg);
+          @include anim5;
+        }
+      }
+    }
+    .title {
+      @include fb;
+      margin: 0 0 24px;
+      letter-spacing: 2px;
+      display: flex;
+      align-self: center;
+      justify-content: space-between;
+      width: 100%;
+      @include respond-to(sm) {
+        margin: 0 0 14px;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        @include respond-to(sm) {
+          cursor: pointer;
+        }
+      }
+      span {
+        order: 0;
+      }
+      &:before {
+        order: 1;
+        display: none;
+        transform: rotate(90deg);
+        @include anim;
+        @include respond-to(sm) {
+          display: inline-flex;
+        }
+      }
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      @include respond-to(sm) {
+        overflow: hidden;
+        max-height: 0;
+        @include anim;
+      }
+      li {
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        margin-bottom: 8px;
+        @include respond-to(sm) {
+          padding: 9px 0;
+          border-bottom: 1px solid #A0A0A0;
+        }
+        &:last-child {
+          @include respond-to(sm) {
+            border-bottom: unset;
+            margin-bottom: 0;
+          }
+        }
+        &:first-child {
+          @include respond-to(sm) {
+            padding-top: 14px;
+          }
+        }
+        &:before {
+          display: none;
+        }
+        a {
+          color: $text;
+          @include anim;
+          &:hover,
+          &:active,
+          &:focus {
+            color: $textDark;
+            @include anim;
+          }
+        }
+      }
+    }
+  }
+  &__phone {
+    @include respond-to(sm) {
+      margin-bottom: 42px;
+      border-bottom: unset;
+    }
+    a {
+      @include fb;
+      font-size: 15px;
+      margin-bottom: 12px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &-list {
+      margin-bottom: 16px;
+    }
+  }
+  &__email {
+    a {
+      @include fr;
+      font-size: 16px;
+    }
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $text;
+    margin-bottom: 64px;
+    @include respond-to(sm) {
+      flex-wrap: wrap;
+      padding-bottom: 16px;
+      margin-bottom: 36px;
+    }
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 64px 5%;
+    @include respond-to(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond-to(sm) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 4px 0;
+    }
+  }
+  &__logo {
+    width: 150px;
+    transform: scale(1.0);
+    margin-bottom: 28px;
+    @include anim;
+    &:after {
+      display: none;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      transform: scale(1.1);
+      @include anim;
+    }
+  }
+  &__dates,
+  &__polotics {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+  }
+  &__dates {
+    color: $textDark;
+  }
+  &__polotics {
+    align-self: center;
+    justify-self: start;
+    color: $text;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $textDark;
+      @include anim;
+    }
+  }
+}
+//footer end
