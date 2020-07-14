@@ -1,0 +1,187 @@
+doctype html
+html
+  include components/_head
+  body
+    noscript
+      div
+        strong Для полной функциональности этого сайта необходимо включить JavaScript. Вот
+        a(href='https://support.google.com/adsense/answer/12654?hl=ru', target='_blank') инструкции,
+        | как включить JavaScript в вашем браузере.
+        link(rel='stylesheet', type='text/css', href='css/without-js.css')
+    .wrapper
+      include components/_button
+      include components/_dropdown
+      header.header
+        .header__offer
+          .container
+            .header__offer-wrapper
+              span.header__offer-text Специальное весеннее предложение
+              a.bold.small.header__offer-link(href="#" title='special offer') Подробнее
+              .close
+                .close-container
+                  .leftright
+                  .rightleft
+                  .text закрыть
+        .container
+          .header__wrapper
+            .header__info-category
+              a(href='#' title='Вход в Личный Кабинет' class="personal") Вход в Личный Кабинет
+              a(href='#' title='Избранное' class="wishlist") Список желаний
+              - var text = ["Покупателю", "Доставка и оплата", "Таблица размеров", "Гарантия и возврат", "Блог", "Новости", "О компании", "Вопросы и ответы", "Контакты"];
+              +dropdown("dropdown_native-link", text, "header", "header-links", "")
+              a(href='#' title='Wholesale and Dropshipping' class="wholesale") Опт и дропшиппинг
+            .header__phone.icon.icon-down(data-target="phone")
+              span.title Консультация
+              span +38 (067) 434 23 64
+            .header__lang
+              a.active(href="#" title='Rus') Рус
+              a(href="#" title='Ukr') Укр
+            .header__currency
+              - var text = ["Грн", "Руб", "Дол"];
+              +dropdown("dropdown_native-link", text, "", "header-currency", "")
+            .header__personal
+              a(href="/personal/kariant.html" title="personal") Личный кабинет
+            .header__burger
+              .hamburger.hamburger--squeeze.js-hamburger.burger
+                .hamburger-box
+                  .hamburger-inner
+            .header__phone.header__phone_mobile(data-target="phone")
+              .icon.icon-phone
+            .header__search_mobile(data-target="search")
+              .icon.icon-search
+              span Поиск
+            .header__logo
+              a(href="/kariant/index.html" title="main")
+                img(data-src="images/other/logo.svg" alt="kariant" title="kariant")
+            nav.header__menu
+              ul.header__menu-list
+                li.header__menu-item.header__menu-item-main.header__menu-catalog
+                  a(href="/kariant/catalog.html" class="header__menu-item-link header__menu-link" title="Women") Женщинам
+                  .header__menu-list-wrapper
+                    .container
+                      .header__menu-list-holder
+                        ul.header__menu-list-sub
+                          .controls
+                            .back
+                              .icon.icon-left
+                              span Меню
+                            .hamburger.hamburger--squeeze.js-hamburger.burger
+                              .hamburger-box
+                                .hamburger-inner
+                          li.header__menu-item.header__menu-item-sub.header__menu-item-category
+                            a(href="/kariant/category.html" class="header__menu-item-sub-link header__menu-link btn-link" title="catalog sub-item") Женщинам
+                          -var mainSubZ = ["Верхняя одежда"]
+                          -for (var z=0; z<mainSubZ.length; z++)
+                            li.header__menu-item.header__menu-item-sub
+                              a(href="/kariant/catalog.html" class="header__menu-item-sub-link header__menu-link" title="catalog item")= mainSubZ[z]
+                              ul.header__menu-list-sub
+                                .controls
+                                  .back
+                                    .icon.icon-left
+                                    span Женщинам
+                                  .hamburger.hamburger--squeeze.js-hamburger.burger
+                                    .hamburger-box
+                                      .hamburger-inner
+                                li.header__menu-item.header__menu-item-sub.header__menu-item-category
+                                  a(href="/kariant/category.html" class="header__menu-item-sub-link header__menu-link btn-link" title="catalog sub-item") Верхняя одежда
+                                -var mainSubN = ["Зимние куртки"]
+                                -for (var n=0; n<mainSubN.length; n++)
+                                  li.header__menu-item.header__menu-item-sub
+                                    a(href="/kariant/catalog.html" class="header__menu-item-sub-link header__menu-link" title="catalog sub-item")= mainSubN[n]
+                                    ul.header__menu-list-sub
+                                      .controls
+                                        .back
+                                          .icon.icon-left
+                                          span Верхняя одежда
+                                        .hamburger.hamburger--squeeze.js-hamburger.burger
+                                          .hamburger-box
+                                            .hamburger-inner
+                                      li.header__menu-item.header__menu-item-sub.header__menu-item-category
+                                        a(href="/kariant/category.html" class="header__menu-item-sub-link header__menu-link btn-link" title="catalog sub-item") Зимние куртки
+                                      -var mainSubP = ["Парки"]
+                                      -for (var p=0; p<mainSubP.length; p++)
+                                        li.header__menu-item.header__menu-item-sub
+                                          a(href="/kariant/catalog.html" class="header__menu-item-sub-link header__menu-link" title="catalog sub-sub-item")= mainSubP[p]
+                          li.header__menu-item.header__menu-item-sub
+                            a(href="/kariant/catalog.html" class="header__menu-item-sub-link header__menu-link" title="Overalls") Комбинезоны
+                        a.header__menu-list-popular(href="/kariant/catalog.html" title="catalog popular")
+                          img.header__menu-list-popular-image(data-src="images/products/14.jpg" alt="kariant" title="kariant")
+                          span.header__menu-list-popular-text.title Верхняя одежда
+
+                li.header__menu-item.header__menu-item-main.header__menu-catalog
+                  a(href="/kariant/catalog.html" class="header__menu-item-link header__menu-link" title="Men") Мужчинам
+                  .header__menu-list-wrapper
+                    .container
+                      .header__menu-list-holder
+                        ul.header__menu-list-sub
+                          .controls
+                            .back
+                              .icon.icon-left
+                              span Меню
+                            .hamburger.hamburger--squeeze.js-hamburger.burger
+                              .hamburger-box
+                                .hamburger-inner
+                          li.header__menu-item.header__menu-item-sub.header__menu-item-category
+                            a(href="/kariant/category.html" class="header__menu-item-sub-link header__menu-link btn-link" title="catalog sub-item") Мужчинам
+                          -var mainSubA = ["Костюмы"]
+                          -for (var a=0; a<mainSubA.length; a++)
+                            li.header__menu-item.header__menu-item-sub
+                              a(href="/kariant/catalog.html" class="header__menu-item-sub-link header__menu-link" title="catalog item")= mainSubA[a]
+                              ul.header__menu-list-sub
+                                .controls
+                                  .back
+                                    .icon.icon-left
+                                    span Мужчинам
+                                  .hamburger.hamburger--squeeze.js-hamburger.burger
+                                    .hamburger-box
+                                      .hamburger-inner
+                                li.header__menu-item.header__menu-item-sub.header__menu-item-category
+                                  a(href="/kariant/category.html" class="header__menu-item-sub-link header__menu-link btn-link" title="catalog sub-item") Костюмы
+                                -var mainSubB = ["Однобортный"]
+                                -for (var b=0; b<mainSubB.length; b++)
+                                  li.header__menu-item.header__menu-item-sub
+                                    a(href="/kariant/catalog.html" class="header__menu-item-sub-link header__menu-link" title="catalog sub-item")= mainSubB[b]
+                                    ul.header__menu-list-sub
+                                      .controls
+                                        .back
+                                          .icon.icon-left
+                                          span Костюмы
+                                        .hamburger.hamburger--squeeze.js-hamburger.burger
+                                          .hamburger-box
+                                            .hamburger-inner
+                                      li.header__menu-item.header__menu-item-sub.header__menu-item-category
+                                        a(href="/kariant/category.html" class="header__menu-item-sub-link header__menu-link btn-link" title="catalog sub-item") Однобортный
+                                      -var mainSubC = ["Английский"]
+                                      -for (var c=0; c<mainSubC.length; c++)
+                                        li.header__menu-item.header__menu-item-sub
+                                          a(href="/kariant/catalog.html" class="header__menu-item-sub-link header__menu-link" title="catalog sub-sub-item")= mainSubC[c]
+                          li.header__menu-item.header__menu-item-sub
+                            a(href="/kariant/catalog.html" class="header__menu-item-sub-link header__menu-link" title="Overalls") Аксессуары
+                        a.header__menu-list-popular(href="/kariant/catalog.html" title="catalog popular")
+                          img.header__menu-list-popular-image(data-src="images/products/13.png" alt="kariant" title="kariant")
+                          span.header__menu-list-popular-text.title Верхняя одежда
+                  li.header__menu-item.header__menu-item-main
+                    a(href="/kariant/stock.html" class="header__menu-item-link header__menu-link" title="Sell-out") Распродажа
+                  li.header__menu-item.header__menu-item-main
+                    a(href="/kariant/stock.html" class="header__menu-item-link header__menu-link" title="New items") Новинки
+            .header__search(data-target="popup-search")
+              .container
+                include components/_search
+                .close
+                  .close-container
+                    .leftright
+                    .rightleft
+                    .text закрыть
+            .header__wishlist
+              a(href="/wishlist.html" title='Избранное').icon.icon-wishlist-empty.label-link
+            .header__cart.active
+              .icon.icon-cart-empty.label-link
+              .value (1)
+      main.main
+        include components/_text-content
+        include components/_text-content
+        include components/_text-content
+        include components/_text-content
+      include components/_footer
+      include components/_popup
+    include components/_footer-include

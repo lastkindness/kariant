@@ -11,7 +11,8 @@
     }
     &:hover,
     &:active,
-    &:focus {
+    &:focus,
+    &.active {
       &:after {
         width: 100%;
       }

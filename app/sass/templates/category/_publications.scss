@@ -1,10 +1,8 @@
 .category-publications {
-
   background-color: $gray2;
   padding-top: 120px;
   padding-bottom: 124px;
   text-align: center;
-
   &__header{
     text-align: left;
     h2{
@@ -12,7 +10,6 @@
       margin-bottom: 28px;
     }
   }
-
   &__img {
     align-items: stretch;
     display: flex;
@@ -32,7 +29,7 @@
         margin: 0;
       }
       a {
-        &:after{
+        &:after {
           display: none;
         }
         img{
@@ -40,16 +37,23 @@
           object-fit: cover;
         }
       }
-
-    h4{
-      color: $textDark;
-      letter-spacing: 0.4px;
-      margin-bottom: 16px;
-    }
+      h4{
+        color: $textDark;
+        letter-spacing: 0.4px;
+        margin-bottom: 16px;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        .btn {
+          &:after {
+            width: 0%;
+          }
+        }
+      }
     }
   }
   .btn-more{
     margin-top: 66px;
-
   }
-  }
+}

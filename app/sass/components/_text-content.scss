@@ -1,10 +1,14 @@
 //text-content start
 .text-content {
+  margin: 0 auto 160px;
   a,
   strong,
   i {
     margin: 0 5px;
     display: inline;
+  }
+  .container {
+    padding: 0 9%;
   }
   &__content {
     display: flex;
@@ -24,6 +28,11 @@
     h5,
     h6 {
       text-transform: none;
+    }
+    h1,
+    h2,
+    h3 {
+      letter-spacing: 0.4px;
     }
   }
 }

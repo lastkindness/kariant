@@ -8,17 +8,26 @@ html
         a(href='https://support.google.com/adsense/answer/12654?hl=ru', target='_blank') инструкции,
         | как включить JavaScript в вашем браузере.
         link(rel='stylesheet', type='text/css', href='css/without-js.css')
-    .wrapper.category-page
+    .wrapper.subcategory-page
       include components/_header
       main.main
         include components/_text-content
         section.page__header
           .container
             include components/_breadcrumbs
-            +breadcrumbs('Женщинам')
+            +breadcrumbs('Женщинам', 'Верхняя одежда')
             .page__header-wrapper
-              h1.title.page__header-title Женщинам
-        include templates/category/_category
+              h1.title.page__header-title Верхняя одежда
+        include components/_catrgory-item
+        section.category-category
+          .container
+            .category-category__wrapper
+              - var img= ["15.png", "1.png", "15.png"]
+              - var title= ["Зимние куртки", "Демисезонные куртки", "Ветровки"]
+              - var classItem= ["category-item_small", "category-item_small", "category-item_small"]
+              - var color= ["#CFC6C3", "#CEB499", "#EFEFEF"]
+              - for (var i = 0; i < img.length; i++)
+                +category-item(img, title, classItem, color)
         include templates/main/_sale
         include templates/category/_new
         include templates/category/_publications

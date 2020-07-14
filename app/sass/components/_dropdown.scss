@@ -93,10 +93,16 @@
     min-width: 80px;
     background-color: $white;
     z-index: 15;
-    padding: 24px;
-    max-height: 310px;
-    overflow-y: auto;
+    padding: 24px 10px 24px 24px;
     border: 1px solid $gray3;
+    &-wrapper {
+      max-height: 310px;
+      overflow-y: auto;
+      @include respond-to(md) {
+        max-height: none;
+        overflow: hidden;
+      }
+    }
   }
   &__item {
     padding-bottom: 16px;

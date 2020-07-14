@@ -97,13 +97,39 @@
       color: $textDark;
       font-size: 25px;
       @include anim;
-      margin-right: 14px;
+      margin-left: 14px;
+      position: relative;
       &:focus,
       &:active,
       &:hover {
         cursor: pointer;
         color: $elements;
         @include anim;
+        span {
+          visibility: visible;
+          opacity: 1;
+          @include anim;
+        }
+      }
+      span {
+        z-index: 5;
+        position: absolute;
+        padding: 6px 12px;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.2px;
+        background-color: $white;
+        border: 1px solid $gray3;
+        width: auto;
+        max-width: none;
+        top: calc(100% - 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        visibility: hidden;
+        opacity: 0;
+        color: $textDark;
+        @include anim;
+        white-space: nowrap;
       }
     }
     .btn-missing {
@@ -111,6 +137,7 @@
     }
   }
   &__sizes {
+    margin-top: 15px;
     @include anim;
     .subtitle {
       font-size: 14px;
@@ -195,10 +222,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding-bottom: 15px;
     }
   }
   &__price {
-    @include fm;
     font-size: 15px;
     line-height: 24px;
     letter-spacing: 0.2px;
@@ -235,6 +262,8 @@
   &_slide {
     height: auto;
     border: 1px solid transparent;
+    padding: 0 15px;
+    background-color: transparent;
     @include anim;
     .product-item {
       &__drop,
@@ -244,6 +273,7 @@
       }
       &__img {
         padding: 0 15px;
+        @include anim;
       }
     }
     &.active {
@@ -251,7 +281,6 @@
       @include anim;
       .product-item {
         &__main {
-          padding: 0 15px;
           @include anim;
         }
       }

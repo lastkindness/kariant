@@ -15,9 +15,10 @@
   }
   &__offer {
     @include anim;
-    padding: 12px 0;
+    padding: 9px 0;
     position: relative;
     background-color: $elements;
+    line-height: 1em;
     @include respond-to(md) {
       margin-bottom: 0px;
     }
@@ -146,7 +147,6 @@
                          "headerLogo headerLogo headerLogo headerLogo headerMenu headerMenu headerMenu headerMenu headerMenu headerMenu headerMenu headerMenu headerMenu headerMenu headerMenu . . . . . headerSearchMobile headerSearchMobile headerWishlist headerCart";
     grid-row-gap: 32px;
     align-content: center;
-    position: relative;
     padding: 24px 0 18px;
     border-bottom: 1px solid $textLight;
     @include respond-to(lg-1200) {
@@ -157,6 +157,7 @@
     }
     @include respond-to(md) {
       padding-bottom: 0;
+      padding-top: 0;
       border: none;
       grid-column-gap: 24px;
       grid-template-columns: repeat(8, 1fr);
@@ -165,9 +166,12 @@
     a {
       &:after {
         width: 0;
-        &:hover,
-        &:active,
-        &:focus {
+      }
+      &:hover,
+      &:active,
+      &:focus,
+      &.active{
+        &:after {
           width: 100%;
         }
       }
@@ -207,22 +211,27 @@
           margin-right: 12px;
         }
       }
-      &-wrapper,
-      &-sub {
+      &-wrapper {
         max-height: 0px;
         @include anim;
         position: absolute;
-      }
-      &-wrapper {
         width: 100%;
         overflow: hidden;
         top: calc(100% + 1px);
         left: 0;
         z-index: 10;
+        background-color: $gray1;
+        .container {
+          @include respond-to(md) {
+            max-width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      &-holder {
         display: flex;
         align-items: self-start;
         justify-content: space-between;
-        background-color: $gray1;
         &>.header {
           &__menu {
             &-list {
@@ -319,6 +328,17 @@
           }
         }
       }
+      &-category {
+        display: none;
+        a {
+          &:after {
+            width: 100%;
+          }
+        }
+        @include respond-to(md) {
+          display: flex;
+        }
+      }
       &-sub {
         &-link {
           font-size: 16px;
@@ -367,6 +387,11 @@
         &:last-child {
           margin-right: 0;
         }
+        &.drop {
+          &:after {
+            transform: rotate(90deg);
+          }
+        }
         &>a {
           margin-right: 8px;
         }
@@ -407,6 +432,30 @@
           font-family: Icons;
           content:'\E002';
           @include anim;
+        }
+        &.header__menu-item-main {
+          &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            background-color: transparent;
+            top: calc(100% - 25px);
+            left: 50%;
+            z-index: 14;
+            transform: translateX(-50%);
+            display: none;
+          }
+          &:hover,
+          &:active,
+          &:focus {
+            &:before {
+              display: block;
+              @include respond-to(md) {
+                display: none;
+              }
+            }
+          }
         }
       }
       &-all {
@@ -465,12 +514,8 @@
       justify-self: center;
       display: none;
       .icon {
-        font-size: 30px;
-        line-height: 30px;
-        @include respond-to(xs-380) {
-          font-size: 25px;
-          line-height: 25px;
-        }
+        font-size: 25px;
+        line-height: 25px;
       }
       &:hover,
       &:active,
@@ -510,6 +555,9 @@
       &.active {
         color: transparentize($textDark, 0.5);
         @include anim;
+        &:after {
+          width: 0;
+        }
         &:hover,
         &:active,
         &:focus {
@@ -531,10 +579,11 @@
     display: none;
     grid-area: headerBurger;
     justify-self: start;
+    min-width: 68px;
     @include respond-to(md) {
       display: inline-flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
     }
   }
   &__personal {
@@ -649,12 +698,8 @@
       letter-spacing: 0.4px;
       text-transform: uppercase;
       .icon {
-        font-size: 30px;
-        line-height: 30px;
-        @include respond-to(xs-380) {
-          font-size: 25px;
-          line-height: 25px;
-        }
+        font-size: 25px;
+        line-height: 25px;
       }
       span {
         margin-left: 12px;
@@ -681,12 +726,8 @@
   }
   &__cart,
   &__wishlist {
-    font-size: 30px;
-    line-height: 30px;
-    @include respond-to(xs-380) {
-      font-size: 25px;
-      line-height: 25px;
-    }
+    font-size: 25px;
+    line-height: 25px;
     @include fl;
     display: flex;
     align-items: center;
@@ -702,6 +743,11 @@
     grid-area: headerWishlist;
     @include respond-to(md) {
       display: none;
+    }
+    a {
+      &::after {
+        display: none;
+      }
     }
     &.active {
       .icon {
@@ -772,7 +818,7 @@
       .hamburger {
         display: inline-flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
       }
     }
     .hamburger {
@@ -888,6 +934,7 @@
           right: 0;
           z-index: 20;
           height: 100vh;
+          overflow-y: auto;
           .hamburger {
             padding: 0;
           }
@@ -923,9 +970,22 @@
         padding: 14px 0;
         border-bottom: 1px solid $gray3;
         margin: 0;
+        @include respond-to(md) {
+          min-height: 48px;
+        }
         &-all {
           border-bottom: unset;
           margin-top: auto;
+          @include respond-to(md) {
+            display: none;
+          }
+        }
+        &-main {
+          &.drop {
+            &:after {
+              transform: rotate(0deg);
+            }
+          }
         }
       }
     }
@@ -966,6 +1026,7 @@
             left: 0;
             right: 0;
             bottom: 0;
+            background-color: $gray1;
             z-index: 20;
             .hamburger {
               padding: 0;
@@ -997,6 +1058,12 @@
           padding: 0;
           border: unset;
           display: flex !important;
+          background-color: $gray1;
+          overflow: hidden;
+          &-wrapper {
+            display: flex;
+            overflow: hidden;
+          }
         }
         &__item {
           padding: 0 12px 0 12px;
@@ -1040,14 +1107,24 @@
       max-height: 0;
       @include anim;
     }
-    .header__wrapper {
-      padding-top: 0;
-      border-bottom: 1px solid transparent;
-      @include anim;
-    }
-    .header__offer {
-      padding: 0;
-      @include anim;
+    .header {
+      &__wrapper {
+        padding: 12px 0;
+        border-bottom: 1px solid transparent;
+        @include anim;
+        grid-row-gap: 0;
+      }
+      &__offer {
+        padding: 0;
+        @include anim;
+      }
+      &__menu {
+        &-list {
+          &-wrapper {
+            top: 100%;
+          }
+        }
+      }
     }
   }
 }

@@ -5,5 +5,7 @@ mixin button(text, tag, icon)
     else if tag === 'button'
         button(type="submit").btn&attributes(attributes)
             span= text
+            if icon !== ''&&icon !== undefined
+                .icon(class="icon-"+icon)
     else if tag === 'input'
         input.btn(value=text type="submit")&attributes(attributes)

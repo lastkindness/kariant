@@ -1,9 +1,11 @@
 mixin breadcrumbs()
     .breadcrumbs&attributes(attributes)
         ul.breadcrumbs__wrapper
+            li.breadcrumbs__item
+                a.breadcrumbs__link.icon.icon-home(href='#')
             - var lastItem = arguments.length;
             - for (let i = 0; i < lastItem-1; i++)
-                li.breadcrumbs__item.icon.icon-small-right
+                li.breadcrumbs__item
                     a.breadcrumbs__link(href='#')= arguments[i]
-            li.breadcrumbs__item.icon.icon-small-right.active
+            li.breadcrumbs__item.active
                 a.breadcrumbs__link(href='#')= arguments[lastItem-1]

@@ -7,9 +7,10 @@ mixin dropdown(classItem, text, tag, idItem, icon)
                 .dropdown__header.icon.icon-down
                     span.dropdown__header-item= text[0]
                 ul.dropdown__dropdown(style='display: none;')
-                    - for (var i = 0; i < text.length; i++)
-                        li.dropdown__item
-                            span.dropdown__text= text[i]
+                    .dropdown__dropdown-wrapper
+                        - for (var i = 0; i < text.length; i++)
+                            li.dropdown__item
+                                span.dropdown__text= text[i]
     -else if (classItem=="dropdown_image")
         .dropdown.dropdown_native
             .dropdown__wrapper.js__dropdown
@@ -19,10 +20,11 @@ mixin dropdown(classItem, text, tag, idItem, icon)
                     span.dropdown__header-item= text[0]
                     img.dropdown__img(src="images/content-icons/"+icon[0] alt=text[0] title=text[0])
                 ul.dropdown__dropdown(style='display: none;')
-                    - for (var i = 0; i < text.length; i++)
-                        li.dropdown__item
-                            span.dropdown__text= text[i]
-                            img.dropdown__img(src="images/content-icons/"+icon[i] alt=text[i] title=text[i])
+                    .dropdown__dropdown-wrapper
+                        - for (var i = 0; i < text.length; i++)
+                            li.dropdown__item
+                                span.dropdown__text= text[i]
+                                img.dropdown__img(src="images/content-icons/"+icon[i] alt=text[i] title=text[i])
     -else if (classItem=="dropdown_select")
         .dropdown.dropdown_select
             .dropdown__wrapper
@@ -42,14 +44,15 @@ mixin dropdown(classItem, text, tag, idItem, icon)
                 .dropdown__header.icon.icon-down
                     span.dropdown__header-item= text[0]
                 ul.dropdown__dropdown(style='display: none;')
-                    -if (tag.length)
-                        .controls
-                            .back
-                                .icon.icon-left
-                                span Меню
-                            .hamburger.hamburger--squeeze.js-hamburger.burger
-                                .hamburger-box
-                                    .hamburger-inner
-                    - for (var i = 0; i < text.length; i++)
-                        li.dropdown__item
-                            a(href='#').dropdown__text= text[i]
+                    .dropdown__dropdown-wrapper
+                        -if (tag.length)
+                            .controls
+                                .back
+                                    .icon.icon-left
+                                    span Меню
+                                .hamburger.hamburger--squeeze.js-hamburger.burger
+                                    .hamburger-box
+                                        .hamburger-inner
+                        - for (var i = 0; i < text.length; i++)
+                            li.dropdown__item
+                                a(href='#').dropdown__text= text[i]

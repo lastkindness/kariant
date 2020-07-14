@@ -2,7 +2,7 @@
 
 //icons start
 .icon {
-  line-height: 1;
+  line-height: 1em;
   display: inline-flex;
   font-size: inherit;
   align-items: center;
@@ -32,6 +32,8 @@
   @extend %icon-point; }
 .icon-phone {
   @extend %icon-phone; }
+.icon-home {
+  @extend %icon-home; }
 .icon-right {
   @extend %icon-right; }
 .icon-search {
@@ -400,15 +402,11 @@ input, textarea, select {
   box-sizing: border-box;
   -webkit-appearance: none;
   background-color: $white;
-  border: 1px solid $elements;
+  border: none;
+  border-bottom: 1px solid $textLight;
   padding: 10px 50px 10px 10px;
-  color: $gray3;
+  color: $textDark;
   @include anim;
-  &:active,
-  &:focus {
-    background-color: $gray3;
-    @include anim;
-  }
   &:hover,
   &:active,
   &:focus {
@@ -1149,6 +1147,7 @@ section {
       width: auto;
       height: auto;
       margin-bottom: 0;
+      z-index: 9;
       &:after {
         font-family: 'Icons';
         font-size: 16px;
@@ -1158,13 +1157,29 @@ section {
     }
     &-next {
       &:after {
-        content:'\E00B';
+        content:'\E00C';
+        @include anim;
+        transform: translateX(0);
+      }
+      &:hover {
+        &:after {
+          @include anim;
+          transform: translateX(5px);
+        }
       }
     }
     &-prev {
       margin-right: 12px;
       &:after {
-        content:'\E008';
+        content:'\E009';
+        @include anim;
+        transform: translateX(0);
+      }
+      &:hover {
+        &:after {
+          @include anim;
+          transform: translateX(-5px);
+        }
       }
     }
   }

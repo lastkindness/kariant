@@ -10,6 +10,7 @@
   line-height: 1em;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+  margin-top: 60px;
   @include fb;
   &__wrapper {
     width: 100%;
@@ -30,6 +31,8 @@
     }
   }
   &__item {
+    opacity: 1;
+    @include anim;
     &.prev,
     &.next {
       a {
@@ -37,10 +40,32 @@
           display: none;
         }
       }
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 0.5;
+        @include anim;
+      }
     }
     &.prev {
       span {
         margin-left: 12px;
+      }
+      a {
+        &:before {
+          @include anim;
+          transform: translateX(0px);
+        }
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        a {
+          &:before {
+            @include anim;
+            transform: translateX(-5px);
+          }
+        }
       }
     }
     &.next {
@@ -51,6 +76,22 @@
       .icon {
         &:before {
           order: 1;
+        }
+      }
+      a {
+        &:before {
+          @include anim;
+          transform: translateX(0px);
+        }
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        a {
+          &:before {
+            @include anim;
+            transform: translateX(5px);
+          }
         }
       }
     }
@@ -82,10 +123,14 @@
       &:hover,
       &:active,
       &:focus,
-      .active {
+      &.active {
         a {
           color: $textDark;
           @include anim;
+          &:after {
+            display: block;
+            width: 100%;
+          }
         }
       }
     }

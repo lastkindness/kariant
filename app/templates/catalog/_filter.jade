@@ -4,7 +4,7 @@ aside.catalog__filter.open
     .auto-fix-sidebar.catalog__filter-wrapper
         .catalog__filter_item.open.main-item
             .catalog__filter_item_title.main_title
-                .subtitle Подбор по параметрам
+                .filter-subtitle Подбор по параметрам
                     span.grey
                         | (
                         span.number 64
@@ -18,273 +18,350 @@ aside.catalog__filter.open
                     +button('Опция фильтра 1', 'button').catalog__filter_reset.btn-link.icon.icon-close
                     +button('Опция фильтра 2', 'button').catalog__filter_reset.btn-link.icon.icon-close
                     +button('Опция фильтра 3', 'button').catalog__filter_reset.btn-link.icon.icon-close
-            .catalog__filter_item_content
-                .catalog__filter_item.open
-                    .catalog__filter_item_title.filter-title
-                        .subtitle Цена, грн
-                        .plus.icon.icon-arr
-                    .catalog__filter_item_content
-                        .range
-                            .range-wrapper
-                                .catalog__filter_item_range_input
-                                    input.catalog__filter_item_range_from(type='text', data-value='0' value="0")
-                                span.line --
-                                .catalog__filter_item_range_input
-                                    input.catalog__filter_item_range_to(type='text', data-value='100' value="100")
-                            +button('ок', 'button').catalog__filter_range.btn-small
-                        .catalog__filter_item_range.ui-slider.ui-corner-all.ui-slider-horizontal.ui-widget.ui-widget-content(data-from='0', data-to='100')
-                            .ui-slider-range.ui-corner-all.ui-widget-header
-                            span.ui-slider-handle.ui-corner-all.ui-state-default(tabindex='0')
-                            span.ui-slider-handle.ui-corner-all.ui-state-default(tabindex='0')
-                .catalog__filter_item.open
-                    .catalog__filter_item_title.filter-title
-                        .subtitle Цвет
-                        .plus.icon.icon-arr
-                    .catalog__filter_item_content.color
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox' id="black-color")
-                                .checkbox(style='background-image: url(images/colors/black.jpg)')
-                            label(for="black-color") Чёрный
+            .catalog__filter_item.open
+                .catalog__filter_item_title.filter-title
+                    .filter-subtitle
+                        span Категории
+                    .plus.icon.icon-up
+                ul.catalog__filter_item_category.catalog__filter_item_content
+                    li.active
+                        a(href="#") Зимние куртки
+                        ul
+                            li.active
+                                a(href="#") Парки
+                            li
+                                a(href="#") Длинные куртки
+                            li
+                                a(href="#") Зимние куртки Plus Size
+                            li
+                                a(href="#") Длинные куртки
+                            li
+                                a(href="#") Короткие куртки
+                            li
+                                a(href="#") Пуховики-одеяла
+                            li
+                                a(href="#") Бомберы
+            .catalog__filter_item.open
+                .catalog__filter_item_title.filter-title
+                    .filter-subtitle
+                        span Размер
+                        span.reset Сбросить
+                    .plus.icon.icon-up
+                .catalog__filter_item_content
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | 40
+                                span.grey
+                                    | (
+                                    span.number 578
+                                    | )
                             a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox' id="white-color")
-                                .checkbox(style='background-image: url(images/colors/white.jpg)')
-                            label(for="white-color") Белый
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | 42
+                                span.grey
+                                    | (
+                                    span.number 178
+                                    | )
                             a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox' id="space-gray-color")
-                                .checkbox(style='background-image: url(images/colors/space-gray.jpg)')
-                            label(for="space-gray-color") Хром
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | 44
+                                span.grey
+                                    | (
+                                    span.number 64
+                                    | )
                             a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox' id="silver-color")
-                                .checkbox(style='background-image: url(images/colors/silver.jpg)')
-                            label(for="silver-color") Серебро
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | 46
+                                span.grey
+                                    | (
+                                    span.number 64
+                                    | )
                             a.hide(href="#link-for-seo")
-                .catalog__filter_item.open
-                    .catalog__filter_item_title.filter-title
-                        .subtitle Марка
-                        .plus.icon.icon-arr
-                    .catalog__filter_item_content
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | CISA
-                                    span.grey
-                                        | (
-                                        span.number 578
-                                        | )
-                                a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Mottura
-                                    span.grey
-                                        | (
-                                        span.number 178
-                                        | )
-                                a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Tesa
-                                    span.grey
-                                        | (
-                                        span.number 64
-                                        | )
-                                a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Kaba
-                                    span.grey
-                                        | (
-                                        span.number 64
-                                        | )
-                                a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Abus
-                                    span.grey
-                                        | (
-                                        span.number 64
-                                        | )
-                                a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Ещё одна подкатегория
-                                    span.grey
-                                        | (
-                                        span.number 59
-                                        | )
-                                a.hide(href="#link-for-seo")
-                .catalog__filter_item.open
-                    .catalog__filter_item_title.filter-title
-                        .subtitle Применяемые технологии
-                        .plus.icon.icon-arr
-                    .catalog__filter_item_content
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Подкатегория
-                                    span.grey
-                                        | (
-                                        span.number 452
-                                        | )
-                                a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Подкатегория
-                                    span.grey
-                                        | (
-                                        span.number 1486
-                                        | )
-                                a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Подкатегория
-                                    span.grey
-                                        | (
-                                        span.number 134
-                                        | )
-                                a.hide(href="#link-for-seo")
-                .catalog__filter_item.open
-                    .catalog__filter_item_title.filter-title
-                        .subtitle Название фильтра
-                        .plus.icon.icon-arr
-                    .catalog__filter_item_content
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Фильтр
-                                    span.grey
-                                        | (
-                                        span.number 452
-                                        | )
-                                a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Фильтр
-                                    span.grey
-                                        | (
-                                        span.number 1486
-                                        | )
-                                a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Фильтр
-                                    span.grey
-                                        | (
-                                        span.number 134
-                                        | )
-                                a.hide(href="#link-for-seo")
-                .catalog__filter_item.open
-                    .catalog__filter_item_title.filter-title
-                        .subtitle Тип
-                        .plus.icon.icon-arr
-                    .catalog__filter_item_content
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Подкатегория
-                                    span.grey
-                                        | (
-                                        span.number 452
-                                        | )
-                                a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Подкатегория
-                                    span.grey
-                                        | (
-                                        span.number 1486
-                                        | )
-                                a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Подкатегория
-                                    span.grey
-                                        | (
-                                        span.number 134
-                                        | )
-                                a.hide(href="#link-for-seo")
-                .catalog__filter_item.open
-                    .catalog__filter_item_title.filter-title
-                        .subtitle Основная характеристика
-                        .plus.icon.icon-arr
-                    .catalog__filter_item_content
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Подкатегория
-                                    span.grey
-                                        | (
-                                        span.number 452
-                                        | )
-                                a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Подкатегория
-                                    span.grey
-                                        | (
-                                        span.number 1486
-                                        | )
-                                a.hide(href="#link-for-seo")
-                        .catalog__filter_item_checkbox
-                            .catalog__filter_item_input
-                                input(type='checkbox')
-                                .checkbox
-                                label
-                                    | Подкатегория
-                                    span.grey
-                                        | (
-                                        span.number 134
-                                        | )
-                                a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | 48
+                                span.grey
+                                    | (
+                                    span.number 64
+                                    | )
+                            a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | 50
+                                span.grey
+                                    | (
+                                    span.number 59
+                                    | )
+                            a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | 50
+                                span.grey
+                                    | (
+                                    span.number 59
+                                    | )
+                            a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | 52
+                                span.grey
+                                    | (
+                                    span.number 59
+                                    | )
+                            a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | 54
+                                span.grey
+                                    | (
+                                    span.number 59
+                                    | )
+                            a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | 56
+                                span.grey
+                                    | (
+                                    span.number 59
+                                    | )
+                            a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | 58
+                                span.grey
+                                    | (
+                                    span.number 59
+                                    | )
+                            a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | 60
+                                span.grey
+                                    | (
+                                    span.number 59
+                                    | )
+                            a.hide(href="#link-for-seo")
+            .catalog__filter_item.open
+                .catalog__filter_item_title.filter-title
+                    .filter-subtitle
+                        span Цвет
+                        span.reset Сбросить
+                    .plus.icon.icon-up
+                .catalog__filter_item_content.color
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox' id="black-color")
+                            .checkbox(style='background-image: url(images/colors/black.jpg)')
+                        label(for="black-color")
+                            | Чёрный
+                            span.grey
+                                | (
+                                span.number 64
+                                | )
+                        a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox' id="white-color")
+                            .checkbox(style='background-image: url(images/colors/white.jpg)')
+                        label(for="white-color")
+                            | Белый
+                            span.grey
+                                | (
+                                span.number 64
+                                | )
+                        a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox' id="space-gray-color")
+                            .checkbox(style='background-image: url(images/colors/space-gray.jpg)')
+                        label(for="space-gray-color")
+                            | Хром
+                            span.grey
+                                | (
+                                span.number 64
+                                | )
+                        a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox' id="blue-color")
+                            .checkbox(style='background-image: url(images/colors/blue.jpg)')
+                        label(for="blue-color")
+                            | Голубой
+                            span.grey
+                                | (
+                                span.number 64
+                                | )
+                        a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox' id="green-color")
+                            .checkbox(style='background-image: url(images/colors/green.jpg)')
+                        label(for="green-color")
+                            | Зеленый
+                            span.grey
+                                | (
+                                span.number 64
+                                | )
+                        a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox' id="indigo-color")
+                            .checkbox(style='background-image: url(images/colors/indigo.jpg)')
+                        label(for="indigo-color")
+                            | Индиго
+                            span.grey
+                                | (
+                                span.number 64
+                                | )
+                        a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox' id="pink-color")
+                            .checkbox(style='background-image: url(images/colors/pink.jpg)')
+                        label(for="pink-color")
+                            | Розовый
+                            span.grey
+                                | (
+                                span.number 64
+                                | )
+                        a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox' id="red-color")
+                            .checkbox(style='background-image: url(images/colors/red.jpg)')
+                        label(for="red-color")
+                            | Красный
+                            span.grey
+                                | (
+                                span.number 64
+                                | )
+                        a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox' id="violet-color")
+                            .checkbox(style='background-image: url(images/colors/violet.jpg)')
+                        label(for="violet-color")
+                            | Фиолетовый
+                            span.grey
+                                | (
+                                span.number 64
+                                | )
+                        a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox' id="yellow-color")
+                            .checkbox(style='background-image: url(images/colors/yellow.jpg)')
+                        label(for="yellow-color")
+                            | Желтый
+                            span.grey
+                                | (
+                                span.number 64
+                                | )
+                        a.hide(href="#link-for-seo")
+
+
+            .catalog__filter_item.open
+                .catalog__filter_item_title.filter-title
+                    .filter-subtitle
+                        span Стиль
+                        span.reset Сбросить
+                    .plus.icon.icon-up
+                .catalog__filter_item_content
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | Casual
+                                span.grey
+                                    | (
+                                    span.number 452
+                                    | )
+                            a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | Повседневный
+                                span.grey
+                                    | (
+                                    span.number 1486
+                                    | )
+                            a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | Классика
+                                span.grey
+                                    | (
+                                    span.number 134
+                                    | )
+                            a.hide(href="#link-for-seo")
+                    .catalog__filter_item_checkbox
+                        .catalog__filter_item_input
+                            input(type='checkbox')
+                            .checkbox
+                            label
+                                | Вечер
+                                span.grey
+                                    | (
+                                    span.number 134
+                                    | )
+                            a.hide(href="#link-for-seo")
+            .catalog__filter_item.open
+                .catalog__filter_item_title.filter-title
+                    .filter-subtitle
+                        span Цена, грн
+                .catalog__filter_item_content
+                    .range
+                        .range-wrapper
+                            .catalog__filter_item_range_input
+                                input.catalog__filter_item_range_from(type='text', data-value='0' value="0" readonly)
+                            .catalog__filter_item_range_input
+                                input.catalog__filter_item_range_to(type='text', data-value='100' value="100" readonly)
+                    .catalog__filter_item_range.ui-slider.ui-corner-all.ui-slider-horizontal.ui-widget.ui-widget-content(data-from='0', data-to='100')
+                        .ui-slider-range.ui-corner-all.ui-widget-header
+                        span.ui-slider-handle.ui-corner-all.ui-state-default(tabindex='0')
+                        span.ui-slider-handle.ui-corner-all.ui-state-default(tabindex='0')

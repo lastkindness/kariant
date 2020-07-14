@@ -92,7 +92,7 @@
     &:before {
       font-weight: 500;
       color: $textDark;
-      content:'\E00B';
+      content:'\E00D';
       background-color: transparent;
       @include anim;
       margin: 0;
@@ -121,6 +121,7 @@
       background:#fff;
       z-index:10;
       width:100%;
+      font-size: 13px;
       &-open {
         display: block !important;
       }

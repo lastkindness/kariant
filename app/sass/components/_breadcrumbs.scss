@@ -36,6 +36,9 @@
     justify-content: space-between;
     padding: 0 10px !important;
     border-left: 1px solid $textLight;
+    a {
+      padding-top: 2px;
+    }
     &:hover,
     &:active,
     &:focus,
@@ -48,9 +51,16 @@
     &:first-child {
       padding-left: 0 !important;
       border-left: none;
+      a {
+        padding-top: 0;
+      }
     }
     &:last-child {
       padding-right: 0 !important;
+    }
+    .icon-home {
+      font-size: 18px;
+      line-height: 1em;
     }
   }
   &__link {

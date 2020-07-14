@@ -14,6 +14,7 @@ $icon_font_name:"Icons";
 %icon-cart-full,
 %icon-close,
 %icon-down,
+%icon-home,
 %icon-left,
 %icon-phone,
 %icon-point,
@@ -84,27 +85,30 @@ $icon_font_name:"Icons";
 %icon-down:before {
 	content:'\E007';
 }
-%icon-left:before {
+%icon-home:before {
 	content:'\E008';
 }
-%icon-phone:before {
+%icon-left:before {
 	content:'\E009';
 }
-%icon-point:before {
+%icon-phone:before {
 	content:'\E00A';
 }
-%icon-right:before {
+%icon-point:before {
 	content:'\E00B';
 }
-%icon-search:before {
+%icon-right:before {
 	content:'\E00C';
 }
-%icon-up:before {
+%icon-search:before {
 	content:'\E00D';
 }
-%icon-wishlist-empty:before {
+%icon-up:before {
 	content:'\E00E';
 }
-%icon-wishlist-full:before {
+%icon-wishlist-empty:before {
 	content:'\E00F';
+}
+%icon-wishlist-full:before {
+	content:'\E010';
 }
