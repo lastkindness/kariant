@@ -1,32 +1,15 @@
 //order main start
 .order {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  @include respond-to(md) {
-    flex-wrap: wrap;
-  }
   &-page {
-    .select2-drop-active {
-      border-radius: unset;
-      min-width: 100px;
-      margin-top: 0;
-    }
-    .select2-results {
-      &>li {
-        &:last-child {
-          border-radius: unset;
-        }
-      }
-      .select2-result-label {
-        padding: 5px 10px;
-      }
+    main,
+    .main {
+      min-height: calc(100vh - 80px - 70px);
     }
   }
-  &_contacts {
-    .btn_buy {
-      display: none;
-    }
+  &-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
   }
 }
 //order main end

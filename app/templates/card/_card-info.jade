@@ -99,8 +99,8 @@ section.card-info
                 .card-info__buttons
                     +button('В корзину', 'button')(class="icon icon-cart")(data-target="cart")
                 form.card-info__call(action='#').js_validate
-                    .input-container
-                        label.req(for="phone") номер телефона
+                    .input-container.input-phone
+                        label.req(for="phone") Ваш номер телефона
                         input(type="tel" id="phone" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)").validate
                         .text-error Поле  не заполнено
                     +button('купить в один клик', 'button')(class="" data-target="order")

@@ -59,17 +59,20 @@ html
                             .input-container.js_valid_select
                                 include components/_dropdown
                                 - var text= ["Страна*", "Украина", "Израиль", "Эстония"]
-                                +dropdown("dropdown_select_first", text, "", "sort-country", "")
+                                - var id = [];
+                                +dropdown("dropdown_select_first", text, "", "sort-country", "", id)
                                 .text-error Поле  не заполнено
                             .input-container.js_valid_select
                                 include components/_dropdown
                                 - var text= ["Область*", "Одесская", "Киевская", "Херсонская"]
-                                +dropdown("dropdown_select_first", text, "", "sort-region", "")
+                                - var id = [];
+                                +dropdown("dropdown_select_first", text, "", "sort-region", "", id)
                                 .text-error Поле  не заполнено
                             .input-container.js_valid_select
                                 include components/_dropdown
                                 - var text= ["Город/Нас.пункт*", "Черкассы", "Киев", "Тель Авив", "Винница", "Кропивницкий (Кировоград)", "Полтава", "Харьков", "Днепр (Днепропетровск)", "Луганск", "Ровно", "Херсон", "Донецк", "Луцк", "Симферополь", "Хмельницкий", "Житомир", "Львов"]
-                                +dropdown("dropdown_select_first", text, "", "sort-city", "")
+                                - var id = [];
+                                +dropdown("dropdown_select_first", text, "", "sort-city", "", id)
                                 .text-error Поле  не заполнено
                             .input-container
                                 label.req(for="index") Почтовый индекс
@@ -94,7 +97,8 @@ html
                             .input-container.js_valid_select
                                 include components/_dropdown
                                 - var text= ["Выбор отделения НП*", "Отделение №1, ул. Полевая, д. 67", "Отделение №2, ул. Луговая, д. 135", "Отделение №3, ул. Цветочная, д. 28"]
-                                +dropdown("dropdown_select_first", text, "", "sort-np", "")
+                                - var id = [];
+                                +dropdown("dropdown_select_first", text, "", "sort-np", "", id)
                                 .text-error Поле  не заполнено
                             input.btn(value='Сохранить изменения', type='submit')
 

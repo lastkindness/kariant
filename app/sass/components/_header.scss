@@ -770,7 +770,7 @@
     &.active {
       .icon {
         &:before {
-          content:'\E005';
+          content:'\E008';
         }
       }
     }
@@ -779,6 +779,66 @@
     .header {
       &__wrapper {
 
+      }
+    }
+  }
+  &_order {
+    margin-bottom: 40px;
+    @include respond-to(md) {
+      border-bottom: none;
+    }
+    .header {
+      &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        border-bottom: none;
+        @include respond-to(md) {
+          padding: 12px 0;
+        }
+      }
+      &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        font-size: 13px;
+        line-height: 100%;
+      }
+      &__schedule {
+        margin-bottom: 10px;
+        color: $text;
+      }
+      &__phone {
+        @include fb;
+        letter-spacing: 1.6px;
+        @include respond-to(md) {
+          display: inline-flex;
+        }
+      }
+      &__logo {
+        @include respond-to(md) {
+          width: auto;
+        }
+        a {
+          @include respond-to(md) {
+            width: 100%;
+          }
+          @include respond-to(sm) {
+            width: 100%;
+          }
+        }
+      }
+    }
+    & > .container {
+      @include respond-to(md) {
+        max-width: 750px;
+      }
+      @include respond-to(sm) {
+        max-width: 690px;
+      }
+      @include respond-to(xs-690) {
+        max-width: 95%;
       }
     }
   }
@@ -1124,6 +1184,17 @@
             top: 100%;
           }
         }
+      }
+    }
+  }
+}
+
+.scroll {
+  .header {
+    &_order {
+      .header__phone {
+        max-height: unset;
+        opacity: 1;
       }
     }
   }

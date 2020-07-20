@@ -9,121 +9,197 @@ html
                 | как включить JavaScript в вашем браузере.
                 link(rel='stylesheet', type='text/css', href='css/without-js.css')
         .wrapper.order-page
-            include components/_header
-            .container
-                main.main
-                    section.page__header
-                        .page__header-wrapper
-                            include components/_breadcrumbs
-                            +breadcrumbs('Главная', 'Оформление заказа - шаг 2')
-                        .title.page__header-title
-                            | Оформление заказа - шаг 2
-                    section.order-wrapper
-                        form.order.order_delivery.js_validate(action='#')
+            include components/_header-order
+            main.main
+                section.order
+                    .container
+                        .order-wrapper
                             section.order_content
-                                .order_content__title.block-title.active
-                                    span.value
-                                        strong 01
-                                        | /02
-                                    span.subtitle Контактные данные
-                                    +button('Редактировать', 'a')(class="btn-link" href="http://html.myapp.com.ua/vashkluch/order-page1.html")
-                                .order_content__title.block-title
-                                    span.value
-                                        strong 02
-                                        | /02
-                                    span.subtitle Выбор способов доставки и оплаты
-                                .order_content__form
-                                    .delivery
-                                        .order_content__wrapper.order_content__delivery
-                                            .form-group-radio
-                                                .subtitle Способы доставки
-                                                .radio-container
-                                                    label
-                                                        input( type="radio" name="group1" checked).js__delivery-pickup
-                                                        | Самовывоз из магазина
-                                                .radio-container
-                                                    label
-                                                        input( type="radio" name="group1").js__delivery-postoffice
-                                                        | Самовывоз из Новой Почты
-                                                .radio-container
-                                                    label
-                                                        input( type="radio" name="group1").js__delivery-courier
-                                                        | Доставка на дом курьером
-
-                                            .order_content__delivery-item.delivery-pickup(style='display: block;')
-                                                .delivery-adress
-                                                    span.title Самовывоз только по городу:
-                                                    span.city Одесса
-                                                .delivery-adress
-                                                    | г.
-                                                    span.city Одесса
-                                                    | ,
-                                                    span.street ул. Преображенская
-                                                    | ,
-                                                    span.build 71
-                                                    +button('Показать на карте', 'button', '')(class="btn-link js__map-toggle" type="button")
-                                                .delivery-map(style='display: none;')
-                                                    //.contacts-map#map-pickup(data-coords='50.550207, 30.232715')
-                                                    .contacts-map
-                                                        iframe(width='100%', height='435', src='https://maps.google.com/maps?width=100%&height=435&hl=en&coord=46.47219710431272, 30.730701684951786&q=%D1%83%D0%BB.%20%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%2C%2071%2C%20%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%B0%2C%20%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%20%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0%2C%2065000+(%D0%92%D0%B0%D1%88%D0%9A%D0%BB%D1%8E%D1%87)&ie=UTF8&t=&z=19&iwloc=B&output=embed', frameborder='0', scrolling='no', marginheight='0', marginwidth='0') <a href="https://www.maps.ie/coordinates.html">find my location</a>
-
-                                            .order_content__delivery-item.delivery-postoffice(style='display: none;')
-                                                .input-container.js_valid_select
+                                section.order_content__title
+                                    h2.title Оформление заказа
+                                    .order_content__subtitle
+                                        .block-title
+                                            span.value.icon.icon-check
+                                            h6.title Контактная информация
+                                        +button('Изменить', 'a')(class="btn-link" href="/order-page1.html")
+                                    .order_content__contacts.order_content__form
+                                        span.name Александр Золочевский,
+                                        span.email post@gmail.com,
+                                        span.phone +38 099 999 44 24
+                                section.order_content__step2
+                                    .order_content__subtitle
+                                        .block-title
+                                            span.value 2
+                                            h6.title Доставка и оплата
+                                    .order_content__form
+                                        form.order.order_delivery.js_validate(action='#')
+                                            .order_content__wrapper.order_content__city
+                                                .input-container.js_valid_select.input-container_select
+                                                    - var text= ["Черкассы", "Киев", "Тель Авив", "Винница", "Кропивницкий (Кировоград)", "Полтава", "Харьков", "Днепр (Днепропетровск)", "Луганск", "Ровно", "Херсон", "Донецк", "Луцк", "Симферополь", "Хмельницкий", "Житомир", "Львов"]
+                                                    - var id= ["CH", "KV", "TA", "VI", "KR", "PT", "KH", "DP", "LG", "RO", "KHE", "DN", "CI", "KH", "ZH", "LV", ""]
                                                     include components/_dropdown
-                                                    - var text= ["Город*", "Черкассы", "Киев", "Тель Авив", "Винница", "Кропивницкий (Кировоград)", "Полтава", "Харьков", "Днепр (Днепропетровск)", "Луганск", "Ровно", "Херсон", "Донецк", "Луцк", "Симферополь", "Хмельницкий", "Житомир", "Львов"]
-                                                    +dropdown("dropdown_select_first", text, "", "sort-city", "")
+                                                    +dropdown("dropdown_select", text, "", "sort-city", "", id)
                                                     .text-error Поле  не заполнено
-                                                .input-container.js_valid_select
-                                                    include components/_dropdown
-                                                    - var text= ["Выбор отделения*", "Отделение №1, ул. Полевая, д. 67", "Отделение №2, ул. Луговая, д. 135", "Отделение №3, ул. Цветочная, д. 28"]
-                                                    +dropdown("dropdown_select_first", text, "", "sort-np", "")
-                                                    .text-error Поле  не заполнено
-                                            .order_content__delivery-item.delivery-courier(style='display: none;')
-                                                .input-container.js_valid_select
-                                                    include components/_dropdown
-                                                    - var text= ["Город*", "Черкассы", "Киев", "Тель Авив", "Винница", "Кропивницкий (Кировоград)", "Полтава", "Харьков", "Днепр (Днепропетровск)", "Луганск", "Ровно", "Херсон", "Донецк", "Луцк", "Симферополь", "Хмельницкий", "Житомир", "Львов"]
-                                                    +dropdown("dropdown_select_first", text, "", "sort-city-courier", "")
-                                                    .text-error Поле  не заполнено
-                                                .input-container
-                                                    label.req(for="street") Улица
-                                                    input(type="text" name="street" id="street" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100").validate
-                                                    .delete
-                                                    .text-error Поле «Улица» не заполнено
-                                                .input-container
-                                                    label.req(for="house") Дом
-                                                    input(type="text" name="house" id="house" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (1-100)" data-minsign="1" data-maxsign="100").validate
-                                                    .delete
-                                                    .text-error Поле «Дом» не заполнено
-                                                .input-container
-                                                    label(for="apartment") Квартира
-                                                    input(type="text" name="apartment" id="apartment" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100")
-                                                    .delete
-                                                    .text-error Поле «Квартира» не заполнено
+                                                .order_content__city-buttons
+                                                    - for (var i = 0; i < 5; i++)
+                                                        +button(text[i], 'button')(class="btn-link js-programmatic-sort-city" data-id=id[i])
+                                            .order_content__wrapper.order_content__delivery
+                                                .form-group-radio
+                                                    .subtitle Способы доставки
+                                                    .radio-container.active
+                                                        label
+                                                            .input
+                                                                input( type="radio" name="group1" checked).js__delivery-postoffice
+                                                                | “Новая Почта” в отделение
+                                                            .price 75 грн
+                                                        .order_content__delivery-item.delivery-postoffice
+                                                            .input-container.input-container_select
+                                                                .label Отделение
+                                                                include components/_dropdown
+                                                                - var text= ["Отделение №1, ул. Полевая, д. 67", "Отделение №2, ул. Луговая, д. 135", "Отделение №3, ул. Цветочная, д. 28"]
+                                                                - var id = [];
+                                                                +dropdown("dropdown_select_first", text, "", "sort-np", "", id)
+                                                                .text-error Поле  не заполнено
+                                                    .radio-container
+                                                        label
+                                                            .input
+                                                                input( type="radio" name="group1").js__delivery-courier
+                                                                | “Новая Почта” курьером
+                                                            .price 125 грн
+                                                        .order_content__delivery-item.delivery-courier
+                                                            .input-container
+                                                                label.req(for="streetNP") улица
+                                                                input(type="text" name="street" id="streetNP" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100").validate
+                                                                .delete
+                                                                .text-error Поле «Улица» не заполнено
+                                                            .input-container
+                                                                label.req(for="houseNP") № дома
+                                                                input(type="text" name="house" id="houseNP" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="1-15 символов" data-minsign="1" data-maxsign="15").validate
+                                                                .delete
+                                                                .text-error Поле «Дом» не заполнено
+                                                            .input-container
+                                                                label(for="apartmentNP") квартира
+                                                                input(type="text" name="apartment" id="apartmentNP" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100")
+                                                                .delete
+                                                                .text-error Поле «Квартира» не заполнено
+                                                            .input-container
+                                                                label(for="entranceNP") подьезд
+                                                                input(type="text" name="entrance" id="entranceNP" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100")
+                                                                .delete
+                                                                .text-error Поле «Подьезд» не заполнено
+                                                            .input-container
+                                                                label(for="floorNP") этаж
+                                                                input(type="text" name="floor" id="floorNP" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100")
+                                                                .delete
+                                                                .text-error Поле «Этаж» не заполнено
+                                                    .radio-container
+                                                        label
+                                                            .input
+                                                                input( type="radio" name="group1").js__delivery-postoffice
+                                                                | “Justin” в отделение
+                                                            .price 25 грн
+                                                        .order_content__delivery-item.delivery-postoffice
+                                                            .input-container.input-container_select
+                                                                .label Отделение
+                                                                include components/_dropdown
+                                                                - var text= ["Отделение №1, ул. Полевая, д. 67", "Отделение №2, ул. Луговая, д. 135", "Отделение №3, ул. Цветочная, д. 28"]
+                                                                - var id = [];
+                                                                +dropdown("dropdown_select_first", text, "", "sort-js", "", id)
+                                                                .text-error Поле  не заполнено
+                                                    .radio-container
+                                                        label
+                                                            .input
+                                                                input( type="radio" name="group1").js__delivery-courier
+                                                                | “Интайм” курьером
+                                                            .price 25 грн
+                                                        .order_content__delivery-item.delivery-courier
+                                                            .input-container
+                                                                label.req(for="streetIN") улица
+                                                                input(type="text" name="street" id="streetIN" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100").validate
+                                                                .delete
+                                                                .text-error Поле «Улица» не заполнено
+                                                            .input-container
+                                                                label.req(for="houseIN") № дома
+                                                                input(type="text" name="house" id="houseIN" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="1-15 символов" data-minsign="1" data-maxsign="15").validate
+                                                                .delete
+                                                                .text-error Поле «Дом» не заполнено
+                                                            .input-container
+                                                                label(for="apartmentIN") квартира
+                                                                input(type="text" name="apartment" id="apartmentIN" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100")
+                                                                .delete
+                                                                .text-error Поле «Квартира» не заполнено
+                                                            .input-container
+                                                                label(for="entranceIN") подьезд
+                                                                input(type="text" name="entrance" id="entranceIN" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100")
+                                                                .delete
+                                                                .text-error Поле «Подьезд» не заполнено
+                                                            .input-container
+                                                                label(for="floorIN") этаж
+                                                                input(type="text" name="floor" id="floorIN" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100")
+                                                                .delete
+                                                                .text-error Поле «Этаж» не заполнено
+                                                    .radio-container
+                                                        label
+                                                            .input
+                                                                input( type="radio" name="group1").js__delivery-courier
+                                                                | “УкрПочта” курьером
+                                                            .price Бесплатно
+                                                        .order_content__delivery-item.delivery-courier
+                                                            .input-container
+                                                                label.req(for="streetUK") улица
+                                                                input(type="text" name="street" id="streetUK" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100").validate
+                                                                .delete
+                                                                .text-error Поле «Улица» не заполнено
+                                                            .input-container
+                                                                label.req(for="houseUK") № дома
+                                                                input(type="text" name="house" id="houseUK" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="1-15 символов" data-minsign="1" data-maxsign="15").validate
+                                                                .delete
+                                                                .text-error Поле «Дом» не заполнено
+                                                            .input-container
+                                                                label(for="apartmentUK") квартира
+                                                                input(type="text" name="apartment" id="apartmentUK" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100")
+                                                                .delete
+                                                                .text-error Поле «Квартира» не заполнено
+                                                            .input-container
+                                                                label(for="entranceUK") подьезд
+                                                                input(type="text" name="entrance" id="entranceUK" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100")
+                                                                .delete
+                                                                .text-error Поле «Подьезд» не заполнено
+                                                            .input-container
+                                                                label(for="floorUK") этаж
+                                                                input(type="text" name="floor" id="floorUK" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100")
+                                                                .delete
+                                                                .text-error Поле «Этаж» не заполнено
+                                            .order_content__wrapper.order_content__payment
+                                                .subtitle Способы оплаты
+                                                .form-group-radio
+                                                    .radio-container
+                                                        label
+                                                            input( type="radio" name="group2" checked)
+                                                            | Наличными
+                                                    .radio-container
+                                                        label
+                                                            input( type="radio" name="group2")
+                                                            | Картой на сайте
+                                                    .radio-container
+                                                        label
+                                                            input( type="radio" name="group2")
+                                                            | Приват24
 
-                                            .order_content__delivery-item.delivery-storage(style='display: none;')
+                                            .order_content__wrapper.order_content__comment
+                                                span.comment Добавить комментарий
+                                                .input-container.textarea
+                                                    textarea(name="comment" id="comment" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100").validate
+                                                    label(for="comment") Сообщение
+                                                    .text-error Введите сообщение
+                                            +button('Оформить заказ', 'button')(type="submit")
 
-                                        .order_content__wrapper.order_content__payment
-                                            .subtitle Способы оплаты
-                                            .form-group-radio
-                                                .radio-container
-                                                    label
-                                                        input( type="radio"  name="group2" checked)
-                                                        | Наличными при получении
-                                                .radio-container
-                                                    label
-                                                        input( type="radio" name="group2")
-                                                        | Наложенный платеж
-                                                .radio-container
-                                                    label
-                                                        input( type="radio" name="group2")
-                                                        | Безналичный расчет по счёту-фактуре (юр.лицам)
-                                                .radio-container
-                                                    label
-                                                        input( type="radio" name="group2")
-                                                        | Безналичная оплата онлайн (банковской картой)
+                                        p.order_content__terms
+                                            | Нажимая кнопку «Оформить заказ», я соглашаюсь с
+                                            a(href='#' title="условия") условиями
+                                            | предоставления персональных данных интернет-магазина «Kariant»
 
-                            include templates/order/_order-sidebar2
-
-            include components/_footer
+                            include templates/order/_order-sidebar1
+            include components/_footer-order
             include components/_popup
         include components/_footer-include

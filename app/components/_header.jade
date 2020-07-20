@@ -18,7 +18,8 @@ header.header
                 a(href='#' title='Вход в Личный Кабинет' class="personal") Вход в Личный Кабинет
                 a(href='#' title='Избранное' class="wishlist") Список желаний
                 - var text = ["Покупателю", "Доставка и оплата", "Таблица размеров", "Гарантия и возврат", "Блог", "Новости", "О компании", "Вопросы и ответы", "Контакты"];
-                +dropdown("dropdown_native-link", text, "header", "header-links", "")
+                - var id = [];
+                +dropdown("dropdown_native-link", text, "header", "header-links", "", id)
                 a(href='#' title='Wholesale and Dropshipping' class="wholesale") Опт и дропшиппинг
             .header__phone.icon.icon-down(data-target="phone")
                 span.title Консультация
@@ -28,7 +29,8 @@ header.header
                 a(href="#" title='Ukr') Укр
             .header__currency
                 - var text = ["Грн", "Руб", "Дол"];
-                +dropdown("dropdown_native-link", text, "", "header-currency", "")
+                - var id = [];
+                +dropdown("dropdown_native-link", text, "", "header-currency", "", id)
             .header__personal
                 a(href="/personal/kariant.html" title="personal") Личный кабинет
             .header__burger
@@ -170,7 +172,7 @@ header.header
                             .text закрыть
             .header__wishlist
                 a(href="/wishlist.html" title='Избранное').icon.icon-wishlist-empty.label-link
-            .header__cart.active
+            .header__cart.active(data-target="cart-in")
                 .icon.icon-cart-empty.label-link
                 .value (1)
 

@@ -1,16 +1,19 @@
 //basket-item start
 .basket-item {
   width: 100%;
-  max-width: 1000px;
   background-color: $white;
-  border-bottom: 1px solid $gray3;
-  padding: 15px 25px;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   text-decoration: unset;
+  min-height: 100px;
+  letter-spacing: 0;
   @include anim;
+  border-bottom: 1px solid $gray3;
+  &:after {
+    display: none;
+  }
   &:last-child {
     border-bottom: unset;
     &:hover,
@@ -22,196 +25,81 @@
   &:hover,
   &:focus,
   &:active {
-    border-bottom: 1px solid $elements;
     @include anim;
     cursor: pointer;
-    .basket-item__vendor-code {
-      .value {
-        color: $elements;
-      }
-    }
-  }
-  &_old-price {
-    .basket-item__old-price {
-      display: flex;
-      visibility: visible;
-    }
-  }
-  &_all-price {
-    .basket-item__all {
-      display: flex;
-    }
-  }
-  &_short {
-    width: 100%;
-    padding: 15px 5px 15px 20px;
-    .basket-item__wrapper {
-      justify-content: flex-start;
-    }
-    .basket-item__remove {
-      display: none;
-    }
-    .basket-item__all {
-      display: none;
-    }
-    .basket-item__price,
-    .basket-item__old-price{
-      display: none;
-    }
-    .basket-item__quantity {
-      display: none;
-    }
-    .basket-item__info {
-      width: calc(100% - 80px);
-      flex-grow: 0;
-      margin-right: 0;
-    }
-    .basket-item__img {
-      flex-grow: 1;
-      width: 65px;
-    }
-    &-card {
-      .basket-item__wrapper {
-        flex-wrap: wrap;
-      }
-      .basket-item__price {
-        display: flex;
-        width: 100%;
-        padding-left: 80px;
-        background-color: transparent;
-      }
-      .basket-item__vendor-code,
-      .basket-item__category {
-        display: none;
-      }
-      .basket-item__img {
-        margin-bottom: -22px;
-      }
-    }
-  }
-  &__wrapper {
-    text-decoration: unset;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    width: 100%;
-    &:hover,
-    &:focus,
-    &:active {
-      @include anim;
-      color: $text;
-    }
   }
   &__img {
     display: flex;
     align-items: center;
     justify-content: center;
     height: auto;
-    width: 80px;
+    width: 63px;
     max-width: unset;
+    margin-right: 16px;
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
     }
   }
   &__info {
+    &-wrapper {
+      padding: 10px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: calc(70% - 80px);
+      margin-right: 10px;
+    }
+  }
+  &__controls {
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 15px;
-    margin-right: 25px;
-    width: calc(30% - 15px - 25px);
+    align-items: flex-end;
+    justify-content: space-between;
+    width: calc(30% - 10px);
   }
   &__name {
     overflow: hidden;
     margin-bottom: 5px;
-    .subtitle {
+    max-height: 26px;
+    .title {
       margin: 0;
       white-space: pre-line;
-      text-align: center;
-      color: $textLight;
+      font-size: 12px;
+      line-height: 1.1em;
+      letter-spacing: 1.4px;
     }
   }
-  &__category {
-    display: block;
-    text-align: center;
-    .title {
+  &__size {
+    font-size: 12px;
+    line-height: 1em;
+    .size {
+      margin-right: 5px;
+      display: inline-block;
       color: $textLight;
-      margin: 0 5px 0 0;
-    }
-    .value {
-      text-align: center;
-      letter-spacing: -0.01em;
-      color: $black;
     }
   }
   &__price {
-    color: $attention;
     margin: 0;
-    text-align: center;
-    justify-content: center;
     display: flex;
     align-items: center;
-    width: 15%;
-    background-color: transparentize($accent, 0.6);
-    padding: 3px 5px;
-    * {
-      color: $textLight;
-    }
-  }
-  &__old-price {
-    display: flex;
-    visibility: hidden;
-    margin: 0;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 10%;
-    padding: 3px 5px;
-    * {
-      color: $textLight;
-      text-decoration: line-through;
+    font-size: 13px;
+    .value {
+      margin-right: 5px;
     }
   }
   &__quantity {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 10%;
-  }
-  &__vendor-code {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 7px;
-    * {
-      text-align: center;
-      letter-spacing: -0.01em;
-    }
-    .title {
-      color: $black;
-      margin: 0 5px 0 0;
-    }
-    .value {
-      color: $elements;
-    }
-  }
-  &__all {
-    color: $textLight;
-    margin: 0;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 15%;
+    justify-content: flex-end;
   }
   &__remove {
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: $black;
-    width: 3%;
+    justify-content: flex-end;
+    color: $textLight;
     @include anim;
     text-align: center;
     z-index: 5;

@@ -1,4 +1,4 @@
-mixin dropdown(classItem, text, tag, idItem, icon)
+mixin dropdown(classItem, text, tag, idItem, icon, id)
     -if (classItem=="dropdown_native")
         .dropdown.dropdown_native
             .dropdown__wrapper.js__dropdown
@@ -28,16 +28,17 @@ mixin dropdown(classItem, text, tag, idItem, icon)
     -else if (classItem=="dropdown_select")
         .dropdown.dropdown_select
             .dropdown__wrapper
-                select.select.icon.icon-down(class=idItem)
+                label(for=idItem) Ваш город
+                select.select.icon.icon-down(id=idItem required="required" data-validate="select2")
+                    option
                     - for (var i = 0; i < text.length; i++)
-                        option= text[i]
+                        option(value=id[i])= text[i]
     -else if (classItem=="dropdown_select_first")
         .dropdown.dropdown_select
             .dropdown__wrapper
                 select.select.icon.icon-down.dropdown-menu(id=idItem required="required" data-validate="select2")
-                    option(value=0 disabled="disabled" selected="selected")= text[0]
-                    - for (var i = 0; i < text.length-1; i++)
-                        option(value=[i+1])= text[i+1]
+                    - for (var i = 0; i < text.length; i++)
+                        option(value=[i])= text[i]
     -else if (classItem=="dropdown_native-link")
         .dropdown.dropdown_native
             .dropdown__wrapper.js__dropdown

@@ -1,26 +1,44 @@
 include ../../components/_button
+include ../../components/_basket-item
 aside.order__sidebar
     .order__sidebar-main
         .order__sidebar-title
-            .title Итого
+            .title.icon-cart-empty.icon
+                span Ваш заказ (5)
+            +button('Редактировать', 'button')(class="btn-link" onClick="history.back()")
         .order__sidebar-info
+            .order__sidebar-info-discount
+                .title У меня есть промокод
+                form.discount(action='#').js_validate
+                    .input-container
+                        label.req(for="promo") Ваш промокод
+                        input(type="text" name="promo" id="promo" required="required" data-validate="text"  data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100").validate
+                        .delete
+                        .text-error Поле  не заполнено
+                    +button('Применить', 'button')(type="submit")
             .order__sidebar-info-total
                 .quantity
                     span.value 400
                     span.goods товаров
-                    span на сумму:
+                    span на сумму
                 .total
                     span.value 34200
                     span.currency грн
-            .order__sidebar-info-discount
-                .title У вас действующая скидка
+            .order__sidebar-info-delivery
+                .quantity
+                    span Доставка
                 .total
-                    span.value 20
-                    span.currency %
-        .order__sidebar-total
-            .title К оплате
-            .total
-                span.value 27360
-                span.currency грн
-    +button('Подтвердить заказ', 'a')(class="disabled" href="http://html.myapp.com.ua/vashkluch/order-success.html")
-    //+button('Подтвердить заказ', 'button')(class="disabled") для бека, раскомментить, кнопку со ссылкой - удалить, это для визуала-перехода на страницу успешного оформления заказа
+                    span Не выбрано
+            .order__sidebar-total
+                .title Итого
+                .total
+                    span.value 27360
+                    span.currency грн
+        .order__sidebar-products
+            - var basketImg = ["5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg"]
+            - var basketItemTitle = ["Тренч Stimma Джеси 4153 S Пудра", "Тренч Stimma Джеси 4151 Xs Графитовый", "Куртка Stimma Кортика 3968 Xs Графитовый", "Куртка Stimma Карелия 4181 Xs Серебряный", "Женская куртка Stimma Веста 4799 L Шоколадный", "Женская куртка Stimma Веста 4800 Xs Черный", "Пуховик ПВ-849 (и/м) Лаке Тон 573", "Парка демисезонная с нашивками"]
+            - var basketPrice= ["142 402", "297", "4579", "25 742", "142", "852", "226", "14 999"]
+            - var basketClassItem= ["", "", "", "", "", "", "", ""]
+            - var basketSize= ["42","45","34","38","44","46", "40","50"]
+            - for (var z = 0; z < basketImg.length; z++)
+                +basket-item(basketImg, basketItemTitle, basketPrice, basketClassItem, basketSize)

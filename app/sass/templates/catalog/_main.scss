@@ -22,6 +22,10 @@
     .product-item {
       width: calc(33.3% - 30px);
       margin: 0 15px 44px;
+      &__title {
+        max-height: 36px;
+        overflow: hidden;
+      }
     }
     .dropdown__dropdown {
       min-width: 200px;

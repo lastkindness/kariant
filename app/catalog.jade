@@ -30,7 +30,8 @@ html
                 .catalog__sort
                   span Сортировать по:
                   - var text = ["Популярности", "Новинкам", "Сначала дешевые", "Сначала дорогие", "Со скидками"];
-                  +dropdown("dropdown_native", text, "", "", "")
+                  - var id = [];
+                  +dropdown("dropdown_native", text, "", "", "", id)
                 .catalog__filters
                   .icon.icon-close
                     span 44

@@ -21,9 +21,11 @@ html
               .page__header-sort
                 include components/_dropdown
                 - var text= ["12", "24", "36"]
-                +dropdown("dropdown_select", text, "Товаров на странице:", "sort-value", "")
+                - var id = [];
+                +dropdown("dropdown_select", text, "Товаров на странице:", "sort-value", "", id)
                 - var text= ["По популярности", "По цене", "По новизне"]
-                +dropdown("dropdown_select", text, "Сортировка:", "sort-quantity", "")
+                - var id = [];
+                +dropdown("dropdown_select", text, "Сортировка:", "sort-quantity", "", id)
           section.catalog.catalog__wrapper
             .main-products-item.catalog__grid
               include components/_product-item
