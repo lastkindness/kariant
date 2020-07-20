@@ -1,18 +1,15 @@
 .input-number {
-  width: 115px;
+  width: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 30px;
-  padding: 5px;
-  background-color: $white;
-  border: 1px solid $elements;
+  height: 24px;
   * {
     display: inline-block;
     vertical-align: middle;
   }
   &_arrow {
-    width: 10px;
+    width: 15px;
     height: 100%;
     text-align: center;
     cursor: pointer;
@@ -20,6 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 24px;
     @include anim;
     &:hover {
       &:before {
@@ -34,7 +32,6 @@
       align-items: center;
       justify-content: center;
       height: 100%;
-      color: $textLight;
     }
     &.next {
       position: relative;
@@ -61,10 +58,11 @@
     border-left: unset;
     border-right: unset;
     appearance: none;
-    color: $elements;
     border: unset;
     background-color: transparent;
     text-align: center;
+    font-size: 14px;
+    line-height: 1em;
   }
   &.disabled {
     .input-number_arrow {

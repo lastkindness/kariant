@@ -12,16 +12,24 @@
   }
 }
 
+.icon-arr-corner {
+  @extend %icon-arr-corner; }
 .icon-arrLeft {
   @extend %icon-arrLeft; }
 .icon-arrRight {
   @extend %icon-arrRight; }
 .icon-bar {
   @extend %icon-bar; }
+.icon-car {
+  @extend %icon-car; }
+.icon-card {
+  @extend %icon-card; }
 .icon-cart-empty {
   @extend %icon-cart-empty; }
 .icon-cart-full {
   @extend %icon-cart-full; }
+.icon-check {
+  @extend %icon-check; }
 .icon-close {
   @extend %icon-close; }
 .icon-down {
@@ -36,8 +44,20 @@
   @extend %icon-home; }
 .icon-right {
   @extend %icon-right; }
+.icon-question-full {
+  @extend %icon-question-full; }
+.icon-question {
+  @extend %icon-question; }
 .icon-search {
   @extend %icon-search; }
+.icon-settings {
+  @extend %icon-settings; }
+.icon-star-double {
+  @extend %icon-star-double; }
+.icon-star-full {
+  @extend %icon-star-full; }
+.icon-star {
+  @extend %icon-star; }
 .icon-up {
   @extend %icon-up; }
 .icon-wishlist-empty {
@@ -101,6 +121,7 @@ body {
   }
 }
 
+main,
 .main {
   display: flex;
   flex-direction: column;
@@ -114,7 +135,6 @@ body {
   align-items: stretch;
   flex-direction: column;
   justify-content: space-between;
-  min-height: calc(100vh - 570px - 182px);
 }
 
 * {
@@ -401,21 +421,34 @@ input, textarea, select {
   width: 100%;
   box-sizing: border-box;
   -webkit-appearance: none;
-  background-color: $white;
+  background-color: transparent;
   border: none;
   border-bottom: 1px solid $textLight;
-  padding: 10px 50px 10px 10px;
+  padding: 10px 25px 10px 10px;
   color: $textDark;
+  font-size: 16px;
+  line-height: 1em;
+  @include fr;
   @include anim;
+  &::placeholder {
+    color: $textLight;
+    font-size: 16px;
+    line-height: 1em;
+  }
   &:hover,
   &:active,
   &:focus {
+    @include anim;
     outline: none;
+  }
+  &:active,
+  &:focus {
+    border-bottom: 1px solid $textDark;
   }
 }
 
 textarea {
-  min-height: 100px;
+  min-height: 70px;
 }
 
 button {
@@ -451,15 +484,15 @@ input[type=email] {
       color: $elements;
     }
     input[type=radio] {
-      border: 1px solid $dark;
+      border: 2px solid $dark;
     }
   }
 }
 
 input[type=radio] {
-  width: 26px;
-  height: 26px;
-  border: 1px solid $elements;
+  width: 20px;
+  height: 20px;
+  border: 2px solid $textDark;
   padding: 0;
   border-radius: 50%;
   background-color: $white;
@@ -469,9 +502,9 @@ input[type=radio] {
   &:after {
     display: block;
     content: '';
-    width: 18px;
-    height: 18px;
-    background-color: $elements;
+    width: 10px;
+    height: 10px;
+    background-color: $textDark;
     border-radius: 50%;
     padding: 0;
     top: 50%;
@@ -568,17 +601,65 @@ input[type=radio] {
     label {
       @include anim;
       top: calc(50% - 30px);
-      left: 0;
+      font-size: 13px;
+      left: 10px;
     }
     textarea+label {
       top: calc(0% - 20px);
     }
+    input {
+      border-bottom: 1px solid $textDark;
+    }
   }
   &.filled {
     label {
+      font-size: 13px;
       @include anim;
       opacity: 0;
     }
+    input {
+      border-bottom: 1px solid $textDark;
+    }
+  }
+  &.input-phone {
+    label {
+      @include anim;
+      top: calc(50% - 30px);
+      font-size: 13px;
+      left: 10px;
+    }
+  }
+  &:after {
+    display: block;
+    content:'\E009';
+    font-family: Icons;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    font-size: 20px;
+    line-height: 1em;
+    color: $textDark;
+    opacity: 0;
+    @include anim;
+    transform: translateY(-50%);
+  }
+  &_select {
+    margin-bottom: 0;
+    &:after {
+      content:'\E00B';
+    }
+    &.pass {
+      label {
+        @include anim;
+        top: calc(50% - 30px);
+        font-size: 13px;
+        left: 10px;
+      }
+      &:after {
+        display: none;
+      }
+    }
+
   }
 }
 
@@ -602,13 +683,11 @@ textarea+label {
   opacity: 0;
   color: $attention;
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: calc(100% + 5px);
+  left: 10px;
+  font-size: 13px;
+  line-height: 14px;
   @include anim;
-  @include respond-to(md) {
-    font-size: 12px;
-    line-height: 14px;
-  }
 }
 
 .error {
@@ -617,6 +696,7 @@ textarea+label {
   input,
   textarea {
     @include anim;
+    border-bottom: 1px solid $attention;
   }
   .label {
     color: $attention;
@@ -628,15 +708,20 @@ textarea+label {
     @include anim;
   }
   .dropdown__wrapper {
-    border: 1px solid $attention;
     @include anim;
-
+    .select2-container--default .select2-selection--single {
+      border-bottom: 1px solid $attention;
+    }
   }
 }
 
 .pass {
   position: relative;
   @include anim;
+  &:after {
+    opacity: 1;
+    @include anim;
+  }
 }
 
 caption {
@@ -1157,7 +1242,7 @@ section {
     }
     &-next {
       &:after {
-        content:'\E00C';
+        content:'\E012';
         @include anim;
         transform: translateX(0);
       }
@@ -1171,7 +1256,7 @@ section {
     &-prev {
       margin-right: 12px;
       &:after {
-        content:'\E009';
+        content:'\E00D';
         @include anim;
         transform: translateX(0);
       }
@@ -1182,6 +1267,28 @@ section {
         }
       }
     }
+  }
+}
+
+.icon-left {
+  @include anim;
+  transform: translateX(0px);
+  &:hover,
+  &:active,
+  &:focus {
+    @include anim;
+    transform: translateX(-5px);
+  }
+}
+
+.icon-right {
+  @include anim;
+  transform: translateX(0px);
+  &:hover,
+  &:active,
+  &:focus {
+    @include anim;
+    transform: translateX(5px);
   }
 }
 

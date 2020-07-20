@@ -200,6 +200,25 @@
     }
     //tub_block click
 
+    //basket-item remove
+    $(".basket-item__remove").on('click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        $('.popup[data-target="popup-product-delete"]').fadeIn(300);
+        $(this).closest('.basket-item').addClass('del');
+    });
+    //basket-item remove
+
+    $(".js__product-delete").on('click', function (e) {
+        $('.popup[data-target="popup-product-delete"]').fadeOut(300);
+        $('.basket-item.del').remove();
+    });
+
+    $(".js__product-delete-reset").on('click', function (e) {
+        $('.popup[data-target="popup-product-delete"]').fadeOut(300);
+        $('.basket-item.del').removeClass('del');
+    });
+
     /* -------------------------------------------------------------------------
         begin Validation
         * ------------------------------------------------------------------------- */
@@ -220,9 +239,9 @@
 
 
         $('.js_validate .btn[type="submit"]').on("click", function () {
-            console.log($(document).find($(this).parents(".js_validate")));
+            //console.log($(document).find($(this).parents(".js_validate")));
             var valid = validate($(document).find($(this).parents(".js_validate")));
-            console.log($(this).closest(".js_validate"));
+            //console.log($(this).closest(".js_validate"));
             if (valid == false) {
                 console.log("valid not passed");
                 return false;
@@ -242,15 +261,16 @@
         }
 
         var format = [".pdf", ".txt", ".doc", ".docx", ".rtf", ".odt"];
+
         console.log((inputFile)[0].files.length!=1);
         if ((inputFile)[0].files.length!=1) {
-            console.log($($(inputFile)[0]).attr("data-error-existence"));
+            //console.log($($(inputFile)[0]).attr("data-error-existence"));
             showMsg($($(inputFile)[0]).attr("data-error-existence"));
             return false;
         } else {
             var file = (inputFile)[0].files;
             var fileName = file[0].name;
-            console.log(file[0].size/1024/1024);
+            //console.log(file[0].size/1024/1024);
             if ((file[0].size/1024/1024) < 5) {
                 for (var i = 0; i < format.length; i++) {
                     if (-1 !== fileName.indexOf(format[i])) {
@@ -293,7 +313,7 @@
             if (expression) {
                 object.parent('div').addClass(error_class).removeClass(norma_class);
                 if (email) {
-                    console.log(object.val());
+                    ///console.log(object.val());
                     if (object.val().length > 0) {
                         if (object.val().length < 6) {
                             object.parent('div').find('.text-error').text(object.attr("data-error-min"));
@@ -308,7 +328,7 @@
                     }
                 }
                 if (password_old) {
-                    console.log(object.val());
+                    //console.log(object.val());
                     if (object.val().length > 0) {
                         if (object.val().length < 6) {
                             object.parent('div').find('.text-error').text(object.attr("data-error-min"));
@@ -341,7 +361,7 @@
                             } else if (object.val()!==pass1) {
                                 object.parent('div').find('.text-error').text(object.attr("data-error-wrong-new"));
                             } else {
-                                console.log(object.val(), passold);
+                                //console.log(object.val(), passold);
                                 object.parent('div').find('.text-error').text(object.attr("data-error-wrong"));
                             }
                         }
@@ -371,7 +391,7 @@
                     }
                 }
                 if (phone) {
-                    console.log(object.val());
+                    //console.log(object.val());
                     if (object.val().length != 17) {
                         object.parent('div').find('.text-error').text(object.attr("data-error-empty"));
                     } else {
@@ -379,7 +399,7 @@
                     }
                 }
                 if (date) {
-                    console.log(object.val());
+                    //console.log(object.val());
                     if (object.val().length != 4) {
                         object.parent('div').find('.text-error').text(object.attr("data-error-empty"));
                     } else {
@@ -387,7 +407,7 @@
                     }
                 }
                 if (number) {
-                    console.log(object.val());
+                    //console.log(object.val());
                     if (object.val().length < 4 ||object.val().length > 100) {
                         object.parent('div').find('.text-error').text(object.attr("data-error-empty"));
                     } else {
@@ -395,7 +415,7 @@
                     }
                 }
                 if (undef) {
-                    console.log(object.val());
+                    //console.log(object.val());
                     if (object.val().length > 0) {
                         if (object.val().length > minSign && object.val().length < maxSign) {
                             object.parent('div').find('.text-error').text(object.attr("data-error-wrong"));
@@ -406,7 +426,7 @@
                         object.parent('div').find('.text-error').text(object.attr("data-error-empty"));
                     }
                 }
-                console.log("expression=true");
+                //console.log("expression=true");
                 e++;
             } else {
                 if($(object[0]).hasClass("select")) {
@@ -420,7 +440,7 @@
                 } else {
                     object.parent('div').addClass(norma_class).removeClass(error_class);
                     e = 0;
-                    console.log("expression=false");
+                    //console.log("expression=false");
                 }
             }
             arr.push(expression);
@@ -456,7 +476,7 @@
                 radio = inputContainer.find('input[type="radio"]'),
                 file = inputContainer.find('input[type="file"]'),
                 checkbox = inputContainer.find('input[type="checkbox"]');
-            console.log(checkbox);
+            //console.log(checkbox);
             if(inputContainer.hasClass('js_valid_select')) {
                 validSelect(select);
             }
@@ -477,7 +497,7 @@
         function caseDataValidate(dataValidate, fieldIn) {
             var minSign = fieldIn.attr("data-minsign");
             var maxSign = fieldIn.attr("data-maxsign");
-            console.log(dataValidate, fieldIn);
+            //console.log(dataValidate, fieldIn);
             switch (dataValidate) {
                 case "text":
                     reg = new RegExp('^[\/\'"?!,.А-Яа-яёЁЇїІіЄєҐґa-zA-Z_0-9 -]{'+minSign+','+maxSign+'}$');
@@ -517,7 +537,7 @@
                 case "passold":
                     password_old = true;
                     reg = /^[a-zA-Z0-9!#@_\-|]{6,20}$/;
-                    console.log(passold, pass, pass1);
+                    //console.log(passold, pass, pass1);
                     mark(fieldIn, (passold==pass||!reg.test($.trim(fieldIn.val()))||passold==pass1));
                     password_old = false;
                     break;
@@ -552,10 +572,10 @@
 
 // js_valid_select
         function validSelect(inp) {
-            console.log(inp);
+            //console.log(inp);
             var rezalt = 0;
             for (var i = 1; i < inp.length; i++) {
-                console.log($(inp[i]).is('selected'));
+                //console.log($(inp[i]).is('selected'));
                 if ($(inp[i]).is('selected') === true||$(inp[i]).prop('selected') === true) {
                     rezalt = 1;
                     break;
@@ -593,7 +613,7 @@
         function validCheckbox(inp) {
             var rezalt = 0;
             for (var i = 0; i < inp.length; i++) {
-                console.log($(inp[i]).is(':checked'));
+                //console.log($(inp[i]).is(':checked'));
                 if ($(inp[i]).is(':checked') === true) {
                     rezalt = 1;
                     break;
@@ -615,11 +635,11 @@
             for (var i = 0; i < inp.length; i++) {
                 if (formatValidate(inp) == true) {
                     rezalt = 1;
-                    console.log("rezalt1");
+                    //console.log("rezalt1");
                     break;
                 } else {
                     rezalt = 0;
-                    console.log("rezalt0");
+                    //console.log("rezalt0");
                 }
             }
             if (rezalt === 0) {
@@ -696,7 +716,7 @@
     $('.js__dropdown').on('click', function (e) {
         var thisItem = $(this);
         function dropdownToggle() {
-            console.log('dropdownToggle');
+            //console.log('dropdownToggle');
             $(thisItem).toggleClass('active');
             $(thisItem).find('.dropdown__dropdown').slideToggle();
             e.stopPropagation();
@@ -705,7 +725,7 @@
             dropdownToggle();
         } else if($(window).width() <= 993 && $(this).closest('.header__currency').length==false) {
             dropdownToggle();
-            console.log($(window).width() <= 993, $(this).closest('.header__currency').length==false);
+            //console.log($(window).width() <= 993, $(this).closest('.header__currency').length==false);
         }
     });
 
@@ -843,7 +863,7 @@
     });
 
     $('.search__input').on('keyup', function () {
-        console.log($(this).closest('.search').find('.search__suggestions-container'));
+        //console.log($(this).closest('.search').find('.search__suggestions-container'));
         $(this).closest('.search').find('.search__suggestions-container').addClass("search__suggestions-container-open");
     });
     $('.search__input').on('blur', function () {
@@ -892,7 +912,7 @@
             });
         } else {
             $(".catalog__filter_item_title:not(.main_title)").on('click', function (e) {
-                console.log(e.target);
+                //console.log(e.target);
                 $(this).closest(".catalog__filter_item").toggleClass("open");
                 $(this).siblings(".catalog__filter_item_content").toggleClass("close");
                 e.stopPropagation();
@@ -961,11 +981,50 @@
     }
     // catalog__info-color checked
 
+    /*slick end*/
+
+    if ($("#sort-city").length) {
+        // $(document).ajaxComplete(function() {
+        //     var sortCity = $("#sort-city").select2({
+        //       placeholder: ""
+        //     });
+        // });
+        var sortCity = $("#sort-city").select2({
+            placeholder: ""
+        });
+        $(".js-programmatic-sort-city").on("click", function () {
+            var id = $(this).data("id");
+            console.log(id, sortCity.val(id));
+            sortCity.val(id).trigger("change");
+        });
+    }
+
+    if ($("#sort-np").length) {
+        // $(document).ajaxComplete(function() {
+        //     $("#sort-np").select2({
+        //     });
+        // });
+        $("#sort-np").select2({
+        });
+    }
+
+    if ($("#sort-js").length) {
+        // $(document).ajaxComplete(function() {
+        //     $("#sort-np").select2({
+        //     });
+        // });
+        $("#sort-js").select2({
+        });
+    }
+
+    //select2 end
+
 
     /*Popup start*/
     $('*[data-target="phone"]').on("click", function (e) {
         e.preventDefault();
         $('.popup-overlay').fadeIn(300);
+        $('.popup').fadeOut(100);
         $('.popup[data-target="popup-phone"]').fadeIn(300);
     });
     $('div[data-target="search"]').on("click", function (e) {
@@ -973,26 +1032,49 @@
         $('.popup').fadeOut(100);
         $('div[data-target="popup-search"]').fadeIn(300);
     });
-
+    $('.btn[data-target="cart"]').on("click", function (e) {
+        e.preventDefault();
+        $('.popup-overlay').fadeIn(300);
+        $('.popup').fadeOut(100);
+        $('div[data-target="popup-cart"]').fadeIn(300);
+    });
+    $('.btn[data-target="missing"]').on("click", function (e) {
+        e.preventDefault();
+        $('.popup-overlay').fadeIn(300);
+        $('.popup').fadeOut(100);
+        $('div[data-target="popup-missing"]').fadeIn(300);
+    });
+    $('*[data-target="cart-in"]').on("click", function (e) {
+        e.preventDefault();
+        $('.popup-overlay').fadeIn(300);
+        $('.popup').fadeOut(100);
+        $('div[data-target="popup-cart-in"]').fadeIn(300);
+    });
+    $('*[data-target="log"]').on("click", function (e) {
+        e.preventDefault();
+        $('.popup-overlay').fadeIn(300);
+        $('.popup').fadeOut(100);
+        $('div[data-target="popup-log"]').fadeIn(300);
+    });
 
     $('.popup:not(.popup__cart-in)').click(function(e) {
         e.stopPropagation();
     });
-    function closePopup() {
-        $('.popup-overlay').fadeOut(300);
-        $('.popup').fadeOut(300);
+    function closePopup(thisIt) {
+        var popup = thisIt.closest('.popup');
+        popup.fadeOut(300);
         setTimeout(function () {
-            $('.popup-overlay').fadeOut(500);
+            $('.popup-overlay').fadeOut(300);
         }, 500);
     }
     $('.popup-overlay').click(function() {
-        closePopup();
+        closePopup($(this));
     });
     $('.popup-header__link a').click(function() {
-        closePopup();
+        closePopup($(this));
     });
     $('.popup .close-btn').click(function() {
-        closePopup();
+        closePopup($(this));
     });
     var popupBtn = document.querySelector(".popup__call .btn");
     popupBtn.addEventListener('click', function(e) {
@@ -1004,7 +1086,7 @@
             return false;
         } else {
             console.log("valid passed");
-            closePopup();
+            closePopup($(this));
             validateReset();
             return true;
         }
@@ -1049,11 +1131,34 @@
                 'n': {pattern: /\d/},
             }
         };
-        $('input[type="tel"]').mask('+380(nn)-nnn-nnnn', {
-            // placeholder: "+380(--)-------"
+        $('input[type="tel"]').mask('+38(0nn)-nnn-nnnn', {
+            placeholder: "+38(0 _ _ ) _ _ _ _ _ _ _"
         });
     }
     //phone mask
+
+    // order discount
+    $('.order__sidebar-info-discount').click(function(e) {
+        $(this).toggleClass('active');
+    });
+    // order discount
+
+    // order radio-container
+    $('.order_content__wrapper .radio-container').click(function(e) {
+        var input = $(this).find('input');
+        $('.order_content__wrapper .radio-container').removeClass('active');
+        if(input.prop("checked")) {
+            input.closest('.radio-container').addClass('active');
+        } else {
+            input.closest('.radio-container').removeClass('active');
+        }
+        console.log($('.order_content__wrapper .radio-container').not('.active'));
+    });
+
+    $('.order_content__comment .comment').click(function(e) {
+        $(this).closest('.order_content__comment').toggleClass('active');
+    });
+    // order radio-container
 
     /* map start*/
     function myMap(mapItem) {
@@ -1096,7 +1201,7 @@
     }
 
     if ($(".product-item__title").length) {
-        cutString($(".product-item__title"), 40);
+        //cutString($(".product-item__title"), 40);
     }
     /*Cut string end*/
 
@@ -1313,7 +1418,7 @@
         n = Math.round(n);
         n = n / 100;
         /* Фикс округления в JS */
-        console.log(n);
+        //console.log(n);
         return n.toFixed(0).replace(/./g, function (c, i, a) {
             return i && c !== "." && ((a.length - i) % 3 === 0) ? "&nbsp;" + c : c;
         });

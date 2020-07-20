@@ -7,19 +7,29 @@ $icon_font_name:"Icons";
 	url('fonts/Icons.ttf') format('truetype'),
 	url('fonts/Icons.svg#Icons') format('svg');
 }
+%icon-arr-corner,
 %icon-arrLeft,
 %icon-arrRight,
 %icon-bar,
+%icon-car,
+%icon-card,
 %icon-cart-empty,
 %icon-cart-full,
+%icon-check,
 %icon-close,
 %icon-down,
 %icon-home,
 %icon-left,
 %icon-phone,
 %icon-point,
+%icon-question-full,
+%icon-question,
 %icon-right,
 %icon-search,
+%icon-settings,
+%icon-star-double,
+%icon-star-full,
+%icon-star,
 %icon-up,
 %icon-wishlist-empty,
 %icon-wishlist-full,
@@ -64,51 +74,81 @@ $icon_font_name:"Icons";
 	}
 }
 
-%icon-arrLeft:before {
+%icon-arr-corner:before {
 	content:'\E001';
 }
-%icon-arrRight:before {
+%icon-arrLeft:before {
 	content:'\E002';
 }
-%icon-bar:before {
+%icon-arrRight:before {
 	content:'\E003';
 }
-%icon-cart-empty:before {
+%icon-bar:before {
 	content:'\E004';
 }
-%icon-cart-full:before {
+%icon-car:before {
 	content:'\E005';
 }
-%icon-close:before {
+%icon-card:before {
 	content:'\E006';
 }
-%icon-down:before {
+%icon-cart-empty:before {
 	content:'\E007';
 }
-%icon-home:before {
+%icon-cart-full:before {
 	content:'\E008';
 }
-%icon-left:before {
+%icon-check:before {
 	content:'\E009';
 }
-%icon-phone:before {
+%icon-close:before {
 	content:'\E00A';
 }
-%icon-point:before {
+%icon-down:before {
 	content:'\E00B';
 }
-%icon-right:before {
+%icon-home:before {
 	content:'\E00C';
 }
-%icon-search:before {
+%icon-left:before {
 	content:'\E00D';
 }
-%icon-up:before {
+%icon-phone:before {
 	content:'\E00E';
 }
-%icon-wishlist-empty:before {
+%icon-point:before {
 	content:'\E00F';
 }
-%icon-wishlist-full:before {
+%icon-question-full:before {
 	content:'\E010';
+}
+%icon-question:before {
+	content:'\E011';
+}
+%icon-right:before {
+	content:'\E012';
+}
+%icon-search:before {
+	content:'\E013';
+}
+%icon-settings:before {
+	content:'\E014';
+}
+%icon-star-double:before {
+	content:'\E015';
+}
+%icon-star-full:before {
+	content:'\E016';
+}
+%icon-star:before {
+	content:'\E017';
+}
+%icon-up:before {
+	content:'\E018';
+}
+%icon-wishlist-empty:before {
+	content:'\E019';
+}
+%icon-wishlist-full:before {
+	content:'\E01A';
 }

@@ -147,6 +147,20 @@
       justify-content: left;
     }
   }
+  &_select {
+    width: 100%;
+    justify-content: flex-start;
+    .dropdown__wrapper {
+      width: 100%;
+      &>span {
+        margin-right: 0;
+      }
+    }
+    label {
+      top: calc(50% - 5px);
+      color: $textLight;
+    }
+  }
 }
 
 
@@ -154,6 +168,7 @@
 .select2-container {
   width: 100% !important;
   min-width: 150px !important;
+  margin-right: 0;
   ul,
   ol {
     list-style: none;
@@ -168,40 +183,103 @@
     }
   }
 }
-.select2-container {
-  &--open {
-    .select2-dropdown {
-      border-radius: 0px;
-      background-color: $white;
-      border: 1px solid $black;
+
+.select2 {
+  &-results {
+    &__options {
+      padding-right: 5px !important;
+    }
+    &__option {
+      font-size: 14px;
+      line-height: 1em;
+      color: $textDark;
+      padding: 8px 0 !important;
+      @include anim;
     }
   }
-}
-
-.select2-results__option {
-  background-color: transparent;
-  @include anim;
-  .select2-results__option--highlighted {
-    background-color: $gray3;
-    @include anim;
-
+  &-dropdown {
+    margin-top: 4px;
+    padding: 16px 16px 24px 24px;
+    border: 1px solid $gray3;
+    border-top: 1px solid $gray3 !important;
   }
-}
-
-.select2-container--default {
-  .select2-results__option--highlighted[aria-selected] {
-    background-color: $gray3;
-    @include anim;
-  }
-  .select2-results__option {
-    padding: 5px;
-    &:first-child {
-      border-radius: 0;
+  &-container {
+    &--default {
+      .select2-search {
+        &--dropdown {
+          .select2-search {
+            &__field {
+              border: none;
+              border-bottom: 1px solid $text;
+              margin-bottom: 5px;
+              padding: 0 0 5px;
+            }
+          }
+        }
+      }
+      .select2-results {
+        &__option {
+          &--highlighted {
+            &[aria-selected] {
+              background-color: $accent5;
+              @include anim;
+            }
+          }
+        }
+      }
+      .select2-selection {
+        &--single {
+          background-color: transparent;
+          border-radius: 0;
+          border: none;
+          border-bottom: 1px solid $textDark;
+          padding-right: 10px;
+          .select2-selection {
+            &__arrow {
+              width: auto;
+              height: auto;
+              right: 20px;
+              b {
+                border: none;
+                width: auto;
+                height: auto;
+                margin: 0;
+                color: $textDark;
+                &:before {
+                  content:'\E00B';
+                  display: inline-block;
+                  font-family: "Icons";
+                  font-size: 16px;
+                  line-height: 1em;
+                  transform: rotate(0deg);
+                  @include anim;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.select2-container {
+      &--open {
+        .select2-selection {
+          &__arrow {
+            b {
+              &:before {
+                transform: rotate(180deg);
+                @include anim;
+              }
+            }
+          }
+        }
+      }
     }
   }
-  .select2-selection--single {
-    .select2-selection__rendered {
-      text-align: center;
+  &-selection {
+    &.select2-selection {
+      &--single {
+        outline: none;
+      }
     }
   }
 }

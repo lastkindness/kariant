@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!--base(href="http://localhost:3000")-->
+  <title>Kariant</title>
+  <!--link(rel='icon', sizes='32x32', type="image/x-icon", href='images/favicon/favicon-32x32.ico')-->
+  <!--link(rel='icon', sizes='16x16', type="image/x-icon", href='images/favicon/favicon-16x16.ico')-->
+  <link rel="icon" sizes="16x16" type="image/x-icon" href="images/favicon/favicon.ico">
+  <section class="preloader">
+    <style>.preloader{position:fixed;z-index:1000;width:100%;height:100vh;left:0;right:0;top:0;bottom:0;background-color:#CEB499;opacity:1;transition:all .3s ease;display:flex;align-items:center;justify-content:center}.preloader.hide{opacity:0;transition:all .3s ease}.preloader.none{display:none}#loading{z-index:5;opacity:1;display:inline-block;width:50px;height:50px;border:3px solid rgba(255,255,255,.3);border-radius:50%;border-top-color:#fff;animation:spin 1s ease-in-out infinite;-webkit-animation:spin 1s ease-in-out infinite}@keyframes spin{to{-webkit-transform:rotate(360deg)}}@-webkit-keyframes spin{to{-webkit-transform:rotate(360deg)}}</style>
+    <div id="loading"></div>
+  </section>
+  <body>
+    <noscript>
+      <div><strong>Для полной функциональности этого сайта необходимо включить JavaScript. Вот</strong><a href="https://support.google.com/adsense/answer/12654?hl=ru" target="_blank">инструкции,</a>как включить JavaScript в вашем браузере.
+        <link rel="stylesheet" type="text/css" href="css/without-js.css">
+      </div>
+    </noscript>
+    <div class="wrapper order-page">
+      <header class="header header_order">
+        <div class="container">
+          <div class="header__wrapper">
+            <div class="header__logo"><a href="/kariant/index.html" title="main"><img data-src="images/other/logo.svg" alt="kariant" title="kariant"></a></div>
+            <div class="header__info">
+              <div class="header__schedule">Пн-Пт с 9:00 до 18:00</div>
+              <div data-target="phone" class="header__phone icon icon-down"><span class="title">Консультация</span><span>+38 (067) 434 23 64</span></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="order">
+          <div class="container">
+            <div class="order-wrapper">
+              <section class="order_content">
+                <div class="order_content__title">
+                  <h2 class="title">Оформление заказа</h2>
+                  <div class="order_content__subtitle">
+                    <div class="block-title"><span class="value">1</span>
+                      <h6 class="title">Контактная информация</h6>
+                    </div><span data-target="log" class="client icon icon-question-full"><span>Я постоянный клиент</span></span>
+                  </div>
+                </div>
+                <div class="order_content__form">
+                  <form action="#" class="contacts js_validate">
+                    <div class="input-container">
+                      <label for="name" class="req">Имя</label>
+                      <input type="text" name="name" id="name" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
+                      <div class="delete"></div>
+                      <div class="text-error">Поле  не заполнено</div>
+                    </div>
+                    <div class="input-container">
+                      <label for="lastname" class="req">Фамилия</label>
+                      <input type="text" name="lastname" id="lastname" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
+                      <div class="delete"></div>
+                      <div class="text-error">Поле  не заполнено</div>
+                    </div>
+                    <div class="input-container input-phone">
+                      <label for="phone" class="req">Ваш номер телефона</label>
+                      <input type="tel" id="phone" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)" class="validate">
+                      <div class="delete"></div>
+                      <div class="text-error">Поле  не заполнено</div>
+                    </div>
+                    <div class="input-container">
+                      <label for="email1" class="req">Email</label>
+                      <input type="email" name="email" id="email1" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" data-error-min="Email: не менее 6 символов" data-error-max="Email: не более 30 символов" class="validate">
+                      <div class="delete"></div>
+                      <div class="text-error">Поле «Email» не заполнено</div>
+                    </div>
+                          <button type="submit" class="btn js__steptwo"><span>Далее</span>
+                          </button>
+                  </form>
+                </div><a href="http://html.myapp.com.ua/vashkluch/order-page2.html" class="order_content__title block-title disabled"><span class="value">2</span>
+                  <h6 class="title">Доставка и оплата</h6></a>
+              </section>
+              <aside class="order__sidebar">
+                <div class="order__sidebar-main">
+                  <div class="order__sidebar-title">
+                    <div class="title icon-cart-empty icon"><span>Ваш заказ (5)</span></div>
+                                  <button type="submit" class="btn btn-link" onClick="history.back()"><span>Редактировать</span>
+                                  </button>
+                  </div>
+                  <div class="order__sidebar-info">
+                    <div class="order__sidebar-info-discount">
+                      <div class="title">У меня есть промокод</div>
+                      <form action="#" class="discount js_validate">
+                        <div class="input-container">
+                          <label for="promo" class="req">Ваш промокод</label>
+                          <input type="text" name="promo" id="promo" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
+                          <div class="delete"></div>
+                          <div class="text-error">Поле  не заполнено</div>
+                        </div>
+                                      <button type="submit" class="btn"><span>Применить</span>
+                                      </button>
+                      </form>
+                    </div>
+                    <div class="order__sidebar-info-total">
+                      <div class="quantity"><span class="value">400</span><span class="goods">товаров</span><span>на сумму</span></div>
+                      <div class="total"><span class="value">34200</span><span class="currency">грн</span></div>
+                    </div>
+                    <div class="order__sidebar-info-delivery">
+                      <div class="quantity"><span>Доставка</span></div>
+                      <div class="total"><span>Не выбрано</span></div>
+                    </div>
+                    <div class="order__sidebar-total">
+                      <div class="title">Итого</div>
+                      <div class="total"><span class="value">27360</span><span class="currency">грн</span></div>
+                    </div>
+                  </div>
+                  <div class="order__sidebar-products"><a href="/card.html" class="basket-item">
+                                    <div class="basket-item__img"><img src="images/products/5.jpg" alt="Тренч Stimma Джеси 4153 S Пудра" title="Тренч Stimma Джеси 4153 S Пудра" class="image"></div>
+                                    <div class="basket-item__info-wrapper">
+                                      <div class="basket-item__info">
+                                        <div class="basket-item__name">
+                                          <h3 class="title">Тренч Stimma Джеси 4153 S Пудра</h3>
+                                        </div>
+                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">42</span></div>
+                                      </div>
+                                      <div class="basket-item__price"><span class="value">142 402</span><span class="currency">грн</span></div>
+                                    </div>
+                                    <div class="basket-item__controls">
+                                      <div data-target="product-delete" class="basket-item__remove">
+                                        <div class="icon icon-close"></div>
+                                      </div>
+                                                    <div class="input-number">
+                                                      <div class="input-number_arrow prev"></div>
+                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                                      <div class="input-number_arrow next"></div>
+                                                    </div>
+                                    </div></a><a href="/card.html" class="basket-item">
+                                    <div class="basket-item__img"><img src="images/products/6.jpg" alt="Тренч Stimma Джеси 4151 Xs Графитовый" title="Тренч Stimma Джеси 4151 Xs Графитовый" class="image"></div>
+                                    <div class="basket-item__info-wrapper">
+                                      <div class="basket-item__info">
+                                        <div class="basket-item__name">
+                                          <h3 class="title">Тренч Stimma Джеси 4151 Xs Графитовый</h3>
+                                        </div>
+                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">45</span></div>
+                                      </div>
+                                      <div class="basket-item__price"><span class="value">297</span><span class="currency">грн</span></div>
+                                    </div>
+                                    <div class="basket-item__controls">
+                                      <div data-target="product-delete" class="basket-item__remove">
+                                        <div class="icon icon-close"></div>
+                                      </div>
+                                                    <div class="input-number">
+                                                      <div class="input-number_arrow prev"></div>
+                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                                      <div class="input-number_arrow next"></div>
+                                                    </div>
+                                    </div></a><a href="/card.html" class="basket-item">
+                                    <div class="basket-item__img"><img src="images/products/7.jpg" alt="Куртка Stimma Кортика 3968 Xs Графитовый" title="Куртка Stimma Кортика 3968 Xs Графитовый" class="image"></div>
+                                    <div class="basket-item__info-wrapper">
+                                      <div class="basket-item__info">
+                                        <div class="basket-item__name">
+                                          <h3 class="title">Куртка Stimma Кортика 3968 Xs Графитовый</h3>
+                                        </div>
+                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">34</span></div>
+                                      </div>
+                                      <div class="basket-item__price"><span class="value">4579</span><span class="currency">грн</span></div>
+                                    </div>
+                                    <div class="basket-item__controls">
+                                      <div data-target="product-delete" class="basket-item__remove">
+                                        <div class="icon icon-close"></div>
+                                      </div>
+                                                    <div class="input-number">
+                                                      <div class="input-number_arrow prev"></div>
+                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                                      <div class="input-number_arrow next"></div>
+                                                    </div>
+                                    </div></a><a href="/card.html" class="basket-item">
+                                    <div class="basket-item__img"><img src="images/products/8.jpg" alt="Куртка Stimma Карелия 4181 Xs Серебряный" title="Куртка Stimma Карелия 4181 Xs Серебряный" class="image"></div>
+                                    <div class="basket-item__info-wrapper">
+                                      <div class="basket-item__info">
+                                        <div class="basket-item__name">
+                                          <h3 class="title">Куртка Stimma Карелия 4181 Xs Серебряный</h3>
+                                        </div>
+                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">38</span></div>
+                                      </div>
+                                      <div class="basket-item__price"><span class="value">25 742</span><span class="currency">грн</span></div>
+                                    </div>
+                                    <div class="basket-item__controls">
+                                      <div data-target="product-delete" class="basket-item__remove">
+                                        <div class="icon icon-close"></div>
+                                      </div>
+                                                    <div class="input-number">
+                                                      <div class="input-number_arrow prev"></div>
+                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                                      <div class="input-number_arrow next"></div>
+                                                    </div>
+                                    </div></a><a href="/card.html" class="basket-item">
+                                    <div class="basket-item__img"><img src="images/products/9.jpg" alt="Женская куртка Stimma Веста 4799 L Шоколадный" title="Женская куртка Stimma Веста 4799 L Шоколадный" class="image"></div>
+                                    <div class="basket-item__info-wrapper">
+                                      <div class="basket-item__info">
+                                        <div class="basket-item__name">
+                                          <h3 class="title">Женская куртка Stimma Веста 4799 L Шоколадный</h3>
+                                        </div>
+                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">44</span></div>
+                                      </div>
+                                      <div class="basket-item__price"><span class="value">142</span><span class="currency">грн</span></div>
+                                    </div>
+                                    <div class="basket-item__controls">
+                                      <div data-target="product-delete" class="basket-item__remove">
+                                        <div class="icon icon-close"></div>
+                                      </div>
+                                                    <div class="input-number">
+                                                      <div class="input-number_arrow prev"></div>
+                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                                      <div class="input-number_arrow next"></div>
+                                                    </div>
+                                    </div></a><a href="/card.html" class="basket-item">
+                                    <div class="basket-item__img"><img src="images/products/10.jpg" alt="Женская куртка Stimma Веста 4800 Xs Черный" title="Женская куртка Stimma Веста 4800 Xs Черный" class="image"></div>
+                                    <div class="basket-item__info-wrapper">
+                                      <div class="basket-item__info">
+                                        <div class="basket-item__name">
+                                          <h3 class="title">Женская куртка Stimma Веста 4800 Xs Черный</h3>
+                                        </div>
+                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">46</span></div>
+                                      </div>
+                                      <div class="basket-item__price"><span class="value">852</span><span class="currency">грн</span></div>
+                                    </div>
+                                    <div class="basket-item__controls">
+                                      <div data-target="product-delete" class="basket-item__remove">
+                                        <div class="icon icon-close"></div>
+                                      </div>
+                                                    <div class="input-number">
+                                                      <div class="input-number_arrow prev"></div>
+                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                                      <div class="input-number_arrow next"></div>
+                                                    </div>
+                                    </div></a><a href="/card.html" class="basket-item">
+                                    <div class="basket-item__img"><img src="images/products/11.jpg" alt="Пуховик ПВ-849 (и/м) Лаке Тон 573" title="Пуховик ПВ-849 (и/м) Лаке Тон 573" class="image"></div>
+                                    <div class="basket-item__info-wrapper">
+                                      <div class="basket-item__info">
+                                        <div class="basket-item__name">
+                                          <h3 class="title">Пуховик ПВ-849 (и/м) Лаке Тон 573</h3>
+                                        </div>
+                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">40</span></div>
+                                      </div>
+                                      <div class="basket-item__price"><span class="value">226</span><span class="currency">грн</span></div>
+                                    </div>
+                                    <div class="basket-item__controls">
+                                      <div data-target="product-delete" class="basket-item__remove">
+                                        <div class="icon icon-close"></div>
+                                      </div>
+                                                    <div class="input-number">
+                                                      <div class="input-number_arrow prev"></div>
+                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                                      <div class="input-number_arrow next"></div>
+                                                    </div>
+                                    </div></a><a href="/card.html" class="basket-item">
+                                    <div class="basket-item__img"><img src="images/products/12.jpg" alt="Парка демисезонная с нашивками" title="Парка демисезонная с нашивками" class="image"></div>
+                                    <div class="basket-item__info-wrapper">
+                                      <div class="basket-item__info">
+                                        <div class="basket-item__name">
+                                          <h3 class="title">Парка демисезонная с нашивками</h3>
+                                        </div>
+                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">50</span></div>
+                                      </div>
+                                      <div class="basket-item__price"><span class="value">14 999</span><span class="currency">грн</span></div>
+                                    </div>
+                                    <div class="basket-item__controls">
+                                      <div data-target="product-delete" class="basket-item__remove">
+                                        <div class="icon icon-close"></div>
+                                      </div>
+                                                    <div class="input-number">
+                                                      <div class="input-number_arrow prev"></div>
+                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                                      <div class="input-number_arrow next"></div>
+                                                    </div>
+                                    </div></a>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer footer-order">
+        <div class="container">
+          <div class="footer__wrapper"><span class="footer__dates">© 2010-2020 Украинский производитель одежды Kariant</span></div>
+        </div>
+      </footer>
+      <!-- popup SECTION-->
+      <div class="popup-overlay">
+        <div data-target="popup-order" class="popup popup__order">
+          <div class="popup-header">
+            <h4 class="title">Ваш заказ успешно оформлен!</h4>
+          </div>
+          <div class="popup-content">
+            <div class="content">В ближайшее время мы свяжемся с Вами</div>
+          </div>
+          <div class="close-btn icon icon-close"></div>
+        </div>
+        <div data-target="popup-cart" class="popup popup__cart">
+          <div class="popup-header">
+            <h4 class="title">Спасибо!</h4>
+          </div>
+          <div class="popup-content">
+            <div class="content">Товар<a href="/card.html" class="btn btn-link" title="Осенняя утепленная куртка Plus Size"><span>Осенняя утепленная куртка Plus Size</span></a>добавлен
+                    <button type="submit" class="btn btn-link" title="корзина" data-target="cart-in"><span>в корзину</span>
+                    </button>
+            </div>
+          </div>
+          <div class="close-btn close">
+            <div class="close-container">
+              <div class="leftright"></div>
+              <div class="rightleft"></div>
+              <div class="text">закрыть</div>
+            </div>
+          </div>
+        </div>
+        <div data-target="popup-favorite" class="popup popup__favorite">
+          <div class="popup-header">
+            <h4 class="title">Спасибо!</h4>
+          </div>
+          <div class="popup-content">
+            <div class="content">Товар<a href="/card.html" class="btn btn-link" title="Осенняя утепленная куртка Plus Size"><span>Осенняя утепленная куртка Plus Size</span></a>добавлен<a href="/favorite.html" class="btn btn-link" title="избранное"><span>в избранное</span></a>
+            </div>
+          </div>
+          <div class="close-btn close">
+            <div class="close-container">
+              <div class="leftright"></div>
+              <div class="rightleft"></div>
+              <div class="text">закрыть</div>
+            </div>
+          </div>
+        </div>
+        <div data-target="popup-favorite-del" class="popup popup__favorite-del">
+          <div class="popup-header">
+            <h4 class="title">Товар<a href="/card.html" class="btn btn-link" title="Осенняя утепленная куртка Plus Size"><span>Осенняя утепленная куртка Plus Size</span></a>
+            </h4>
+          </div>
+          <div class="popup-content">
+            <div class="content">удален из<a href="/favorite.html" class="btn btn-link" title="избранное"><span>избранного</span></a>
+            </div>
+          </div>
+          <div class="close-btn close">
+            <div class="close-container">
+              <div class="leftright"></div>
+              <div class="rightleft"></div>
+              <div class="text">закрыть</div>
+            </div>
+          </div>
+        </div>
+        <div data-target="popup-product-delete" class="popup popup__product-delete">
+          <div class="popup-header">
+            <h4 class="title">Удаление товара</h4>
+          </div>
+          <div class="popup-content">
+            <div class="content">Товар<a href="/card.html" class="btn btn-link" title="Осенняя утепленная куртка Plus Size"><span>Осенняя утепленная куртка Plus Size</span></a>
+              <div class="popup-buttons">
+                      <button type="submit" class="btn js__product-delete btn-transparent btn-small"><span>удалить</span>
+                      </button>
+                      <button type="submit" class="btn js__product-delete-reset btn-small"><span>не удалять</span>
+                      </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-target="popup-call" class="popup popup__call">
+          <form class="popup-content js_validate">
+            <div class="popup-header">
+              <h4 class="title">В ближайшее время мы Вам перезвоним</h4>
+            </div>
+            <div class="input-container">
+              <label for="name-call" class="req">Имя</label>
+              <input type="text" name="name" id="name-call" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
+              <div class="text-error">Поле  не заполнено</div>
+            </div>
+            <div class="input-container input-phone">
+              <label for="phone" class="req">Ваш номер телефона</label>
+              <input type="tel" id="phone" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)" class="validate">
+              <div class="text-error">Поле  не заполнено</div>
+            </div>
+                  <button type="submit" class="btn"><span>перезвоните мне</span>
+                  </button>
+          </form>
+          <div class="close-btn close">
+            <div class="close-container">
+              <div class="leftright"></div>
+              <div class="rightleft"></div>
+              <div class="text">закрыть</div>
+            </div>
+          </div>
+        </div>
+        <div data-target="popup-one-click" class="popup popup__one-click">
+          <form class="popup-content js_validate">
+            <div class="popup-header">
+              <h4 class="title">Заказать товар</h4><a href="/card.html" class="btn btn-link" title="Осенняя утепленная куртка Plus Size"><span>Осенняя утепленная куртка Plus Size</span></a>
+            </div>
+            <div class="input-container">
+              <label for="name-one-click" class="req">Имя</label>
+              <input type="text" name="name" id="name-one-click" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
+              <div class="text-error">Поле  не заполнено</div>
+            </div>
+            <div class="input-container">
+              <label for="email-one-click" class="req">Email</label>
+              <input type="email" name="email" id="email-one-click" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" class="validate">
+              <div class="text-error">Поле «Email» не заполнено</div>
+            </div>
+            <div class="input-container input-phone">
+              <label for="phone-one-click" class="req">Ваш номер телефона</label>
+              <input type="tel" id="phone-one-click" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)" class="validate">
+              <div class="text-error">Поле  не заполнено</div>
+            </div>
+                  <button type="submit" class="btn"><span>оформить заказ</span>
+                  </button>
+          </form>
+          <div class="close-btn close">
+            <div class="close-container">
+              <div class="leftright"></div>
+              <div class="rightleft"></div>
+              <div class="text">закрыть</div>
+            </div>
+          </div>
+        </div>
+        <div data-target="popup-missing" class="popup popup__missing">
+          <form class="popup-content js_validate">
+            <div class="popup-header">
+              <h4 class="title">В ближайшее время мы пришлём Вам уведомление о наличии</h4>
+            </div>
+            <div class="popup-content">
+              <div class="content">Пожалуйста, оставьте свой контактный e-mail.</div>
+              <div class="content">Мы оповестим вас о наличии интересующего вас товара, как только данный товар поступит на склад.</div>
+            </div>
+            <div class="input-container">
+              <label for="name" class="req">Имя</label>
+              <input type="text" name="name" id="name" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
+              <div class="text-error">Поле  не заполнено</div>
+            </div>
+            <div class="input-container">
+              <label for="email" class="req">Email</label>
+              <input type="email" name="email" id="email" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" class="validate">
+              <div class="text-error">Поле «Email» не заполнено</div>
+            </div>
+                  <button type="submit" class="btn"><span>сообщите мне о наличии товара</span>
+                  </button>
+          </form>
+          <div class="close-btn close">
+            <div class="close-container">
+              <div class="leftright"></div>
+              <div class="rightleft"></div>
+              <div class="text">закрыть</div>
+            </div>
+          </div>
+        </div>
+        <div data-target="popup-mail" class="popup popup__mail">
+          <div class="popup-header">
+            <h4 class="title">Спасибо!</h4>
+          </div>
+          <div class="popup-content">
+            <div class="content">Ваше сообщение отправлено успешно!</div>
+          </div>
+          <div class="close-btn close">
+            <div class="close-container">
+              <div class="leftright"></div>
+              <div class="rightleft"></div>
+              <div class="text">закрыть</div>
+            </div>
+          </div>
+        </div>
+        <div data-target="popup-phone" class="popup popup__phone">
+          <div class="popup-header">
+            <h4 class="title">Контактные телефоны</h4>
+          </div>
+          <div class="popup-content">
+            <div class="subtitle">Консультации и заказ по телефонам</div><a href="tel:+380676236049" class="btn-link-unline">+ 38 067 623 60 49</a><a href="tel:+380507396878" class="btn-link-unline">+ 38 050 739 68 78</a><a href="tel:+380931704799" class="btn-link-unline">+ 38 093 170 47 99</a><a href="tel:+380443347863" class="btn-link-unline">+ 38 044 334 78 63</a>
+          </div>
+          <div class="popup-content">
+            <div class="subtitle">График работы интернет-магазина</div>
+            <ul>
+              <li>ПН-ПТ</li>
+              <li><span>с</span><span>9:00</span><span>до</span><span>18:00</span></li>
+            </ul>
+          </div>
+          <div class="close-btn close">
+            <div class="close-container">
+              <div class="leftright"></div>
+              <div class="rightleft"></div>
+              <div class="text">закрыть</div>
+            </div>
+          </div>
+        </div>
+        <div data-target="popup-recover" class="popup popup__recover">
+          <div class="popup-header">
+            <h4 class="title">Забыли пароль?</h4>
+          </div>
+          <form class="popup-content js_validate">
+            <div class="content">Введите email, на который зарегестрирован ваш профиль и мы вышлем вам новый пароль.</div>
+            <div class="input-container">
+              <label for="email2" class="req">Email</label>
+              <input type="email" name="email" id="email2" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" class="validate">
+              <div class="text-error">Поле «Email» не заполнено</div>
+            </div>
+                  <button type="submit" class="btn"><span>Получить новый пароль</span>
+                  </button>
+          </form>
+          <div class="close-btn close">
+            <div class="close-container">
+              <div class="leftright"></div>
+              <div class="rightleft"></div>
+              <div class="text">закрыть</div>
+            </div>
+          </div>
+        </div>
+        <div data-target="popup-cart-in" class="popup popup__cart-in">
+          <div class="popup-holder">
+            <div class="popup-wrapper">
+              <div class="popup-header">
+                <div class="close-btn close icon icon-left"></div>
+                <h4 class="title">Корзина<span>(5)</span></h4>
+              </div>
+              <div class="popup-content"><a href="/card.html" class="basket-item">
+                        <div class="basket-item__img"><img src="images/products/5.jpg" alt="Тренч Stimma Джеси 4153 S Пудра" title="Тренч Stimma Джеси 4153 S Пудра" class="image"></div>
+                        <div class="basket-item__info-wrapper">
+                          <div class="basket-item__info">
+                            <div class="basket-item__name">
+                              <h3 class="title">Тренч Stimma Джеси 4153 S Пудра</h3>
+                            </div>
+                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">42</span></div>
+                          </div>
+                          <div class="basket-item__price"><span class="value">142 402</span><span class="currency">грн</span></div>
+                        </div>
+                        <div class="basket-item__controls">
+                          <div data-target="product-delete" class="basket-item__remove">
+                            <div class="icon icon-close"></div>
+                          </div>
+                                <div class="input-number">
+                                  <div class="input-number_arrow prev"></div>
+                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                  <div class="input-number_arrow next"></div>
+                                </div>
+                        </div></a><a href="/card.html" class="basket-item">
+                        <div class="basket-item__img"><img src="images/products/6.jpg" alt="Тренч Stimma Джеси 4151 Xs Графитовый" title="Тренч Stimma Джеси 4151 Xs Графитовый" class="image"></div>
+                        <div class="basket-item__info-wrapper">
+                          <div class="basket-item__info">
+                            <div class="basket-item__name">
+                              <h3 class="title">Тренч Stimma Джеси 4151 Xs Графитовый</h3>
+                            </div>
+                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">45</span></div>
+                          </div>
+                          <div class="basket-item__price"><span class="value">297</span><span class="currency">грн</span></div>
+                        </div>
+                        <div class="basket-item__controls">
+                          <div data-target="product-delete" class="basket-item__remove">
+                            <div class="icon icon-close"></div>
+                          </div>
+                                <div class="input-number">
+                                  <div class="input-number_arrow prev"></div>
+                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                  <div class="input-number_arrow next"></div>
+                                </div>
+                        </div></a><a href="/card.html" class="basket-item">
+                        <div class="basket-item__img"><img src="images/products/7.jpg" alt="Куртка Stimma Кортика 3968 Xs Графитовый" title="Куртка Stimma Кортика 3968 Xs Графитовый" class="image"></div>
+                        <div class="basket-item__info-wrapper">
+                          <div class="basket-item__info">
+                            <div class="basket-item__name">
+                              <h3 class="title">Куртка Stimma Кортика 3968 Xs Графитовый</h3>
+                            </div>
+                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">34</span></div>
+                          </div>
+                          <div class="basket-item__price"><span class="value">4579</span><span class="currency">грн</span></div>
+                        </div>
+                        <div class="basket-item__controls">
+                          <div data-target="product-delete" class="basket-item__remove">
+                            <div class="icon icon-close"></div>
+                          </div>
+                                <div class="input-number">
+                                  <div class="input-number_arrow prev"></div>
+                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                  <div class="input-number_arrow next"></div>
+                                </div>
+                        </div></a><a href="/card.html" class="basket-item">
+                        <div class="basket-item__img"><img src="images/products/8.jpg" alt="Куртка Stimma Карелия 4181 Xs Серебряный" title="Куртка Stimma Карелия 4181 Xs Серебряный" class="image"></div>
+                        <div class="basket-item__info-wrapper">
+                          <div class="basket-item__info">
+                            <div class="basket-item__name">
+                              <h3 class="title">Куртка Stimma Карелия 4181 Xs Серебряный</h3>
+                            </div>
+                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">38</span></div>
+                          </div>
+                          <div class="basket-item__price"><span class="value">25 742</span><span class="currency">грн</span></div>
+                        </div>
+                        <div class="basket-item__controls">
+                          <div data-target="product-delete" class="basket-item__remove">
+                            <div class="icon icon-close"></div>
+                          </div>
+                                <div class="input-number">
+                                  <div class="input-number_arrow prev"></div>
+                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                  <div class="input-number_arrow next"></div>
+                                </div>
+                        </div></a><a href="/card.html" class="basket-item">
+                        <div class="basket-item__img"><img src="images/products/9.jpg" alt="Женская куртка Stimma Веста 4799 L Шоколадный" title="Женская куртка Stimma Веста 4799 L Шоколадный" class="image"></div>
+                        <div class="basket-item__info-wrapper">
+                          <div class="basket-item__info">
+                            <div class="basket-item__name">
+                              <h3 class="title">Женская куртка Stimma Веста 4799 L Шоколадный</h3>
+                            </div>
+                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">44</span></div>
+                          </div>
+                          <div class="basket-item__price"><span class="value">142</span><span class="currency">грн</span></div>
+                        </div>
+                        <div class="basket-item__controls">
+                          <div data-target="product-delete" class="basket-item__remove">
+                            <div class="icon icon-close"></div>
+                          </div>
+                                <div class="input-number">
+                                  <div class="input-number_arrow prev"></div>
+                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                  <div class="input-number_arrow next"></div>
+                                </div>
+                        </div></a><a href="/card.html" class="basket-item">
+                        <div class="basket-item__img"><img src="images/products/10.jpg" alt="Женская куртка Stimma Веста 4800 Xs Черный" title="Женская куртка Stimma Веста 4800 Xs Черный" class="image"></div>
+                        <div class="basket-item__info-wrapper">
+                          <div class="basket-item__info">
+                            <div class="basket-item__name">
+                              <h3 class="title">Женская куртка Stimma Веста 4800 Xs Черный</h3>
+                            </div>
+                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">46</span></div>
+                          </div>
+                          <div class="basket-item__price"><span class="value">852</span><span class="currency">грн</span></div>
+                        </div>
+                        <div class="basket-item__controls">
+                          <div data-target="product-delete" class="basket-item__remove">
+                            <div class="icon icon-close"></div>
+                          </div>
+                                <div class="input-number">
+                                  <div class="input-number_arrow prev"></div>
+                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                  <div class="input-number_arrow next"></div>
+                                </div>
+                        </div></a><a href="/card.html" class="basket-item">
+                        <div class="basket-item__img"><img src="images/products/11.jpg" alt="Пуховик ПВ-849 (и/м) Лаке Тон 573" title="Пуховик ПВ-849 (и/м) Лаке Тон 573" class="image"></div>
+                        <div class="basket-item__info-wrapper">
+                          <div class="basket-item__info">
+                            <div class="basket-item__name">
+                              <h3 class="title">Пуховик ПВ-849 (и/м) Лаке Тон 573</h3>
+                            </div>
+                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">40</span></div>
+                          </div>
+                          <div class="basket-item__price"><span class="value">226</span><span class="currency">грн</span></div>
+                        </div>
+                        <div class="basket-item__controls">
+                          <div data-target="product-delete" class="basket-item__remove">
+                            <div class="icon icon-close"></div>
+                          </div>
+                                <div class="input-number">
+                                  <div class="input-number_arrow prev"></div>
+                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                  <div class="input-number_arrow next"></div>
+                                </div>
+                        </div></a><a href="/card.html" class="basket-item">
+                        <div class="basket-item__img"><img src="images/products/12.jpg" alt="Парка демисезонная с нашивками" title="Парка демисезонная с нашивками" class="image"></div>
+                        <div class="basket-item__info-wrapper">
+                          <div class="basket-item__info">
+                            <div class="basket-item__name">
+                              <h3 class="title">Парка демисезонная с нашивками</h3>
+                            </div>
+                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">50</span></div>
+                          </div>
+                          <div class="basket-item__price"><span class="value">14 999</span><span class="currency">грн</span></div>
+                        </div>
+                        <div class="basket-item__controls">
+                          <div data-target="product-delete" class="basket-item__remove">
+                            <div class="icon icon-close"></div>
+                          </div>
+                                <div class="input-number">
+                                  <div class="input-number_arrow prev"></div>
+                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
+                                  <div class="input-number_arrow next"></div>
+                                </div>
+                        </div></a>
+              </div>
+            </div>
+            <div class="popup-footer">
+              <div class="value"><span class="final">Итого:</span><span class="sum">4 850 грн</span></div><a href="/order-page1.html" class="btn"><span>Оформить заказ</span></a>
+            </div>
+          </div>
+        </div>
+        <div data-target="popup-log" class="popup popup__log">
+          <form class="popup-content js_validate">
+            <div class="popup-header">
+              <h4 class="title">Авторизируйтесь</h4>
+            </div>
+            <div class="input-container">
+              <label for="email-one-click" class="req">Email</label>
+              <input type="email" name="email" id="email-log" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" class="validate">
+              <div class="text-error">Поле «Email» не заполнено</div>
+            </div>
+            <div class="input-container">
+              <label for="password" class="req">Пароль</label>
+              <input id="password" type="password" name="password" required="required" data-validate="pass" data-error-wrong="Поле заполнено не верно" data-error-empty="Поле не заполнено" data-error-min="Пароль: не менее 6 символов" data-error-max="Пароль: не более 20 символов" class="validate password">
+              <div class="text-error">Поле не заполнено</div>
+            </div>
+                  <button type="submit" class="btn"><span>войти</span>
+                  </button>
+          </form>
+          <div class="close-btn close">
+            <div class="close-container">
+              <div class="leftright"></div>
+              <div class="rightleft"></div>
+              <div class="text">закрыть</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <link rel="stylesheet" type="text/css" href="css/lib.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--link(rel='stylesheet', type='text/css', href='css/main.min.css')-->
+    <script type="text/javascript" src="js/lib.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!--script(type='text/javascript', src='js/main.min.js') разкоментить по окончанию разработки, закомментить в админке main.js-->
+  </body>
+</html>

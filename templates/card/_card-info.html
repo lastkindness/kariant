@@ -55,7 +55,7 @@
         <div class="card-info__all">
           <div class="input-number">
             <div class="input-number_arrow prev"></div>
-            <input type="text" readonly="readonly" min="1" max="99" value="1" step="1" class="input-number_input"/>
+            <input type="number" min="1" max="99" value="1" step="1" readonly="readonly" class="input-number_input"/>
             <div class="input-number_arrow next"></div>
           </div>
           <div class="card-info-value"><span class="title">Всего</span><span class="value">8550</span><span class="currency">грн.</span></div>
@@ -65,8 +65,8 @@
           </button>
         </div>
         <form action="#" class="card-info__call js_validate">
-          <div class="input-container">
-            <label for="phone" class="req">номер телефона</label>
+          <div class="input-container input-phone">
+            <label for="phone" class="req">Ваш номер телефона</label>
             <input type="tel" id="phone" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)" class="validate"/>
             <div class="text-error">Поле  не заполнено</div>
           </div>

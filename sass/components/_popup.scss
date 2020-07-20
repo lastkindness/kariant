@@ -62,8 +62,14 @@
       }
     }
   }
+  &-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 100%;
+  }
   &-content {
-    margin-bottom: 24px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -74,26 +80,12 @@
     &:last-child {
       margin-bottom: 0;
     }
-    .basket-item {
-      border: unset;
-      border-top: 1px solid $black;
-      @include anim;
-      &:hover,
-      &:active,
-      &:focus {
-        border: unset;
-        border-top: 1px solid transparent;
-        @include anim;
-      }
-    }
     p,
     .content {
-      text-align: center;
+      width: 100%;
       display: flex;
       align-items: center;
-      justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 20px;
     }
   }
   &__phone {
@@ -101,49 +93,89 @@
       height: 100vh;
     }
   }
-  &__call {
-    &-mobile {
-      padding: 0;
-      .popup-header,
-      .popup-body {
-        padding: 30px;
-      }
-      .popup-header {
+  &__product {
+    &-delete {
+      z-index: 102;
+    }
+  }
+  &__cart-in {
+    height: 100vh;
+    width: 420px;
+    padding: 0;
+    right: 0;
+    transform: translate(0, -50%);
+    left: unset;
+    .popup {
+      &-header {
+        margin-bottom: 34px;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         align-items: center;
-        a {
-          color: $text;
-          margin-bottom: 20px;
-          text-decoration: unset;
-          &:last-child {
-            margin-bottom: 0;
-          }
+        justify-content: flex-start;
+        .close {
+          margin-right: 20px;
+          position: static;
         }
       }
-      .popup-body {
-        background-color: $gray3;
-        border-top: 1px solid $black;
+      &-content {
+        max-height: calc(100vh - 244px);
+        overflow-y: auto;
+        padding-right: 20px;
       }
-      .input-container {
-        margin-bottom: 25px;
+      &-footer {
+        padding: 34px 28px;
+        background-color: $elements;
+        .value {
+          font-size: 16px;
+          line-height: 22px;
+          @include fb;
+          text-align: center;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: $textDark;
+          margin-bottom: 12px;
+        }
+        .final {
+          margin-right: 5px;
+        }
+      }
+      &-wrapper {
+        padding: 32px 9px 0 32px;
+        position: relative;
+        &:after {
+          content: '';
+          display: block;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 94.27%);
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 67px;
+        }
       }
     }
   }
-  &-buttons {
-    display: flex;
+  .input-container {
     width: 100%;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 15px;
   }
   .btn {
     width: 100%;
     text-align: center;
     justify-content: center;
     &-link {
-      margin-left: 5px;
+      font-size: 12px;
+      width: auto;
+      margin: 0 5px;
+    }
+  }
+  &-buttons {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    .btn {
+      width: calc(50% - 10px);
     }
   }
   .close-btn {
