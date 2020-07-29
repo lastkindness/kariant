@@ -52,8 +52,10 @@
     }
     &:hover,
     &:active,
-    &:focus {
+    &:focus,
+    &.active {
       background-color: transparent;
+      border: none !important;
     }
     &::placeholder {
       color: $textLight;
@@ -92,7 +94,7 @@
     &:before {
       font-weight: 500;
       color: $textDark;
-      content:'\E00D';
+      content:'\E013';
       background-color: transparent;
       @include anim;
       margin: 0;

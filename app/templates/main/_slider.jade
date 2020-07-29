@@ -18,4 +18,5 @@ section.main-slider.js-main-banner.swiper-container
                                 .swiper-arrows
                                     .swiper-button-prev
                                     .swiper-button-next
-                        img.main-slider__img(data-src="images/products/"+img[i] alt=img[i] title=img[i])
+                        .main-slider__img(style='background-color:' + color[i] +';')
+                            img(data-src="images/products/"+img[i] alt=img[i] title=img[i])

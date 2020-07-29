@@ -1,6 +1,9 @@
 .main-products {
   padding: 120px 0;
   position: relative;
+  @include respond-to(xs-690) {
+    padding: 44px 0;
+  }
   &:before {
     position: absolute;
     content: '';
@@ -16,18 +19,31 @@
     align-items: center;
     justify-content: space-between;
     padding-left: 8.3%;
+    @include respond-to(tablet) {
+      padding-left: 0;
+    }
   }
   &__list {
     margin: 0;
     padding: 0;
     width: 40%;
+    @include respond-to(xs-690) {
+      width: 100%;
+    }
     li {
       margin-bottom: 34px;
+      @include respond-to(xs-690) {
+        margin-bottom: 26px;
+      }
       &:before {
         display: none;
       }
       a {
         text-align: left;
+        @include respond-to(xs-690) {
+          font-size: 18px;
+          line-height: 22px;
+        }
         &.active {
           &:after {
             width: 100%;
@@ -40,6 +56,12 @@
     height: 540px;
     width: 40%;
     position: relative;
+    @include respond-to(tablet) {
+      width: 55%;
+    }
+    @include respond-to(xs-690) {
+      display: none;
+    }
     img {
       position: absolute;
       object-fit: cover;

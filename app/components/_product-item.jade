@@ -37,17 +37,20 @@ mixin product-item(img, itemTitle, price, priceOld, classItem, vendor, sale, lab
                 img(data-src="images/products/" + img[i] alt= itemTitle[i] title= itemTitle[i])
             .product-item__main
                 h2.title.product-item__title.subtitle-small= itemTitle[i]
-                .product-item__price-box
-                    .product-item__price
-                        //если есть цена для оптовиков - выводим блок from
-                        span.from от
-                        span.price= price[i]
-                        span.currency грн
-                    - if(priceOld[i].length)
-                        //если есть старая цена, выводим этот блок
-                        .product-item__price.product-item__price_old
-                            span.price= priceOld[i]
+                .product-item__offer
+                    .product-item__price-box
+                        .product-item__price
+                            //если есть цена для оптовиков - выводим блок from
+                            span.from от
+                            span.price= price[i]
                             span.currency грн
+                        - if(priceOld[i].length)
+                            //если есть старая цена, выводим этот блок
+                            .product-item__price.product-item__price_old
+                                span.price= priceOld[i]
+                                span.currency грн
+                    //если есть товар в наличии выводим такую кнопку
+                    +button('Купить', 'button')(class="icon icon-cart")(data-target="cart")
         .product-item__drop
             .product-item__buttons
                 - if(missing[i]==false)

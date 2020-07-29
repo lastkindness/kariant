@@ -108,6 +108,10 @@ html {
   &.mobile-menu {
     overflow: hidden;
   }
+  @include respond-to(sm){
+    font-size: 15px;
+    line-height: 26px;
+  }
 }
 
 body {
@@ -258,6 +262,11 @@ h3 {
         font-size: 3vw;
         line-height: 3.2vw;
       }
+      @include respond-to(xs) {
+        font-size: 20px;
+        letter-spacing: 1.4px;
+        line-height: 1.2em;
+      }
     }
   }
 }
@@ -272,6 +281,12 @@ h2 {
   @include respond-to(lg-1200) {
     font-size: 2.8vw;
     line-height: 3vw;
+  }
+  @include respond-to(lg-1200) {
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    line-height: 1.2em;
+    margin: 0 0 16px;
   }
 }
 h3 {
@@ -933,6 +948,9 @@ section {
   &.page__header {
     margin: 12px 0 36px;
   }
+  @include respond-to(md) {
+    margin: 0 0 65px;
+  }
 }
 
 .page {
@@ -1211,6 +1229,7 @@ section {
     position: static;
     width: auto;
     font-size: 22px;
+    line-height: 1em;
     color: $textDark;
     font-weight: 400;
     letter-spacing: 0.4px;
@@ -1222,7 +1241,14 @@ section {
     }
     &-total {
       font-size: 18px;
+      line-height: 1em;
       font-weight: 300;
+      @include respond-to(xs) {
+        font-size: 12px;
+      }
+    }
+    @include respond-to(xs) {
+      font-size: 16px;
     }
   }
   &-button {
