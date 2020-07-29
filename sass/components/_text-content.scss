@@ -1,6 +1,9 @@
 //text-content start
 .text-content {
   margin: 0 auto 160px;
+  @include respond-to(md) {
+    margin: 0 auto 65px;
+  }
   a,
   strong,
   i {
@@ -9,6 +12,9 @@
   }
   .container {
     padding: 0 9%;
+    @include respond-to(md) {
+      padding: 0;
+    }
   }
   &__content {
     display: flex;
@@ -33,6 +39,11 @@
     h2,
     h3 {
       letter-spacing: 0.4px;
+    }
+    h2 {
+      @include respond-to(xs) {
+        font-size: 18px;
+      }
     }
   }
 }

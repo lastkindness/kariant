@@ -216,19 +216,19 @@
   }
   &__title {
     margin-bottom: 4px;
-  }
-  &__price {
-    &-box {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-bottom: 15px;
+    @include respond-to(sm) {
+      margin-bottom: 12px;
     }
   }
   &__price {
     font-size: 15px;
     line-height: 24px;
     letter-spacing: 0.2px;
+    @include respond-to(sm) {
+      font-size: 14px;
+      line-height: 14px;
+      order: 1;
+    }
     &_old {
       @include fr;
       font-size: 13px;
@@ -236,6 +236,20 @@
       letter-spacing: 0.2px;
       text-decoration-line: line-through;
       color: $textLight;
+      @include respond-to(sm) {
+        font-size: 11px;
+        line-height: 13px;
+        order: 0;
+      }
+    }
+    &-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 15px;
+      @include respond-to(sm) {
+        padding-bottom: 0;
+      }
     }
     span {
       margin-right: 5px;
@@ -275,6 +289,26 @@
         padding: 0 15px;
         @include anim;
       }
+      &__offer {
+        @include respond-to(sm) {
+          display: flex;
+          align-items: stretch;
+          justify-content: space-between;
+        }
+        .btn {
+          display: none;
+          @include respond-to(sm) {
+            display: block;
+          }
+        }
+      }
+      &__price {
+        &-box {
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+        }
+      }
     }
     &.active {
       border: 1px solid $textLight;
@@ -284,6 +318,9 @@
           @include anim;
         }
       }
+    }
+    @include respond-to(sm) {
+      padding: 0 6px;
     }
   }
 }

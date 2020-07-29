@@ -4,11 +4,18 @@
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
+    @include respond-to(sm) {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
   }
   .category {
     &-item {
       &:first-child {
         margin-right: 6.8vw;
+        @include respond-to(sm) {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -16,7 +23,19 @@
     position: absolute;
     right: 38px;
     top: 50%;
+    width: 97px;
+    height: 540px;
     transform: translateY(-50%);
+    @include respond-to(lg-1200) {
+      right: 0;
+    }
+    @include respond-to(sm) {
+      width: 51px;
+      height: 283px;
+      right: 12.5px;
+      top: 24px;
+      transform: translateY(0);
+    }
   }
 }
 

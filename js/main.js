@@ -1252,13 +1252,31 @@
 
     /*slider main page*/
     var swiper = new Swiper('.js-main-sale.swiper-container', {
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         spaceBetween: 0,
-        //loop: true,
+        loop: true,
+        pagination: {
+            type: 'progressbar',
+            el: '.swiper-pagination',
+        },
         navigation: {
             nextEl: '.main-sale .swiper-button-next',
             prevEl: '.main-sale .swiper-button-prev',
         },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 0
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 0
+            },
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 0,
+            }
+        }
     });
     /*slider main page*/
 
@@ -1307,6 +1325,12 @@
         });
     }
     //main-products hover links
+
+
+    //footer__list mobile
+    $( ".footer__list .title" ).click(function() {
+        $(this).closest('.footer__list').toggleClass('active');
+    });
 
 
 

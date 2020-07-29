@@ -6,6 +6,14 @@
     justify-content: space-between;
     display: flex;
     margin-bottom: 90px;
+    @include respond-to(lg-1200) {
+      padding: 38px 30px;
+    }
+    @include respond-to(xs-690) {
+      flex-wrap: wrap;
+      padding: 56px 16px 0;
+      margin-bottom: 42px;
+    }
   }
   &__img{
     position: relative;
@@ -15,6 +23,27 @@
       top: -90px;
       left: 29px;
       height: auto;
+      @include respond-to(lg-1200) {
+        top: -93px;
+      }
+      @include respond-to(md) {
+        top: -42px;
+      }
+      @include respond-to(sm) {
+        top: 6px;
+      }
+      @include respond-to(xs-690) {
+        position: static;
+        width: 70%;
+        margin: 0 auto;
+        transform: translateY(45px);
+      }
+    }
+    @include respond-to(xs-690) {
+      width: 100%;
+      text-align: center;
+      order: 1;
+      margin-top: -25px;
     }
   }
   &__text{
@@ -23,11 +52,24 @@
     letter-spacing: 0.2px;
     width: 49%;
     color: $textDark;
+    @include respond-to(xs-690) {
+      width: 100%;
+      text-align: center;
+      order: 0;
+    }
     h2{
       margin-bottom: 12px;
+      @include respond-to(xs-690) {
+        text-align: center;
+        margin-bottom: 4px;
+      }
     }
     p{
       margin-bottom: 36px;
+      @include respond-to(xs-690) {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
     }
   }
 }
