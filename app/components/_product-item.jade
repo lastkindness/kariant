@@ -36,7 +36,7 @@ mixin product-item(img, itemTitle, price, priceOld, classItem, vendor, sale, lab
                                 .perc %
                 img(data-src="images/products/" + img[i] alt= itemTitle[i] title= itemTitle[i])
             .product-item__main
-                h2.title.product-item__title.subtitle-small= itemTitle[i]
+                h2.title.product-item__title.subtitle-small(title= itemTitle[i] alt= itemTitle[i])= itemTitle[i]
                 .product-item__offer
                     .product-item__price-box
                         .product-item__price

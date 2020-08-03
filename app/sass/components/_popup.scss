@@ -105,25 +105,44 @@
     right: 0;
     transform: translate(0, -50%);
     left: unset;
+    @include respond-to(xs) {
+      width: 100%;
+      padding: 20px 0 0;
+    }
     .popup {
       &-header {
         margin-bottom: 34px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        @include respond-to(xs) {
+          margin-bottom: 14px;
+        }
         .close {
           margin-right: 20px;
           position: static;
+        }
+        .title {
+          @include respond-to(xs) {
+            font-size: 16px;
+            line-height: 16px;
+          }
         }
       }
       &-content {
         max-height: calc(100vh - 244px);
         overflow-y: auto;
         padding-right: 20px;
+        @include respond-to(xs) {
+          max-height: calc(100vh - 215px);
+        }
       }
       &-footer {
         padding: 34px 28px;
         background-color: $elements;
+        @include respond-to(xs) {
+          padding: 10px 20px 50px;
+        }
         .value {
           font-size: 16px;
           line-height: 22px;

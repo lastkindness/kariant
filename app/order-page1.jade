@@ -21,7 +21,9 @@ html
                                         .block-title
                                             span.value 1
                                             h6.title Контактная информация
-                                        span.client.icon.icon-question-full(data-target='log')
+                                        span.client(data-target='log')
+                                            .icon.icon-question-full
+                                                span.hint Подсказка о том, что делать если вы - постоянный клиент
                                             span Я постоянный клиент
                                 .order_content__form
                                     form.contacts(action='#').js_validate

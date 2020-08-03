@@ -2,7 +2,11 @@ mixin breadcrumbs()
     .breadcrumbs&attributes(attributes)
         ul.breadcrumbs__wrapper
             li.breadcrumbs__item
-                a.breadcrumbs__link.icon.icon-home(href='#')
+                a.breadcrumbs__link(href='#')
+                    .icon.icon-home
+                    span
+                        .icon-down.icon
+                        | Главная
             - var lastItem = arguments.length;
             - for (let i = 0; i < lastItem-1; i++)
                 li.breadcrumbs__item

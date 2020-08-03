@@ -167,9 +167,9 @@
     }
     >.catalog__filter_item_content{
       max-height: 220px;
-      padding: 16px 0;
+      padding: 0 0 16px;
       overflow-y: auto;
-      margin: 5px 10px 5px 0;
+      margin: 21px 10px 5px 0;
     }
     &.main-item {
       background-color: transparent;
@@ -425,6 +425,12 @@
 
 .catalog__filter_item_checkbox {
   padding: 8px 0;
+  &:first-child {
+    padding-top: 0;
+  }
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
 
 .catalog__filter_item_input {

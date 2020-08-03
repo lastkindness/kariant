@@ -113,12 +113,12 @@
       }
     }
     .container {
-      @include respond-to(md) {
-        max-width: 750px;
-      }
-      @include respond-to(xs-360) {
-        max-width: 85%;
-      }
+      //@include respond-to(md) {
+      //  max-width: 750px;
+      //}
+      //@include respond-to(xs-360) {
+      //  max-width: 85%;
+      //}
     }
   }
 }

@@ -11,10 +11,25 @@
   }
   .category {
     &-item {
+      @include respond-to(sm) {
+        margin-bottom: 44px;
+      }
       &:first-child {
         margin-right: 6.8vw;
         @include respond-to(sm) {
           margin-right: 0;
+        }
+      }
+      .title {
+        @include respond-to(sm) {
+          order: 0;
+          margin-bottom: 14px;
+          height: auto;
+        }
+      }
+      &__img {
+        @include respond-to(sm) {
+          order: 1;
         }
       }
     }

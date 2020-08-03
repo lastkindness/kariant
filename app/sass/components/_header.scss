@@ -2,6 +2,9 @@
 .header {
   color: $textDark;
   position: sticky;
+  width: 100%;
+  left: 0;
+  right: 0;
   top: 0;
   background-color: $gray1;
   z-index: 10;
@@ -45,7 +48,7 @@
     }
     .close {
       position: absolute;
-      top: 30%;
+      top: 40%;
       transform: translateY(-50%);
       right: 26px;
       @include respond-to(xs) {
@@ -598,6 +601,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin-left: -10px;
     @include respond-to(md) {
       display: none;
     }
@@ -658,6 +662,7 @@
       align-items: center;
       @include respond-to(md) {
         width: 50%;
+        height: 69px;
       }
       @include respond-to(sm) {
         width: 70%;
@@ -674,6 +679,11 @@
       &:focus {
         transform: scale(1.1);
         @include anim;
+      }
+    }
+    img {
+      @include respond-to(md) {
+        padding: 16px 0;
       }
     }
   }
@@ -1171,10 +1181,13 @@
     }
     .header {
       &__wrapper {
-        padding: 0;
+        padding: 16px 0;
         border-bottom: 1px solid transparent;
         @include anim;
         grid-row-gap: 0;
+        @include respond-to(md) {
+          padding: 0;
+        }
       }
       &__offer {
         padding: 0;
@@ -1186,6 +1199,10 @@
             top: 100%;
           }
         }
+      }
+      &__phone_mobile {
+        opacity: 1;
+        max-height: none;
       }
     }
   }

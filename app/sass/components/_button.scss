@@ -12,6 +12,8 @@
   background-color: $textDark;
   position: relative;
   text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
   @include fb;
   @include anim;
   @include respond-to(sm) {
@@ -61,6 +63,7 @@
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 2px;
+    overflow: visible;
     color: $textDark;
     &:after {
       transform-origin: center;
