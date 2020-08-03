@@ -6,12 +6,7 @@
   @include respond-to(sm) {
     width: 76%;
     align-self: flex-end;
-    margin-bottom: 44px;
-  }
-  &:last-child {
-    @include respond-to(sm) {
-      margin-bottom: 0px;
-    }
+    margin-bottom: 64px;
   }
   &:after {
     display: none;
@@ -24,8 +19,8 @@
     @include respond-to(sm) {
       font-size: 18px;
       margin-top: 0;
-      margin-bottom: 14px;
-      order: 0;
+      height: 34px;
+      overflow: hidden;
     }
     &:after {
       content: '';
@@ -38,11 +33,9 @@
       left: 50%;
       transform: translateX(-50%);
       display: inline-block;
-    }
-  }
-  &__img {
-    @include respond-to(sm) {
-      order: 1;
+      @include respond-to(sm) {
+        display: none;
+      }
     }
   }
   img {
@@ -74,9 +67,6 @@
       order: 0;
       margin-bottom: 28px;
       margin-top: 0;
-      @include respond-to(sm) {
-        margin-bottom: 14px;
-      }
     }
   }
   &_small {
@@ -85,6 +75,10 @@
       line-height: 22px;
       margin-top: 16px;
       letter-spacing: 2px;
+      @include respond-to(xs-690) {
+        font-size: 13px;
+        line-height: 17px;
+      }
       &:after {
         height: 1px;
       }

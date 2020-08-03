@@ -53,13 +53,13 @@
         display: flex;
         align-items: stretch;
         justify-content: space-between;
-        padding-top: 10px;
+        padding-top: 15px;
         input {
           height: 100%;
         }
         .input-container {
           margin-bottom: 0;
-          width: 100%;
+          flex-grow: 1;
         }
       }
     }

@@ -1,5 +1,7 @@
 .main-sale {
   text-align: center;
+  overflow: hidden;
+  margin-right: -25%;
   .product-item {
     width: 25%;
     visibility: visible;
@@ -32,6 +34,7 @@
       margin-bottom: 32px;
     }
     &+.btn {
+      overflow: visible;
       @include respond-to(sm) {
         background-color: transparent;
         padding: 0;

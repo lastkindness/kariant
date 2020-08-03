@@ -4,6 +4,11 @@
   @include anim;
   position: relative;
   border-top: 1px solid transparent;
+  &__offer {
+    .btn {
+      display: none;
+    }
+  }
   &__right {
     position: absolute;
     width: 16px;

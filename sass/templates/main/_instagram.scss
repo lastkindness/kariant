@@ -16,6 +16,7 @@
       width: calc(25% - 30px);
       margin: 0 15px;
       padding: 0;
+      overflow: hidden;
       @include respond-to(md) {
         width: calc(50% - 30px);
         margin-bottom: 30px;

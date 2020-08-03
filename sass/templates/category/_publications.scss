@@ -3,11 +3,18 @@
   padding-top: 120px;
   padding-bottom: 124px;
   text-align: center;
+  @include respond-to(sm) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
   &__header{
     text-align: left;
     h2{
       color: $textDark;
       margin-bottom: 28px;
+      @include respond-to(sm) {
+        margin-bottom: 16px;
+      }
     }
   }
   &__img {
@@ -16,10 +23,23 @@
     margin: 0 -15px;
     padding: 0;
     text-align: left;
+    @include respond-to(sm) {
+      flex-wrap: wrap;
+      margin: 0;
+    }
     li {
       width: calc(33.3% - 30px);
       padding: 0;
       margin: 0 15px;
+      @include respond-to(sm) {
+        width: 100%;
+        margin: 0 0 40px;
+      }
+      &:last-child {
+        @include respond-to(sm) {
+          margin: 0;
+        }
+      }
       &:before {
         display: none;
       }
@@ -27,6 +47,9 @@
         color: $textDark;
         padding: 0;
         margin: 0;
+        @include respond-to(sm) {
+          display: none;
+        }
       }
       a {
         &:after {
@@ -36,11 +59,19 @@
           margin-bottom: 15px;
           object-fit: cover;
         }
+        @include respond-to(sm) {
+          width: 100%;
+        }
       }
       h4{
         color: $textDark;
         letter-spacing: 0.4px;
         margin-bottom: 16px;
+        @include respond-to(sm) {
+          font-size: 1.2em;
+          line-height: 1.2em;
+          margin-bottom: 0;
+        }
       }
       &:hover,
       &:active,
@@ -55,5 +86,22 @@
   }
   .btn-more{
     margin-top: 66px;
+    overflow: visible;
+    @include respond-to(sm) {
+      background-color: transparent;
+      padding: 0;
+      color: $textDark;
+      margin-top: 32px;
+    }
+    &:before {
+      @include respond-to(sm) {
+        display: none;
+      }
+    }
+    &:after {
+      @include respond-to(sm) {
+        display: block;
+      }
+    }
   }
 }

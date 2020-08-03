@@ -105,6 +105,8 @@ html {
   line-height: 30px;
   color: $text;
   @include fr;
+  width: 100%;
+  max-width: 100%;
   &.mobile-menu {
     overflow: hidden;
   }
@@ -117,6 +119,9 @@ html {
 body {
   position: relative;
   background: $gray1;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   &.overflow {
     width: 100%;
     height: 100%;
@@ -132,6 +137,10 @@ main,
   justify-content: flex-start;
   align-items: stretch;
   min-height: calc(100vh - 570px - 182px);
+  overflow-x: hidden;
+  background-color: $gray1;
+  position: relative;
+  z-index: 1;
 }
 
 .wrapper {
@@ -711,9 +720,10 @@ textarea+label {
   input,
   textarea {
     @include anim;
-    border-bottom: 1px solid $attention;
+    border-bottom: 1px solid $attention !important;
   }
-  .label {
+  .label,
+  label {
     color: $attention;
     @include anim;
   }
@@ -947,6 +957,9 @@ section {
   }
   &.page__header {
     margin: 12px 0 36px;
+    @include respond-to(sm) {
+      margin: 24px 0 32px;
+    }
   }
   @include respond-to(md) {
     margin: 0 0 65px;
@@ -1315,6 +1328,15 @@ section {
   &:focus {
     @include anim;
     transform: translateX(5px);
+  }
+}
+
+#grid {
+  column-count: 3;
+  width: 100%;
+  margin: 0 -10px;
+  img {
+    margin: 0 10px 20px;
   }
 }
 
