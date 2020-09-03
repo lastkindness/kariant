@@ -42,9 +42,15 @@
       justify-content: flex-end;
       height: 44px;
       @include anim;
+      input {
+        border: none !important;
+        &.error {
+          border: none !important;
+        }
+      }
       .text-error {
         font-size: 12px;
-        top: calc(100% - 5px);
+        top: calc(100% + 10px);
         @include respond-to(md) {
           top: calc(100% + 5px);
         }
@@ -94,7 +100,7 @@
     &:before {
       font-weight: 500;
       color: $textDark;
-      content:'\E013';
+      content:'\E017';
       background-color: transparent;
       @include anim;
       margin: 0;
@@ -143,7 +149,7 @@
       padding: 0;
       margin: 0;
       list-style:none;
-      max-height: 390px;
+      max-height: 500px;
       overflow-x: hidden;
       overflow-y: auto;
     }

@@ -1,0 +1,15 @@
+//order main start
+.order {
+  &-page {
+    main,
+    .main {
+      min-height: calc(100vh - 80px - 70px);
+    }
+  }
+  &-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+//order main end

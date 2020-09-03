@@ -1,0 +1,218 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .5s;
+  display: none;
+  z-index: 101;
+  width: 570px;
+  height: auto;
+  background-color: $white;
+  text-align: left;
+  padding: 36px 56px 36px 36px;
+  @include respond-to(xs) {
+    width: 100%;
+    padding: 66px 16px 36px 16px;
+  }
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($text, .5);
+    display: none;
+    z-index: 100;
+  }
+  .title {
+    margin: 0;
+  }
+  .subtitle {
+    @include fb;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.4px;
+    color: $text;
+    margin-bottom: 12px;
+  }
+  &-header {
+    margin-bottom: 24px;
+  }
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    &:before {
+      display: none;
+    }
+  }
+  ul {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 5px;
+    span {
+      margin-right: 5px;
+      display: inline-block;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+  &-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    a {
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    p,
+    .content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+  &__phone {
+    @include respond-to(xs) {
+      height: 100vh;
+    }
+  }
+  &__product {
+    &-delete {
+      z-index: 102;
+    }
+  }
+  &__cart-in {
+    height: 100vh;
+    width: 420px;
+    padding: 0;
+    right: 0;
+    transform: translate(0, -50%);
+    left: unset;
+    @include respond-to(xs) {
+      width: 100%;
+      padding: 20px 0 0;
+    }
+    .popup {
+      &-header {
+        margin-bottom: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @include respond-to(xs) {
+          margin-bottom: 14px;
+        }
+        .close {
+          margin-right: 20px;
+          position: static;
+        }
+        .title {
+          @include respond-to(xs) {
+            font-size: 16px;
+            line-height: 16px;
+          }
+        }
+      }
+      &-content {
+        max-height: calc(100vh - 244px);
+        overflow-y: auto;
+        padding-right: 20px;
+        @include respond-to(xs) {
+          max-height: calc(100vh - 215px);
+        }
+      }
+      &-footer {
+        padding: 34px 28px;
+        background-color: $elements;
+        @include respond-to(xs) {
+          padding: 10px 20px 50px;
+        }
+        .value {
+          font-size: 16px;
+          line-height: 22px;
+          @include fb;
+          text-align: center;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: $textDark;
+          margin-bottom: 12px;
+        }
+        .final {
+          margin-right: 5px;
+        }
+      }
+      &-wrapper {
+        padding: 32px 9px 0 32px;
+        position: relative;
+        &:after {
+          content: '';
+          display: block;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 94.27%);
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 67px;
+        }
+      }
+    }
+  }
+  .input-container {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    &-link {
+      font-size: 12px;
+      width: auto;
+      margin: 0 5px;
+    }
+  }
+  &-buttons {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    .btn {
+      width: calc(50% - 10px);
+    }
+  }
+  .close-btn {
+    right: 36px;
+    left: unset;
+    margin: 0;
+    top: 36px;
+    position: absolute;
+    @include anim;
+    @include respond-to(xs) {
+      top: 21px;
+      right: 21px;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: pointer;
+      @include anim;
+    }
+  }
+}

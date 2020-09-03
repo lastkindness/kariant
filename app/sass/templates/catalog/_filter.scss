@@ -7,8 +7,32 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.2px;
-  @include respond-to(tablet-1030){
-    //display: none;
+  @include respond-to(md) {
+    margin-bottom: 0;
+    background-color: $white;
+    padding: 0 12px 8px;
+  }
+  @include respond-to(sm) {
+    transform: translateX(350px);
+    position: fixed;
+    opacity: 0;
+    @include anim;
+    width: 312px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  &.mobile-active {
+    transform: translateX(0px);
+    opacity: 1;
+    @include anim;
+    &:before {
+      display: block;
+    }
   }
   ul,
   li {
@@ -52,19 +76,50 @@
       }
     }
   }
+  &_choose {
+    padding-top: 12px;
+    display: none;
+    @include respond-to(sm) {
+      display: block;
+    }
+    &-title {
+      margin-bottom: 8px;
+    }
+    .catalog__filters {
+      padding: 0;
+    }
+  }
+  &_title {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: $gray1;
+    margin: 0 -12px;
+    position: relative;
+    @include respond-to(sm) {
+      display: flex;
+    }
+    .back {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 12px;
+      .icon {
+        margin-right: 6px;
+        font-size: 10px;
+      }
+    }
+  }
   &_item {
     width: 100%;
     //overflow: hidden;
     @include anim;
-    @include respond-to(tablet-1030){
-      background-color: $gray3;
-      border-top: 1px solid $gray3;
-    }
     &:last-child {
       border: none;
       padding-bottom: 20px;
-      @include respond-to(tablet-1030){
-        border-top: 1px solid $gray3;
+      @include respond-to(sm) {
+        padding-bottom: 0;
       }
     }
     .filter-title {
@@ -114,21 +169,12 @@
     }
     &_title {
       &.filter-title {
-        @include respond-to(tablet-1030){
-          align-items: stretch;
-        }
         .plus {
           color: $textDark;
           font-size: 20px;
           &:before {
             transform: rotate(180deg);
             @include anim;
-          }
-          @include respond-to(tablet-1030){
-            width: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
           }
         }
       }
@@ -227,31 +273,11 @@
     &-wrapper {
       padding: 20px;
       display: none;
-      @include respond-to(tablet-1030){
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-      }
       .reset {
         width: 100%;
-        @include respond-to(tablet-1030){
-          //width: 80%;
-        }
-        @include respond-to(xs-690){
-          //width: 60%;
-          display: inline-block;
-        }
       }
       .apply {
         display: none;
-        @include respond-to(tablet-1030){
-          width: 20%;
-          //display: inline-block;
-        }
-        @include respond-to(xs-690){
-          width: 40%;
-          //display: inline-block;
-        }
       }
     }
     &-main {
@@ -291,9 +317,6 @@
   z-index: 20;
   .woof_checkbox_count, .woof_checkbox_term {
     display: none;
-  }
-  @include respond-to(tablet-1030){
-    border: none;
   }
 }
 
@@ -559,6 +582,23 @@
     margin: 0 3px;
     padding: 5px 10px;
     text-align: center;
+  }
+}
+
+.mobile-filter {
+  main {
+    z-index: 10;
+    .catalog {
+      &__wrapper {
+        &:before {
+          display: block;
+        }
+      }
+    }
+  }
+  header {
+    position: relative;
+    z-index: 1;
   }
 }
 

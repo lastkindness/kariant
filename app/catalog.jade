@@ -21,40 +21,46 @@ html
         section.catalog
           .container
             .catalog__wrapper
+              #stop-top-sidebar
               include templates/catalog/_filter
-              .catalog__grid
-                include components/_product-item
-                include components/_pagination
-                include components/_button
-                include components/_dropdown
-                .catalog__sort
-                  span Сортировать по:
-                  - var text = ["Популярности", "Новинкам", "Сначала дешевые", "Сначала дорогие", "Со скидками"];
-                  - var id = [];
-                  +dropdown("dropdown_native", text, "", "", "", id)
-                .catalog__filters
-                  .icon.icon-close
-                    span 44
-                  .icon.icon-close
-                    span оранжевый
-                  .icon.icon-close
-                    span зеленый
-                  .icon.icon-close
-                    span классика
-                - var img = ["1.png", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.png", "14.jpg", "15.png"]
-                - var itemTitle = ["Тренч Stimma Джеси 4153 S Пудра", "Тренч Stimma Джеси 4151 Xs Графитовый", "Куртка Stimma Кортика 3968 Xs Графитовый", "Куртка Stimma Карелия 4181 Xs Серебряный", "Женская куртка Stimma Веста 4799 L Шоколадный", "Женская куртка Stimma Веста 4800 Xs Черный", "Пуховик ПВ-849 (и/м) Лаке Тон 573", "Парка демисезонная с нашивками", "Куртка Джей", "Colin's куртка однотонный черный casual производство — Турция", "Hollister парка однотонный темно-синий casual производство - Вьетнам", "Коттоновая парка", "Джинсовая парка  с песцовым мехом", "Colorado clothing куртка однотонный темно-синий casual производство — Китай", "Теплая парка с мехом Frost Fox"]
-                - var price= ["142 402", "29 755", "45 794", "25 742", "142 699", "85 289", "226", "14 999", "142 402", "29 755", "45 794", "25 742", "142 699", "85 289", "226"]
-                - var classItem= ["", "", "", "", "", "product-item_stock product-item_old", "", "", "", "", "", "product-item_missing", "product-item_missing", "product-item_stock product-item_old", ""]
-                - var priceOld= ["", "", "", "", "", "86 231", "", "", "", "", "", "", "", "142 699", ""]
-                - var vendor= ["45881257","557780","7x757","ВШГ202","4588QS","4jjQS", "45881257","557780", "45881257","557780","7x757","ВШГ202","4588QS","4jjQS", "45881257"]
-                - var sale= ["", "", "", "", "", "-20", "", "", "", "", "", "", "", "-15", ""]
-                - var label= ["", "топ", "", "", "", "", "new", "", "", "топ", "", "", "", "", "new"]
-                - var classLabel= ["", "label-status_top", "", "", "", "", "label-status_new", "", "", "label-status_top", "", "", "", "", "label-status_new"]
-                - var missing= [false, false, false, true, true, false, false, false, false, false, false, true, true, false, false]
-                - for (var i = 0; i < img.length; i++)
-                  +product-item(img, itemTitle, price, priceOld, classItem, vendor, sale, label, classLabel, missing)
+              .catalog__grid-wrapper
+                .catalog__grid
+                  include components/_product-item
+                  include components/_pagination
+                  include components/_button
+                  include components/_dropdown
+                  .catalog__sort
+                    span Сортировать по:
+                    - var text = ["Популярности", "Новинкам", "Сначала дешевые", "Сначала дорогие", "Со скидками"];
+                    - var id = [];
+                    +dropdown("dropdown_native", text, "", "", "", id)
+                  .catalog__filters
+                    .icon.icon-close
+                      span 44
+                    .icon.icon-close
+                      span оранжевый
+                    .icon.icon-close
+                      span зеленый
+                    .icon.icon-close
+                      span классика
+                  .catalog__mobile-buttons
+                    +button('Сортировка', 'button', 'sort')(class="btn_inverse sort")
+                    +button('Фильтры', 'button', 'filter')(class="filter")
+                  - var img = ["1.png", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.png", "14.jpg", "15.png"]
+                  - var itemTitle = ["Тренч Stimma Джеси 4153 S Пудра", "Тренч Stimma Джеси 4151 Xs Графитовый", "Куртка Stimma Кортика 3968 Xs Графитовый", "Куртка Stimma Карелия 4181 Xs Серебряный", "Женская куртка Stimma Веста 4799 L Шоколадный", "Женская куртка Stimma Веста 4800 Xs Черный", "Пуховик ПВ-849 (и/м) Лаке Тон 573", "Парка демисезонная с нашивками", "Куртка Джей", "Colin's куртка однотонный черный casual производство — Турция", "Hollister парка однотонный темно-синий casual производство - Вьетнам", "Коттоновая парка", "Джинсовая парка  с песцовым мехом", "Colorado clothing куртка однотонный темно-синий casual производство — Китай", "Теплая парка с мехом Frost Fox"]
+                  - var price= ["142 402", "29 755", "45 794", "25 742", "142 699", "85 289", "226", "14 999", "142 402", "29 755", "45 794", "25 742", "142 699", "85 289", "226"]
+                  - var classItem= ["", "", "", "", "", "product-item_stock product-item_old", "", "", "", "", "", "product-item_missing", "product-item_missing", "product-item_stock product-item_old", ""]
+                  - var priceOld= ["", "", "", "", "", "86 231", "", "", "", "", "", "", "", "142 699", ""]
+                  - var vendor= ["45881257","557780","7x757","ВШГ202","4588QS","4jjQS", "45881257","557780", "45881257","557780","7x757","ВШГ202","4588QS","4jjQS", "45881257"]
+                  - var sale= ["", "", "", "", "", "-20", "", "", "", "", "", "", "", "-15", ""]
+                  - var label= ["", "топ", "", "", "", "", "new", "", "", "топ", "", "", "", "", "new"]
+                  - var classLabel= ["", "label-status_top", "", "", "", "", "label-status_new", "", "", "label-status_top", "", "", "", "", "label-status_new"]
+                  - var missing= [false, false, false, true, true, false, false, false, false, false, false, true, true, false, false]
+                  - for (var i = 0; i < img.length; i++)
+                    +product-item(img, itemTitle, price, priceOld, classItem, vendor, sale, label, classLabel, missing)
                 +button('Показать еще', 'button', 'down')
                 +pagination
+              #stop-bottom-sidebar
     include components/_footer
     include components/_popup
   include components/_footer-include

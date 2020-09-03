@@ -1,0 +1,37 @@
+.category {
+  &-category {
+    &__wrapper {
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      margin: 0 -15px;
+      flex-wrap: wrap;
+      @include respond-to(xs-690) {
+        margin: 0 -6px;
+      }
+      .category-item {
+        margin-bottom: 68px;
+        margin: 0 15px;
+        width: calc(33.3% - 30px);
+        @include respond-to(xs-690) {
+          margin: 0 6px;
+          width: calc(50% - 12px);
+          margin-bottom: 64px;
+        }
+        &:nth-child(3n+1) {
+          @include respond-to(xs-690) {
+            width: 100%;
+          }
+        }
+        &:last-child {
+          @include respond-to(xs-690) {
+            margin-bottom: 0;
+          }
+        }
+        &__img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

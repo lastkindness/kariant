@@ -700,6 +700,9 @@
     background-color: $white;
     z-index: 10;
     padding: 70px 0;
+    @include respond-to(sm) {
+      height: 100vh;
+    }
     &_mobile {
       display: inline-flex;
       align-items: center;

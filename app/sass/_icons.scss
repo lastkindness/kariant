@@ -17,16 +17,22 @@ $icon_font_name:"Icons";
 %icon-cart-full,
 %icon-check,
 %icon-close,
+%icon-delivery,
 %icon-down,
+%icon-filter,
 %icon-home,
 %icon-left,
+%icon-payment,
 %icon-phone,
 %icon-point,
 %icon-question-full,
 %icon-question,
+%icon-return,
 %icon-right,
 %icon-search,
 %icon-settings,
+%icon-share,
+%icon-sort,
 %icon-star-double,
 %icon-star-full,
 %icon-star,
@@ -104,51 +110,69 @@ $icon_font_name:"Icons";
 %icon-close:before {
 	content:'\E00A';
 }
-%icon-down:before {
+%icon-delivery:before {
 	content:'\E00B';
 }
-%icon-home:before {
+%icon-down:before {
 	content:'\E00C';
 }
-%icon-left:before {
+%icon-filter:before {
 	content:'\E00D';
 }
-%icon-phone:before {
+%icon-home:before {
 	content:'\E00E';
 }
-%icon-point:before {
+%icon-left:before {
 	content:'\E00F';
 }
-%icon-question-full:before {
+%icon-payment:before {
 	content:'\E010';
 }
-%icon-question:before {
+%icon-phone:before {
 	content:'\E011';
 }
-%icon-right:before {
+%icon-point:before {
 	content:'\E012';
 }
-%icon-search:before {
+%icon-question-full:before {
 	content:'\E013';
 }
-%icon-settings:before {
+%icon-question:before {
 	content:'\E014';
 }
-%icon-star-double:before {
+%icon-return:before {
 	content:'\E015';
 }
-%icon-star-full:before {
+%icon-right:before {
 	content:'\E016';
 }
-%icon-star:before {
+%icon-search:before {
 	content:'\E017';
 }
-%icon-up:before {
+%icon-settings:before {
 	content:'\E018';
 }
-%icon-wishlist-empty:before {
+%icon-share:before {
 	content:'\E019';
 }
-%icon-wishlist-full:before {
+%icon-sort:before {
 	content:'\E01A';
+}
+%icon-star-double:before {
+	content:'\E01B';
+}
+%icon-star-full:before {
+	content:'\E01C';
+}
+%icon-star:before {
+	content:'\E01D';
+}
+%icon-up:before {
+	content:'\E01E';
+}
+%icon-wishlist-empty:before {
+	content:'\E01F';
+}
+%icon-wishlist-full:before {
+	content:'\E020';
 }

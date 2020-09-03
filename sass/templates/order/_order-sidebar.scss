@@ -1,0 +1,130 @@
+//order-sidebar start
+.order__sidebar {
+  padding: 32px 28px 0;
+  background-color: $white;
+  width: 40%;
+  order: 1;
+  position: relative;
+  &-title,
+  &-info-total,
+  &-info-delivery,
+  &-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-title {
+    padding-bottom: 26px;
+    border-bottom: 1px solid $textDark;
+    margin-bottom: 20px;
+    .title {
+      font-size: 13px;
+      @include fb;
+      letter-spacing: 1.6px;
+      &:before {
+        margin-right: 12px;
+        font-size: 22px;
+        line-height: 22px;
+      }
+    }
+    .btn {
+      font-size: 12px;
+      line-height: 1.4px;
+      color: $textLight;
+      &:after {
+        bottom: -8px;
+        background-color: $textLight;
+      }
+    }
+  }
+  &-info {
+    &-discount {
+      margin-bottom: 20px;
+      .title {
+        @include fb;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 1.4px;
+        border-bottom: 1px dashed $textDark;
+        display: inline-block;
+        cursor: pointer;
+      }
+      form {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        padding-top: 15px;
+        input {
+          height: 100%;
+        }
+        .input-container {
+          margin-bottom: 0;
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+  &-info-total,
+  &-info-delivery,
+  &-total {
+    color: $textDark;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 15px;
+    span {
+      margin-right: 5px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &-info {
+    padding-bottom: 24px;
+    border-bottom: 1px solid $textDark;
+    margin-bottom: 24px;
+    &-discount {
+      .discount {
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        @include anim;
+      }
+      &.active {
+        .discount {
+          max-height: 200px;
+          opacity: 1;
+          @include anim;
+        }
+      }
+    }
+  }
+  &-total {
+    @include fb;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  &-products {
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 20px;
+    &:after {
+      content: '';
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 94.27%);
+      width: 100%;
+      height: 67px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  .basket-item {
+    &__remove {
+      display: none;
+    }
+    &__controls {
+      justify-content: flex-end;
+    }
+  }
+}
+//order-sidebar end

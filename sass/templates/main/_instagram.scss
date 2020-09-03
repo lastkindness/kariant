@@ -1,0 +1,89 @@
+.main-instagram {
+  &__img{
+    align-items: stretch;
+    display: flex;
+    margin: 0 -15px;
+    padding: 0;
+    @include respond-to(md) {
+      flex-wrap: wrap;
+    }
+    @include respond-to(xs) {
+      margin: 0 -6px;
+    }
+    li{
+      opacity: 1;
+      @include anim;
+      width: calc(25% - 30px);
+      margin: 0 15px;
+      padding: 0;
+      overflow: hidden;
+      @include respond-to(md) {
+        width: calc(50% - 30px);
+        margin-bottom: 30px;
+      }
+      @include respond-to(xs) {
+        width: calc(50% - 12px);
+        margin: 0 6px;
+        margin-bottom: 12px;
+      }
+      &:before{
+        display: none;
+      }
+      a{
+        height: 100%;
+        width: 100%;
+        &:after{
+          display: none;
+        }
+        img{
+          object-fit: cover;
+        }
+      }
+      &:hover,
+      &:active,
+      &:focus{
+        opacity: 0.4;
+        @include anim;
+      }
+    }
+  }
+  &__header {
+    margin-bottom: 28px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    @include respond-to(xs) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 30px;
+    }
+    &-title {
+      @include respond-to(xs) {
+        text-align: center;
+      }
+      span {
+        margin-bottom: 12px;
+        display: inline-block;
+        font-size: 24px;
+        letter-spacing: 1.6px;
+        color: $accent;
+        @include fb;
+        @include respond-to(xs) {
+          font-size: 18px;
+          line-height: 22px;
+          margin-bottom: 8px;
+        }
+      }
+      h2{
+        margin-bottom: 0;
+        @include respond-to(xs) {
+          text-align: center;
+          font-size: 20px;
+          line-height: 22px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}

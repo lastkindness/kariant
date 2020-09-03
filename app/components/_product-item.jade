@@ -7,17 +7,17 @@ mixin product-item(img, itemTitle, price, priceOld, classItem, vendor, sale, lab
         .product-item__right
         .product-item__colors
             a(href="/card.html" title='Амалия Зеленый')
-                img(data-src="images/products/12.jpg" alt='Амалия Зеленый' title='Амалия Зеленый')
+                img(src="images/products/12.jpg" alt='Амалия Зеленый' title='Амалия Зеленый')
             a(href="/card.html" title='Амалия Желтый')
-                img(data-src="images/products/17.jpg" alt='Амалия Желтый' title='Амалия Желтый')
+                img(src="images/products/17.jpg" alt='Амалия Желтый' title='Амалия Желтый')
             a(href="/card.html" title='Амалия Синий')
-                img(data-src="images/products/16.jpg" alt='Амалия Синий' title='Амалия Синий')
+                img(src="images/products/16.jpg" alt='Амалия Синий' title='Амалия Синий')
             a(href="/card.html" title='Амалия Красный')
-                img(data-src="images/products/12.jpg" alt='Амалия Красный' title='Амалия Красный')
+                img(src="images/products/12.jpg" alt='Амалия Красный' title='Амалия Красный')
             a(href="/card.html" title='Амалия Белый')
-                img(data-src="images/products/17.jpg" alt='Амалия Белый' title='Амалия Белый')
+                img(src="images/products/17.jpg" alt='Амалия Белый' title='Амалия Белый')
             a(href="/card.html" title='Амалия Черный')
-                img(data-src="images/products/16.jpg" alt='Амалия Черный' title='Амалия Черный')
+                img(src="images/products/16.jpg" alt='Амалия Черный' title='Амалия Черный')
             //если цветовых вариаций больше чем 6 выводить ...
             a(href="/card.html" title='Амалия Фиолетовый') ...
         a.product-item__wrapper(href="/card.html")
@@ -34,7 +34,7 @@ mixin product-item(img, itemTitle, price, priceOld, classItem, vendor, sale, lab
                             .product-item__sale
                                 .value= sale[i]
                                 .perc %
-                img(data-src="images/products/" + img[i] alt= itemTitle[i] title= itemTitle[i])
+                img(src="images/products/" + img[i] alt= itemTitle[i] title= itemTitle[i])
             .product-item__main
                 h2.title.product-item__title.subtitle-small(title= itemTitle[i] alt= itemTitle[i])= itemTitle[i]
                 .product-item__offer
@@ -66,15 +66,15 @@ mixin product-item(img, itemTitle, price, priceOld, classItem, vendor, sale, lab
                 .product-item__sizes
                     span.subtitle Размеры в наличии
                     .product-item__sizes-box
-                        a(href="/card.html" title='Амалия Фиолетовый 42') 42
-                        a(href="/card.html" title='Амалия Фиолетовый 44') 44
-                        a(href="/card.html" title='Амалия Фиолетовый 46') 46
-                        a(href="/card.html" title='Амалия Фиолетовый 48') 48
-                        a(href="/card.html" title='Амалия Фиолетовый 50') 50
-                        a(href="/card.html" title='Амалия Фиолетовый 52') 52
-                        a(href="/card.html" title='Амалия Фиолетовый 54') 54
-                        a(href="/card.html" title='Амалия Фиолетовый 56') 56
-                        a(href="/card.html" title='Амалия Фиолетовый') ...
+                        button(class='btn_link' title='Амалия Фиолетовый 42') 42
+                        button(class='btn_link' title='Амалия Фиолетовый 44') 44
+                        button(class='btn_link' title='Амалия Фиолетовый 46') 46
+                        button(class='btn_link' title='Амалия Фиолетовый 48') 48
+                        button(class='btn_link' title='Амалия Фиолетовый 50') 50
+                        button(class='btn_link' title='Амалия Фиолетовый 52') 52
+                        button(class='btn_link' title='Амалия Фиолетовый 54') 54
+                        button(class='btn_link' title='Амалия Фиолетовый 56') 56
+                        button(class='btn_link' title='Амалия Фиолетовый') ...
 
 
 

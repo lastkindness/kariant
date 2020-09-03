@@ -1,0 +1,35 @@
+//news-item start
+.service-item {
+  padding: 25px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid $gray3;
+  height: 420px;
+  &__title {
+    color: $text;
+    padding-bottom: 5px;
+    border-bottom: 2px solid $elements;
+    text-align: center;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  &__img {
+    width: 80%;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+    }
+  }
+  .btn {
+    width: 100%;
+  }
+}
+//news-item end

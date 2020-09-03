@@ -1,0 +1,154 @@
+.contacts {
+  &-page {
+    .footer {
+      margin: 0;
+    }
+  }
+  &__maps {
+    margin-bottom: 0;
+    order: 0;
+    display: inline-flex;
+    width: 100%;
+  }
+  &__main {
+    margin-bottom: 0;
+  }
+  &__content {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-bottom: 0;
+    @include respond-to(md) {
+      flex-wrap: wrap;
+    }
+  }
+  &__info {
+    width: 60%;
+    @include respond-to(lg-1360) {
+      width: 50%;
+    }
+    @include respond-to(md) {
+      width: 100%;
+    }
+    &-title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+      color: $text;
+      .icon {
+        margin-right: 15px;
+        &:before {
+          color: $elements;
+        }
+      }
+      @include respond-to(xs) {
+        margin-bottom: 10px;
+        justify-content: center;
+      }
+    }
+    &-li {
+      margin-bottom: 35px;
+      @include respond-to(xs-600) {
+        margin-bottom: 10px;
+      }
+      &:before {
+        display: none;
+      }
+    }
+    &-list {
+      padding: 0;
+      margin: 0;
+      @include respond-to(md) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    }
+    &-content {
+      span,
+      a {
+        width: 100%;
+        display: inline-block;
+        color: $black;
+      }
+      a {
+        margin-bottom: 10px;
+        &:hover,
+        &:active,
+        &:focus {
+          color: $elements;
+          @include anim;
+        }
+      }
+    }
+    &-adress {
+      @include respond-to(md) {
+        order: 0;
+        width: 65%;
+      }
+      @include respond-to(xs) {
+        width: 100%;
+        text-align: center;
+      }
+      .contacts__info-content {
+        margin-right: 25%;
+        padding: 15px 0;
+        border-bottom: 1px solid $accent;
+        @include respond-to(lg-1360) {
+          margin-right: 5%;
+        }
+        @include respond-to(xs) {
+          margin-right: 0;
+        }
+        span {
+          width: 100%;
+          display: inline-block;
+          color: $black;
+        }
+      }
+    }
+    &-phone {
+      @include respond-to(md) {
+        order: 1;
+        width: 35%;
+        text-align: center;
+      }
+      @include respond-to(xs) {
+        width: 100%;
+      }
+      .contacts__info-title {
+        @include respond-to(md) {
+          justify-content: center;
+        }
+      }
+    }
+  }
+  &__form {
+    &-form {
+      padding: 55px 70px;
+      background-color: transparentize($elements, 0.9);
+      @include respond-to(sm) {
+        padding: 20px 30px;
+      }
+    }
+    &-wrapper {
+      width: 40%;
+      @include respond-to(lg-1360) {
+        width: 50%;
+      }
+      @include respond-to(md) {
+        width: 100%;
+      }
+    }
+    &-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 10px 15px;
+      width: 100%;
+    }
+  }
+}

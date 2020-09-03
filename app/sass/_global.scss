@@ -12,64 +12,70 @@
   }
 }
 
-.icon-arr-corner {
-  @extend %icon-arr-corner; }
-.icon-arrLeft {
-  @extend %icon-arrLeft; }
-.icon-arrRight {
-  @extend %icon-arrRight; }
-.icon-bar {
-  @extend %icon-bar; }
-.icon-car {
-  @extend %icon-car; }
-.icon-card {
-  @extend %icon-card; }
-.icon-cart-empty {
-  @extend %icon-cart-empty; }
-.icon-cart-full {
-  @extend %icon-cart-full; }
-.icon-check {
-  @extend %icon-check; }
-.icon-close {
-  @extend %icon-close; }
-.icon-down {
-  @extend %icon-down; }
-.icon-left {
-  @extend %icon-left; }
-.icon-point {
-  @extend %icon-point; }
-.icon-phone {
-  @extend %icon-phone; }
-.icon-home {
-  @extend %icon-home; }
-.icon-right {
-  @extend %icon-right; }
-.icon-question-full {
-  @extend %icon-question-full; }
-.icon-question {
-  @extend %icon-question; }
-.icon-search {
-  @extend %icon-search; }
-.icon-settings {
-  @extend %icon-settings; }
-.icon-star-double {
-  @extend %icon-star-double; }
-.icon-star-full {
-  @extend %icon-star-full; }
-.icon-star {
-  @extend %icon-star; }
-.icon-up {
-  @extend %icon-up; }
-.icon-wishlist-empty {
-  @extend %icon-wishlist-empty;
-  &.active {
-    @extend %icon-wishlist-full;
-  }
-}
-.icon-wishlist-full {
-  @extend %icon-wishlist-full; }
-.last_selector {
-  @extend %last_selector; }
+.icon-arr-corner{
+  @extend %icon-arr-corner}
+.icon-arrLeft{
+  @extend %icon-arrLeft}
+.icon-arrRight{
+  @extend %icon-arrRight}
+.icon-bar{
+  @extend %icon-bar}
+.icon-car{
+  @extend %icon-car}
+.icon-card{
+  @extend %icon-card}
+.icon-cart-empty{
+  @extend %icon-cart-empty}
+.icon-cart-full{
+  @extend %icon-cart-full}
+.icon-check{
+  @extend %icon-check}
+.icon-close{
+  @extend %icon-close}
+.icon-delivery{
+  @extend %icon-delivery}
+.icon-down{
+  @extend %icon-down}
+.icon-filter{
+  @extend %icon-filter}
+.icon-home{
+  @extend %icon-home}
+.icon-left{
+  @extend %icon-left}
+.icon-payment{
+  @extend %icon-payment}
+.icon-phone{
+  @extend %icon-phone}
+.icon-point{
+  @extend %icon-point}
+.icon-question-full{
+  @extend %icon-question-full}
+.icon-question{
+  @extend %icon-question}
+.icon-return{
+  @extend %icon-return}
+.icon-right{
+  @extend %icon-right}
+.icon-search{
+  @extend %icon-search}
+.icon-settings{
+  @extend %icon-settings}
+.icon-share{
+  @extend %icon-share}
+.icon-sort{
+  @extend %icon-sort}
+.icon-star-double{
+  @extend %icon-star-double}
+.icon-star-full{
+  @extend %icon-star-full}
+.icon-star{
+  @extend %icon-star}
+.icon-up{
+  @extend %icon-up}
+.icon-wishlist-empty{
+  @extend %icon-wishlist-empty}
+.icon-wishlist-full{
+  @extend %icon-wishlist-full}
 
 //icons end
 
@@ -108,6 +114,12 @@ html {
   width: 100%;
   max-width: 100%;
   &.mobile-menu {
+    overflow: hidden;
+    main {
+      z-index: 1;
+    }
+  }
+  &.overflow {
     overflow: hidden;
   }
   @include respond-to(sm){
@@ -256,13 +268,17 @@ ol {
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 1.6px;
+    @include respond-to(xs) {
+      ont-size: 10px;
+      line-height: 12px;
+    }
   }
 }
 h1,
 h2,
 h3 {
   &.title {
-  &-big {
+    &-big {
       font-size: 36px;
       letter-spacing: 3.2px;
       line-height: 38px;
@@ -1145,6 +1161,9 @@ section {
   width: 100%;
   &_catalog {
     margin-bottom: 30px;
+    @include respond-to(sm) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -1159,7 +1178,7 @@ section {
 
 .sidebar-top {
   position: fixed;
-  top: 191px!important;
+  top: 91px!important;
 }
 .sidebar-fixed-top {
   position: absolute;
@@ -1281,7 +1300,7 @@ section {
     }
     &-next {
       &:after {
-        content:'\E012';
+        content:'\E016';
         @include anim;
         transform: translateX(0);
       }
@@ -1295,7 +1314,7 @@ section {
     &-prev {
       margin-right: 12px;
       &:after {
-        content:'\E00D';
+        content:'\E00F';
         @include anim;
         transform: translateX(0);
       }
@@ -1338,6 +1357,11 @@ section {
   img {
     margin: 0 10px 20px;
   }
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
 }
 
 // general end

@@ -5,8 +5,24 @@
   position: relative;
   border-top: 1px solid transparent;
   &__offer {
+    @include respond-to(sm) {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+    }
     .btn {
       display: none;
+      @include respond-to(sm) {
+        display: block;
+      }
+    }
+  }
+  .btn {
+    @include respond-to(sm) {
+      padding: 8px 16px;
+      font-size: 11px;
+      letter-spacing: 0.6px;
+      line-height: 15px;
     }
   }
   &__right {
@@ -22,6 +38,9 @@
     opacity: 0;
     z-index: -1;
     @include anim;
+    @include respond-to(sm) {
+      display: none;
+    }
   }
   a {
     &:after {
@@ -40,6 +59,9 @@
     border-left: 1px solid $textLight;
     border-top: 1px solid $textLight;
     border-bottom: 1px solid $textLight;
+    @include respond-to(sm) {
+      display: none;
+    }
     @include anim;
     background-color: $white;
     a {
@@ -85,6 +107,9 @@
     @include anim;
     padding-bottom: 20px;
     border-bottom: 1px solid $textLight;
+    @include respond-to(sm) {
+      display: none;
+    }
   }
   &__buttons {
     display: flex;
@@ -151,6 +176,10 @@
       color: $textLight;
     }
     &-box {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      button,
       a {
         @include fm;
         font-size: 14px;
@@ -159,6 +188,8 @@
         margin-right: 12px;
         position: relative;
         display: inline-block;
+        background-color: transparent;
+        padding: 0;
         &:after {
           transform-origin: center;
           width: 0%;
@@ -218,6 +249,9 @@
     img {
       object-fit: cover;
     }
+    @include respond-to(sm) {
+      height: 222px;
+    }
   }
   &__title {
     margin-bottom: 4px;
@@ -230,7 +264,7 @@
     line-height: 24px;
     letter-spacing: 0.2px;
     @include respond-to(sm) {
-      font-size: 14px;
+      font-size: 12px;
       line-height: 14px;
       order: 1;
     }
@@ -254,6 +288,9 @@
       padding-bottom: 15px;
       @include respond-to(sm) {
         padding-bottom: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
       }
     }
     span {
@@ -268,6 +305,10 @@
     z-index: 6;
     border-top: 1px solid $textLight;
     @include anim;
+    @include respond-to(sm) {
+      background-color: transparent;
+      border-top: 1px solid transparent;
+    }
     .product-item {
       &__drop,
       &__colors,
@@ -295,24 +336,7 @@
         @include anim;
       }
       &__offer {
-        @include respond-to(sm) {
-          display: flex;
-          align-items: stretch;
-          justify-content: space-between;
-        }
-        .btn {
-          display: none;
-          @include respond-to(sm) {
-            display: block;
-          }
-        }
-      }
-      &__price {
-        &-box {
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: center;
-        }
+
       }
     }
     &.active {

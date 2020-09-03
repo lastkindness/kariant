@@ -1,0 +1,154 @@
+$icon_font_name:"Icons";
+@font-face {
+	font-family:$icon_font_name;
+	src: url('fonts/Icons.eot');
+	src: url('fonts/Icons.eot?#iefix') format('eot'),
+	url('fonts/Icons.woff') format('woff'),
+	url('fonts/Icons.ttf') format('truetype'),
+	url('fonts/Icons.svg#Icons') format('svg');
+}
+%icon-arr-corner,
+%icon-arrLeft,
+%icon-arrRight,
+%icon-bar,
+%icon-car,
+%icon-card,
+%icon-cart-empty,
+%icon-cart-full,
+%icon-check,
+%icon-close,
+%icon-down,
+%icon-home,
+%icon-left,
+%icon-phone,
+%icon-point,
+%icon-question-full,
+%icon-question,
+%icon-right,
+%icon-search,
+%icon-settings,
+%icon-star-double,
+%icon-star-full,
+%icon-star,
+%icon-up,
+%icon-wishlist-empty,
+%icon-wishlist-full,
+%last_selector {
+		&:before {
+			font-family:$icon_font_name;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: normal;
+			// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+			text-decoration: none;
+			text-transform: none;
+		}
+	}
+
+%icons_before_after {
+	&:before,
+	&:after {
+		font-family: $icon_font_name;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+%icons_after {
+	&:after {
+		font-family: $icon_font_name;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+%icon-arr-corner:before {
+	content:'\E001';
+}
+%icon-arrLeft:before {
+	content:'\E002';
+}
+%icon-arrRight:before {
+	content:'\E003';
+}
+%icon-bar:before {
+	content:'\E004';
+}
+%icon-car:before {
+	content:'\E005';
+}
+%icon-card:before {
+	content:'\E006';
+}
+%icon-cart-empty:before {
+	content:'\E007';
+}
+%icon-cart-full:before {
+	content:'\E008';
+}
+%icon-check:before {
+	content:'\E009';
+}
+%icon-close:before {
+	content:'\E00A';
+}
+%icon-down:before {
+	content:'\E00B';
+}
+%icon-home:before {
+	content:'\E00C';
+}
+%icon-left:before {
+	content:'\E00D';
+}
+%icon-phone:before {
+	content:'\E00E';
+}
+%icon-point:before {
+	content:'\E00F';
+}
+%icon-question-full:before {
+	content:'\E010';
+}
+%icon-question:before {
+	content:'\E011';
+}
+%icon-right:before {
+	content:'\E012';
+}
+%icon-search:before {
+	content:'\E013';
+}
+%icon-settings:before {
+	content:'\E014';
+}
+%icon-star-double:before {
+	content:'\E015';
+}
+%icon-star-full:before {
+	content:'\E016';
+}
+%icon-star:before {
+	content:'\E017';
+}
+%icon-up:before {
+	content:'\E018';
+}
+%icon-wishlist-empty:before {
+	content:'\E019';
+}
+%icon-wishlist-full:before {
+	content:'\E01A';
+}

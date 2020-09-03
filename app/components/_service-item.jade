@@ -1,7 +1,6 @@
 include _button
-mixin service-item(img, itemTitle)
-    .service-item
         h2.service-item__title.subtitle= itemTitle[i]
-        .service-item__img
+        .service-item__imgmixin service-item(img, itemTitle)
+            .service-item
             img(src="images/services/"+img[i] alt= itemTitle[i] title= itemTitle[i])
         +button('Подробнее', 'a')(href="http://html.myapp.com.ua/vashkluch/service.html")

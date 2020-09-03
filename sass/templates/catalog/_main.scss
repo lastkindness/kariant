@@ -1,0 +1,95 @@
+//catalog main start
+.catalog {
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__filter {
+    width: 23%;
+  }
+  &__grid {
+    width: calc(77% - 10px);
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+    .btn {
+      margin: 0 auto;
+    }
+    .product-item {
+      width: calc(33.3% - 30px);
+      margin: 0 15px 44px;
+      &__title {
+        max-height: 36px;
+        overflow: hidden;
+      }
+    }
+    .dropdown__dropdown {
+      min-width: 200px;
+    }
+  }
+  &__sort,
+  &__filters,
+  &.icon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+    span {
+      margin-right: 12px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__sort {
+    margin-bottom: 24px;
+    span {
+      color: $textLight;
+    }
+    .dropdown {
+      span {
+        color: $textDark;
+      }
+    }
+  }
+  &__filters {
+    margin-bottom: 24px;
+    span {
+      order: 0;
+    }
+    .icon {
+      @include fb;
+      color: $textDark;
+      margin-right: 12px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:before {
+        color: $textLight;
+        order: 1;
+        margin-left: 5px;
+        @include anim;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        cursor: pointer;
+        &:before {
+          color: $black;
+          @include anim;
+        }
+      }
+    }
+  }
+}
+//catalog main end
