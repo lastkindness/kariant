@@ -1,0 +1,65 @@
+
+<aside class="cart__sidebar tub-block cart__sidebar_unregistered">
+  <div class="tub_filter">
+    <ul class="tub_header cart__sidebar-title">
+      <li class="active cart__sidebar-tab"><span>Авторизоваться</span></li>
+      <li class="cart__sidebar-tab"><span>Продолжить без регистрации</span></li>
+    </ul>
+  </div>
+  <div class="main_cont cart__sidebar-wrapper">
+    <div style="display: flex;" class="tub_body cart__sidebar-main">
+      <div class="cart__sidebar-info">
+        <form class="js_validate">
+          <div class="input-container">
+            <label for="email" class="req">Email</label>
+            <input type="email" name="email" id="email" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" class="validate"/>
+            <div class="text-error">Поле «Email» не заполнено</div>
+          </div>
+          <div class="input-container">
+            <label for="password" class="req">Пароль</label>
+            <input id="password" type="password" name="password" required="required" data-validate="pass" data-error-wrong="Поле заполнено не верно" data-error-empty="Поле не заполнено" data-error-min="Пароль: не менее 6 символов" data-error-max="Пароль: не более 20 символов" class="validate"/>
+            <div class="text-error">Поле не заполнено</div>
+          </div>
+          <input value="Войти" type="submit" class="btn"/>
+        </form>
+      </div>
+      <div class="cart__sidebar-total">
+        <div class="cart__sidebar-total-value">
+          <div class="title">Итого</div>
+          <div class="total"><span class="value">27360</span><span class="currency">грн</span></div>
+        </div>
+        <button type="submit" class="btn disabled"><span>Оформить заказ</span>
+        </button>
+      </div>
+    </div>
+    <div style="display: none;" class="tub_body cart__sidebar-main">
+      <form class="js_validate">
+        <div class="cart__sidebar-info">
+          <div class="input-container">
+            <label for="name" class="req">Имя</label>
+            <input id="name" type="text" name="firstname" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate"/>
+            <div class="text-error">Поле  не заполнено</div>
+          </div>
+          <div class="input-container">
+            <label for="email" class="req">Email</label>
+            <input type="email" name="email" id="email" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" class="validate"/>
+            <div class="text-error">Поле «Email» не заполнено</div>
+          </div>
+          <div class="input-container">
+            <label for="phone" class="req">Телефон</label>
+            <input id="phone" type="tel" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(17)" class="validate"/>
+            <div class="text-error">Поле  не заполнено</div>
+          </div>
+        </div>
+        <div class="cart__sidebar-total">
+          <div class="cart__sidebar-total-value">
+            <div class="title">Итого</div>
+            <div class="total"><span class="value">27360</span><span class="currency">грн</span></div>
+          </div>
+          <button type="submit" class="btn"><span>Оформить заказ</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</aside>

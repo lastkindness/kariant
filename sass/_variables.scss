@@ -2,60 +2,84 @@
 
 /*COLORS start*/
 $white: #FFFFFF;
-$grayBG: #F1F1F1;
-$grayBG2: #FCFCFC;
-$lines: #E2E3E7;
-$darkColor: #2D2E35;
-$text: #23364B;
-$textGray: #717C89;
-$elements: #394791;
-$action: #2F80ED;
+$black: #000000;
+$text: #5A5858;
+$textDark: #282727;
+$textLight: #A0A0A0;
+$elements: #CFC6C3;
+$accent: #CEB499;
+$accent2: #EBE1DD;
+$accent3: #8E8174;
+$accent4: #F1EFE8;
+$accent5: #E8E6DA;
+$accent5: #D9C7AA;
+$gray1: #F5F5F5;
+$gray2: #EFEFEF;
+$gray3: #E3E2E2;
 $attention: #EB5757;
-$select: #4AAC4E;
-$promotion: #FFBC00;
-$mainBannerBG: #309CFF;
+$select: #27AE60;
+$dark: #2F3344;
 /*COLORS end*/
 
 /*ANIMATIONS start*/
 @mixin anim{
 	transition: all .3s ease;
 }
+@mixin anim5{
+	transition: all .5s ease;
+}
 @mixin anim-linear{
 	transition: all .3s linear;
 }
+@mixin anim-linear{
+	transition: all .5s linear;
+}
 /*ANIMATIONS end*/
-
-/*SHADOWS start*/
-$box-shadow-none: 0px 0px 0px rgba(0, 0, 0, 1);
-$box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.28);
-/*SHADOWS end*/
 
 
 /*FONTS start*/
-@mixin fr {
-	font-family: 'GothamPro', sans-serif;
-	font-weight: 400;
+@mixin fblack {
+	font-family: 'ProximaNova', sans-serif;
+	font-weight: 900;
+	font-feature-settings: 'pnum' on, 'lnum' on;
 }
-@mixin fm {
-	font-family: 'GothamPro', sans-serif;
-	font-weight: 500;
+@mixin fextra {
+	font-family: 'ProximaNova', sans-serif;
+	font-weight: 800;
+	font-feature-settings: 'pnum' on, 'lnum' on;
 }
 @mixin fb {
-	font-family: 'GothamPro', sans-serif;
+	font-family: 'ProximaNova', sans-serif;
 	font-weight: 700;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+}
+@mixin fm {
+	font-family: 'ProximaNova', sans-serif;
+	font-weight: 600;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+}
+@mixin fr {
+	font-family: 'ProximaNova', sans-serif;
+	font-weight: 400;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+}
+@mixin fl {
+	font-family: 'ProximaNova', sans-serif;
+	font-weight: 300;
+	font-feature-settings: 'pnum' on, 'lnum' on;
 }
 /*FONTS end*/
 
 
 /*=======================START-MEDIA=====================*/
 @mixin respond-to($media) {
-	@if $media == xs-340 {
-		@media only screen and (max-width: 340px) {
+	@if $media == xs-360 {
+		@media only screen and (max-width: 360px) {
 			@content;
 		}
 	}
-	@if $media == xs-370 {
-		@media only screen and (max-width: 375px) {
+	@if $media == xs-380 {
+		@media only screen and (max-width: 380px) {
 			@content;
 		}
 	}
@@ -77,16 +101,16 @@ $box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.28);
 		@media only screen and (max-width: 691px) {
 			@content;
 		}
-	} @else if $media == max-height-420 {
-		@media only screen and (max-height: 420px) {
-			@content;
-		}
 	} @else if $media == sm-767 {
 		@media only screen and (max-width: 767px) {
 			@content;
 		}
 	} @else if $media == sm {
 		@media only screen and (max-width: 768px) {
+			@content;
+		}
+	} @else if $media == mdMin {
+		@media only screen and (min-width: 994px) {
 			@content;
 		}
 	} @else if $media == md {
@@ -125,9 +149,12 @@ $box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.28);
 		@media only screen and (max-width: 1700px) {
 			@content;
 		}
+	} @else if $media == lg-1920 {
+		@media only screen and (max-width: 1919px) {
+			@content;
+		}
 	}
 }
 /*=======================END-MEDIA=====================*/
 
 /*Variables end*/
-

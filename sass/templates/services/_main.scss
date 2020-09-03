@@ -1,0 +1,17 @@
+.services {
+  &-page {
+    .main {
+      &-services {
+        .main-page__title {
+          display: none;
+        }
+      }
+    }
+  }
+  &__main {
+    margin: 45px 0;
+    @include respond-to(xs) {
+      margin: 0;
+    }
+  }
+}

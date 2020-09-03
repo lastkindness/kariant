@@ -1,0 +1,125 @@
+.main {
+  &-slider {
+    &__item {
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      margin-right: -20vw;
+      padding: 20px 0 0 100px;
+      background-color: $elements;
+      @include respond-to(sm) {
+        padding: 20px 0 0 20px;
+      }
+      @include respond-to(xs) {
+        padding: 14px 0 0;
+        background-color: transparent !important;
+        margin-right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+      }
+    }
+    &__contant {
+      width: calc(55% - 30px - 10vw);
+      margin-right: 30px;
+      margin-top: 116px;
+      margin-bottom: 44px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-bottom: 1px solid $textDark;
+      @include respond-to(lg-1200) {
+        margin-top: 50px;
+      }
+      @include respond-to(xs) {
+        order: 1;
+        margin: 20px 0 0;
+        width: 100%;
+        border: none;
+      }
+      h2 {
+        margin-bottom: 36px;
+        color: $textDark;
+        @include respond-to(xs) {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &__img {
+      width: calc(45% - 10vw);
+      align-self: flex-end;
+      @include respond-to(xs) {
+        width: 100%;
+        height: 342px;
+      }
+    }
+    &__controls {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      @include respond-to(xs) {
+        position: relative;
+        justify-content: center;
+      }
+    }
+    &__box {
+      margin-bottom: 40px;
+      @include respond-to(sm) {
+        margin-bottom: 10px;
+      }
+      @include respond-to(xs) {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+    }
+    .swiper {
+      &-slide {
+        opacity: 0;
+        @include anim;
+        &-active {
+          opacity: 1;
+          @include anim;
+        }
+      }
+      &-pagination {
+        margin-bottom: 0;
+      }
+      &-arrows {
+        @include respond-to(xs) {
+          width: 100%;
+          position: absolute;
+          height: 100%;
+        }
+        &>* {
+          margin: 0;
+        }
+      }
+      &-button {
+        &-prev {
+          @include respond-to(xs) {
+            transform: translateX(-40px);
+          }
+        }
+        &-next {
+          margin-left: 12px;
+          @include respond-to(xs) {
+            transform: translateX(40px);
+          }
+        }
+      }
+    }
+    .container {
+      //@include respond-to(md) {
+      //  max-width: 750px;
+      //}
+      //@include respond-to(xs-360) {
+      //  max-width: 85%;
+      //}
+    }
+  }
+}
+

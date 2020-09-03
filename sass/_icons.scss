@@ -7,35 +7,38 @@ $icon_font_name:"Icons";
 	url('fonts/Icons.ttf') format('truetype'),
 	url('fonts/Icons.svg#Icons') format('svg');
 }
-%icon-aj-logo-w,
-%icon-artj-logo,
-%icon-big-left,
-%icon-big-right,
-%icon-calendar,
-%icon-cart,
-%icon-cart2,
+%icon-arr-corner,
+%icon-arrLeft,
+%icon-arrRight,
+%icon-bar,
+%icon-car,
+%icon-card,
+%icon-cart-empty,
+%icon-cart-full,
+%icon-check,
 %icon-close,
-%icon-delete,
-%icon-envelope,
-%icon-fb,
-%icon-gift,
+%icon-delivery,
+%icon-down,
+%icon-filter,
 %icon-home,
-%icon-insta,
-%icon-like,
-%icon-mail,
-%icon-menu-button,
-%icon-normal_arr,
-%icon-opened_arr,
+%icon-left,
+%icon-payment,
 %icon-phone,
-%icon-placeholder,
-%icon-pointer,
+%icon-point,
+%icon-question-full,
+%icon-question,
+%icon-return,
+%icon-right,
 %icon-search,
-%icon-small-left,
-%icon-small-right,
-%icon-user,
-%icon-v,
-%icon-youtube,
-%icon-сomparison,
+%icon-settings,
+%icon-share,
+%icon-sort,
+%icon-star-double,
+%icon-star-full,
+%icon-star,
+%icon-up,
+%icon-wishlist-empty,
+%icon-wishlist-full,
 %last_selector {
 		&:before {
 			font-family:$icon_font_name;
@@ -77,90 +80,99 @@ $icon_font_name:"Icons";
 	}
 }
 
-%icon-aj-logo-w:before {
+%icon-arr-corner:before {
 	content:'\E001';
 }
-%icon-artj-logo:before {
+%icon-arrLeft:before {
 	content:'\E002';
 }
-%icon-big-left:before {
+%icon-arrRight:before {
 	content:'\E003';
 }
-%icon-big-right:before {
+%icon-bar:before {
 	content:'\E004';
 }
-%icon-calendar:before {
+%icon-car:before {
 	content:'\E005';
 }
-%icon-cart:before {
+%icon-card:before {
 	content:'\E006';
 }
-%icon-cart2:before {
+%icon-cart-empty:before {
 	content:'\E007';
 }
-%icon-close:before {
+%icon-cart-full:before {
 	content:'\E008';
 }
-%icon-delete:before {
+%icon-check:before {
 	content:'\E009';
 }
-%icon-envelope:before {
+%icon-close:before {
 	content:'\E00A';
 }
-%icon-fb:before {
+%icon-delivery:before {
 	content:'\E00B';
 }
-%icon-gift:before {
+%icon-down:before {
 	content:'\E00C';
 }
-%icon-home:before {
+%icon-filter:before {
 	content:'\E00D';
 }
-%icon-insta:before {
+%icon-home:before {
 	content:'\E00E';
 }
-%icon-like:before {
+%icon-left:before {
 	content:'\E00F';
 }
-%icon-mail:before {
+%icon-payment:before {
 	content:'\E010';
 }
-%icon-menu-button:before {
+%icon-phone:before {
 	content:'\E011';
 }
-%icon-normal_arr:before {
+%icon-point:before {
 	content:'\E012';
 }
-%icon-opened_arr:before {
+%icon-question-full:before {
 	content:'\E013';
 }
-%icon-phone:before {
+%icon-question:before {
 	content:'\E014';
 }
-%icon-placeholder:before {
+%icon-return:before {
 	content:'\E015';
 }
-%icon-pointer:before {
+%icon-right:before {
 	content:'\E016';
 }
 %icon-search:before {
 	content:'\E017';
 }
-%icon-small-left:before {
+%icon-settings:before {
 	content:'\E018';
 }
-%icon-small-right:before {
+%icon-share:before {
 	content:'\E019';
 }
-%icon-user:before {
+%icon-sort:before {
 	content:'\E01A';
 }
-%icon-v:before {
+%icon-star-double:before {
 	content:'\E01B';
 }
-%icon-youtube:before {
+%icon-star-full:before {
 	content:'\E01C';
 }
-%icon-сomparison:before {
+%icon-star:before {
 	content:'\E01D';
+}
+%icon-up:before {
+	content:'\E01E';
+}
+%icon-wishlist-empty:before {
+	content:'\E01F';
+}
+%icon-wishlist-full:before {
+	content:'\E020';
 }

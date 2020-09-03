@@ -1,188 +1,75 @@
-//main-banner start
 .main-banner {
-  .container {
-    @include respond-to(tablet-1030) {
-      width: 100%;
+  &__wrapper{
+    background-color: $elements;
+    padding: 78px 94px;
+    align-items: stretch;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 90px;
+    @include respond-to(lg-1200) {
+      padding: 38px 30px;
     }
-  }
-  .slick-slider .slick-list,
-  .slick-slider .slick-track {
     @include respond-to(xs-690) {
-      overflow-y: visible !important;
-      -webkit-transform: translate3d(0, 0, 0);
-      -moz-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      -o-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
+      flex-wrap: wrap;
+      padding: 56px 16px 0;
+      margin-bottom: 42px;
     }
   }
-  .slick-slider .slick-list {
-    @include respond-to(tablet-1030) {
-      overflow-x: hidden !important;
-    }
-  }
-  &__item {
+  &__img{
     position: relative;
-  }
-  &__img {
-    img {
-      width: 100%;
-    }
-    @include respond-to(xs-690) {
-      height: 350px;
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-      overflow: hidden;
-      padding-bottom: 50px;
-      img {
-        width: auto;
-        max-width: none;
-        height: 100%;
+    width: 39%;
+    img{
+      position: absolute;
+      top: -90px;
+      left: 29px;
+      height: auto;
+      @include respond-to(lg-1200) {
+        top: -93px;
       }
-    }
-  }
-  &__content {
-    position: absolute;
-    max-width: 580px;
-    //padding: 70px 125px 70px 55px;
-    padding: 0 125px 0 55px;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    border-radius: 30px 0 0 30px;
-    //background: linear-gradient(239.9deg, rgba(255, 255, 255, 0.7) 0.98%, rgba(255, 255, 255, 0.555483) 26.11%, rgba(255, 255, 255, 0.275124) 95.07%, rgba(255, 255, 255, 0) 108.75%);
-    background: transparent;
-    @include respond-to(tablet-1030) {
-      padding: 40px 80px 40px 45px;
-    }
-    @include respond-to(xs-690) {
-      padding: 10px 0 10px 10px;
-      top: 220px;
-      left: 35px;
-      //background: linear-gradient(239.9deg, rgba(255, 255, 255, 0.9) 0.98%, rgba(255, 255, 255, 0.9) 26.11%, rgba(255, 255, 255, 0.9) 95.07%, rgba(255, 255, 255, 0.9) 108.75%);
-      //box-shadow: $box-shadow;
-      border-radius: 30px 0 0 0;
-      background: transparent;
-    }
-    &-wrapper {
+      @include respond-to(md) {
+        top: -42px;
+      }
+      @include respond-to(sm) {
+        top: 6px;
+      }
       @include respond-to(xs-690) {
-        padding: 20px 20px 35px 20px;
-        border-radius: 30px 0 0 0;
-        border: 2px solid $lines;
-        border-right: none;
+        position: static;
+        width: 70%;
+        margin: 0 auto;
+        transform: translateY(45px);
       }
     }
-  }
-  &__header {
-    margin-bottom: 40px;
     @include respond-to(xs-690) {
-      margin-bottom: 0px;
-    }
-  }
-  &__subtitle {
-    font-size: 21px;
-    line-height: 25px;
-    letter-spacing: 0.02em;
-    text-align: left;
-    @include fm;
-    @include respond-to(xs-690) {
-      font-size: 16px;
-      line-height: 18px;
-      max-height: 50px;
-      overflow: hidden;
-    }
-  }
-  &__title {
-    font-size: 36px;
-    line-height: 40px;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-    text-align: left;
-    @include fb;
-    @include respond-to(xs-690) {
-      font-size: 25px;
-      line-height: 21px;
-      text-transform: lowercase;
-      margin-bottom: 0;
-      max-height: 80px;
-      overflow: hidden;
-    }
-  }
-  &__wrapper {
-    z-index: 10;
-    position: relative;
-    &.slick-slider {
-      margin-bottom: 0;
-    }
-  }
-  &__small {
-    position: absolute;
-    top: 450px;
-    left: 50%;
-    width: 500px;
-    transform: translateX(-50%);
-    @include respond-to(tablet-1030) {
-      position: static;
       width: 100%;
-      transform: translateX(0);
-      margin-top: 10px;
-    }
-    .slick-track {
-      transform: translate(0, 0) !important;
-      @include respond-to(tablet-1030) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-    &-slide {
-      border: 1px solid $lines;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100px !important;
-      height: 100px;
-      overflow: hidden;
-      margin-right: 15px;
-      @include anim;
-      box-shadow: $box-shadow-none;
-      transform: scale(0.9);
-      &:last-child {
-        margin-right: 0;
-        @include respond-to(tablet-1030) {
-          margin-right: 0;
-        }
-      }
-      @include respond-to(tablet-1030) {
-        width: 70px !important;
-        height: 70px;
-        margin-right: 15px;
-      }
-      &:focus,
-      &:active {
-        @include anim;
-        box-shadow: $box-shadow;
-        transform: scale(1.0);
-      }
-      &.slick-current {
-        @include anim;
-        box-shadow: $box-shadow;
-        border: 1px solid $action;
-        transform: scale(1.0);
-      }
-      img {
-        max-width: unset;
-        height: 100%;
-        width: auto;
-        @include respond-to(tablet-1030) {
-          height: 140%;
-        }
-      }
+      text-align: center;
+      order: 1;
+      margin-top: -25px;
     }
   }
-  @include respond-to(tablet-1030) {
-    overflow-x: hidden !important;
+  &__text{
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0.2px;
+    width: 49%;
+    color: $textDark;
+    @include respond-to(xs-690) {
+      width: 100%;
+      text-align: center;
+      order: 0;
+    }
+    h2{
+      margin-bottom: 12px;
+      @include respond-to(xs-690) {
+        text-align: center;
+        margin-bottom: 4px;
+      }
+    }
+    p{
+      margin-bottom: 36px;
+      @include respond-to(xs-690) {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+    }
   }
 }
-//main-banner end

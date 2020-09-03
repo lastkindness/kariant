@@ -14,17 +14,18 @@
     justify-content: center;
     flex-direction: column;
     height: 100%;
+    .btn {
+      padding: 20px;
+    }
     @include respond-to(xs-600) {
       padding: 0;
     }
     .icon {
-      color: $select;
-      border: 6px solid $select;
+      color: $accent;
+      border: 6px solid $accent;
       border-radius: 50%;
-      font-size: 60px;
       width: 92px;
       height: 92px;
-      @include fb;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -35,10 +36,7 @@
     }
     .subtitle {
       margin: 0 auto 50px;
-      font-size: 16px;
-      line-height: 21px;
-      @include fr;
-      color: $textGray;
+      color: $textLight;
     }
   }
   &__wrapper {

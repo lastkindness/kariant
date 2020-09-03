@@ -1,389 +1,112 @@
 //product-item start
 .product-item {
-  border: 1px solid $lines;
+  max-width: 33.3%;
   @include anim;
-  &:hover,
-  &:active,
-  &:focus {
-    @include anim;
-    box-shadow: $box-shadow;
-    .product-item__additional {
-      box-shadow: 0 -15px 0 -1px #fff, 0px 90px 60px 0 rgba(35,54,75,.16), 0 -10px 10px -5px rgba(35,54,75,.16), 0 5px 15px 0 rgba(35,54,75,.16);
-    }
-  }
-  &_delete {
-    .product-item__delete {
-      display: block;
-    }
-  }
-  &_stock {
-    .product-item {
-      &__stock {
-        display: flex;
-        height: 45px;
-        @include respond-to(xs) {
-          font-size: 10px;
-        }
-      }
-      &__title {
-        margin: 5px auto 5px !important;
-        //height: 21px;
-        height: 55px;
-        @include respond-to(tablet-1030) {
-          font-size: 15px;
-          line-height: 19px;
-          height: 60px;
-          align-items: center;
-        }
-        @include respond-to(sm) {
-          align-items: flex-start;
-        }
-        @include respond-to(xs) {
-          height: 29px;
-          line-height: 10px;
-          font-size: 13px;
-        }
-      }
-      &__price {
-        align-items: center;
-      }
-      &__main {
-        position: relative;
-        padding-top: 45px;
-        @include respond-to(sm) {
-          padding-top: 45px !important;
-        }
-      }
-    }
-  }
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-    text-decoration: none;
-    position: relative;
-    color: $text;
-    height: 100%;
-    &:hover,
-    &:active,
-    &:focus {
-      color: $text;
-    }
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    cursor: pointer;
-  }
-  &__additional {
-    display: none;
-    position: absolute;
-    top: calc(100% + -1px);
-    background-color: #fff;
-    border: 1px solid #E2E3E7;
-    border-top: none;
-    width: calc(100% + 2.5px);
-    left: calc(50% - 0px);
-    transform: translateX(-50%);
-    z-index: 10;
-    @include respond-to(tablet-1030) {
-      position: static;
-      transform: unset;
-      border-bottom: unset;
-      flex-grow: 1;
+  position: relative;
+  border-top: 1px solid transparent;
+  &__offer {
+    @include respond-to(sm) {
       display: flex;
-      flex-direction: column;
       align-items: stretch;
       justify-content: space-between;
-      border: none;
-      width: 100%;
-      background-color: transparent;
     }
-    @include respond-to(sm) {
-      //height: 40px;
-      flex-grow: 0;
-    }
-    @include respond-to(xs) {
-      height: auto;
-      justify-content: flex-end;
-    }
-  }
-  &__img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 290px;
-    padding: 20px;
-    overflow: hidden;
-    flex-basis: 290px;
-    flex-grow: 0;
-    img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-    @include respond-to(md) {
-      height: 180px;
-      flex-basis: 180px;
-    }
-    @include respond-to(xs) {
-      height: 140px;
-      flex-basis: 140px;
-    }
-  }
-  &__stock {
-    display: none;
-    padding: 20px;
-    font-size: 12px;
-    line-height: 14px;
-    text-transform: uppercase;
-    align-items: center;
-    justify-content: center;
-    color: $elements;
-    background-color: $grayBG;
-    border-bottom: 1px solid $lines;
-    @include fm;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    //height: 55px;
-    height: 70px;
-    &.icon {
-      &:before {
-        font-size: 25px;
-        margin-right: 20px;
-      }
-    }
-    &-content {
-      display: block;
-      background-color: $elements;
-      color: $white;
-      @include fm;
-      position: absolute;
-      text-transform: lowercase;
-      text-align: center;
-      bottom: calc(100% + 20px);
-      width: 90%;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 13px;
-      box-shadow: $box-shadow;
-      opacity: 0;
-      z-index: -1;
-      @include anim;
-      &:after {
-        content: "";
-        background-color: $elements;
+    .btn {
+      display: none;
+      @include respond-to(sm) {
         display: block;
-        position: absolute;
-        top: calc(100% - 5px);
-        width: 20px;
-        height: 20px;
-        transform: rotate(45deg) translateX(-50%);
-        left: 50%;
       }
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      .product-item__stock-content {
-        @include anim;
-        opacity: 1;
-        z-index: 1;
-      }
-    }
-  }
-  &__title {
-    text-align: center;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    //margin: 20px 0 !important;
-    //height: 40px;
-    margin: 10px auto 5px !important;
-    height: 55px;
-    font-size: 16px;
-    @include respond-to(tablet-1030) {
-      height: 95px;
-      align-items: center;
-    }
-    @include respond-to(xs-690) {
-      height: auto;
-      //font-size: 18px;
-      font-size: 16px;
-      line-height: 21px;
-    }
-    @include respond-to(sm) {
-      height: 85px;
-      font-size: 15px;
-      line-height: 16px;
-      align-items: flex-start;
-    }
-    @include respond-to(xs) {
-      height: 60px;
-      font-size: 14px;
-      line-height: 15px;
-    }
-  }
-  &__main,
-  &__info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-    padding: 0 20px;
-    margin-bottom: 10px;
-  }
-  &__info {
-    @include respond-to(tablet-1030) {
-      display: none;
-    }
-  }
-  &__main {
-    border-top: 1px solid $lines;
-    flex-grow: 1;
-  }
-  &__price {
-    width: 50%;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    @include fb;
-    color: $textGray;
-    &_old {
-      display: none;
-      text-decoration: line-through;
-    }
-    .price,
-    .value {
-      margin-right: 5px;
-      @include respond-to(xs-370) {
-        margin-right: 3px;
-      }
-    }
-    @include respond-to(tablet-1030) {
-      align-items: center;
-    }
-    @include respond-to(xs-690) {
-      font-size: 18px;
-      line-height: 21px;
-    }
-    @include respond-to(xs) {
-      width: 100%;
-      font-size: 16px;
-      line-height: 16px;
     }
   }
   .btn {
-    @include respond-to(xs-690) {
-      font-size: 14px;
-      line-height: 18px;
-    }
-    @include respond-to(xs) {
-      width: 100%;
-      height: 30px;
-      overflow: hidden;
+    @include respond-to(sm) {
+      padding: 8px 16px;
+      font-size: 11px;
+      letter-spacing: 0.6px;
+      line-height: 15px;
     }
   }
-  &__tabs {
-    margin-bottom: 20px;
-    width: 100%;
-    height: auto;
-    &-buttons {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      //margin-bottom: 20px;
-    }
-    &-button {
-      position: relative;
-      .btn {
-        padding: 7px;
-        font-size: 12px;
-        @include respond-to(xs-690) {
-          font-size: 12px;
-          line-height: 18px;
-        }
-      }
-      &::after {
-        display: block;
-        content: "";
-        width: 20px;
-        height: 20px;
-        border-top: 1px solid $elements;
-        border-left: 1px solid $elements;
-        position: absolute;
-        left: 50%;
-        bottom: -33px;
-        transform: rotate(45deg) translateX(-50%);
-        z-index: -1;
-        background-color: $white;
-        opacity: 0;
-        @include anim;
-      }
-      &_red {
-        &::after {
-          border-top: 1px solid $attention;
-          border-left: 1px solid $attention;
-        }
-      }
-      &.active {
-        &::after {
-          opacity: 1;
-          z-index: 13;
-          @include anim;
-        }
-      }
-    }
-    &-content {
-      width: 100%;
-      position: relative;
-      .content-block {
-        text-align: center;
-        border: 1px solid $elements;
-        padding: 10px 15px;
-        position: absolute;
-        width: 100%;
-        background-color: $white;
-        opacity: 0;
-        z-index: -1;
-        font-size: 12px;
-        line-height: 14px;
-        top: 15px;
-        height: auto;
-        @include anim;
-        &_red {
-          border: 1px solid $attention;
-        }
-        &.active {
-          opacity: 1;
-          z-index: 12;
-          @include anim;
-        }
-      }
-    }
-    &.active {
-      &+.product-item__content {
-        opacity: 0;
-        @include anim;
-      }
-    }
-  }
-  &__content {
-    opacity: 1;
-    font-size: 12px;
-    line-height: 14px;
-    min-height: 45px;
+  &__right {
+    position: absolute;
+    width: 16px;
+    height: 100%;
+    right: -16px;
+    background-color: $white;
+    top: -1px;
+    border-right: 1px solid $textLight;
+    border-top: 1px solid $textLight;
+    border-bottom: 1px solid $textLight;
+    opacity: 0;
+    z-index: -1;
     @include anim;
-    //margin-bottom: 20px;
-    text-align: center;
+    @include respond-to(sm) {
+      display: none;
+    }
+  }
+  a {
+    &:after {
+      display: none;
+    }
+  }
+  &__colors {
+    position: absolute;
+    height: 100%;
+    width: 77px;
+    padding: 16px 11px 16px 16px;
+    top: -1px;
+    left: -77px;
+    opacity: 0;
+    z-index: -1;
+    border-left: 1px solid $textLight;
+    border-top: 1px solid $textLight;
+    border-bottom: 1px solid $textLight;
+    @include respond-to(sm) {
+      display: none;
+    }
+    @include anim;
+    background-color: $white;
+    a {
+      border: 1px solid $gray2;
+      @include anim;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white;
+      &:focus,
+      &:active,
+      &:hover {
+        border: 1px solid $accent;
+        @include anim;
+      }
+    }
+  }
+  &__main {
+    @include anim;
+    flex-grow: 1;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    position: relative;
+  }
+  &__drop {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: -1;
+    background-color: white;
+    @include anim;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $textLight;
     @include respond-to(sm) {
       display: none;
     }
@@ -392,157 +115,241 @@
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    z-index: 5;
-    @include respond-to(xs) {
-      flex-wrap: wrap;
-      height: auto;
+    @include anim;
+    button {
+      flex-grow: 1;
+      margin-right: 14px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
-    &-add {
+    .icon-point {
+      color: $textDark;
+      font-size: 25px;
+      @include anim;
+      margin-left: 14px;
+      position: relative;
+      &:focus,
+      &:active,
+      &:hover {
+        cursor: pointer;
+        color: $elements;
+        @include anim;
+        span {
+          visibility: visible;
+          opacity: 1;
+          @include anim;
+        }
+      }
+      span {
+        z-index: 5;
+        position: absolute;
+        padding: 6px 12px;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.2px;
+        background-color: $white;
+        border: 1px solid $gray3;
+        width: auto;
+        max-width: none;
+        top: calc(100% - 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        visibility: hidden;
+        opacity: 0;
+        color: $textDark;
+        @include anim;
+        white-space: nowrap;
+      }
+    }
+    .btn-missing {
+      margin-bottom: 14px;
+    }
+  }
+  &__sizes {
+    margin-top: 15px;
+    @include anim;
+    .subtitle {
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0.1px;
+      color: $textLight;
+    }
+    &-box {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
-      position: relative;
-      text-decoration: none;
-      button {
-        padding: 0 20px;
-        height: 100%;
-        @include respond-to(sm) {
-          padding: 5px;
+      flex-wrap: wrap;
+      button,
+      a {
+        @include fm;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.8px;
+        margin-right: 12px;
+        position: relative;
+        display: inline-block;
+        background-color: transparent;
+        padding: 0;
+        &:after {
+          transform-origin: center;
+          width: 0%;
+          height: 1px;
+          position: absolute;
+          bottom: -2px;
+          content: '';
+          @include anim;
+          left: 50%;
+          display: inline-block;
+          transform: translateX(-50%);
+          background-color: $textDark;
         }
-      }
-      .btn {
-        height: 100%;
-        text-decoration: unset;
-        z-index: 10;
-        &.icon {
-          &:before {
-            margin-left: 0;
+        &:hover,
+        &:active,
+        &:focus {
+          &:after {
+            width: 100%;
+            @include anim;
           }
         }
-        @include respond-to(xs) {
-          padding: 5px;
-        }
-      }
-      @include respond-to(xs-690) {
-        width: 100%;
-        justify-content: center;
-      }
-      @include respond-to(xs) {
-        height: 38px;
-        overflow: hidden;
-      }
-    }
-    .btn[data-buy] {
-      @include respond-to(xs-690) {
-        left: -1px;
-        bottom: -1px;
       }
     }
   }
-  &_old {
-    .product-item__price {
-      color: $attention;
-      &_old {
-        display: flex;
-        color: $textGray;
-      }
-    }
-  }
-  &__delete {
-    display: none;
+  &__favorite,
+  &__label {
     position: absolute;
-    right: 10px;
-    top: 10px;
-    color: $textGray;
-    font-size: 25px;
-    @include anim;
-    &:hover,
-    &:active,
-    &:focus {
-      color: $attention;
-      @include anim;
+  }
+  &__label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 5;
+  }
+  &__sale {
+    @include fb;
+    font-size: 15px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    letter-spacing: 1.4px;
+    color: $attention;
+  }
+  &__favorite {
+    right: 12px;
+    top: 12px;
+    display: inline-flex;
+    text-align: center;
+    justify-content: flex-end;
+    font-size: 30px;
+  }
+  &__img {
+    height: 374px;
+    background-color: $white;
+    margin-bottom: 16px;
+    img {
+      object-fit: cover;
+    }
+    @include respond-to(sm) {
+      height: 222px;
     }
   }
-  &__missing {
-    &-buttons {
-      width: 100%;
-      text-align: center;
-      display: none;
-    }
-    &-title {
-      height: 20px;
-      overflow: hidden;
-      width: 100%;
-      margin-top: 5px;
-      display: none;
-      .subtitle {
-        margin: 0 auto;
-        color: $textGray;
-        display: none;
-        text-align: center;
-        @include respond-to(xs) {
-          font-size: 14px;
-        }
-      }
-    }
-    &-buttons {
-      .btn {
-        width: 100%;
-        margin-top: 10px;
-        @include respond-to(tablet-1030) {
-          margin-top: 0px;
-        }
-        @include respond-to(sm) {
-          font-size: 9px;
-          padding: 5px;
-          height: 100%;
-        }
-      }
+  &__title {
+    margin-bottom: 4px;
+    @include respond-to(sm) {
+      margin-bottom: 12px;
     }
   }
-  &_missing {
-    .product-item__buttons>button,
-    .product-item__info {
-      display: none;
+  &__price {
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    @include respond-to(sm) {
+      font-size: 12px;
+      line-height: 14px;
+      order: 1;
     }
-    .product-item__missing-buttons,
-    .product-item__buttons {
-      width: 100%;
-      @include respond-to(xs) {
+    &_old {
+      @include fr;
+      font-size: 13px;
+      line-height: 16px;
+      letter-spacing: 0.2px;
+      text-decoration-line: line-through;
+      color: $textLight;
+      @include respond-to(sm) {
+        font-size: 11px;
+        line-height: 13px;
         order: 0;
       }
     }
-    .product-item__buttons {
-      @include respond-to(xs) {
-        order: 1;
-      }
-    }
-    .product-item__missing-buttons,
-    .product-item__missing-title .subtitle {
-      display: block;
-    }
-    .product-item__additional {
-      justify-content: flex-end;
+    &-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 15px;
       @include respond-to(sm) {
-        flex-direction: row;
-      }
-      @include respond-to(xs) {
-        flex-wrap: wrap;
+        padding-bottom: 0;
         flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
       }
     }
-    .product-item__buttons-add {
-      justify-content: center;
-      width: 100%;
+    span {
+      margin-right: 5px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
-  .product-item__main {
-    @include respond-to(tablet-1030) {
-      height: auto;
+  &.active {
+    background-color: $white;
+    z-index: 6;
+    border-top: 1px solid $textLight;
+    @include anim;
+    @include respond-to(sm) {
+      background-color: transparent;
+      border-top: 1px solid transparent;
+    }
+    .product-item {
+      &__drop,
+      &__colors,
+      &__right {
+        z-index: 6;
+        opacity: 1;
+        @include anim;
+      }
+    }
+  }
+  &_slide {
+    height: auto;
+    border: 1px solid transparent;
+    padding: 0 15px;
+    background-color: transparent;
+    @include anim;
+    .product-item {
+      &__drop,
+      &__colors,
+      &__right {
+        display: none;
+      }
+      &__img {
+        padding: 0 15px;
+        @include anim;
+      }
+      &__offer {
+
+      }
+    }
+    &.active {
+      border: 1px solid $textLight;
+      @include anim;
+      .product-item {
+        &__main {
+          @include anim;
+        }
+      }
     }
     @include respond-to(sm) {
-      height: auto;
-      padding: 5px 10px 0px;
+      padding: 0 6px;
     }
   }
 }

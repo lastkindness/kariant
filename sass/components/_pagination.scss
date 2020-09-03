@@ -1,134 +1,143 @@
 //pagination start
 .pagination {
-  list-style-type: none;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  list-style: none;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1em;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-top: 60px;
+  @include fb;
+  &__wrapper {
+    width: 100%;
+  }
+  li,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    &:after {
+      bottom: 0;
+    }
+  }
   li {
-    margin-bottom: 0;
     &:before {
       display: none;
     }
   }
-  &_link {
-    width: 100%;
-    height: 100%;
-    color: $text;
+  &__item {
+    opacity: 1;
     @include anim;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  &_item {
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
-    visibility: visible;
-    @include anim;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
-    background-color: transparent;
-    &_link {
-      display: inline-block;
-      width: 100%;
-      color: $text;
-    }
-    &.hide {
-      @include anim;
-      display: none;
-    }
-    &.more {
-      border: none;
-      .pagination_link {
-        color: $text;
-      }
-    }
-    &.active {
-      background-color: $text;
-      @include anim;
-      .pagination_link {
-        color: $white;
+    &.prev,
+    &.next {
+      a {
+        &:after {
+          display: none;
+        }
       }
       &:hover,
       &:active,
       &:focus {
+        opacity: 0.5;
         @include anim;
-        background-color: $elements;
-        .pagination_link {
+      }
+    }
+    &.prev {
+      span {
+        margin-left: 12px;
+      }
+      a {
+        &:before {
           @include anim;
-          color: $white;
+          transform: translateX(0px);
         }
-      }
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      @include anim;
-      cursor: pointer;
-      color: $elements;
-      .pagination_link {
-        @include anim;
-        color: $elements;
-      }
-    }
-    &.prev,
-    &.next {
-      background-color: transparent;
-      border: none;
-      .pagination_link {
-        @include anim;
-        color: $text;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 30px;
       }
       &:hover,
       &:active,
-      &:focus,
-      &.active {
-        @include anim;
-        background-color: transparent;
-        color: $elements;
-        .pagination_link {
-          @include anim;
-          color: $elements;
+      &:focus {
+        a {
+          &:before {
+            @include anim;
+            transform: translateX(-5px);
+          }
         }
       }
     }
     &.next {
-      margin-right: 0;
-    }
-    &.more {
+      span {
+        margin-right: 12px;
+        order: 0;
+      }
+      .icon {
+        &:before {
+          order: 1;
+        }
+      }
+      a {
+        &:before {
+          @include anim;
+          transform: translateX(0px);
+        }
+      }
       &:hover,
       &:active,
-      &:focus,
-      &.active {
-        @include anim;
-        border: none;
-        .pagination_link {
-          @include anim;
-          color: $elements;
+      &:focus {
+        a {
+          &:before {
+            @include anim;
+            transform: translateX(5px);
+          }
         }
+      }
+    }
+    span {
+      @include respond-to(sm) {
+        display: none;
       }
     }
   }
-  &_wrapper {
+  &__link {
+
+  }
+  &__list,
+  a,
+  li {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    margin: 50px 0;
-    @include respond-to(sm) {
-      margin: 20px 0 10px;
+  }
+  &__list {
+    font-size: 16px;
+    li {
+      padding: 0 12px;
+      a {
+        color: $textLight;
+        @include anim;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      &:hover,
+      &:active,
+      &:focus,
+      &.active {
+        a {
+          color: $textDark;
+          @include anim;
+          &:after {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }
