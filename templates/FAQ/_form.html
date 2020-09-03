@@ -1,0 +1,32 @@
+
+<section style="background: linear-gradient(rgba(2, 20, 116, 0.6), rgba(2, 20, 116, 0.6)), url(&quot;images/banners/image12.jpg&quot;)" class="faq-form">
+  <div class="container">
+    <div class="faq-form__wrapper">
+      <div class="faq-form__content">
+        <h3 class="title">Не нашли ответ на свой вопрос?</h3>
+        <div class="subtitle">Задайте его нам!</div>
+      </div>
+      <form class="faq-form__form js_validate">
+        <div class="input-container">
+          <label for="name" class="req">Имя</label>
+          <input type="text" name="name" id="name" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate"/>
+          <div class="delete"></div>
+          <div class="text-error">Поле  не заполнено</div>
+        </div>
+        <div class="input-container">
+          <label for="email" class="req">Email</label>
+          <input type="email" name="email" id="email" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" data-error-min="Email: не менее 6 символов" data-error-max="Email: не более 30 символов" class="validate"/>
+          <div class="delete"></div>
+          <div class="text-error">Поле «Email» не заполнено</div>
+        </div>
+        <div class="input-container">
+          <textarea name="comment" id="comment" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate"></textarea>
+          <label for="comment" class="req">Вопрос</label>
+          <div class="delete"></div>
+          <div class="text-error">Введите сообщение</div>
+        </div>
+        <button type="submit" class="btn"><span>Отправить</span></button>
+      </form>
+    </div>
+  </div>
+</section>

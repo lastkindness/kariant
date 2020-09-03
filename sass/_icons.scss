@@ -7,32 +7,35 @@ $icon_font_name:"Icons";
 	url('fonts/Icons.ttf') format('truetype'),
 	url('fonts/Icons.svg#Icons') format('svg');
 }
-%icon-arr-corner,
-%icon-arrLeft,
-%icon-arrRight,
-%icon-bar,
-%icon-car,
-%icon-card,
-%icon-cart-empty,
-%icon-cart-full,
-%icon-check,
+%icon-aj-logo-w,
+%icon-artj-logo,
+%icon-big-left,
+%icon-big-right,
+%icon-calendar,
+%icon-cart,
+%icon-cart2,
 %icon-close,
-%icon-down,
+%icon-delete,
+%icon-envelope,
+%icon-fb,
+%icon-gift,
 %icon-home,
-%icon-left,
+%icon-insta,
+%icon-like,
+%icon-mail,
+%icon-menu-button,
+%icon-normal_arr,
+%icon-opened_arr,
 %icon-phone,
-%icon-point,
-%icon-question-full,
-%icon-question,
-%icon-right,
+%icon-placeholder,
+%icon-pointer,
 %icon-search,
-%icon-settings,
-%icon-star-double,
-%icon-star-full,
-%icon-star,
-%icon-up,
-%icon-wishlist-empty,
-%icon-wishlist-full,
+%icon-small-left,
+%icon-small-right,
+%icon-user,
+%icon-v,
+%icon-youtube,
+%icon-сomparison,
 %last_selector {
 		&:before {
 			font-family:$icon_font_name;
@@ -74,81 +77,90 @@ $icon_font_name:"Icons";
 	}
 }
 
-%icon-arr-corner:before {
+%icon-aj-logo-w:before {
 	content:'\E001';
 }
-%icon-arrLeft:before {
+%icon-artj-logo:before {
 	content:'\E002';
 }
-%icon-arrRight:before {
+%icon-big-left:before {
 	content:'\E003';
 }
-%icon-bar:before {
+%icon-big-right:before {
 	content:'\E004';
 }
-%icon-car:before {
+%icon-calendar:before {
 	content:'\E005';
 }
-%icon-card:before {
+%icon-cart:before {
 	content:'\E006';
 }
-%icon-cart-empty:before {
+%icon-cart2:before {
 	content:'\E007';
 }
-%icon-cart-full:before {
+%icon-close:before {
 	content:'\E008';
 }
-%icon-check:before {
+%icon-delete:before {
 	content:'\E009';
 }
-%icon-close:before {
+%icon-envelope:before {
 	content:'\E00A';
 }
-%icon-down:before {
+%icon-fb:before {
 	content:'\E00B';
 }
-%icon-home:before {
+%icon-gift:before {
 	content:'\E00C';
 }
-%icon-left:before {
+%icon-home:before {
 	content:'\E00D';
 }
-%icon-phone:before {
+%icon-insta:before {
 	content:'\E00E';
 }
-%icon-point:before {
+%icon-like:before {
 	content:'\E00F';
 }
-%icon-question-full:before {
+%icon-mail:before {
 	content:'\E010';
 }
-%icon-question:before {
+%icon-menu-button:before {
 	content:'\E011';
 }
-%icon-right:before {
+%icon-normal_arr:before {
 	content:'\E012';
 }
-%icon-search:before {
+%icon-opened_arr:before {
 	content:'\E013';
 }
-%icon-settings:before {
+%icon-phone:before {
 	content:'\E014';
 }
-%icon-star-double:before {
+%icon-placeholder:before {
 	content:'\E015';
 }
-%icon-star-full:before {
+%icon-pointer:before {
 	content:'\E016';
 }
-%icon-star:before {
+%icon-search:before {
 	content:'\E017';
 }
-%icon-up:before {
+%icon-small-left:before {
 	content:'\E018';
 }
-%icon-wishlist-empty:before {
+%icon-small-right:before {
 	content:'\E019';
 }
-%icon-wishlist-full:before {
+%icon-user:before {
 	content:'\E01A';
+}
+%icon-v:before {
+	content:'\E01B';
+}
+%icon-youtube:before {
+	content:'\E01C';
+}
+%icon-сomparison:before {
+	content:'\E01D';
 }

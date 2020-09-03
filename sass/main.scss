@@ -6,85 +6,80 @@
 @import "global";
 
 //components
-@import "components/_button";
-@import "components/_header";
-@import "components/_footer";
-@import "components/_burger";
-@import "components/_product-item";
-@import "components/_service-item";
-@import "components/_text-content";
-@import "components/_brands";
-@import "components/_breadcrumbs";
-@import "components/_pagination";
-@import "components/_dropdown";
-@import "components/_popup";
-@import "components/_tub-block";
-@import "components/_input-number";
-@import "components/_search";
-@import "components/_basket-item";
-@import "components/_category-item";
+  @import "components/_button";
+//@import "components/_menu";
+  @import "components/_search";
+  @import "components/_header";
+  @import "components/_footer";
+  @import "components/_product-item";
+  @import "components/_news-item";
+  @import "components/_text-content";
+  @import "components/_partners";
+  @import "components/_banner";
+  @import "components/_breadcrumbs";
+  @import "components/_pagination";
+  @import "components/_dropdown";
+  @import "components/_popup";
+  @import "components/_input-number";
+  @import "components/_basket-item";
 
 //templates
 //main
-@import "templates/main/main";
-@import "templates/main/slider";
-@import "templates/main/banner";
-@import "templates/main/category";
-@import "templates/main/instagram";
-@import "templates/main/sale";
-@import "templates/main/products";
-
+  @import "templates/main/_banner";
+  @import "templates/main/_leaders";
+  @import "templates/main/_advantages";
+  @import "templates/main/_news";
+  @import "templates/main/_catalog";
 //catalog
-@import "templates/catalog/main";
-@import "templates/catalog/filter";
-
-//card
-@import "templates/card/main";
-@import "templates/card/card-info";
-@import "templates/card/card-sidebar";
-
+  @import "templates/catalog/_main";
+  @import "templates/catalog/_filter";
+//serach
+  @import "templates/search/_main";
+//favorites
+  @import "templates/favorites/_main";
 //cart
-@import "templates/cart/main";
-@import "templates/cart/slider";
-@import "templates/cart/aside";
-
+  @import "templates/cart/_main";
+  @import "templates/cart/_basket-sidebar";
+//card
+  @import "templates/card/_main";
+  @import "templates/card/_card-sidebar";
+  @import "templates/card/_card-info";
+  @import "templates/card/_characteristic";
+  @import "templates/card/_product-order";
+  @import "templates/card/_technologies";
+  @import "templates/card/_description";
 //order
-@import "templates/order/main";
-@import "templates/order/order-content";
-@import "templates/order/order-sidebar";
-@import "templates/order/order-success";
-
-//services
-@import "templates/services/main";
-
+  @import "templates/order/_main";
+  @import "templates/order/_order-sidebar";
+  @import "templates/order/_order-content";
+  @import "templates/order/_order-success";
+//сompare
+  @import "templates/сompare/_сompare-category";
+  @import "templates/сompare/_сompare-prod";
+//news
+  @import "templates/news/_news";
+  @import "templates/news/_news-one";
+//about
+  @import "templates/about/_main";
+  @import "templates/about/_content";
+  @import "templates/about/_founder";
+  @import "templates/about/_products";
+  @import "templates/about/_gallery";
+  @import "templates/about/_dates";
+  @import "templates/about/_slider";
+//technology
+  @import "templates/technology/_main";
+//partners
+  @import "templates/partners/_main";
+//stock
+  @import "templates/stock/_stock";
+  @import "templates/stock/_stock-item";
+  @import "templates/stock/_stock-one";
+  @import "templates/stock/_stock-one-item";
+//error
+  @import "templates/error/_main";
 //contacts
-@import "templates/contacts/main";
-
-//error
-@import "templates/error/main";
-
-//error
-@import "templates/search/main";
-
-//service-one
-@import "templates/service-one/main";
-
-//service-one
-@import "templates/content/main";
-
-//registration
-@import "templates/registration/main";
-
-//profile
-@import "templates/profile/main";
-
-//mapsite
-@import "templates/mapsite/main";
-
-//promotions
-@import "templates/promotions/main";
-
-//category
-@import "templates/category/publications";
-@import "templates/category/category";
-@import "templates/category/publications";
+  @import "templates/contacts/_main";
+//FAQ
+  @import "templates/FAQ/_main";
+  @import "templates/FAQ/_form";

@@ -1,12 +1,4 @@
 .error {
-  &-wrapper {
-    padding-top: 70px;
-  }
-  &-page {
-    .main {
-      justify-content: center;
-    }
-  }
   &__image {
     width: calc(40% - 130px);
     display: flex;
@@ -16,9 +8,6 @@
       width: 270px;
       height: auto;
       max-width: 100%;
-      @include respond-to(xs) {
-        width: 160px;
-      }
     }
     @include respond-to(md) {
       width: 100%;
@@ -26,14 +15,10 @@
   }
   &__content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    padding-right: 20%;
     @include respond-to(md) {
       flex-wrap: wrap;
-    }
-    @include respond-to(lg-1360) {
-      padding-right: 0;
     }
   }
   &__text {
@@ -43,22 +28,34 @@
       text-align: center;
     }
     .title {
-      color: $elements;
+      font-size: 168px;
+      line-height: 192px;
+      @include fb;
       margin: 0;
+      @include respond-to(md) {
+        text-align: center;
+      }
+      @include respond-to(xs-690) {
+        font-size: 120px;
+        line-height: 120px;
+      }
+      @include respond-to(xs) {
+        font-size: 90px;
+        line-height: 90px;
+      }
     }
     .subtitle {
-      color: $elements;
+      font-size: 25px;
+      line-height: 29px;
+      @include fb;
       margin: 0;
-      margin-bottom: 20px;
     }
     p {
-      color: $text;
+      color: $textGray;
       margin: 20px 0;
     }
     .btn {
       letter-spacing: 0.04em;
-      padding: 15px 30px;
-      margin-top: 20px;
     }
   }
 }

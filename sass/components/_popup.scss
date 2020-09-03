@@ -6,14 +6,22 @@
   transition: all .5s;
   display: none;
   z-index: 101;
-  width: 570px;
+  width: 400px;
   height: auto;
   background-color: $white;
+  font-size: 12px;
+  line-height: 14px;
   text-align: left;
-  padding: 36px 56px 36px 36px;
-  @include respond-to(xs) {
-    width: 100%;
-    padding: 66px 16px 36px 16px;
+  padding: 20px;
+  border-top: 6px solid $elements;
+  @include respond-to(tablet-1030){
+    width: 50%;
+  }
+  @include respond-to(md){
+    width: 60%;
+  }
+  @include respond-to(xs-600){
+    width: 90%;
   }
   &-overlay {
     position: fixed;
@@ -23,196 +31,146 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba($text, .5);
+    background-color: rgba($text, .85);
+    transition: all .5s;
     display: none;
     z-index: 100;
   }
-  .title {
-    margin: 0;
-  }
-  .subtitle {
-    @include fb;
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0.4px;
-    color: $text;
-    margin-bottom: 12px;
-  }
   &-header {
-    margin-bottom: 24px;
-  }
-  ul,
-  li {
-    margin: 0;
-    padding: 0;
-    &:before {
-      display: none;
-    }
-  }
-  ul {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(2, auto);
-    grid-gap: 5px;
-    span {
-      margin-right: 5px;
-      display: inline-block;
-      &:last-child{
-        margin-right: 0;
+    @include fb;
+    .subtitle {
+      text-align: center;
+      @include respond-to(max-height-420) {
+        margin: 10px 0;
       }
     }
   }
-  &-holder {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-    height: 100%;
-  }
   &-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    a {
-      margin-bottom: 10px;
-    }
-    &:last-child {
-      margin-bottom: 0;
+    .basket-item {
+      border: unset;
+      border-top: 1px solid $lines;
+      @include anim;
+      &:hover,
+      &:active,
+      &:focus {
+        border: unset;
+        border-top: 1px solid transparent;
+        @include anim;
+      }
+      @include respond-to(tablet-1030){
+        max-width: 100%;
+      }
     }
     p,
     .content {
-      width: 100%;
+      font-size: 16px;
+      line-height: 21px;
+      text-align: center;
       display: flex;
       align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
+      @include respond-to(sm){
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
   }
-  &__phone {
-    @include respond-to(xs) {
-      height: 100vh;
-    }
-  }
-  &__product {
-    &-delete {
-      z-index: 102;
-    }
-  }
-  &__cart-in {
-    height: 100vh;
-    width: 420px;
-    padding: 0;
-    right: 0;
-    transform: translate(0, -50%);
-    left: unset;
-    @include respond-to(xs) {
-      width: 100%;
-      padding: 20px 0 0;
-    }
-    .popup {
-      &-header {
-        margin-bottom: 34px;
+  &__call {
+    &-mobile {
+      padding: 0;
+      .popup-header,
+      .popup-body {
+        padding: 30px;
+      }
+      .popup-header {
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        justify-content: flex-start;
-        @include respond-to(xs) {
-          margin-bottom: 14px;
-        }
-        .close {
-          margin-right: 20px;
-          position: static;
-        }
-        .title {
-          @include respond-to(xs) {
-            font-size: 16px;
-            line-height: 16px;
+        a {
+          font-size: 18px;
+          line-height: 21px;
+          color: $text;
+          margin-bottom: 20px;
+          text-decoration: unset;
+          &:last-child {
+            margin-bottom: 0;
           }
         }
       }
-      &-content {
-        max-height: calc(100vh - 244px);
-        overflow-y: auto;
-        padding-right: 20px;
-        @include respond-to(xs) {
-          max-height: calc(100vh - 215px);
-        }
+      .popup-body {
+        background-color: $grayBG;
+        border-top: 1px solid $lines;
       }
-      &-footer {
-        padding: 34px 28px;
-        background-color: $elements;
-        @include respond-to(xs) {
-          padding: 10px 20px 50px;
-        }
-        .value {
-          font-size: 16px;
-          line-height: 22px;
-          @include fb;
-          text-align: center;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-          color: $textDark;
-          margin-bottom: 12px;
-        }
-        .final {
-          margin-right: 5px;
-        }
+      .input-container {
+        margin-bottom: 25px;
       }
-      &-wrapper {
-        padding: 32px 9px 0 32px;
-        position: relative;
-        &:after {
-          content: '';
-          display: block;
-          background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 94.27%);
-          width: 100%;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 67px;
-        }
-      }
-    }
-  }
-  .input-container {
-    width: 100%;
-  }
-  .btn {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    &-link {
-      font-size: 12px;
-      width: auto;
-      margin: 0 5px;
     }
   }
   &-buttons {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 15px;
-    .btn {
-      width: calc(50% - 10px);
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    &-link {
+      margin-left: 5px;
     }
   }
+  .input-container {
+    //margin-bottom: 15px;
+  }
   .close-btn {
-    right: 36px;
+    width: 30px;
+    height: 30px;
+    right: -15px;
     left: unset;
     margin: 0;
-    top: 36px;
+    top: -15px;
     position: absolute;
+    background-color: $elements;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
     @include anim;
-    @include respond-to(xs) {
-      top: 21px;
-      right: 21px;
-    }
     &:hover,
     &:active,
     &:focus {
       cursor: pointer;
       @include anim;
+      background-color: $action;
     }
+  }
+  &__cart-in {
+    padding: 0;
+    .basket-sidebar {
+      .btn-basket-edit {
+        display: none;
+      }
+    }
+  }
+  &__product-delete {
+    z-index: 105;
+  }
+  &__message {
+    .subtitle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include respond-to(sm) {
+        flex-wrap: wrap;
+      }
+    }
+  }
+  .js_message_append {
+    text-align: center;
   }
 }

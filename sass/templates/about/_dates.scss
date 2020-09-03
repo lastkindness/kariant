@@ -1,0 +1,33 @@
+.about__dates {
+  ul,
+  ol {
+    li {
+      &:before {
+        display: none;
+      }
+    }
+  }
+  &-title {
+    margin: 20px 0;
+  }
+  &-list {
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+  }
+  &-li {
+    margin-bottom: 20px;
+    color: $text;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &-date {
+    color: $textGray;
+    @include fm;
+    margin-right: 30px;
+  }
+  &-event {
+
+  }
+}

@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>L-UA</title>
+    <link rel="icon" sizes="32x32" type="image/x-icon" href="images/favicon/favicon-32x32.ico">
+    <link rel="icon" sizes="16x16" type="image/x-icon" href="images/favicon/favicon-16x16.ico">
+    <link rel="stylesheet" type="text/css" href="css/lib.min.css">
+    <!--link(rel='stylesheet', type='text/css', href='css/main.min.css')-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!--WARNING: Respond.js doesn't work if you view the page via file://-->
+    <!--if lt IE 9-->
+    <!--  script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')-->
+    <!--  script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')-->
+  </head>
+  <body class="card-page">
+    <noscript>
+      <div><strong>Для полной функциональности этого сайта необходимо включить JavaScript. Вот</strong><a href="https://artjoker.ua/ru/blog/how-to-enable-javascript/" target="_blank">инструкции,</a>как включить JavaScript в вашем браузере.
+        <link rel="stylesheet" type="text/css" href="css/without-js.css">
+      </div>
+    </noscript>
+    <!--if lte IE 8-->
+    <!--  p.off-js-->
+    <!--    | Ваш браузер устарел, пожалуйста-->
+    <!--    b обновите-->
+    <!--    |  его.-->
+    <!--wrapper start-->
+    <div class="wrapper">
+      <!-- header SECTION-->
+      <section class="preloader">
+        <style>
+          .preloader {
+              position: fixed;
+              z-index: 1000;
+              width: 100%;
+              height: 100vh;
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              background-color: #F1F1F1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              opacity: 1;
+              transition: all .3s ease;
+          }
+          .preloader.hide {
+              opacity: 0;
+              transition: all .3s ease;
+          }
+          .preloader.none {
+              display: none;
+          }
+          .sk-rotating-plane {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            background-color: #23364B;
+            animation: sk-rotating-plane 1.2s infinite ease-in-out;
+          }
+          
+          @keyframes sk-rotating-plane {
+            0% {
+              transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            }
+            50% {
+              transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+            }
+            100% {
+              transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            }
+          }
+          
+          @media only screen and (max-width: 993px) {
+              @keyframes sk-rotating-plane {
+                  0% {
+                      transform: perspective(80px) rotateX(0deg) rotateY(0deg);
+                  }
+                  50% {
+                      transform: perspective(80px) rotateX(-180.1deg) rotateY(0deg);
+                  }
+                  100% {
+                      transform: perspective(80px) rotateX(-180deg) rotateY(-179.9deg);
+                  }
+              }
+          }
+        </style>
+        <div class="sk-rotating-plane"></div>
+      </section>
+      <header class="header">
+        <div class="header__line"></div>
+        <div class="header__wrapper">
+          <div class="header__catalog">
+                  <button type="submit" class="btn btn-small"><span>Каталог</span></button>
+          </div>
+          <div class="header__burger">
+            <div class="burger"><span></span><span></span><span></span></div>
+          </div>
+          <div class="header__search-icon">
+            <div class="icon-search icon"></div>
+          </div>
+          <nav class="header__main">
+            <ul class="header__main-list">
+              <li class="header__main-item"><a href="/l-ua/about.html" class="header__main-item-link header__main-link">О Liebherr</a></li>
+              <li class="header__main-item"><a href="/l-ua/technology.html" class="header__main-item-link header__main-link">Технологии</a></li>
+              <li class="header__main-item"><a href="/l-ua/content-page.html" class="header__main-item-link header__main-link">Гарантия</a></li>
+              <li class="header__main-item"><a href="/l-ua/content-page.html" class="header__main-item-link header__main-link">Оплата</a></li>
+              <li class="header__main-item"><a href="/l-ua/content-page.html" class="header__main-item-link header__main-link">Доставка</a></li>
+              <li class="header__main-item"><a href="/l-ua/content-page2.html" class="header__main-item-link header__main-link">Обзоры</a></li>
+              <li class="header__main-item"><a href="/l-ua/news.html" class="header__main-item-link header__main-link">Новости</a></li>
+              <li class="header__main-item"><a href="/l-ua/FAQ.html" class="header__main-item-link header__main-link">Вопросы-ответы</a></li>
+              <li class="header__main-item"><a href="/l-ua/partners.html" class="header__main-item-link header__main-link">Партнеры</a></li>
+              <li class="header__main-item active"><a href="/l-ua/contacts.html" class="header__main-item-link header__main-link">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="header__lang">
+            <ul class="header__lang-list">
+              <li class="header__lang-item"><a href="#" class="header__lang-item-link header__main-link">Укр</a></li>
+              <li class="header__lang-item active"><a href="#" class="header__lang-item-link header__main-link">Рус</a></li>
+            </ul>
+          </div>
+          <div class="header__logo"><a href="#"><img data-src="images/logo.svg" alt="Liebherr" title="Liebherr">
+              <div class="anim-wrapper">
+                <svg width="22" height="25" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <lineargradient id="linear-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="1" stop-color="#E5E5E5">
+                        <animate attributename="offset" values="1;1;1;1;1;0;0;0;0;0" dur="16s" begin="8s;grayEnd.end+8s;" id="gray" repeatCount="indefinite"></animate>
+                      </stop>
+                      <stop offset="0.5" stop-color="#4D60C4">
+                        <animate attributename="offset" values="0.5;1;" dur="8s" begin="gray.end" id="blue" repeatCount="indefinite"></animate>
+                      </stop>
+                      <stop offset="0" stop-color="#FFCE45">
+                        <animate attributename="offset" values="0;0.5;" dur="8s" begin="blue.end" id="yellow" repeatCount="indefinite"></animate>
+                      </stop>
+                    </lineargradient>
+                  </defs>
+                  <path d="M5.016 12.176C7.032 12.176 8.952 10.592 8.952 7.792C8.952 4.96 7.016 3.376 5.016 3.376C3.656 3.376 2.776 4.08 2.152 4.96V0.32H0.216V12H2.152V10.688C2.744 11.472 3.624 12.176 5.016 12.176ZM4.568 10.496C3.256 10.496 2.104 9.424 2.104 7.792C2.104 6.144 3.256 5.056 4.568 5.056C5.88 5.056 6.984 6.128 6.984 7.76C6.984 9.456 5.896 10.496 4.568 10.496ZM13.9268 12.144C14.6467 12.144 15.1908 11.984 15.6708 11.712V10.128C15.2868 10.32 14.9028 10.416 14.4707 10.416C13.8147 10.416 13.4308 10.112 13.4308 9.36V5.216H15.7028V3.552H13.4308V1.232H11.4947V3.552H10.4227V5.216H11.4947V9.664C11.4947 11.52 12.5027 12.144 13.9268 12.144Z" fill="url(#linear-gradient)"></path>
+                </svg>
+              </div></a></div>
+          <div class="header__phone">
+            <div class="header__phone-wrapper icon icon-phone js__phone-dropdown">
+              <div class="header__phone-header icon icon-normal_arr"><a href="tel:044 257 65 99" class="header__phone-header-link">(044) 257 65 99</a></div>
+              <ul style="display: none;" class="header__phone-dropdown">
+                <li class="header__phone-item"><a href="tel:044 257 65 99" class="header__phone-link">(044) 257 65 99</a></li>
+                <li class="header__phone-item"><a href="tel:044 257 65 99" class="header__phone-link">(044) 257 65 99</a></li>
+                <li class="header__phone-item"><a href="tel:044 257 65 99" class="header__phone-link">(044) 257 65 99</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__call">
+                  <button type="submit" class="btn btn-link" data-target="call"><span>Перезвоните мне</span></button>
+          </div>
+          <div class="header__search">
+            <form class="search js_validate">
+              <div class="input-container">
+                <input type="text" placeholder="Поиск..." name="search" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="search__input validate">
+                <div class="delete"></div>
+                <div class="text-error">Поле  не заполнено</div>
+              </div>
+                          <button type="submit" class="btn icon-search icon btn-reset"><span></span></button>
+            </form>
+          </div><a href="/l-ua/favorites.html" class="header__favorite"><span class="text header__main-link">Избранное</span>
+            <div class="icon icon-like label-link">
+              <div class="value">1</div>
+            </div></a><a href="/l-ua/compare-prod.html" class="header__comparison disabled btn btn-link"><span class="text header__main-link">Сравнение</span>
+            <div class="icon icon-comparison label-link">
+              <div class="value">1</div>
+            </div></a><a href="#" data-target="cart-in" class="header__cart btn btn-link">
+            <div class="icon icon-cart2 label-link active">
+              <div class="value">1</div>
+            </div></a>
+          <nav class="header__menu">
+            <ul class="header__menu-list header__menu-list-main"><span class="header__menu-list-main-header">
+                <div class="icon icon-small-right"></div><span class="header__main-link">Каталог товаров</span></span>
+              <li class="header__menu-item header__menu-item-main"><a href="/l-ua/subcategory.html" class="header__menu-item-link header__main-link">Холодильники, морозильные камеры</a>
+                <ul class="header__menu-list header__menu-list-sub">
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image5.jpg" alt="Холодильники" title="Холодильники"></div><span>Холодильники</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image1.jpg" alt="Встраиваемые холодильники" title="Встраиваемые холодильники"></div><span>Встраиваемые холодильники</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image2.jpg" alt="Морозильные камеры" title="Морозильные камеры"></div><span>Морозильные камеры</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image3.jpg" alt="Встраиваемые морозильные камеры" title="Встраиваемые морозильные камеры"></div><span>Встраиваемые морозильные камеры</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image4.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image0.jpg" alt="Аксессуары" title="Аксессуары"></div><span>Аксессуары</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image6.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image7.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image8.jpg" alt="Категория в категории" title="Категория в категории"></div><span>Категория в категории</span></a>
+                    <ul class="header__menu-list header__menu-list-sub">
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image5.jpg" alt="Холодильники" title="Холодильники"></div><span>Холодильники</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image1.jpg" alt="Встраиваемые холодильники" title="Встраиваемые холодильники"></div><span>Встраиваемые холодильники</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image2.jpg" alt="Морозильные камеры" title="Морозильные камеры"></div><span>Морозильные камеры</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image3.jpg" alt="Встраиваемые морозильные камеры" title="Встраиваемые морозильные камеры"></div><span>Встраиваемые морозильные камеры</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image4.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image0.jpg" alt="Аксессуары" title="Аксессуары"></div><span>Аксессуары</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image6.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image7.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__menu-item header__menu-item-main"><a href="/l-ua/subcategory.html" class="header__menu-item-link header__main-link">Винные шкафы, хьюмидор</a>
+                <ul class="header__menu-list header__menu-list-sub">
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image5.jpg" alt="Холодильники" title="Холодильники"></div><span>Холодильники</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image1.jpg" alt="Встраиваемые холодильники" title="Встраиваемые холодильники"></div><span>Встраиваемые холодильники</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image2.jpg" alt="Морозильные камеры" title="Морозильные камеры"></div><span>Морозильные камеры</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image3.jpg" alt="Встраиваемые морозильные камеры" title="Встраиваемые морозильные камеры"></div><span>Встраиваемые морозильные камеры</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image4.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image0.jpg" alt="Аксессуары" title="Аксессуары"></div><span>Аксессуары</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image6.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image7.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image8.jpg" alt="Категория в категории" title="Категория в категории"></div><span>Категория в категории</span></a>
+                    <ul class="header__menu-list header__menu-list-sub">
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image5.jpg" alt="Холодильники" title="Холодильники"></div><span>Холодильники</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image1.jpg" alt="Встраиваемые холодильники" title="Встраиваемые холодильники"></div><span>Встраиваемые холодильники</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image2.jpg" alt="Морозильные камеры" title="Морозильные камеры"></div><span>Морозильные камеры</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image3.jpg" alt="Встраиваемые морозильные камеры" title="Встраиваемые морозильные камеры"></div><span>Встраиваемые морозильные камеры</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image4.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image0.jpg" alt="Аксессуары" title="Аксессуары"></div><span>Аксессуары</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image6.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image7.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__menu-item header__menu-item-main"><a href="/l-ua/subcategory.html" class="header__menu-item-link header__main-link">Профессиональное оборудование</a>
+                <ul class="header__menu-list header__menu-list-sub">
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image5.jpg" alt="Холодильники" title="Холодильники"></div><span>Холодильники</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image1.jpg" alt="Встраиваемые холодильники" title="Встраиваемые холодильники"></div><span>Встраиваемые холодильники</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image2.jpg" alt="Морозильные камеры" title="Морозильные камеры"></div><span>Морозильные камеры</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image3.jpg" alt="Встраиваемые морозильные камеры" title="Встраиваемые морозильные камеры"></div><span>Встраиваемые морозильные камеры</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image4.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image0.jpg" alt="Аксессуары" title="Аксессуары"></div><span>Аксессуары</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image6.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image7.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image8.jpg" alt="Категория в категории" title="Категория в категории"></div><span>Категория в категории</span></a>
+                    <ul class="header__menu-list header__menu-list-sub">
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image5.jpg" alt="Холодильники" title="Холодильники"></div><span>Холодильники</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image1.jpg" alt="Встраиваемые холодильники" title="Встраиваемые холодильники"></div><span>Встраиваемые холодильники</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image2.jpg" alt="Морозильные камеры" title="Морозильные камеры"></div><span>Морозильные камеры</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image3.jpg" alt="Встраиваемые морозильные камеры" title="Встраиваемые морозильные камеры"></div><span>Встраиваемые морозильные камеры</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image4.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image0.jpg" alt="Аксессуары" title="Аксессуары"></div><span>Аксессуары</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image6.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image7.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__menu-item header__menu-item-main header__menu-item-main_stock"><a href="/l-ua/stock.html" class="header__menu-item-sub-link header__main-link">Акции</a></li>
+              <li class="header__menu-item header__menu-item-main header__menu-item-main_new"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">Новинки</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- header SECTION-->
+      <main class="main">
+        <section class="text-content">
+          <div class="container">
+            <div class="text-content__wrapper">
+              <h3>SEO заголовок</h3>
+              <div class="text-content__item">
+                <p>Основанная в 1949 году Гансом Либхерром (Hans Liebherr) корпорация Liebherr на сегодняшний день занимает ведущие места на рынке производства холодильного оборудования, строительной техники, высокоточного технологического оборудования и авиационной промышленности.</p>
+                <ul>
+                  <li><strong>Европейский тип</strong>(неширокие агрегаты выше 1,8 метра). Холодильный отсек обычно вмонтирован над морозильным.</li>
+                  <li><strong>Азиатский вариант</strong>средних размеров. Морозильная камера относительно маленькая и находится над холодильным отсеком.</li>
+                  <li><strong>Американский тип</strong>Отличается гораздо большими габаритами ширины и высоты, чем обычные модели.</li>
+                </ul>
+                <h3>Стандартными габаритами для таких моделей считаются:</h3>
+                <ol>
+                  <li>высота от 170 сантиметров до 1,9 м;</li>
+                  <li>ширина до 1 метра;</li>
+                  <li>глубина от 60 до 80 сантиметров;</li>
+                  <li>объём может варьироваться в рамках от 350 до 800 литров. Холодильная камера бывает вместимостью до 520 литров, а морозильная - до 280.</li>
+                </ol>
+                <p>Модельный ряд холодильников и морозильников Liebherr для бытового и профессинального назначения насчитывает более 300 базовых моделей. Имя Liebherr - это символ качества в Европе и за ее пределами.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__header">
+          <div class="container">
+            <div class="page__header-wrapper">
+                            <div class="breadcrumbs">
+                              <ul class="breadcrumbs__wrapper">
+                                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link icon icon-home"></a></li>
+                                <li class="breadcrumbs__item icon icon-small-right"><a href="#" class="breadcrumbs__link">Каталог1</a></li>
+                                <li class="breadcrumbs__item icon icon-small-right"><a href="#" class="breadcrumbs__link">Каталог2</a></li>
+                                <li class="breadcrumbs__item icon icon-small-right"><a href="#" class="breadcrumbs__link">Каталог3</a></li>
+                                <li class="breadcrumbs__item icon icon-small-right active"><a href="#" class="breadcrumbs__link">Холодильник Liebherr CB 4815</a></li>
+                              </ul>
+                            </div>
+            </div>
+          </div>
+        </section>
+        <section class="card-wrapper">
+          <div id="stop-top-sidebar"></div>
+          <div class="container">
+            <div class="card card_missing">
+              <aside class="card_sidebar">
+                <div class="card-sidebar auto-fix-sidebar">
+                  <div class="card-sidebar__wrapper">
+                    <div class="product-item__label label-status label-status_sale">Акция</div>
+                    <div class="card-sidebar__image">
+                      <div class="card__image_loupe">
+                        <div class="card__image_slider-big gallery-images"><a href="images/catalog/image8.jpg" data-fancybox="gallery" data-title="MacBook Air 11 2015 (128 Gb)">
+                            <div class="card__image_slider-big-slide"><img data-src="images/catalog/image8.jpg" title="Холодильник Liebherr CB 4815" alt="Холодильник Liebherr CB 4815" id="image-1" data-zoom-image="images/catalog/image8.jpg" class="product-image"></div></a><a href="images/catalog/item-image1.jpg" data-fancybox="gallery" data-title="Холодильник Liebherr CB 4815">
+                            <div class="card__image_slider-big-slide"><img data-src="images/catalog/item-image1.jpg" title="Холодильник Liebherr CB 4815" alt="Холодильник Liebherr CB 4815" id="image-2" data-zoom-image="images/catalog/item-image1.jpg" class="product-image"></div></a><a href="images/catalog/item-image2.jpg" data-fancybox="gallery" data-title="Холодильник Liebherr CB 4815">
+                            <div class="card__image_slider-big-slide"><img data-src="images/catalog/item-image2.jpg" title="Холодильник Liebherr CB 4815" alt="Холодильник Liebherr CB 4815" id="image-3" data-zoom-image="images/catalog/item-image2.jpg" class="product-image"></div></a><a href="images/catalog/item-image3.jpg" data-fancybox="gallery" data-title="Холодильник Liebherr CB 4815">
+                            <div class="card__image_slider-big-slide"><img data-src="images/catalog/item-image3.jpg" title="Холодильник Liebherr CB 4815" alt="Холодильник Liebherr CB 4815" id="image-4" data-zoom-image="images/catalog/item-image3.jpg" class="product-image"></div></a><a href="images/catalog/item-image5.jpg" data-fancybox="gallery" data-title="Холодильник Liebherr CB 4815">
+                            <div class="card__image_slider-big-slide"><img data-src="images/catalog/item-image5.jpg" title="Холодильник Liebherr CB 4815" alt="Холодильник Liebherr CB 4815" id="image-5" data-zoom-image="images/catalog/item-image5.jpg" class="product-image"></div></a><a href="https://www.youtube.com/embed/5B2g-c15Trk" data-fancybox="gallery" data-title="Холодильник Liebherr CB 4815">
+                            <div class="card__image_slider-big-slide card-info__image_video"><img data-src="images/catalog/item-image4.jpg" title="Холодильник Liebherr CB 4815" alt="Холодильник Liebherr CB 4815" id="image-6" data-zoom-image="images/catalog/item-image4.jpg" class="product-image"></div></a></div>
+                        <div class="card__image_slider-small">
+                          <div class="card__image_slider-small-slide"><img data-src="images/catalog/image8.jpg" title="Холодильник Liebherr CB 4815" alt="Холодильник Liebherr CB 4815" data-image-index="1"></div>
+                          <div class="card__image_slider-small-slide"><img data-src="images/catalog/item-image1.jpg" title="Холодильник Liebherr CB 4815" alt="Холодильник Liebherr CB 4815" data-image-index="2"></div>
+                          <div class="card__image_slider-small-slide"><img data-src="images/catalog/item-image2.jpg" title="Холодильник Liebherr CB 4815" alt="Холодильник Liebherr CB 4815" data-image-index="3"></div>
+                          <div class="card__image_slider-small-slide"><img data-src="images/catalog/item-image3.jpg" title="Холодильник Liebherr CB 4815" alt="Холодильник Liebherr CB 4815" data-image-index="4"></div>
+                          <div class="card__image_slider-small-slide"><img data-src="images/catalog/item-image5.jpg" title="Холодильник Liebherr CB 4815" alt="Холодильник Liebherr CB 4815" data-image-index="5"></div>
+                          <div class="card__image_slider-small-slide card-info__image_video"><img data-src="images/catalog/item-image4.jpg" title="Холодильник Liebherr CB 4815" alt="Холодильник Liebherr CB 4815" data-image-index="6"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <nav class="card-sidebar__nav">
+                      <ul class="card-sidebar__nav-list">
+                        <li class="card-sidebar__nav-li"><a href="#anchor-technologies" class="card-sidebar__nav-link scrollto">Применяемые технологии
+                            <div class="icon icon-small-right"></div></a></li>
+                        <li class="card-sidebar__nav-li"><a href="#anchor-characteristic" class="card-sidebar__nav-link scrollto">Характеристики
+                            <div class="icon icon-small-right"></div></a></li>
+                        <li class="card-sidebar__nav-li"><a href="#anchor-description" class="card-sidebar__nav-link scrollto">Описание
+                            <div class="icon icon-small-right"></div></a></li>
+                        <li class="card-sidebar__nav-li"><a href="#anchor-accessories" class="card-sidebar__nav-link scrollto">Рекомендуемые аксессуары
+                            <div class="icon icon-small-right"></div></a></li>
+                        <li class="card-sidebar__nav-li"><a href="#anchor-similar" class="card-sidebar__nav-link scrollto">Подобные товары
+                            <div class="icon icon-small-right"></div></a></li>
+                      </ul>
+                      <div class="card-sidebar__instruction"><a href="#" target="_blank"><span>Скачать инструкцию</span>
+                          <div class="icon icon-pdf"></div></a></div>
+                    </nav>
+                  </div>
+                </div>
+              </aside>
+              <section class="card_content">
+                <section class="card-info">
+                  <div class="card-info__wrapper"><a href="http://html.myapp.com.ua/l-ua/stock-one.html" class="product-item__stock icon-gift icon">Получи сумку в подарок
+                      <div class="product-item__stock-content"><span>при наведении появляется тултип с минимальным описанием подарка и/или акции</span></div></a>
+                    <h1 class="title">Холодильник Liebherr CB 4815</h1>
+                    <div class="card-info__vendor-button">
+                      <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">14b23f</span></div>
+                      <div class="product-item__buttons-add">
+                        <button type="submit">
+                          <div class="icon icon-like label-link"></div>
+                        </button>
+                        <button type="submit">
+                          <div class="icon icon-comparison label-link"></div>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-info__price">
+                      <div class="product-item__price product-item__price_old"><span class="price">100 300</span><span class="currency">грн</span></div>
+                      <div class="product-item__price"><span class="price">100 200</span><span class="currency">грн</span></div>
+                    </div>
+                    <div class="card-sidebar__additional">
+                      <div class="card-info__missing">
+                        <div class="subtitle">Нет в наличии</div>
+                      </div>
+                      <div class="product-item__info">
+                        <div class="product-item__tabs js-tabs">
+                          <div class="product-item__tabs-buttons js-tabs__buttons">
+                            <div class="product-item__tabs-button js-tabs__button">
+                                              <button type="submit" class="btn btn-transparent btn-small"><span>Ваша цена</span></button>
+                            </div>
+                            <div class="product-item__tabs-button product-item__tabs-button_red js-tabs__button">
+                                              <button type="submit" class="btn btn-atten btn-transparent btn-small active"><span>Cделать скидку</span></button>
+                            </div>
+                          </div>
+                          <div class="product-item__tabs-content js-tabs__content">
+                            <div class="content-block js-tabs__content-block"><span>Аргумент для обсуждения. Возможность получения информации о понижении цены</span></div>
+                            <div class="content-block content-block_red js-tabs__content-block"><span>При покупке товара на сумму 1000грн -</span><strong>скидка 200 грн</strong></div>
+                          </div>
+                        </div>
+                        <!--.product-item__content-->
+                        <!--    p-->
+                        <!--        strong ДИЗАЙН-->
+                        <!--        span Стильный и практичный холодильник серии Comfort выполнен в фирменном стиле SwingLine. Плавность линий и округленность краев подчеркивают утонченность данного прибора. Холодильник LIEBHERR имеет белый корпус из нержавеющей стали. Специальное внешнее покрытие SmartSteel защищает дверцу от отпечатков пальцев и незначительных внешних повреждений. Габариты устройства составляют 185.2 х 121 х 63 см. Для экономии пространства холодильник можно устанавливать вплотную к стене или встраивать в подготовленную нишу.-->
+                        <!--    p-->
+                        <!--        strong ТЕХНОЛОГИЯ DUOCOOLING-->
+                        <!--        span Для более точной настройки параметров работы в холодильное и морозильное отделение встроены независимые охлаждающие контуры и вентиляторы. Технология DuoCooling позволяет поддерживать кардинально разные температурные условия, при этом не допуская взаимного воздухообмена.-->
+                        <!--    p-->
+                        <!--        strong УПРАВЛЕНИЕ ХОЛОДИЛЬНЫМ ОТДЕЛЕНИЕМ-->
+                        <!--        span Холодильное отделение объемом 390 л позволяет хранить множество продуктов, избавляя от еженедельного посещения супермаркета. Достаточно простое и легкое управление в морозильной и холодильной камере реализовано с помощью дисплея MagicEye. Все индикаторы и электронные клавиши удобно расположены на торцевой части отделения и скрыты дверцей. Можно вручную настроить температуру и контролировать нужные параметры с помощью цифрового дисплея. Режим разморозки – автоматический.-->
+                      </div>
+                      <div class="card-info__quantity">
+                                        <div class="input-number">
+                                          <div class="input-number_arrow prev"></div>
+                                          <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                          <div class="input-number_arrow next"></div>
+                                        </div>
+                      </div>
+                      <div class="product-item__buttons">
+                                        <button type="submit" class="btn icon icon-cart2" data-target="cart"><span>Купить</span></button>
+                                        <button type="submit" class="btn btn-transparent" data-target="call"><span>купить в один клик</span></button>
+                                        <button type="submit" class="btn btn-missing" data-target="missing"><span>Сообщить когда появится</span></button>
+                        <div class="product-item__buttons-add">
+                          <button data-target="favorite" class="btn btn-link">
+                            <div class="icon icon-like label-link btn btn-link"></div>
+                          </button>
+                          <button data-target="comparison" class="btn btn-link">
+                            <div class="icon icon-comparison label-link btn btn-link"></div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-sidebar__instruction"><a href="#" target="_blank"><span>Скачать инструкцию</span>
+                        <div class="icon icon-pdf"></div></a></div>
+                  </div>
+                  <div class="card-info__sidebar">
+                    <div class="card-info__sidebar-item"><span class="title">Доставка в</span>
+                                      <div class="dropdown dropdown_select">
+                                        <div class="dropdown__wrapper"><span></span>
+                                          <select id="sort-town" class="select icon icon-normal_arr">
+                                            <option>Ивано-Франковск</option>
+                                            <option>Киев</option>
+                                            <option>Харьков</option>
+                                            <option>Одесса</option>
+                                            <option>Львов</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                    </div>
+                    <div class="card-info__sidebar-item">
+                      <ul class="card-info__sidebar-list">
+                        <li class="card-info__sidebar-li"><span class="title">Самовывоз из Новой Почты</span><span class="value">90<span class="currency">грн</span></span></li>
+                        <li class="card-info__sidebar-li"><span class="title">Курьер Мист Экспресс</span><span class="value">90<span class="currency">грн</span></span></li>
+                        <li class="card-info__sidebar-li"><span class="title">Курьер Новая Почта</span><span class="value">90<span class="currency">грн</span></span></li>
+                      </ul>
+                    </div>
+                    <div class="card-info__sidebar-item"><span class="title">Оплата</span><span>Наличными, Visa/MasterCard,</span>
+                      <p>Оплата частями, безналичный расчет, Мгновенная рассрочка</p>
+                    </div>
+                    <div class="card-info__sidebar-item"><span class="title">Гарантия 24 месяца</span>
+                      <p>официальной гарантии от производителя, обмен/возврат товара в течении 14 дней</p>
+                    </div>
+                    <div class="card-info__sidebar-item">
+                      <p>Мы гарантируем упаковку заказанного товара, которая обеспечит целостность и сохранность его товарного вида</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="card_product-order">
+                  <div class="branded-box">
+                    <h2 class="subtitle">Вариант продукта для заказа</h2>
+                    <div class="card_product-order__grid"><a href="/l-ua/card.html" class="basket-item product-item basket-item_vendor basket-item_little">
+                                        <div class="basket-item__wrapper">
+                                          <div class="basket-item__img"><img src="images/catalog/image8.jpg" alt="Холодильник Liebherr CNP 4858" title="Холодильник Liebherr CNP 4858" class="image"></div>
+                                          <div class="basket-item__name">
+                                            <h3 class="subtitle">Холодильник Liebherr CNP 4858</h3>
+                                          </div>
+                                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value">Серый</span></div>
+                                          <div class="basket-item__price product-item__price"><span class="value">25 335</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">26 375</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__quantity">
+                                                            <div class="input-number">
+                                                              <div class="input-number_arrow prev"></div>
+                                                              <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                                              <div class="input-number_arrow next"></div>
+                                                            </div>
+                                          </div>
+                                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">JJFD-jn-31f</span></div>
+                                          <div class="basket-item__all product-item__price"><span class="value">25 335</span><span class="currency">грн</span></div>
+                                          <div data-target="product-delete" class="basket-item__remove">
+                                            <div class="icon icon-delete"></div>
+                                          </div>
+                                        </div></a><a href="/l-ua/card.html" class="basket-item product-item basket-item_vendor basket-item_little">
+                                        <div class="basket-item__wrapper">
+                                          <div class="basket-item__img"><img src="images/catalog/image2.jpg" alt="Морозильная камера Liebherr G 1223" title="Морозильная камера Liebherr G 1223" class="image"></div>
+                                          <div class="basket-item__name">
+                                            <h3 class="subtitle">Морозильная камера Liebherr G 1223</h3>
+                                          </div>
+                                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value">Белый</span></div>
+                                          <div class="basket-item__price product-item__price"><span class="value">224 880</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">228 180</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__quantity">
+                                                            <div class="input-number">
+                                                              <div class="input-number_arrow prev"></div>
+                                                              <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                                              <div class="input-number_arrow next"></div>
+                                                            </div>
+                                          </div>
+                                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">14b23f</span></div>
+                                          <div class="basket-item__all product-item__price"><span class="value">224 880</span><span class="currency">грн</span></div>
+                                          <div data-target="product-delete" class="basket-item__remove">
+                                            <div class="icon icon-delete"></div>
+                                          </div>
+                                        </div></a><a href="/l-ua/card.html" class="basket-item product-item basket-item_vendor basket-item_little">
+                                        <div class="basket-item__wrapper">
+                                          <div class="basket-item__img"><img src="images/catalog/image0.jpg" alt="Воздушный фильтр FreshAir" title="Воздушный фильтр FreshAir" class="image"></div>
+                                          <div class="basket-item__name">
+                                            <h3 class="subtitle">Воздушный фильтр FreshAir</h3>
+                                          </div>
+                                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value">Хром</span></div>
+                                          <div class="basket-item__price product-item__price"><span class="value">226</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">234</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__quantity">
+                                                            <div class="input-number">
+                                                              <div class="input-number_arrow prev"></div>
+                                                              <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                                              <div class="input-number_arrow next"></div>
+                                                            </div>
+                                          </div>
+                                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">GG-jdbn-31f</span></div>
+                                          <div class="basket-item__all product-item__price"><span class="value">226</span><span class="currency">грн</span></div>
+                                          <div data-target="product-delete" class="basket-item__remove">
+                                            <div class="icon icon-delete"></div>
+                                          </div>
+                                        </div></a><a href="/l-ua/card.html" class="basket-item product-item basket-item_vendor basket-item_little">
+                                        <div class="basket-item__wrapper">
+                                          <div class="basket-item__img"><img src="images/catalog/image13.jpg" alt="Встраиваемый комплект холодильников Side by Side Liebherr ICUN 3324 + ICBN 3324" title="Встраиваемый комплект холодильников Side by Side Liebherr ICUN 3324 + ICBN 3324" class="image"></div>
+                                          <div class="basket-item__name">
+                                            <h3 class="subtitle">Встраиваемый комплект холодильников Side by Side Liebherr ICUN 3324 + ICBN 3324</h3>
+                                          </div>
+                                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value">Ультрафиолет</span></div>
+                                          <div class="basket-item__price product-item__price"><span class="value">234 870</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">255 270</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__quantity">
+                                                            <div class="input-number">
+                                                              <div class="input-number_arrow prev"></div>
+                                                              <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                                              <div class="input-number_arrow next"></div>
+                                                            </div>
+                                          </div>
+                                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">15431f-hy</span></div>
+                                          <div class="basket-item__all product-item__price"><span class="value">234 870</span><span class="currency">грн</span></div>
+                                          <div data-target="product-delete" class="basket-item__remove">
+                                            <div class="icon icon-delete"></div>
+                                          </div>
+                                        </div></a><a href="/l-ua/card.html" class="basket-item product-item basket-item_vendor basket-item_little">
+                                        <div class="basket-item__wrapper">
+                                          <div class="basket-item__img"><img src="images/catalog/image1.jpg" alt="Холодильник Liebherr CNP 4858" title="Холодильник Liebherr CNP 4858" class="image"></div>
+                                          <div class="basket-item__name">
+                                            <h3 class="subtitle">Холодильник Liebherr CNP 4858</h3>
+                                          </div>
+                                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value">Черный</span></div>
+                                          <div class="basket-item__price product-item__price"><span class="value">226</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">234</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__quantity">
+                                                            <div class="input-number">
+                                                              <div class="input-number_arrow prev"></div>
+                                                              <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                                              <div class="input-number_arrow next"></div>
+                                                            </div>
+                                          </div>
+                                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">GG-jdbn-31f</span></div>
+                                          <div class="basket-item__all product-item__price"><span class="value">226</span><span class="currency">грн</span></div>
+                                          <div data-target="product-delete" class="basket-item__remove">
+                                            <div class="icon icon-delete"></div>
+                                          </div>
+                                        </div></a><a href="/l-ua/card.html" class="basket-item product-item basket-item_vendor basket-item_little">
+                                        <div class="basket-item__wrapper">
+                                          <div class="basket-item__img"><img src="images/catalog/image3.jpg" alt="Морозильная камера Liebherr G 1223" title="Морозильная камера Liebherr G 1223" class="image"></div>
+                                          <div class="basket-item__name">
+                                            <h3 class="subtitle">Морозильная камера Liebherr G 1223</h3>
+                                          </div>
+                                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value">Хром</span></div>
+                                          <div class="basket-item__price product-item__price"><span class="value">234 870</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">255 270</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__quantity">
+                                                            <div class="input-number">
+                                                              <div class="input-number_arrow prev"></div>
+                                                              <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                                              <div class="input-number_arrow next"></div>
+                                                            </div>
+                                          </div>
+                                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">15431f-hy</span></div>
+                                          <div class="basket-item__all product-item__price"><span class="value">234 870</span><span class="currency">грн</span></div>
+                                          <div data-target="product-delete" class="basket-item__remove">
+                                            <div class="icon icon-delete"></div>
+                                          </div>
+                                        </div></a>
+                    </div>
+                  </div>
+                </section>
+                <section id="anchor-technologies" class="card_technologies">
+                  <div class="branded-box">
+                    <h2 class="subtitle">Применяемые технологии</h2>
+                    <div class="card_technologies__grid">
+                      <div class="card_technologies__item"><img data-src="images/technology/technology1.svg" alt="A++" title="A++">
+                        <div class="card_technologies__info"><img data-src="images/technology/technology1.svg" alt="A++" title="A++">
+                          <div class="card_technologies__content">
+                            <div class="card_technologies__title">A++</div>
+                            <div class="card_technologies__text">Система NoFrost обеспечивает замораживание продуктов при помощи циркуляции охлажденного воздуха. Вся лишняя влага выводится за пределы морозильной камеры, вследствие чего на продуктах не образовывается лед и иней. А необходимость ручного размораживания навсегда останется в прошлом.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card_technologies__item"><img data-src="images/technology/technology2.svg" alt="Bio Fresh Plus" title="Bio Fresh Plus">
+                        <div class="card_technologies__info"><img data-src="images/technology/technology2.svg" alt="Bio Fresh Plus" title="Bio Fresh Plus">
+                          <div class="card_technologies__content">
+                            <div class="card_technologies__title">Bio Fresh Plus</div>
+                            <div class="card_technologies__text">Bio Fresh Plus. Система NoFrost обеспечивает замораживание продуктов при помощи циркуляции охлажденного воздуха. Вся лишняя влага выводится за пределы морозильной камеры, вследствие чего на продуктах не образовывается лед и иней. А необходимость ручного размораживания навсегда останется в прошлом.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card_technologies__item"><img data-src="images/technology/technology3.svg" alt="DrySafe HydroSafe" title="DrySafe HydroSafe">
+                        <div class="card_technologies__info"><img data-src="images/technology/technology3.svg" alt="DrySafe HydroSafe" title="DrySafe HydroSafe">
+                          <div class="card_technologies__content">
+                            <div class="card_technologies__title">DrySafe HydroSafe</div>
+                            <div class="card_technologies__text">Вся лишняя влага выводится за пределы морозильной камеры, вследствие чего на продуктах не образовывается лед и иней. А необходимость ручного размораживания навсегда останется в прошлом.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card_technologies__item"><img data-src="images/technology/technology4.svg" alt="Glass Line" title="Glass Line">
+                        <div class="card_technologies__info"><img data-src="images/technology/technology4.svg" alt="Glass Line" title="Glass Line">
+                          <div class="card_technologies__content">
+                            <div class="card_technologies__title">Glass Line</div>
+                            <div class="card_technologies__text">Glass Line. Вся лишняя влага выводится за пределы морозильной камеры, вследствие чего на продуктах не образовывается лед и иней. А необходимость ручного размораживания навсегда останется в прошлом.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card_technologies__item"><img data-src="images/technology/technology5.svg" alt="Power Cooling" title="Power Cooling">
+                        <div class="card_technologies__info"><img data-src="images/technology/technology5.svg" alt="Power Cooling" title="Power Cooling">
+                          <div class="card_technologies__content">
+                            <div class="card_technologies__title">Power Cooling</div>
+                            <div class="card_technologies__text">Вся лишняя влага выводится за пределы морозильной камеры, вследствие чего на продуктах не образовывается лед и иней. А необходимость ручного размораживания навсегда останется в прошлом.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card_technologies__item"><img data-src="images/technology/technology6.svg" alt="A++" title="A++">
+                        <div class="card_technologies__info"><img data-src="images/technology/technology6.svg" alt="A++" title="A++">
+                          <div class="card_technologies__content">
+                            <div class="card_technologies__title">A++</div>
+                            <div class="card_technologies__text">А необходимость ручного размораживания навсегда останется в прошлом.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card_technologies__item"><img data-src="images/technology/technology7.svg" alt="Bio Fresh Plus" title="Bio Fresh Plus">
+                        <div class="card_technologies__info"><img data-src="images/technology/technology7.svg" alt="Bio Fresh Plus" title="Bio Fresh Plus">
+                          <div class="card_technologies__content">
+                            <div class="card_technologies__title">Bio Fresh Plus</div>
+                            <div class="card_technologies__text">Система NoFrost обеспечивает замораживание продуктов при помощи циркуляции охлажденного воздуха. Вся лишняя влага выводится за пределы морозильной камеры, вследствие чего на продуктах не образовывается лед и иней. А необходимость ручного размораживания навсегда останется в прошлом.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card_technologies__item"><img data-src="images/technology/technology8.svg" alt="DrySafe HydroSafe" title="DrySafe HydroSafe">
+                        <div class="card_technologies__info"><img data-src="images/technology/technology8.svg" alt="DrySafe HydroSafe" title="DrySafe HydroSafe">
+                          <div class="card_technologies__content">
+                            <div class="card_technologies__title">DrySafe HydroSafe</div>
+                            <div class="card_technologies__text">Не следует, однако забывать, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке дальнейших направлений развития.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card_technologies__item"><img data-src="images/technology/technology9.svg" alt="Glass Line" title="Glass Line">
+                        <div class="card_technologies__info"><img data-src="images/technology/technology9.svg" alt="Glass Line" title="Glass Line">
+                          <div class="card_technologies__content">
+                            <div class="card_technologies__title">Glass Line</div>
+                            <div class="card_technologies__text">Не следует, однако забывать, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке дальнейших направлений развития. Таким образом дальнейшее развитие различных форм деятельности способствует подготовки и реализации направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card_technologies__item"><img data-src="images/technology/technology10.svg" alt="Power Cooling" title="Power Cooling">
+                        <div class="card_technologies__info"><img data-src="images/technology/technology10.svg" alt="Power Cooling" title="Power Cooling">
+                          <div class="card_technologies__content">
+                            <div class="card_technologies__title">Power Cooling</div>
+                            <div class="card_technologies__text">Таким образом дальнейшее развитие различных форм деятельности способствует подготовки и реализации направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card_technologies__item"><img data-src="images/technology/technology11.svg" alt="A++" title="A++">
+                        <div class="card_technologies__info"><img data-src="images/technology/technology11.svg" alt="A++" title="A++">
+                          <div class="card_technologies__content">
+                            <div class="card_technologies__title">A++</div>
+                            <div class="card_technologies__text">Система NoFrost обеспечивает замораживание продуктов при помощи циркуляции охлажденного воздуха.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card_technologies__item"><img data-src="images/technology/technology12.svg" alt="Bio Fresh Plus" title="Bio Fresh Plus">
+                        <div class="card_technologies__info"><img data-src="images/technology/technology12.svg" alt="Bio Fresh Plus" title="Bio Fresh Plus">
+                          <div class="card_technologies__content">
+                            <div class="card_technologies__title">Bio Fresh Plus</div>
+                            <div class="card_technologies__text">Система NoFrost обеспечивает замораживание продуктов при помощи циркуляции охлажденного воздуха. Вся лишняя влага выводится за пределы морозильной камеры, вследствие чего на продуктах не образовывается лед и иней. А необходимость ручного размораживания навсегда останется в прошлом.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section id="anchor-characteristic" class="card_characteristic">
+                  <div class="branded-box">
+                    <table>
+                      <caption>Характеристики</caption>
+                      <tbody>
+                        <tr>
+                          <th>Класс модели</th>
+                          <td>Premium</td>
+                        </tr>
+                        <tr>
+                          <th>Габариты (ВхШхГ) (см)</th>
+                          <td>121,8х55,9х54,4</td>
+                        </tr>
+                        <tr>
+                          <th>Вес (кг), без упаковки/в упаковке</th>
+                          <td>51,3/54,1</td>
+                        </tr>
+                        <tr>
+                          <th>Общий объем холодильной/морозильной камер (л)</th>
+                          <td>226/-</td>
+                        </tr>
+                        <tr>
+                          <th>Объем холодильной камеры общий/полезный (л)</th>
+                          <td>161/137</td>
+                        </tr>
+                        <tr>
+                          <th>Объем зоны свежести BioFresh общий/полезный (л)</th>
+                          <td>65/69</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Объем морозильной камеры общий/полезный (л)</th>
+                          <td>-/-</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Расположение морозильной камеры</th>
+                          <td>Нет</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>No Frost (Frost Free)</th>
+                          <td>Нет</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>BioFresh зона свежести</th>
+                          <td>Есть</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Тип управления</th>
+                          <td>Дисплей MagicEye с цифровой индикацией температуры</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Регулируемые контуры охлаждения</th>
+                          <td>1</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Кол-во компрессоров</th>
+                          <td>1</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Двери</th>
+                          <td>Перенавешивание</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Крепление дверей фасада</th>
+                          <td>Жесткое (door-on-door)</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Полки</th>
+                          <td>Стекло</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Звуковая сигнализация</th>
+                          <td>Есть</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Класс энергопотребления</th>
+                          <td>А++</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Энергопотребление (кВт*ч в год)</th>
+                          <td>38</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Уровень шума (Дб)</th>
+                          <td>121</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Ледогенератор</th>
+                          <td>Нет</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Климатический класс</th>
+                          <td>SN-T (+10 С to +43 С)</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Страна-производитель</th>
+                          <td>Германия</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Гарантия</th>
+                          <td>3 года</td>
+                        </tr>
+                        <tr style="display: none;">
+                          <th>Примечания</th>
+                          <td>Производитель на свое усмотрение и без дополнительных уведомлений может менять технические характеристики и комплектацию модели.</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th colspan="2"><span data-text="Все характеристики" data-hidden="Скрыть">Все характеристики</span>
+                            <div class="icon icon-big-right"></div>
+                          </th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </section>
+                <section id="anchor-description" class="card_description">
+                  <div class="branded-box">
+                    <h2 class="subtitle">Описание</h2>
+                    <div class="card_description__content">
+                      <p>Таким образом дальнейшее развитие различных форм деятельности способствует подготовки и реализации направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке дальнейших направлений развития.</p>
+                      <p>Таким образом дальнейшее развитие различных форм деятельности способствует подготовки и реализации направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке дальнейших направлений развития.</p>
+                    </div>
+                  </div>
+                  <div class="card_description__button"><span data-text="Показать все описание" data-hidden="Свернуть описание">Показать все описание</span></div>
+                </section>
+                <section id="anchor-accessories" class="card_accessories">
+                  <div class="main-leaders__header">
+                    <h2 class="title title_center">Рекомендуемые аксессуары</h2>
+                  </div>
+                  <div class="main-leaders__wrapper">
+                    <div class="main-leaders__slider js-card_accessories-slider">
+                      <div class="main-leaders__item">
+                                              <div class="product-item product-item_stock"><a href="/l-ua/card.html" class="product-item__wrapper">
+                                                  <div class="product-item__label label-status label-status_new">Новинка</div>
+                                                  <div data-target="product-delete" class="product-item__delete basket-item__remove">
+                                                    <div class="icon icon-delete"></div>
+                                                  </div>
+                                                  <div class="product-item__img"><img data-src="images/catalog/image0.jpg" alt="Воздушный фильтр FreshAir " title="Воздушный фильтр FreshAir "></div>
+                                                  <div class="product-item__main">
+                                                    <div class="product-item__stock icon-gift icon">Получи сумку в подарок
+                                                      <div class="product-item__stock-content"><span>при наведении появляется тултип с минимальным описанием подарка и/или акции</span></div>
+                                                    </div>
+                                                    <h2 class="product-item__title subtitle">Воздушный фильтр FreshAir </h2>
+                                                    <div class="product-item__price product-item__price_old"><span class="price">228</span><span class="currency">грн</span></div>
+                                                    <div class="product-item__price"><span class="price">226</span><span class="currency">грн</span></div>
+                                                    <div class="product-item__missing-title">
+                                                      <div class="subtitle">Нет в наличии</div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="product-item__additional">
+                                                    <div class="product-item__info">
+                                                      <div class="product-item__tabs js-tabs">
+                                                        <div class="product-item__tabs-buttons js-tabs__buttons">
+                                                          <div class="product-item__tabs-button js-tabs__button">
+                                                                                  <button type="submit" class="btn btn-transparent btn-small"><span>Ваша цена</span></button>
+                                                          </div>
+                                                          <div class="product-item__tabs-button product-item__tabs-button_red js-tabs__button">
+                                                                                  <button type="submit" class="btn btn-atten btn-transparent btn-small"><span>Cделать скидку</span></button>
+                                                          </div>
+                                                        </div>
+                                                        <div class="product-item__tabs-content js-tabs__content">
+                                                          <div class="content-block js-tabs__content-block"><span>Аргумент для обсуждения. Возможность получения информации о понижении цены</span></div>
+                                                          <div class="content-block content-block_red js-tabs__content-block"><span>При покупке товара на сумму 1000грн -</span><strong>скидка 200 грн</strong></div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="product-item__content"><span>ВхШхГ: 186,1х60х65,7; класс A++;</span></div>
+                                                    </div>
+                                                    <div class="product-item__buttons">
+                                                                            <button type="submit" class="btn" data-target="cart"><span>В корзину</span></button>
+                                                      <div class="product-item__buttons-add">
+                                                        <button data-target="favorite" class="btn btn-link">
+                                                          <div class="icon icon-like label-link btn btn-link"></div>
+                                                        </button>
+                                                        <button data-target="comparison" class="btn btn-link">
+                                                          <div class="icon icon-comparison label-link btn btn-link"></div>
+                                                        </button>
+                                                      </div>
+                                                    </div>
+                                                    <div class="product-item__missing-buttons">
+                                                                            <button type="submit" class="btn btn-missing" data-target="missing"><span>Сообщить когда появится</span></button>
+                                                    </div>
+                                                  </div></a></div>
+                      </div>
+                      <div class="main-leaders__item">
+                                              <div class="product-item"><a href="/l-ua/card.html" class="product-item__wrapper">
+                                                  <div data-target="product-delete" class="product-item__delete basket-item__remove">
+                                                    <div class="icon icon-delete"></div>
+                                                  </div>
+                                                  <div class="product-item__img"><img data-src="images/catalog/image1.jpg" alt="Двухкамерный холодильник Liebherr CNP 4858" title="Двухкамерный холодильник Liebherr CNP 4858"></div>
+                                                  <div class="product-item__main">
+                                                    <div class="product-item__stock icon-gift icon">Получи сумку в подарок
+                                                      <div class="product-item__stock-content"><span>при наведении появляется тултип с минимальным описанием подарка и/или акции</span></div>
+                                                    </div>
+                                                    <h2 class="product-item__title subtitle">Двухкамерный холодильник Liebherr CNP 4858</h2>
+                                                    <div class="product-item__price product-item__price_old"><span class="price">24 880</span><span class="currency">грн</span></div>
+                                                    <div class="product-item__price"><span class="price">22 850</span><span class="currency">грн</span></div>
+                                                    <div class="product-item__missing-title">
+                                                      <div class="subtitle">Нет в наличии</div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="product-item__additional">
+                                                    <div class="product-item__info">
+                                                      <div class="product-item__tabs js-tabs">
+                                                        <div class="product-item__tabs-buttons js-tabs__buttons">
+                                                          <div class="product-item__tabs-button js-tabs__button">
+                                                                                  <button type="submit" class="btn btn-transparent btn-small"><span>Ваша цена</span></button>
+                                                          </div>
+                                                          <div class="product-item__tabs-button product-item__tabs-button_red js-tabs__button">
+                                                                                  <button type="submit" class="btn btn-atten btn-transparent btn-small"><span>Cделать скидку</span></button>
+                                                          </div>
+                                                        </div>
+                                                        <div class="product-item__tabs-content js-tabs__content">
+                                                          <div class="content-block js-tabs__content-block"><span>Аргумент для обсуждения. Возможность получения информации о понижении цены</span></div>
+                                                          <div class="content-block content-block_red js-tabs__content-block"><span>При покупке товара на сумму 1000грн -</span><strong>скидка 200 грн</strong></div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="product-item__content"><span>Этот высококачественный холодильник обеспечит надежное хранение абсолютно каждого продукта в вашем доме. LIEBHERR CNP 4858 с нижним расположением морозильной камеры выполнен в универсальном дизайне и прекрасно смотрится в любом интерьере кухни.</span></div>
+                                                    </div>
+                                                    <div class="product-item__buttons">
+                                                                            <button type="submit" class="btn disabled" data-target="cart"><span>В корзину</span></button>
+                                                      <div class="product-item__buttons-add">
+                                                        <button data-target="favorite" class="btn btn-link">
+                                                          <div class="icon icon-like label-link btn btn-link"></div>
+                                                        </button>
+                                                        <button data-target="comparison" class="btn btn-link">
+                                                          <div class="icon icon-comparison label-link btn btn-link"></div>
+                                                        </button>
+                                                      </div>
+                                                    </div>
+                                                    <div class="product-item__missing-buttons">
+                                                                            <button type="submit" class="btn btn-missing" data-target="missing"><span>Сообщить когда появится</span></button>
+                                                    </div>
+                                                  </div></a></div>
+                      </div>
+                      <div class="main-leaders__item">
+                                              <div class="product-item product-item_stock product-item_old"><a href="/l-ua/card.html" class="product-item__wrapper">
+                                                  <div class="product-item__label label-status label-status_promotion">распродажа</div>
+                                                  <div data-target="product-delete" class="product-item__delete basket-item__remove">
+                                                    <div class="icon icon-delete"></div>
+                                                  </div>
+                                                  <div class="product-item__img"><img data-src="images/catalog/image2.jpg" alt="Встраиваемый двухкамерный холодильник Liebherr ICUNS 3324" title="Встраиваемый двухкамерный холодильник Liebherr ICUNS 3324"></div>
+                                                  <div class="product-item__main">
+                                                    <div class="product-item__stock icon-gift icon">Получи сумку в подарок
+                                                      <div class="product-item__stock-content"><span>при наведении появляется тултип с минимальным описанием подарка и/или акции</span></div>
+                                                    </div>
+                                                    <h2 class="product-item__title subtitle">Встраиваемый двухкамерный холодильник Liebherr ICUNS 3324</h2>
+                                                    <div class="product-item__price product-item__price_old"><span class="price">246560</span><span class="currency">грн</span></div>
+                                                    <div class="product-item__price"><span class="price">226 880</span><span class="currency">грн</span></div>
+                                                    <div class="product-item__missing-title">
+                                                      <div class="subtitle">Нет в наличии</div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="product-item__additional">
+                                                    <div class="product-item__info">
+                                                      <div class="product-item__tabs js-tabs">
+                                                        <div class="product-item__tabs-buttons js-tabs__buttons">
+                                                          <div class="product-item__tabs-button js-tabs__button">
+                                                                                  <button type="submit" class="btn btn-transparent btn-small"><span>Ваша цена</span></button>
+                                                          </div>
+                                                          <div class="product-item__tabs-button product-item__tabs-button_red js-tabs__button">
+                                                                                  <button type="submit" class="btn btn-atten btn-transparent btn-small"><span>Cделать скидку</span></button>
+                                                          </div>
+                                                        </div>
+                                                        <div class="product-item__tabs-content js-tabs__content">
+                                                          <div class="content-block js-tabs__content-block"><span>Аргумент для обсуждения. Возможность получения информации о понижении цены</span></div>
+                                                          <div class="content-block content-block_red js-tabs__content-block"><span>При покупке товара на сумму 1000грн -</span><strong>скидка 200 грн</strong></div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="product-item__content"><span>&quot;ВхШхГ: 186,1х60х65,7; класс A++; объем: холодильного отделения 217 л, морозильного отделения 116 л; белый; Болгария</span></div>
+                                                    </div>
+                                                    <div class="product-item__buttons">
+                                                                            <button type="submit" class="btn" data-target="cart"><span>В корзину</span></button>
+                                                      <div class="product-item__buttons-add">
+                                                        <button data-target="favorite" class="btn btn-link">
+                                                          <div class="icon icon-like label-link btn btn-link"></div>
+                                                        </button>
+                                                        <button data-target="comparison" class="btn btn-link">
+                                                          <div class="icon icon-comparison label-link btn btn-link"></div>
+                                                        </button>
+                                                      </div>
+                                                    </div>
+                                                    <div class="product-item__missing-buttons">
+                                                                            <button type="submit" class="btn btn-missing" data-target="missing"><span>Сообщить когда появится</span></button>
+                                                    </div>
+                                                  </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section id="anchor-similar" class="card_similar-product">
+                  <div class="main-leaders__header">
+                    <h2 class="title title_center">Подобные товары</h2>
+                  </div>
+                  <div class="main-leaders__wrapper">
+                    <div class="main-leaders__slider js-card_similar-product-slider">
+                      <div class="main-leaders__item">
+                                              <div class="product-item product-item_stock"><a href="/l-ua/card.html" class="product-item__wrapper">
+                                                  <div class="product-item__label label-status label-status_new">Новинка</div>
+                                                  <div data-target="product-delete" class="product-item__delete basket-item__remove">
+                                                    <div class="icon icon-delete"></div>
+                                                  </div>
+                                                  <div class="product-item__img"><img data-src="images/catalog/image0.jpg" alt="Воздушный фильтр FreshAir " title="Воздушный фильтр FreshAir "></div>
+                                                  <div class="product-item__main">
+                                                    <div class="product-item__stock icon-gift icon">Получи сумку в подарок
+                                                      <div class="product-item__stock-content"><span>при наведении появляется тултип с минимальным описанием подарка и/или акции</span></div>
+                                                    </div>
+                                                    <h2 class="product-item__title subtitle">Воздушный фильтр FreshAir </h2>
+                                                    <div class="product-item__price product-item__price_old"><span class="price">228</span><span class="currency">грн</span></div>
+                                                    <div class="product-item__price"><span class="price">226</span><span class="currency">грн</span></div>
+                                                    <div class="product-item__missing-title">
+                                                      <div class="subtitle">Нет в наличии</div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="product-item__additional">
+                                                    <div class="product-item__info">
+                                                      <div class="product-item__tabs js-tabs">
+                                                        <div class="product-item__tabs-buttons js-tabs__buttons">
+                                                          <div class="product-item__tabs-button js-tabs__button">
+                                                                                  <button type="submit" class="btn btn-transparent btn-small"><span>Ваша цена</span></button>
+                                                          </div>
+                                                          <div class="product-item__tabs-button product-item__tabs-button_red js-tabs__button">
+                                                                                  <button type="submit" class="btn btn-atten btn-transparent btn-small"><span>Cделать скидку</span></button>
+                                                          </div>
+                                                        </div>
+                                                        <div class="product-item__tabs-content js-tabs__content">
+                                                          <div class="content-block js-tabs__content-block"><span>Аргумент для обсуждения. Возможность получения информации о понижении цены</span></div>
+                                                          <div class="content-block content-block_red js-tabs__content-block"><span>При покупке товара на сумму 1000грн -</span><strong>скидка 200 грн</strong></div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="product-item__content"><span>ВхШхГ: 186,1х60х65,7; класс A++;</span></div>
+                                                    </div>
+                                                    <div class="product-item__buttons">
+                                                                            <button type="submit" class="btn" data-target="cart"><span>В корзину</span></button>
+                                                      <div class="product-item__buttons-add">
+                                                        <button data-target="favorite" class="btn btn-link">
+                                                          <div class="icon icon-like label-link btn btn-link"></div>
+                                                        </button>
+                                                        <button data-target="comparison" class="btn btn-link">
+                                                          <div class="icon icon-comparison label-link btn btn-link"></div>
+                                                        </button>
+                                                      </div>
+                                                    </div>
+                                                    <div class="product-item__missing-buttons">
+                                                                            <button type="submit" class="btn btn-missing" data-target="missing"><span>Сообщить когда появится</span></button>
+                                                    </div>
+                                                  </div></a></div>
+                      </div>
+                      <div class="main-leaders__item">
+                                              <div class="product-item"><a href="/l-ua/card.html" class="product-item__wrapper">
+                                                  <div data-target="product-delete" class="product-item__delete basket-item__remove">
+                                                    <div class="icon icon-delete"></div>
+                                                  </div>
+                                                  <div class="product-item__img"><img data-src="images/catalog/image1.jpg" alt="Двухкамерный холодильник Liebherr CNP 4858" title="Двухкамерный холодильник Liebherr CNP 4858"></div>
+                                                  <div class="product-item__main">
+                                                    <div class="product-item__stock icon-gift icon">Получи сумку в подарок
+                                                      <div class="product-item__stock-content"><span>при наведении появляется тултип с минимальным описанием подарка и/или акции</span></div>
+                                                    </div>
+                                                    <h2 class="product-item__title subtitle">Двухкамерный холодильник Liebherr CNP 4858</h2>
+                                                    <div class="product-item__price product-item__price_old"><span class="price">24 880</span><span class="currency">грн</span></div>
+                                                    <div class="product-item__price"><span class="price">22 850</span><span class="currency">грн</span></div>
+                                                    <div class="product-item__missing-title">
+                                                      <div class="subtitle">Нет в наличии</div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="product-item__additional">
+                                                    <div class="product-item__info">
+                                                      <div class="product-item__tabs js-tabs">
+                                                        <div class="product-item__tabs-buttons js-tabs__buttons">
+                                                          <div class="product-item__tabs-button js-tabs__button">
+                                                                                  <button type="submit" class="btn btn-transparent btn-small"><span>Ваша цена</span></button>
+                                                          </div>
+                                                          <div class="product-item__tabs-button product-item__tabs-button_red js-tabs__button">
+                                                                                  <button type="submit" class="btn btn-atten btn-transparent btn-small"><span>Cделать скидку</span></button>
+                                                          </div>
+                                                        </div>
+                                                        <div class="product-item__tabs-content js-tabs__content">
+                                                          <div class="content-block js-tabs__content-block"><span>Аргумент для обсуждения. Возможность получения информации о понижении цены</span></div>
+                                                          <div class="content-block content-block_red js-tabs__content-block"><span>При покупке товара на сумму 1000грн -</span><strong>скидка 200 грн</strong></div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="product-item__content"><span>Этот высококачественный холодильник обеспечит надежное хранение абсолютно каждого продукта в вашем доме. LIEBHERR CNP 4858 с нижним расположением морозильной камеры выполнен в универсальном дизайне и прекрасно смотрится в любом интерьере кухни.</span></div>
+                                                    </div>
+                                                    <div class="product-item__buttons">
+                                                                            <button type="submit" class="btn disabled" data-target="cart"><span>В корзину</span></button>
+                                                      <div class="product-item__buttons-add">
+                                                        <button data-target="favorite" class="btn btn-link">
+                                                          <div class="icon icon-like label-link btn btn-link"></div>
+                                                        </button>
+                                                        <button data-target="comparison" class="btn btn-link">
+                                                          <div class="icon icon-comparison label-link btn btn-link"></div>
+                                                        </button>
+                                                      </div>
+                                                    </div>
+                                                    <div class="product-item__missing-buttons">
+                                                                            <button type="submit" class="btn btn-missing" data-target="missing"><span>Сообщить когда появится</span></button>
+                                                    </div>
+                                                  </div></a></div>
+                      </div>
+                      <div class="main-leaders__item">
+                                              <div class="product-item product-item_stock product-item_old"><a href="/l-ua/card.html" class="product-item__wrapper">
+                                                  <div class="product-item__label label-status label-status_promotion">распродажа</div>
+                                                  <div data-target="product-delete" class="product-item__delete basket-item__remove">
+                                                    <div class="icon icon-delete"></div>
+                                                  </div>
+                                                  <div class="product-item__img"><img data-src="images/catalog/image2.jpg" alt="Встраиваемый двухкамерный холодильник Liebherr ICUNS 3324" title="Встраиваемый двухкамерный холодильник Liebherr ICUNS 3324"></div>
+                                                  <div class="product-item__main">
+                                                    <div class="product-item__stock icon-gift icon">Получи сумку в подарок
+                                                      <div class="product-item__stock-content"><span>при наведении появляется тултип с минимальным описанием подарка и/или акции</span></div>
+                                                    </div>
+                                                    <h2 class="product-item__title subtitle">Встраиваемый двухкамерный холодильник Liebherr ICUNS 3324</h2>
+                                                    <div class="product-item__price product-item__price_old"><span class="price">246560</span><span class="currency">грн</span></div>
+                                                    <div class="product-item__price"><span class="price">226 880</span><span class="currency">грн</span></div>
+                                                    <div class="product-item__missing-title">
+                                                      <div class="subtitle">Нет в наличии</div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="product-item__additional">
+                                                    <div class="product-item__info">
+                                                      <div class="product-item__tabs js-tabs">
+                                                        <div class="product-item__tabs-buttons js-tabs__buttons">
+                                                          <div class="product-item__tabs-button js-tabs__button">
+                                                                                  <button type="submit" class="btn btn-transparent btn-small"><span>Ваша цена</span></button>
+                                                          </div>
+                                                          <div class="product-item__tabs-button product-item__tabs-button_red js-tabs__button">
+                                                                                  <button type="submit" class="btn btn-atten btn-transparent btn-small"><span>Cделать скидку</span></button>
+                                                          </div>
+                                                        </div>
+                                                        <div class="product-item__tabs-content js-tabs__content">
+                                                          <div class="content-block js-tabs__content-block"><span>Аргумент для обсуждения. Возможность получения информации о понижении цены</span></div>
+                                                          <div class="content-block content-block_red js-tabs__content-block"><span>При покупке товара на сумму 1000грн -</span><strong>скидка 200 грн</strong></div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="product-item__content"><span>&quot;ВхШхГ: 186,1х60х65,7; класс A++; объем: холодильного отделения 217 л, морозильного отделения 116 л; белый; Болгария</span></div>
+                                                    </div>
+                                                    <div class="product-item__buttons">
+                                                                            <button type="submit" class="btn" data-target="cart"><span>В корзину</span></button>
+                                                      <div class="product-item__buttons-add">
+                                                        <button data-target="favorite" class="btn btn-link">
+                                                          <div class="icon icon-like label-link btn btn-link"></div>
+                                                        </button>
+                                                        <button data-target="comparison" class="btn btn-link">
+                                                          <div class="icon icon-comparison label-link btn btn-link"></div>
+                                                        </button>
+                                                      </div>
+                                                    </div>
+                                                    <div class="product-item__missing-buttons">
+                                                                            <button type="submit" class="btn btn-missing" data-target="missing"><span>Сообщить когда появится</span></button>
+                                                    </div>
+                                                  </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </section>
+            </div>
+          </div>
+          <div id="stop-bottom-sidebar"></div>
+        </section>
+        <div class="partners">
+          <div class="partners__header">Партнёр</div>
+          <ul class="partners__list">
+            <li class="partners__li"><a href="#partners.html" target="_blank" class="partners__link"><img data-src="images/partners/logo1.svg" alt="Best" title="Best"></a></li>
+            <li class="partners__li"><a href="#partners.html" target="_blank" class="partners__link"><img data-src="images/partners/logo4.svg" alt="Denon" title="Denon"></a></li>
+            <li class="partners__li"><a href="#partners.html" target="_blank" class="partners__link"><img data-src="images/partners/logo3.svg" alt="Blanco" title="Blanco"></a></li>
+          </ul>
+        </div>
+      </main>
+      <!--footer-->
+      <footer class="footer">
+        <div class="container">
+          <div class="card-gallery"></div>
+          <div class="go-to-top"></div>
+          <div class="footer__wrapper">
+            <div class="footer__logo"><a href="#"><img data-src="images/logo-white.svg" alt="Liebherr" title="Liebherr">
+                <div class="anim-wrapper">
+                  <svg width="22" height="25" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <lineargradient id="linear-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="1" stop-color="#E5E5E5">
+                          <animate attributename="offset" values="1;1;1;1;1;0;0;0;0;0" dur="16s" begin="0s;grayEnd.end+8s;" id="gray" repeatCount="indefinite"></animate>
+                        </stop>
+                        <stop offset="0.5" stop-color="#4D60C4">
+                          <animate attributename="offset" values="0.5;1;" dur="8s" begin="gray.end" id="blue" repeatCount="indefinite"></animate>
+                        </stop>
+                        <stop offset="0" stop-color="#FFCE45">
+                          <animate attributename="offset" values="0;0.5;" dur="8s" begin="blue.end" id="yellow" repeatCount="indefinite"></animate>
+                        </stop>
+                      </lineargradient>
+                    </defs>
+                    <path d="M5.016 12.176C7.032 12.176 8.952 10.592 8.952 7.792C8.952 4.96 7.016 3.376 5.016 3.376C3.656 3.376 2.776 4.08 2.152 4.96V0.32H0.216V12H2.152V10.688C2.744 11.472 3.624 12.176 5.016 12.176ZM4.568 10.496C3.256 10.496 2.104 9.424 2.104 7.792C2.104 6.144 3.256 5.056 4.568 5.056C5.88 5.056 6.984 6.128 6.984 7.76C6.984 9.456 5.896 10.496 4.568 10.496ZM13.9268 12.144C14.6467 12.144 15.1908 11.984 15.6708 11.712V10.128C15.2868 10.32 14.9028 10.416 14.4707 10.416C13.8147 10.416 13.4308 10.112 13.4308 9.36V5.216H15.7028V3.552H13.4308V1.232H11.4947V3.552H10.4227V5.216H11.4947V9.664C11.4947 11.52 12.5027 12.144 13.9268 12.144Z" fill="url(#linear-gradient)"></path>
+                  </svg>
+                </div></a></div>
+            <div class="footer__phone header__phone">
+              <div class="header__phone-wrapper icon icon-phone js__phone-dropdown">
+                <div class="header__phone-header icon icon-normal_arr"><a href="tel:044 257 65 99" class="header__phone-header-link">(044) 257 65 99</a></div>
+                <ul style="display: none;" class="header__phone-dropdown">
+                  <li class="header__phone-item"><a href="tel:044 257 65 99" class="header__phone-link">(044) 257 65 99</a></li>
+                  <li class="header__phone-item"><a href="tel:044 257 65 99" class="header__phone-link">(044) 257 65 99</a></li>
+                  <li class="header__phone-item"><a href="tel:044 257 65 99" class="header__phone-link">(044) 257 65 99</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__social">
+              <ul class="social-list">
+                <li class="social-item"><a href="https://www.facebook.com/" target="_blank" rel="nofollow" class="icon-fb icon"></a></li>
+                <li class="social-item"><a href="https://www.instagram.com/" target="_blank" rel="nofollow" class="icon-insta icon"></a></li>
+                <li class="social-item"><a href="https://youtobe.com/" target="_blank" rel="nofollow" class="icon-youtube icon"></a></li>
+              </ul>
+            </div>
+            <div class="footer__contact">
+              <div class="footer__contact-title subtitle">График работы:</div>
+              <div class="footer__contact-item"><span>Пн-Пт:</span><span>9:00 - 19:00</span></div>
+              <div class="footer__contact-item"><span>Суббота:</span><span>10:00 - 17:00</span></div>
+              <div class="footer__contact-item"><span>Воскресенье:</span><span>Выходной</span></div>
+            </div>
+            <div class="footer__content">
+              <nav class="footer__content-nav">
+                <ul class="footer__content-wrapper">
+                  <li class="footer__content-item"><span class="footer__content-title subtitle">Оборудование</span>
+                    <ul class="footer__content-list">
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Холодильники, морозильные камеры</a></li>
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Винные шкафы, хьюмидор</a></li>
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Профессиональное оборудование</a></li>
+                    </ul>
+                  </li>
+                  <li class="footer__content-item"><span class="footer__content-title subtitle">Покупателю</span>
+                    <ul class="footer__content-list">
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Холодильники, морозильные камеры</a></li>
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Винные шкафы, хьюмидор</a></li>
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Профессиональное оборудование</a></li>
+                    </ul>
+                  </li>
+                  <li class="footer__content-item"><span class="footer__content-title subtitle">О компании</span>
+                    <ul class="footer__content-list">
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Холодильники, морозильные камеры</a></li>
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Винные шкафы, хьюмидор</a></li>
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Профессиональное оборудование</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__copyright">© 2019 Liebherr</div>
+            <div class="footer__dev">
+              <div class="text">Разработка и поддержка сайта -</div><a href="https://artjoker.ua/" target="_blank" rel="nofollow" class="icon icon-artj-logo"></a>
+            </div>
+            <div class="footer__adaptive"><span data-text="Показать полную версию сайта" data-hidden="Показать мобильную версию сайта">Показать полную версию сайта</span></div>
+          </div>
+        </div>
+      </footer>
+      <!--include _popup-->
+      <!-- popup SECTION-->
+      <div class="popup-overlay">
+        <div data-target="popup-order" class="popup popup__order">
+          <div class="popup-header">
+            <div class="subtitle">Ваш заказ успешно оформлен!</div>
+          </div>
+          <div class="popup-content">
+            <div class="content">В ближайшее время мы свяжемся с Вами</div>
+          </div>
+          <div class="close-btn icon icon-close"></div>
+        </div>
+        <div data-target="popup-cart" class="popup popup__cart">
+          <div class="popup-header">
+            <div class="subtitle">Спасибо!</div>
+          </div>
+          <div class="popup-content">
+            <div class="content">Товар добавлен
+                    <button type="submit" class="btn btn-link" data-target="cart-in"><span>в корзину</span></button>
+            </div>
+          </div>
+          <div class="close-btn icon icon-close"></div>
+        </div>
+        <div data-target="popup-favorite" class="popup popup__favorite">
+          <div class="popup-header">
+            <div class="subtitle">Спасибо!</div>
+          </div>
+          <div class="popup-content">
+            <div class="content">Товар добавлен<a href="/l-ua/favorites.html" class="btn btn-link"><span>в избранное</span></a>
+            </div>
+          </div>
+          <div class="close-btn icon icon-close"></div>
+        </div>
+        <div data-target="popup-comparison" class="popup popup__comparison">
+          <div class="popup-header">
+            <div class="subtitle">Спасибо!</div>
+          </div>
+          <div class="popup-content">
+            <div class="content">Товар добавлен на<a href="/l-ua/compare-prod.html" class="btn btn-link"><span>страницу сравнения</span></a>
+            </div>
+          </div>
+          <div class="close-btn icon icon-close"></div>
+        </div>
+        <div data-target="popup-product-delete" class="popup popup__product-delete">
+          <div class="popup-header">
+            <div class="subtitle">Удаление товара</div>
+          </div>
+          <div class="popup-content">
+            <div class="content">Данный товар будет удален
+              <div class="popup-buttons">
+                      <button type="submit" class="btn js__product-delete btn-transparent btn-small"><span>удалить</span></button>
+                      <button type="submit" class="btn js__product-delete-reset btn-small"><span>не удалять</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-target="popup-call" class="popup popup__call">
+          <form class="popup-content js_validate">
+            <div class="popup-header">
+              <div class="subtitle">В ближайшее время мы Вам перезвоним</div>
+            </div>
+            <div class="input-container">
+              <label for="name" class="req">Имя</label>
+              <input type="text" name="name" id="name" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
+              <div class="delete"></div>
+              <div class="text-error">Поле  не заполнено</div>
+            </div>
+            <div class="input-container">
+              <label for="phone" class="req">Телефон</label>
+              <input type="tel" id="phone" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)" class="validate">
+              <div class="delete"></div>
+              <div class="text-error">Поле  не заполнено</div>
+            </div>
+                  <button type="submit" class="btn"><span>перезвоните мне</span></button>
+          </form>
+          <div class="close-btn icon icon-close"></div>
+        </div>
+        <div data-target="popup-call-mobile" class="popup popup__call-mobile">
+          <form class="popup-content js_validate">
+            <div class="popup-header"><a href="tel:044 257 65 99">(044) 257 65 99</a><a href="tel:044 257 65 99">(044) 257 65 99</a><a href="tel:044 257 65 99">(044) 257 65 99</a></div>
+            <div class="popup-body">
+              <div class="input-container">
+                <label for="phone" class="req">Ваш телефон</label>
+                <input type="tel" id="phone" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)" class="validate">
+                <div class="delete"></div>
+                <div class="text-error">Поле  не заполнено</div>
+              </div>
+                    <button type="submit" class="btn"><span>перезвоните мне</span></button>
+            </div>
+          </form>
+          <div class="close-btn icon icon-close"></div>
+        </div>
+        <div data-target="popup-missing" class="popup popup__call">
+          <form class="popup-content js_validate">
+            <div class="popup-header">
+              <div class="subtitle">В ближайшее время мы пришлём Вам уведомление о наличии</div>
+            </div>
+            <div class="popup-content">
+              <div class="content">Пожалуйста, оставьте свой контактный<br>e-mail.</div>
+              <div class="content">Мы оповестим вас о наличии интересующего вас товара, как только данный товар поступит на склад.</div>
+            </div>
+            <div class="input-container">
+              <label for="name2" class="req">Имя</label>
+              <input type="text" name="name" id="name2" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
+              <div class="delete"></div>
+              <div class="text-error">Поле  не заполнено</div>
+            </div>
+            <div class="input-container">
+              <label for="email" class="req">Email</label>
+              <input type="email" name="email" id="email" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" data-error-min="Email: не менее 6 символов" data-error-max="Email: не более 30 символов" class="validate">
+              <div class="delete"></div>
+              <div class="text-error">Поле «Email» не заполнено</div>
+            </div>
+                  <button type="submit" class="btn"><span>сообщите мне о наличии товара</span></button>
+          </form>
+          <div class="close-btn icon icon-close"></div>
+        </div>
+        <div data-target="popup-order" class="popup popup__call">
+          <form class="popup-content js_validate">
+            <div class="popup-header">
+              <div class="subtitle">Ваш заказ оформлен.<br>В ближайшее время мы Вам перезвоним</div>
+            </div>
+            <div class="input-container">
+              <label for="phone2" class="req">Телефон</label>
+              <input type="tel" id="phone2" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)" class="validate">
+              <div class="delete"></div>
+              <div class="text-error">Поле  не заполнено</div>
+            </div>
+                  <button type="submit" class="btn"><span>перезвоните мне</span></button>
+          </form>
+          <div class="close-btn icon icon-close"></div>
+        </div>
+        <div data-target="popup-mail" class="popup popup__mail">
+          <div class="popup-header">
+            <div class="subtitle">Спасибо!</div>
+          </div>
+          <div class="popup-content">
+            <div class="content">Ваше сообщение отправлено успешно!</div>
+          </div>
+          <div class="close-btn icon icon-close"></div>
+        </div>
+        <div data-target="popup-cart-in" style="display: none;" class="popup popup__cart-in">
+          <div class="popup-wrapper"></div>
+          <div class="popup-header">
+            <div class="subtitle">Сейчас в корзине</div>
+          </div>
+          <div class="popup-content">
+            <div class="basket-wrap">
+              <div class="basket-content"><a href="/l-ua/card.html" class="basket-item product-item basket-item_number-val basket-item_all-price">
+                        <div class="basket-item__wrapper">
+                          <div class="basket-item__img"><img src="images/catalog/image8.jpg" alt="Холодильник Liebherr CNP 4858" title="Холодильник Liebherr CNP 4858" class="image"></div>
+                          <div class="basket-item__name">
+                            <h3 class="subtitle">Холодильник Liebherr CNP 4858</h3>
+                          </div>
+                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value"></span></div>
+                          <div class="basket-item__price product-item__price"><span class="value">25 335</span><span class="currency">грн</span></div>
+                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">26 375</span><span class="currency">грн</span></div>
+                          <div class="basket-item__quantity">
+                                  <div class="input-number">
+                                    <div class="input-number_arrow prev"></div>
+                                    <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                    <div class="input-number_arrow next"></div>
+                                  </div>
+                          </div>
+                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value"></span></div>
+                          <div class="basket-item__all product-item__price"><span class="value">25 335</span><span class="currency">грн</span></div>
+                          <div data-target="product-delete" class="basket-item__remove">
+                            <div class="icon icon-delete"></div>
+                          </div>
+                        </div></a><a href="/l-ua/card.html" class="basket-item product-item basket-item_number-val basket-item_all-price basket-item_old-price">
+                        <div class="basket-item__wrapper">
+                          <div class="basket-item__img"><img src="images/catalog/image2.jpg" alt="Морозильная камера Liebherr G 1223" title="Морозильная камера Liebherr G 1223" class="image"></div>
+                          <div class="basket-item__name">
+                            <h3 class="subtitle">Морозильная камера Liebherr G 1223</h3>
+                          </div>
+                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value"></span></div>
+                          <div class="basket-item__price product-item__price"><span class="value">224 880</span><span class="currency">грн</span></div>
+                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">228 180</span><span class="currency">грн</span></div>
+                          <div class="basket-item__quantity">
+                                  <div class="input-number">
+                                    <div class="input-number_arrow prev"></div>
+                                    <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                    <div class="input-number_arrow next"></div>
+                                  </div>
+                          </div>
+                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">14b23f</span></div>
+                          <div class="basket-item__all product-item__price"><span class="value">224 880</span><span class="currency">грн</span></div>
+                          <div data-target="product-delete" class="basket-item__remove">
+                            <div class="icon icon-delete"></div>
+                          </div>
+                        </div></a><a href="/l-ua/card.html" class="basket-item product-item basket-item_number-val basket-item_all-price">
+                        <div class="basket-item__wrapper">
+                          <div class="basket-item__img"><img src="images/catalog/image0.jpg" alt="Воздушный фильтр FreshAir" title="Воздушный фильтр FreshAir" class="image"></div>
+                          <div class="basket-item__name">
+                            <h3 class="subtitle">Воздушный фильтр FreshAir</h3>
+                          </div>
+                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value"></span></div>
+                          <div class="basket-item__price product-item__price"><span class="value">226</span><span class="currency">грн</span></div>
+                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">234</span><span class="currency">грн</span></div>
+                          <div class="basket-item__quantity">
+                                  <div class="input-number">
+                                    <div class="input-number_arrow prev"></div>
+                                    <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                    <div class="input-number_arrow next"></div>
+                                  </div>
+                          </div>
+                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">GG-jdbn-31f</span></div>
+                          <div class="basket-item__all product-item__price"><span class="value">226</span><span class="currency">грн</span></div>
+                          <div data-target="product-delete" class="basket-item__remove">
+                            <div class="icon icon-delete"></div>
+                          </div>
+                        </div></a><a href="/l-ua/card.html" class="basket-item product-item basket-item_number-val basket-item_all-price basket-item_old-price">
+                        <div class="basket-item__wrapper">
+                          <div class="basket-item__img"><img src="images/catalog/image13.jpg" alt="Встраиваемый комплект холодильников Side by Side Liebherr ICUN 3324 + ICBN 3324" title="Встраиваемый комплект холодильников Side by Side Liebherr ICUN 3324 + ICBN 3324" class="image"></div>
+                          <div class="basket-item__name">
+                            <h3 class="subtitle">Встраиваемый комплект холодильников Side by Side Liebherr ICUN 3324 + ICBN 3324</h3>
+                          </div>
+                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value">Ультрафиолет</span></div>
+                          <div class="basket-item__price product-item__price"><span class="value">234 870</span><span class="currency">грн</span></div>
+                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">255 270</span><span class="currency">грн</span></div>
+                          <div class="basket-item__quantity">
+                                  <div class="input-number">
+                                    <div class="input-number_arrow prev"></div>
+                                    <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                    <div class="input-number_arrow next"></div>
+                                  </div>
+                          </div>
+                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">15431f-hy</span></div>
+                          <div class="basket-item__all product-item__price"><span class="value">234 870</span><span class="currency">грн</span></div>
+                          <div data-target="product-delete" class="basket-item__remove">
+                            <div class="icon icon-delete"></div>
+                          </div>
+                        </div></a>
+              </div>
+              <div class="basket-sidebar">
+                <div class="basket-sidebar__item"><span class="title">Стоимость</span><span class="value">25 044 010</span><span class="currency">грн</span></div>
+                <div class="basket-sidebar__item"><span class="title">Скидка</span><span class="value">44 010</span><span class="currency">грн</span></div>
+                <div class="basket-sidebar__item basket-sidebar__final"><span class="title">К оплате</span><span class="value">25 000 000</span><span class="currency">грн</span></div>
+                              <button type="submit" class="btn btn_buy"><span>Оформить заказ</span></button><a href="/l-ua/catalog.html" class="btn btn-link btn-basket-more"><span>Продолжить покупки</span></a>
+                              <button type="submit" class="btn btn-link btn-basket-edit" data-target="cart-in"><span>Редактировать заказ</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="close-btn icon icon-close"></div>
+        </div>
+      </div>
+      <!--include _popup-->
+      <!--footer-->
+    </div>
+    <script type="text/javascript" src="js/lib.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNAljGFFDKq6W69dSVoW52nEhHtQ8nV78&amp;language=ru"></script>
+    <!--script(type='text/javascript', src='js/main.min.js')-->
+    <!--script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.js')-->
+    <!--script(type='text/javascript', src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js")-->
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+.compare-prod {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    align-items: stretch;
+    justify-content: stretch;
+    justify-items: stretch;
+    margin-bottom: 30px;
+    @include respond-to(md) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: stretch;
+      justify-items: stretch;
+      align-items: stretch;
+    }
+    @include respond-to(xs-600) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .basket-item__price {
+      grid-column: 2/4;
+      align-items: center;
+      @include respond-to(lg-1200) {
+        grid-column: 2/5;
+        grid-row: 2/3;
+      }
+    }
+    .basket-item__old-price {
+      grid-row: 2/3;
+      grid-column: 2/3;
+      align-items: center;
+      justify-content: flex-start;
+      @include respond-to(lg-1200) {
+        grid-column: 2/5;
+        grid-row: 4/5;
+      }
+    }
+    .basket-item__vendor-code {
+      grid-column: 2/4;
+      grid-row: 3/4;
+      align-items: center;
+      justify-content: flex-start;
+      @include respond-to(lg-1200) {
+        grid-column: 2/5;
+        grid-row: 4/5;
+      }
+      .value {
+        @include fm;
+      }
+    }
+    .basket-item_old-price  {
+      .basket-item__old-price {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        @include respond-to(lg-1200) {
+          grid-row: 2/3;
+          grid-column: 2/5;
+        }
+      }
+      .basket-item__price {
+        grid-column: 3/4;
+        @include respond-to(lg-1200) {
+          grid-column: 2/5;
+          grid-row: 3/4;
+        }
+      }
+    }
+    .basket-item__wrapper {
+      @include respond-to(lg-1200) {
+        grid-template-rows: 1fr 1fr 1fr 30px;
+      }
+    }
+    .basket-item__img {
+      @include respond-to(lg-1200) {
+        grid-row: 1/5;
+      }
+    }
+    .basket-item__remove {
+      @include respond-to(lg-1200) {
+        grid-row: 4/5;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+    }
+  }
+  &__block {
+    margin-bottom: 30px;
+    border-bottom: 1px solid $lines;
+    @include respond-to(sm) {
+      border-bottom: none;
+    }
+    .btn {
+      margin-bottom: 30px;
+      display: flex;
+      width: auto;
+      max-width: 200px;
+      &:before {
+        order: 2;
+      }
+      @include respond-to(sm) {
+        margin-bottom: 0px;
+      }
+    }
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,15 +1,33 @@
 //order main start
 .order {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  @include respond-to(md) {
+    flex-wrap: wrap;
+  }
   &-page {
-    main,
-    .main {
-      min-height: calc(100vh - 80px - 70px);
+    .select2-drop-active {
+      border-radius: unset;
+      min-width: 100px;
+      margin-top: 0;
+    }
+    .select2-results {
+      &>li {
+        font-size: 12px;
+        &:last-child {
+          border-radius: unset;
+        }
+      }
+      .select2-result-label {
+        padding: 5px 10px;
+      }
     }
   }
-  &-wrapper {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+  &_contacts {
+    .btn_buy {
+      display: none;
+    }
   }
 }
 //order main end

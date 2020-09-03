@@ -1,74 +1,27 @@
 //catalog-filter start
 .catalog__filter {
+  background-color: $white;
   z-index: 2;
   max-height: 100%;
   @include anim;
   margin-bottom: 40px;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.2px;
   @include respond-to(tablet-1030){
-    //display: none;
-  }
-  ul,
-  li {
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    &:before {
-      display: none;
-    }
-  }
-  a {
-    &:after {
-      display: none;
-    }
-  }
-  .filter {
-    &-subtitle {
-      text-transform: uppercase;
-      @include fb;
-      color: $textDark;
-      letter-spacing: 1.6px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      .reset {
-        text-transform: none;
-        @include fr;
-        font-size: 13px;
-        color: $textLight;
-        border-bottom: 1px dashed $textLight;
-        margin-left: 15px;
-        @include anim;
-        &:hover,
-        &:active,
-        &:focus {
-          cursor: pointer;
-          color: $text;
-          @include anim;
-        }
-      }
-    }
+    display: none;
   }
   &_item {
+    padding: 0 20px 15px;
     width: 100%;
-    //overflow: hidden;
     @include anim;
     @include respond-to(tablet-1030){
-      background-color: $gray3;
-      border-top: 1px solid $gray3;
+      background-color: $grayBG;
+      border-top: 1px dashed $lines;
     }
     &:last-child {
       border: none;
       padding-bottom: 20px;
       @include respond-to(tablet-1030){
-        border-top: 1px solid $gray3;
+        border-top: 1px dashed $lines;
       }
-    }
-    .filter-title {
-      border-bottom: 0;
     }
     &_checkbox {
       color: $elements;
@@ -78,39 +31,17 @@
         transform: unset;
         vertical-align: middle;
         margin: 4px 0 0;
+        font-size: 14px;
+        @include fr;
         text-transform: none;
         letter-spacing: 0;
-        color: $black;
       }
     }
-    &_category {
-      font-size: 16px;
-      line-height: 19px;
-      letter-spacing: 0.8px;
-      max-height: none !important;
-      @include fb;
-      height: 100%;
-      width: 100%;
-      li {
-        padding: 6px 0;
-        ul {
-          height: auto;
-          padding-left: 16px;
-        }
-        &:hover,
-        &:active,
-        &:focus,
-        &.active {
-          &>a {
-            @include anim;
-            color: $textDark;
-          }
-        }
-      }
-      a {
-        @include anim;
-        color: $textLight;
-      }
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $grayBG;
+      @include anim;
     }
     &_title {
       &.filter-title {
@@ -118,10 +49,10 @@
           align-items: stretch;
         }
         .plus {
-          color: $textDark;
-          font-size: 20px;
+          font-size: 14px;
+          color: $elements;
           &:before {
-            transform: rotate(180deg);
+            transform: rotate(270deg);
             @include anim;
           }
           @include respond-to(tablet-1030){
@@ -135,22 +66,33 @@
       &.main_title {
         border-top: none;
         .plus {
+          font-size: 14px;
           display: none;
           &:before {
-            transform: rotate(180deg);
+            transform: rotate(270deg);
             @include anim;
+            @include respond-to(tablet-1030){
+              content:'\E008';
+            }
+          }
+          @include respond-to(tablet-1030){
+            display: inline-block;
           }
         }
       }
     }
     &.open {
       min-height: 85px;
+      @include respond-to(tablet-1030){
+        background-color: transparent;
+        padding-bottom: 0;
+        min-height: auto;
+      }
       >.catalog__filter_item_title {
         &.filter-title {
-          border-bottom: 1px solid $gray3;
           .plus {
             &:before {
-              transform: rotate(0deg);
+              transform: rotate(90deg);
               @include anim;
             }
           }
@@ -158,22 +100,17 @@
         &.main_title {
           .plus {
             &:before {
-              transform: rotate(0deg);
+              transform: rotate(90deg);
               @include anim;
             }
           }
         }
       }
     }
-    >.catalog__filter_item_content{
-      max-height: 220px;
-      padding: 0 0 16px;
-      overflow-y: auto;
-      margin: 21px 10px 5px 0;
-    }
     &.main-item {
       background-color: transparent;
       padding: 0;
+      border: 1px solid $lines;
       &:hover,
       &:active,
       &:focus {
@@ -197,14 +134,18 @@
     border: none;
     color: $text;
   }
+  &-wrapper {
+    background-color: $white;
+  }
   &_reset {
     margin-bottom: 10px;
-    color: $black;
+    color: $textGray;
     display: none;
+    font-size: 14px;
     @include anim;
     text-decoration: none;
     span {
-      color: $black;
+      color: $textGray;
       @include anim;
     }
     &:active,
@@ -226,57 +167,81 @@
     }
     &-wrapper {
       padding: 20px;
-      display: none;
       @include respond-to(tablet-1030){
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        flex-wrap: wrap;
       }
       .reset {
         width: 100%;
         @include respond-to(tablet-1030){
-          //width: 80%;
-        }
-        @include respond-to(xs-690){
-          //width: 60%;
-          display: inline-block;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          overflow-x: auto;
+          max-width: 100%;
         }
       }
       .apply {
         display: none;
+        margin-bottom: 10px;
         @include respond-to(tablet-1030){
-          width: 20%;
-          //display: inline-block;
-        }
-        @include respond-to(xs-690){
-          width: 40%;
-          //display: inline-block;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
         }
       }
     }
     &-main {
-      width: 100%;
       justify-content: flex-start !important;
     }
     &.btn {
       &:before {
+        font-size: 14px;
         color: $elements;
         @include anim;
+      }
+      @include respond-to(tablet-1030){
+        padding: 5px;
+        display: inline-flex;
+        margin-bottom: 0;
+        white-space: nowrap;
+        width: auto !important;
+        max-width: none;
+        overflow: unset;
+      }
+    }
+  }
+  @include respond-to(tablet-1030){
+    border-top: 6px solid $elements;
+  }
+  &.open {
+    @include respond-to(tablet-1030){
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 10000;
+      height: 100vh;
+      overflow-y: auto;
+      display: block;
+      @include anim;
+      >.catalog__filter_item_content {
+        z-index: 10;
       }
     }
   }
 }
 
-.grey {
-  margin-left: 5px;
-  color: $textLight;
-}
-
 .catalog__filter_item_title {
+  font-size: 18px;
   color: $text;
-  border-top: 1px solid $gray3;
-  border-bottom: 1px solid $gray3;
-  padding: 16px 0;
+  border-top: 1px dashed $lines;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -299,14 +264,15 @@
 
 .catalog__filter_item_title {
   &.main_title {
+    color: $text;
     padding: 0 20px;
-    //display: flex;
-    align-items: center;
-    justify-content: center;
-    display: none;
     .grey {
       margin-left: 5px;
-      color: $textLight;
+      color: #717C89;
+      @include fr;
+    }
+    @include respond-to(tablet-1030){
+      background-color: $grayBG;
     }
   }
 }
@@ -318,105 +284,64 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  overflow: visible;
-  @include anim;
   .line {
     color: $elements;
+    font-size: 15px;
   }
   &.close {
     max-height: 0 !important;
     opacity: 0;
     padding: 0;
-    overflow: hidden;
-    @include anim;
-    margin: 0;
   }
   &.color {
     margin-left: -5px;
-    //overflow-x: hidden;
     @include anim;
-    display: flex;
-    align-items: stretch;
-    justify-content: flex-start;
-    max-height: none;
-    overflow: visible;
     .catalog__filter_item_checkbox {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: flex-start;
       padding: 5px;
       border: none;
-      position: relative;
-      width: auto;
       @include anim;
-      .checkbox {
-        width: 28px;
-        height: 28px;
-        @include anim;
-      }
-      label {
-        z-index: 5;
-        position: absolute;
-        padding: 6px 12px;
-        background-color: $white;
-        border: 1px solid $gray3;
-        width: auto;
-        max-width: none;
-        top: calc(100% - 10px);
-        left: 50%;
-        transform: translateX(-50%);
-        visibility: hidden;
-        opacity: 0;
-        @include anim;
-      }
-      &:hover,
-      &:active,
-      &:focus {
-        label {
-          @include anim;
-          opacity: 1;
-          visibility: visible;
-        }
-      }
     }
     .catalog__filter_item_input {
       display: block;
-      border: 1px solid transparent;
+      margin-right: 10px;
+      border: 1px solid $lines;
       @include anim;
       .checkbox {
         margin: 0;
         display: block;
         transition: all .3s;
         border-radius: 0;
+        border: none;
         background-repeat: no-repeat;
+        //background-size: cover;
         background-size: 50px;
         background-position: 50% 50%;
-        border: 0px solid $white;
         @include anim;
         &:after, &:before {
           content: none;
           @include anim;
         }
         &.checked {
-          border: 3px solid $white;
+          border: 3px solid $elements;
           border-radius: 0;
           @include anim;
         }
       }
-      input {
-        padding: 10px;
-      }
       //input:checked + .checkbox,
       input.active + .checkbox {
-        border: 3px solid $gray1;
+        border: 2px solid $elements;
         @include anim;
       }
       &:hover {
-        border: 1px solid $text;
+        border: 1px solid $elements;
         @include anim;
       }
       &.checked {
-        border: 1px solid $text;
+        border: 2px solid $elements;
         @include anim;
       }
     }
@@ -424,13 +349,7 @@
 }
 
 .catalog__filter_item_checkbox {
-  padding: 8px 0;
-  &:first-child {
-    padding-top: 0;
-  }
-  &:last-child {
-    padding-bottom: 0;
-  }
+  padding: 5px 0;
 }
 
 .catalog__filter_item_input {
@@ -446,15 +365,11 @@
     opacity: 0;
     cursor: pointer;
     border: none;
-    @include anim;
     &.active + .checkbox {
-      border: 1px solid $text;
-      background-color: $textDark;
-      @include anim;
+      border: 2px solid $elements;
     }
     &.active + .checkbox:after {
-      opacity: 0;
-      @include anim;
+      width: 0;
     }
   }
   .checkbox {
@@ -462,21 +377,19 @@
     width: 20px;
     height: 20px;
     background-color: $white;
-    border: 1px solid $gray3;
+    border: 1px solid $lines;
     vertical-align: middle;
     margin-right: 10px;
     position: relative;
-    @include anim;
     &:before {
       content: "";
       background: url("../../../images/content-icons/check-active.svg") no-repeat 50% 50%;
       background-size: contain;
-      width: 12px;
-      height: 12px;
+      width: 16px;
+      height: 16px;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 0px;
+      left: 0px;
     }
     &:after {
       content: "";
@@ -489,24 +402,20 @@
       -webkit-transition: width .3s;
       -o-transition: width .3s;
       transition: width .3s;
-      opacity: 1;
-      @include anim;
     }
   }
+  .grey {
+    margin-left: 5px;
+    color: $textGray;
+  }
+}
+
+.catalog__filter_item.open .catalog__filter_item_title {
+  border-width: 1px 0;
 }
 
 .catalog__filter_item_content .range {
   width: 100%;
-  .btn {
-    background-color: $elements;
-    @include anim;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $gray3;
-      @include anim;
-    }
-  }
 }
 
 .catalog__filter_item_content .range-wrapper,
@@ -514,27 +423,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 
 .catalog__filter_item_range {
-  margin: 20px 10px;
+  margin: 20px;
   height: 3px;
-  background-color: $gray3;
+  background-color: $textGray;
   border-radius: 0;
   width: 100%;
   &.ui-widget.ui-widget-content {
     border: none;
   }
   .ui-slider-range {
-    background-color: $text;
+    background-color: $elements;
   }
   .ui-slider-handle {
-    border-radius: 0;
     width: 14px;
     height: 14px;
-    background-color: $text;
-    border: 2px solid $text;
+    background-color: $elements;
+    border-radius: 50%;
+    border: 2px solid $elements;
     outline: none;
     top: -6px;
   }
@@ -552,14 +460,70 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  font-size: 14px;
+  color: $text;
   input {
-    background: transparent;
-    width: 56px;
-    height: 30px;
+    background: $white;
+    border: 1px solid $lines;
+    width: 90px;
+    height: 38px;
+    font-size: 14px;
     margin: 0 3px;
     padding: 5px 10px;
-    text-align: center;
+    text-align: left;
   }
 }
 
+@media (max-width: 576px) {
+  .catalog__filter .widget-woof button.btn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .catalog__filter_item_input .checkbox {
+    margin-right: 5px;
+  }
+  .catalog__filter_item_content {
+    font-size: 15px;
+  }
+  .catalog__filter_item_range_input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    span:last-child {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .catalog__filter_item_input label {
+    font-size: 14px;
+    .number {
+      font-size: 12px;
+    }
+  }
+  .catalog__filter_item_range_input {
+    justify-content: flex-end;
+    &:first-of-type {
+      justify-content: flex-start;
+    }
+    input {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog__filter_item_content {
+    font-size: 20px;
+  }
+}
 //catalog-filter end

@@ -1,0 +1,81 @@
+//card characteristic start
+.card {
+  &_characteristic {
+    overflow: hidden;
+    table {
+      width: 100%;
+      font-size: 12px;
+      line-height: 14px;
+    }
+    caption {
+      padding: 30px;
+      font-size: 20px;
+      line-height: 23px;
+      @include fb;
+      text-align: left;
+    }
+    .branded-box {
+      padding: 0;
+    }
+    th {
+      width: 40%;
+      padding: 10px 30px;
+      text-align: left;
+      @include respond-to(sm) {
+        width: 50%;
+        padding: 10px;
+      }
+    }
+    td {
+      width: 60%;
+      text-align: left;
+      padding: 10px 30px;
+      @include respond-to(sm) {
+        width: 50%;
+        padding: 10px;
+      }
+    }
+    tr {
+      background-color: $white;
+      &:nth-child(odd) {
+        background-color: $grayBG;
+      }
+    }
+    tfoot {
+      border-top: 1px solid $lines;
+      &:hover,
+      &:active,
+      &:focus {
+        cursor: pointer;
+      }
+      &.active {
+        .icon {
+          transform: rotate(-90deg);
+          @include anim;
+        }
+      }
+      th {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        line-height: 19px;
+        color: $elements;
+        @include anim;
+        @include fr;
+        &:hover,
+        &:active,
+        &:focus {
+          @include anim;
+          color: $action;
+        }
+      }
+      .icon {
+        transform: rotate(90deg);
+        @include anim;
+        color: $white;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+//card characteristic end

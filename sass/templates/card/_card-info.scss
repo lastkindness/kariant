@@ -1,91 +1,25 @@
 //card-info main start
   .card-info {
-    border: 1px solid $gray3;
+    border: 1px solid $lines;
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-    flex-wrap: wrap;
-    border-radius: 10px;
-    @include respond-to(md) {
-      flex-wrap: wrap;
-    }
-    .label-status {
-      transform: rotate(45deg);
-      right: -30px;
-      left: unset;
-    }
     &__quantity {
       margin-bottom: 30px;
       @include respond-to(sm-767) {
         margin-bottom: 5px;
       }
     }
-    &__characteristic {
-      flex-grow: 1;
-      width: 60%;
-      border: 1px solid $gray3;
-      border-radius: 10px;
-      overflow: hidden;
-      margin: 0 auto;
-    }
-    &__descr {
-      width: 100%;
-      &-item {
-        margin-bottom: 5px;
-        &:last-child {
-          margin-bottom: 0;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-      }
-    }
-    .product-item__missing-title {
-      justify-content: space-between;
-      .subtitle {
-        margin: 0;
-        padding-left: 20px;
-        .icon-check {
-          left: 0;
-        }
-      }
-      .icon-car {
-        color: $elements !important;
-      }
-    }
-    &__wrapper {
-      width: 66.7%;
-      padding: 50px 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: stretch;
-      .title,
-      .value {
-        letter-spacing: -0.01em;
-        display: inline-block;
-        margin: 0;
-        color: $elements;
-        width: auto;
-      }
-      .main-title {
-        width: 100%;
-        color: $textLight;
-        margin-bottom: 10px;
-      }
-      .value {
-        margin-left: 5px;
-      }
-    }
     &__sidebar {
-      width: 100%;
-      background-color: $white;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-between;
+      padding: 30px 20px;
+      width: 35%;
+      background-color: $grayBG;
+      @include respond-to(sm) {
+        padding: 10px 20px;
+      }
+      @include respond-to(sm-767) {
+        width: 100%;
+      }
       &-list {
         width: 100%;
         list-style: none;
@@ -107,21 +41,21 @@
       }
       &-item {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: flex-start;
-        flex-direction: column;
+        font-size: 12px;
+        line-height: 14px;
         letter-spacing: 0.02em;
         flex-wrap: wrap;
         margin-bottom: 20px;
-        @include respond-to(sm){
-          width: 100%;
-        }
         &:last-child {
-          margin-bottom: 0;
+          margin-bottom: 0px;
         }
         .title,
         p,
         span {
+          font-size: 12px;
+          line-height: 14px;
           margin: 0;
         }
         p {
@@ -130,14 +64,108 @@
         .title {
           margin-right: 5px;
         }
+        .dropdown__wrapper {
+          padding: 0;
+          min-height: unset;
+          border: none;
+          background: transparent;
+          border-radius: unset;
+          font-size: 12px;
+          .select2 {
+            color: $text;
+          }
+          .select2-container--default {
+            .select2-selection--single {
+              background-color: transparent;
+              outline: transparentize($elements, 1);
+              border: none;
+              .select2-selection__arrow {
+                b {
+                  border-color: $text transparent transparent;
+                  @include anim;
+                }
+              }
+              .select2-selection__rendered {
+                padding-left: 0;
+                text-decoration: underline;
+                color: $text;
+              }
+            }
+            &.select2-container--open {
+              &.select2-container--below {
+                .select2-selection--single,
+                .select2-selection--multiple {
+                  outline: transparentize($elements, 1);
+                }
+              }
+              .select2-selection--single {
+                .select2-selection__arrow {
+                  b {
+                    border-color: transparent transparent $text;
+                    @include anim;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .dropdown__dropdown {
+          background-color: transparent;
+          border-radius: unset;
+          top: 15px;
+          font-size: 12px;
+        }
+        .dropdown__item {
+          padding: 5px;
+        }
+        .dropdown_select .icon:before {
+          font-size: 6px;
+        }
       }
+    }
+    &__vendor-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      .product-item__buttons-add {
+        display: none;
+        @include respond-to(sm-767) {
+          display: flex;
+          width: 30%;
+        }
+        @include respond-to(xs) {
+          width: 40%;
+        }
+      }
+    }
+    &__wrapper {
+      width: 65%;
+      padding: 20px;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      @include respond-to(sm-767) {
+        width: 100%;
+      }
+      @include respond-to(sm) {
+        padding: 5px 20px 10px;
+      }
+    }
+    &__price {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 20px 0 10px;
     }
     &__image {
       &_video {
         position: relative;
         &:after {
-          content: '\E002';
-          line-height: 1em;
+          content: '\E012';
+          line-height: 1;
           position: absolute;
           top: 50%;
           left: 50%;
@@ -149,6 +177,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          font-size: 8px;
           color: $text;
           font-family: "Icons";
           font-style: normal;
@@ -159,172 +188,13 @@
         }
       }
     }
-    &__price {
-      display: inline-block;
-      &-wrapper {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin-bottom: 5px;
-        &-saving {
-          span {
-            color: $attention;
-          }
-          .value {
-            margin: 0 5px;
-            display: inline-block;
-          }
-        }
-      }
-      &_old {
-        text-decoration: line-through;
-        span {
-          text-decoration: line-through;
-          color: $elements;
-        }
-        .price {
-          margin: 0 5px;
-          display: inline-block;
-        }
-      }
-    }
     &__missing {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin-bottom: 20px;
+      display: none;
       width: 100%;
-      .subtitle,
-      .value {
-        color: $text;
-      }
-      .value {
-        color: $elements;
-        margin-left: 5px;
-      }
-    }
-    &__stock {
-      width: 100%;
-      text-align: center;
-      @include respond-to(md){
-        margin-bottom: 10px;
-      }
-      @include respond-to(sm){
-        text-align: left;
-      }
-      span {
-        color: $text;
-      }
-      .value {
-        color: $elements;
-        margin: 0 5px;
-      }
-      .discount {
-        color: $attention;
-        margin: 0 5px;
-      }
-    }
-    &__buttons {
-      width: 100%;
-      display: flex;
-      align-items: stretch;
-      justify-content: flex-start;
-      margin-bottom: 20px;
-      .input-number,
-      button {
-        width: 115px;
-        height: 40px;
-        @include respond-to(md){
-          width: 100%;
-        }
-        @include respond-to(sm){
-          height: auto;
-        }
-      }
-      .icon-mail {
-        width: 180px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: auto;
-        @include respond-to(md){
-          width: 80%;
-        }
-        @include respond-to(sm){
-          width: 50%;
-        }
-        @include respond-to(xs){
-          width: 100%;
-        }
-        span {
-          order: 0;
-          text-align: left;
-          width: 70%;
-        }
-        &:before {
-          order: 1;
-        }
-      }
-    }
-    &__call {
-      width: 100%;
-      display: flex;
-      align-items: stretch;
-      justify-content: space-between;
-      @include respond-to(lg-1200){
-        flex-wrap: wrap;
-      }
-      .input-container {
-        margin: 0;
-        @include respond-to(lg-1200){
-          width: 100%;
-        }
-        input {
-          height: 100%;
-          padding: 10px 5px;
-        }
-        .text-error {
-          @include respond-to(lg-1200){
-            top: calc(100% + 35px);
-          }
-        }
-      }
-      .btn {
-        white-space: nowrap;
-        padding: 7px;
-        @include respond-to(lg-1200){
-          width: 100%;
-        }
-      }
-    }
-    &__all {
-      margin-bottom: 20px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      .title,
-      span {
-        color: $text;
-      }
-      .value {
-        margin: 0 5px;
-        color: $elements;
-      }
-      .input-number {
-        height: 40px;
-        margin-bottom: 10px;
-        @include respond-to(md){
-          width: 100%;
-        }
-      }
-      .card-info-value {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
+      .subtitle {
+        color: $textGray;
+        font-size: 20px;
+        line-height: 23px;
       }
     }
     .btn-missing {
@@ -353,6 +223,97 @@
           z-index: 150;
         }
       }
+    }
+    .basket-item__vendor-code {
+      display: flex;
+    }
+    .product-item__price_old,
+    .product-item__price {
+      display: inline-block;
+      width: auto;
+      margin: 0;
+      color: $attention;
+    }
+    .product-item__price_old {
+      margin-right: 10px;
+      color: $textGray;
+    }
+    .product-item__buttons {
+      @include respond-to(xs-600) {
+        flex-wrap: wrap;
+      }
+      .btn {
+        @include respond-to(xs-600) {
+          width: 100%;
+          margin-top: 10px;
+          text-align: center;
+          justify-content: center;
+        }
+      }
+    }
+    .product-item__buttons-add {
+      button {
+        @include respond-to(sm-767) {
+          padding: 0 10px;
+        }
+      }
+    }
+    .card-sidebar__instruction {
+      padding: 0;
+      width: 100%;
+    }
+    .product-item__additional {
+      display: block;
+      position: static;
+      border: none;
+      transform: unset;
+    }
+    .product-item__info {
+      padding: 0;
+      margin-bottom: 10px;
+    }
+    .product-item__tabs-buttons {
+      justify-content: flex-start;
+    }
+    .product-item__tabs-button {
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .product-item__tabs {
+      margin-bottom: 0;
+    }
+    .product-item__content {
+      text-align: left;
+      p,
+      span {
+        font-size: 12px;
+        line-height: 14px;
+      }
+      ul,
+      ol {
+        li {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
+    h1.title {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+      margin-top: 20px;
+      @include respond-to(sm) {
+        margin-top: 10px;
+      }
+    }
+    @include respond-to(sm-767) {
+      margin-top: 0;
+      border-top: none;
+      flex-wrap: wrap;
     }
   }
 //card-info main end

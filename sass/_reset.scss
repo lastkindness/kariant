@@ -1,3 +1,4 @@
+// reset start
 div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td{padding:0;margin:0;}
 table{border-collapse:collapse;border-spacing:0;}
@@ -6,17 +7,17 @@ ul,nav{list-style:none;}
 input:focus, button:focus,a:focus, textarea:focus, select:focus{outline:none !important;}
 textarea{resize:none;}
 html, body{height:100%;min-height: 100%}
-body{background:#fff;min-width:320px;margin:0;overflow-x:hidden;}
+body{min-width:320px;margin:0;overflow-x:hidden;}
 section{max-width:100%;}
-a{text-decoration:none;}
-a:hover, a:active, a:focus{text-decoration:none;}
+//a{text-decoration:none;}
+//a:hover, a:active, a:focus {text-decoration:none;}
 a img{border:none;}
 img{max-width:100%;display:block;border-style:none;}
-noscript div{position:relative;top:0;background: #fff;z-index:77777;left:0;right:0;width:100%;margin:0 auto;padding:50px;border:3px solid $attention;text-align: center;text-transform:uppercase;color:$attention;}
-noscript div a{text-decoration:underline;color:blue;}
+noscript div{position:relative;top:0;background: #fff;z-index:77777;left:0;right:0;width:100%;margin:0 auto;padding:50px;border:3px solid $attention;font-size:14px;text-align: center;text-transform:uppercase;color:$textGray;}
+noscript div a{text-decoration:underline;color:$action;}
 input,
 textarea,
-select{vertical-align:middle;color:$textDark;}
+select{vertical-align:middle;color:$textGray;}
 form, fieldset{margin:0;padding:0;border-style:none;}
 input[type="text"],
 input[type="file"],
@@ -35,7 +36,8 @@ input[type="button"]{cursor:pointer;}
 input[type="submit"]:focus,
 input[type="button"]:focus{outline:none;border:none;box-shadow:none;}
 button:focus{outline:none;border:none;box-shadow:none;}
-button {cursor: pointer}
+button {cursor: pointer;background-color: transparent;border: none;}
 p{max-width: 100%;margin:0 0 10px;}
 p,span,label,h1,h2,h3,h4,h5,h6,b,strong,i,em {max-width: 100%;word-wrap: break-word;}
 div {word-wrap: break-word;}
+// reset end

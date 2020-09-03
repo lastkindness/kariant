@@ -1,86 +1,17 @@
-.cart {
-  &__main {
-    width: 100%;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    &-grid {
-      padding: 0 10px;
-      border: 1px solid $elements;
-      width: 65%;
-      @include respond-to(lg){
-        width: 73%;
-      }
-      @include respond-to(lg-1200){
-        width: 100%;
-        order: 1;
-      }
-      &-title {
-        width: 100%;
-        max-width: 1000px;
-        padding: 15px 25px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-bottom: 1px solid $elements;
-        @include respond-to(md){
-          justify-content: flex-start;
-        }
-        span {
-          display: inline-block;
-          text-align: center;
-          color: $elements;
-        }
-        .title {
-          width: calc((30% - 40px) + 80px);
-          text-align: center;
-          margin-left: 15px;
-          margin-top: 0;
-          margin-bottom: 0;
-          margin-right: 25px;
-          @include respond-to(md){
-            width: 45%;
-            margin: 0;
-          }
-          @include respond-to(xs){
-            width: 100%;
-          }
-        }
-        .price {
-          width: 15%;
-          @include respond-to(md){
-            width: 30%;
-          }
-          @include respond-to(xs){
-            display: none;
-          }
-        }
-        .old-price {
-          width: 10%;
-          @include respond-to(md){
-            width: 20%;
-          }
-          @include respond-to(xs){
-            display: none;
-          }
-        }
-        .quantity {
-          width: 10%;
-          @include respond-to(md){
-            display: none;
-          }
-        }
-        .total {
-          width: 15%;
-          @include respond-to(md){
-            display: none;
-          }
-        }
-        .last {
-          width: 3%;
-        }
-      }
+//basket/cart start
+.basket {
+  &-content {
+    overflow-y: auto;
+    max-height: 357px;
+    @include respond-to(xs-690) {
+      max-height: 200px;
+    }
+    @include respond-to(max-height-420) {
+      max-height: 100px;
+    }
+    @include respond-to(xs-370) {
+      max-height: 130px;
     }
   }
 }
+//basket/cart end

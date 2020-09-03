@@ -1,22 +1,17 @@
-.search {
+//search main start
+.search-filters {
   &-empty-page {
+    .catalog__grid-wrapper {
+      width: 100%;
+    }
     .catalog__grid {
       display: block;
     }
-    .search-block {
-      span {
-        display: inline-block;
-        margin-bottom: 10px;
-      }
-      .title {
-        margin-top: 0;
-      }
-    }
-    &-page {
-      .catalog__grid,
-      .catalog__grid-wrapper {
-        width: 100%;
-      }
+  }
+  &-full-page {
+    .footer {
+      margin-top: 30px;
     }
   }
 }
+//search main end

@@ -1,0 +1,59 @@
+.about__slider {
+  background-color: $grayBG;
+  overflow: visible !important;
+  .slick-list {
+    overflow: visible !important;
+  }
+  &-item {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 100px;
+    opacity: 0;
+    @include anim;
+    @include respond-to(xs-690) {
+      flex-wrap: wrap;
+    }
+    &.slick-current {
+      opacity: 1;
+      @include anim;
+    }
+    @include respond-to(tablet) {
+      padding: 40px;
+    }
+  }
+  &-text {
+    width: 60%;
+    h2,
+    h3,
+    h4 {
+      margin: 20px 0;
+    }
+    p {
+      color: $textGray;
+    }
+    a {
+      margin: 0 5px;
+      text-decoration: none;
+    }
+    @include respond-to(xs-690) {
+      width: 100%;
+    }
+  }
+  &-image {
+    width: calc(40% - 30px);
+    margin-right: 30px;
+    img {
+      width: 100%;
+      transform: translateY(-60px);
+      box-shadow: 0px 2px 25px rgba(35, 54, 75, 0.16);
+      @include respond-to(tablet) {
+        transform: translateY(0);
+      }
+    }
+    @include respond-to(xs-690) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+//main-catalog start
+.main-catalog {
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  @include respond-to(sm) {
+    margin-bottom: 0;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-gap: 30px;
+    @include respond-to(sm) {
+      grid-gap: 10px;
+    }
+    @include respond-to(xs) {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+  &__item {
+    border: 1px solid $lines;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 30px;
+    background-color: $text;
+  }
+  &__img {
+    margin-right: 30px;
+  }
+  &__title {
+    color: $white;
+    @include fm;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__list {
+    padding: 30px !important;
+  }
+  &__li {
+    margin-bottom: 10px !important;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:before {
+      display: none;
+    }
+  }
+  &__link {
+    color: transparentize($text, 0.2);
+    text-underline-position: under;
+    @include anim;
+    &:hover,
+    &:active,
+    &:focus {
+      color: transparentize($text, 0.6);
+      @include anim;
+    }
+  }
+}
+//main-catalog end

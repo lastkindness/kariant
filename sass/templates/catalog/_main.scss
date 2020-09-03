@@ -1,93 +1,82 @@
 //catalog main start
 .catalog {
+  margin-bottom: 0;
   &__wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     position: relative;
+    @include respond-to(tablet-1030){
+      flex-wrap: wrap;
+    }
   }
   &__filter {
-    width: 23%;
+    width: 25%;
+    @include respond-to(lg-1200){
+      width: 35%
+    }
+    @include respond-to(tablet-1030){
+      width: 100%;
+    }
+    &+.catalog__grid-wrapper {
+      width: calc(75% - 30px);
+      @include respond-to(lg-1200){
+        width: calc(65% - 30px);
+      }
+      @include respond-to(tablet-1030){
+        width: 100%;
+      }
+    }
   }
   &__grid {
-    width: calc(77% - 10px);
-    display: flex;
-    align-items: stretch;
-    justify-content: flex-start;
-    margin: 0 -15px;
-    flex-wrap: wrap;
-    .btn {
-      margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 20px;
+    @include respond-to(sm){
+      grid-template-columns: repeat(2, 1fr);
     }
-    .product-item {
-      width: calc(33.3% - 30px);
-      margin: 0 15px 44px;
-      &__title {
-        max-height: 36px;
-        overflow: hidden;
-      }
+    @include respond-to(xs){
+      grid-template-columns: repeat(2, 50%);
     }
-    .dropdown__dropdown {
-      min-width: 200px;
+    @include respond-to(xs-370){
+      grid-template-columns: repeat(1, 1fr);
     }
-  }
-  &__sort,
-  &__filters,
-  &.icon {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 15px;
-    font-size: 14px;
-    line-height: 16px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.2px;
-    span {
-      margin-right: 12px;
-      &:last-child {
-        margin-right: 0;
+    &-wrapper {
+      order: 2;
+      width: 100%;
+      @include respond-to(tablet-1030){
+        width: 100%;
       }
     }
   }
-  &__sort {
-    margin-bottom: 24px;
-    span {
-      color: $textLight;
+  &-page {
+    .select2-container--open {
+      .select2-dropdown {
+        margin-top: 15px;
+        min-width: 100px;
+      }
     }
-    .dropdown {
-      span {
-        color: $textDark;
+    .select2-container--default {
+      .select2-results__option {
+        padding: 10px;
+        font-size: 16px;
+      }
+    }
+    .main {
+      padding-bottom: 30px;
+      @include respond-to(sm){
+        padding-bottom: 10px;
       }
     }
   }
-  &__filters {
-    margin-bottom: 24px;
-    span {
-      order: 0;
-    }
-    .icon {
-      @include fb;
-      color: $textDark;
-      margin-right: 12px;
-      &:last-child {
-        margin-right: 0;
-      }
-      &:before {
-        color: $textLight;
-        order: 1;
-        margin-left: 5px;
-        @include anim;
-      }
-      &:hover,
-      &:active,
-      &:focus {
-        cursor: pointer;
-        &:before {
-          color: $black;
-          @include anim;
-        }
+}
+
+.subcategory {
+  &-page {
+    .main {
+      padding-bottom: 30px;
+      @include respond-to(sm){
+        padding-bottom: 10px;
       }
     }
   }

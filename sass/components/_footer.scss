@@ -1,242 +1,414 @@
 //footer start
-footer {
-  background-color: $elements;
-}
 .footer {
-  a {
-    &:after {
-      width: 0;
-    }
-    &:hover,
-    &:active,
-    &:focus,
-    &.active {
-      &:after {
-        width: 100%;
-      }
-    }
-  }
-  &__list {
-    @include respond-to(sm) {
-      border-bottom: 1px solid $textLight;
-      margin-top: 14px;
-    }
-    &:last-of-type {
-      @include respond-to(sm) {
-        margin-bottom: 28px;
-      }
-    }
-    &:first-of-type {
-      @include respond-to(sm) {
-        margin-top: 0;
-      }
-    }
-    &.active {
-      ul {
-        @include respond-to(sm) {
-          max-height: 700px;
-          @include anim5;
-        }
-      }
-      .title {
-        &:before {
-          transform: rotate(-90deg);
-          @include anim5;
-        }
-      }
-    }
-    .title {
-      @include fb;
-      margin: 0 0 24px;
-      letter-spacing: 2px;
-      display: flex;
-      align-self: center;
-      justify-content: space-between;
-      width: 100%;
-      @include respond-to(sm) {
-        margin: 0 0 14px;
-      }
-      &:hover,
-      &:active,
-      &:focus {
-        @include respond-to(sm) {
-          cursor: pointer;
-        }
-      }
-      span {
-        order: 0;
-      }
-      &:before {
-        order: 1;
-        display: none;
-        transform: rotate(90deg);
-        @include anim;
-        @include respond-to(sm) {
-          display: inline-flex;
-        }
-      }
-    }
-    ul {
+  background-color: $text;
+  color: $textGray;
+  font-size: 14px;
+  padding: 80px 0;
+  ul,
+  ol {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    li {
       margin: 0;
       padding: 0;
-      @include respond-to(sm) {
-        overflow: hidden;
-        max-height: 0;
-        @include anim;
-      }
-      li {
-        font-size: 14px;
-        letter-spacing: 0.2px;
-        margin-bottom: 8px;
-        @include respond-to(sm) {
-          padding: 9px 0;
-          border-bottom: 1px solid #A0A0A0;
-        }
-        &:last-child {
-          @include respond-to(sm) {
-            border-bottom: unset;
-            margin-bottom: 0;
-          }
-        }
-        &:first-child {
-          @include respond-to(sm) {
-            padding-top: 14px;
-          }
-        }
-        &:before {
-          display: none;
-        }
-        a {
-          color: $text;
-          @include anim;
-          &:hover,
-          &:active,
-          &:focus {
-            color: $textDark;
-            @include anim;
-          }
-        }
+      &:before {
+        display: none;
       }
     }
   }
-  &__phone {
-    @include respond-to(sm) {
-      margin-bottom: 42px;
-      border-bottom: unset;
-    }
-    a {
-      @include fb;
-      font-size: 15px;
-      margin-bottom: 12px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-    &-list {
-      margin-bottom: 16px;
-    }
-  }
-  &__email {
-    a {
-      @include fr;
-      font-size: 16px;
-    }
-  }
-  &__head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 30px;
-    border-bottom: 1px solid $text;
-    margin-bottom: 64px;
-    @include respond-to(sm) {
-      flex-wrap: wrap;
-      padding-bottom: 16px;
-      margin-bottom: 36px;
-    }
-  }
-  &__body {
+  &__wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 64px 5%;
-    @include respond-to(md) {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 3fr 0.7fr;
+    grid-template-rows: repeat(4, auto);
+    grid-column-gap: 10%;
+    grid-row-gap: 30px;
+    @include respond-to(tablet-1030) {
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: repeat(6, auto);
     }
-    @include respond-to(sm) {
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap: 4px 0;
+    @include respond-to(xs-690) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(7, auto);
+    }
+    @include respond-to(xs-480) {
+      grid-row-gap: 15px;
+    }
+    @include respond-to(xs-370) {
+      grid-row-gap: 10px;
     }
   }
   &__logo {
-    width: 150px;
-    transform: scale(1.0);
-    margin-bottom: 28px;
-    @include anim;
-    &:after {
-      display: none;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    img {
+      max-width: 170px;
+      width: 100%;
     }
+    & > a {
+      width: 80%;
+      position: relative;
+      perspective: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .anim-wrapper {
+      position: absolute;
+      right: -20px;
+      top: -20px;
+      overflow: hidden;
+      width: 22px;
+      height: 25px;
+      animation: rotate2 8s infinite reverse;
+      transform-style: preserve-3d;
+      @include anim;
+      @include respond-to(xs-690){
+        right: unset;
+        left: 180px;
+        width: 15px !important;
+        height: 15px !important;
+      }
+      @include respond-to(xs){
+        right: 80px;
+        left: unset;
+      }
+      @include respond-to(xs-370){
+        right: 25px;
+        left: unset;
+      }
+      svg {
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%) rotate(0deg);
+        transform-style: preserve-3d;
+        //animation: downUp 2s infinite ease-in-out alternate;
+        @keyframes downUp {
+          0% {
+            bottom: -100%;
+          }
+          8% {
+            bottom: -80%;
+          }
+          10% {
+            bottom: -35%;
+          }
+          20% {
+            bottom: -20%;
+          }
+          30% {
+            bottom: -5%;
+          }
+          40% {
+            bottom: 10%;
+          }
+          50% {
+            bottom: 25%;
+          }
+          60% {
+            bottom: 40%;
+          }
+          70% {
+            bottom: 50%;
+          }
+          80% {
+            bottom: 50%;
+          }
+          100% {
+            bottom: 50%;
+          }
+        }
+        @keyframes rotate {
+          0% {
+            transform: translateY(50%) rotate(0deg);
+          }
+          10% {
+            transform: translateY(50%) rotate(0deg);
+          }
+          20% {
+            transform: translateY(50%) rotate(0deg);
+          }
+          30% {
+            transform: translateY(50%) rotate(0deg);
+          }
+          40% {
+            transform: translateY(50%) rotate(0deg);
+          }
+          50% {
+            transform: translateY(50%) rotate(0deg);
+          }
+          60% {
+            transform: translateY(50%) rotate(0deg);
+          }
+          70% {
+            transform: translateY(50%) rotate(0deg);
+          }
+          90% {
+            transform: translateY(50%) rotate(0deg);
+          }
+          100% {
+            transform: translateY(50%) rotate(180deg);
+          }
+        }
+        @include respond-to(xs-690){
+          width: 15px !important;
+          height: 15px !important;
+        }
+      }
+      @keyframes rotate2 {
+        0% {
+          transform: rotateY(0deg);
+        }
+        10% {
+          transform: rotateY(0deg);
+        }
+        20% {
+          transform: rotateY(0deg);
+        }
+        30% {
+          transform: rotateY(0deg);
+        }
+        40% {
+          transform: rotateY(0deg);
+        }
+        50% {
+          transform: rotateY(0deg);
+        }
+        60% {
+          transform: rotateY(0deg);
+        }
+        70% {
+          transform: rotateY(0deg);
+        }
+        90% {
+          transform: rotateY(0deg);
+        }
+        100% {
+          transform: rotateY(-180deg);
+        }
+      }
+    }
+    @include respond-to(xs-600){
+      grid-column: 1/2;
+    }
+  }
+  &__phone {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-content: flex-start;
+    .header__phone-wrapper,
+    .header__phone-header-link {
+      color: $white;
+      font-size: 14px;
+    }
+  }
+  &__contact {
+    &-title {
+      color: $textGray;
+      margin-bottom: 15px;
+    }
+    span {
+      &:first-child {
+        margin-right: 5px;
+      }
+    }
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  &__copyright {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 12px;
+    @include respond-to(tablet-1030) {
+      grid-column: 1/2;
+      grid-row: 5/6;
+    }
+    @include respond-to(xs-690) {
+      grid-column: 1/2;
+      grid-row: 6/7;
+      justify-content: center;
+    }
+  }
+  &__content {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    &-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      @include respond-to(tablet-1030) {
+        flex-wrap: wrap;
+      }
+    }
+    &-li {
+      margin-bottom: 15px !important;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &.active {
+        .footer__content-link {
+          @include fm;
+          @include anim;
+          color: $white;
+        }
+      }
+    }
+    &-item {
+      width: 28%;
+      @include respond-to(tablet-1030) {
+        width: 45%;
+        margin-bottom: 50px;
+      }
+      &.last {
+        margin-bottom: 0;
+        @include respond-to(xs-690) {
+          width: 100%;
+        }
+      }
+    }
+    &-link {
+      font-size: 14px;
+      color: $textGray;
+      text-decoration: none;
+      &:hover,
+      &:active,
+      &:focus {
+        color: $white;
+      }
+    }
+    &-title {
+      color: $white;
+      margin-bottom: 30px;
+      display: inline-block;
+      position: relative;
+      &:after {
+        content: "";
+        height: 1px;
+        width: 65px;
+        background-color: $textGray;
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        display: none;
+        @include respond-to(tablet-1030) {
+          display: inline-block;
+        }
+      }
+    }
+    @include respond-to(tablet-1030) {
+      grid-row: 1/6;
+    }
+    @include respond-to(xs-690) {
+      grid-column: 1/2;
+      grid-row: 4/5;
+    }
+  }
+  &__social {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    .icon {
+      &:before {
+        font-size: 25px;
+      }
+    }
+    .social-item {
+      @include respond-to(xs-690) {
+        margin-right: 30px;
+      }
+      &:last-child {
+        @include respond-to(xs-690) {
+          margin-right: 0;
+        }
+      }
+    }
+    .social-list {
+      @include respond-to(xs-690) {
+        justify-content: center;
+      }
+    }
+    @include respond-to(tablet-1030) {
+      grid-column: 1/2;
+      grid-row: 4/5;
+    }
+    @include respond-to(xs-690) {
+      grid-column: 1/2;
+      grid-row: 5/6;
+      justify-content: center;
+    }
+  }
+  &__dev {
+    //grid-area: footerDev;
+    font-size: 12px;
+    grid-column: 2/4;
+    grid-row: 4/5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .icon {
+      margin-left: 5px;
+      color: $textGray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: unset;
+      &:hover,
+      &:active,
+      &:focus {
+        color: $white;
+      }
+    }
+    @include respond-to(tablet-1030) {
+      grid-column: 1/2;
+      grid-row: 6/7;
+      justify-content: flex-start;
+    }
+    @include respond-to(xs-690) {
+      grid-column: 1/2;
+      grid-row: 8/9;
+      justify-content: center;
+    }
+  }
+  &__adaptive {
+    display: none;
+    grid-column: 2/3;
+    grid-row: 4/5;
     &:hover,
     &:active,
     &:focus {
-      transform: scale(1.1);
       @include anim;
+      color: $white;
+      cursor: pointer;
+    }
+    @include respond-to(tablet-1030) {
+      grid-column: 2/3;
+      grid-row: 6/7;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    @include respond-to(xs-690) {
+      grid-column: 1/2;
+      grid-row: 7/8;
+      justify-content: center;
+    }
+    &.desktop {
+      display: flex;
     }
   }
-  &__dates,
-  &__polotics {
-    font-size: 14px;
-    letter-spacing: 0.2px;
+  @include respond-to(xs-690) {
+    padding: 40px 0;
+    margin-top: 10px;
   }
-  &__dates {
-    color: $textDark;
-  }
-  &__polotics {
-    align-self: center;
-    justify-self: start;
-    color: $text;
-    &:hover,
-    &:active,
-    &:focus {
-      color: $textDark;
-      @include anim;
+  .container {
+    @include respond-to(xs-370) {
+      width: 90%;
     }
-  }
-  &-order {
-    padding: 20px 0;
-  }
-}
-
-.footer-push {
-  display: none
-}
-
-.footer {
-  position: relative;
-  z-index: 1
-}
-
-.footer-push {
-  content: "";
-  position: relative;
-  z-index: -10;
-  display: block;
-  pointer-events: none;
-}
-.footer {
-  position: fixed;
-  z-index: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  @include respond-to(sm) {
-    position: static;
-  }
-}
-
-.footer .footer-bottom {
-  padding: 80px 0 40px;
-  @include respond-to(sm) {
-    padding: 44px 0;
   }
 }
 //footer end

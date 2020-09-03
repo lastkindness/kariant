@@ -1,0 +1,80 @@
+.partners {
+  &__items {
+    display: grid;
+    align-items: stretch;
+    justify-content: space-between;
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    grid-gap: 30px;
+    width: 100%;
+    @include respond-to(sm) {
+      grid-template-columns: 100%;
+      grid-gap: 10px;
+    }
+  }
+  &__item {
+    border: 1px solid $lines;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    //overflow: hidden;
+    @include anim;
+    &-image {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      height: 265px;
+      width: 100%;
+      img {
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        @include respond-to(sm) {
+          width: 100%;
+        }
+        @include respond-to(xs-690) {
+          width: auto;
+          max-width: none;
+        }
+      }
+      .logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        height: auto;
+        width: 150px;
+      }
+    }
+    &-content {
+      position: relative;
+      padding: 30px 30px 80px 30px;
+      flex-grow: 1;
+      @include respond-to(xs) {
+        padding: 15px 15px 50px 15px;
+      }
+      .btn {
+        display: inline-flex;
+        position: absolute;
+        bottom: -1px;
+        left: -1px;
+      }
+      &-title {
+        color: $darkColor;
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+      &-text {
+        color: $textGray;
+        font-size: 14px;
+      }
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      @include anim;
+      box-shadow: $box-shadow;
+    }
+  }
+}

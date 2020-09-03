@@ -1,0 +1,26 @@
+//main-news start
+.main-news {
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.92) 43.85%, rgba(255, 255, 255, 0.81) 100%), url(../../../images/banners/image10.jpg);
+  background-position: 50% 50% !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  padding-bottom: 80px;
+  @include respond-to(sm){
+    padding-bottom: 30px;
+  }
+  &__item {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 30px;
+    @include respond-to(sm){
+      grid-gap: 10px;
+    }
+  }
+}
+//main-news end

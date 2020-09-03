@@ -1,516 +1,668 @@
 <!DOCTYPE html>
 <html>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <!--base(href="http://localhost:3000")-->
-  <title>Kariant</title>
-  <!--link(rel='icon', sizes='32x32', type="image/x-icon", href='images/favicon/favicon-32x32.ico')-->
-  <!--link(rel='icon', sizes='16x16', type="image/x-icon", href='images/favicon/favicon-16x16.ico')-->
-  <link rel="icon" sizes="16x16" type="image/x-icon" href="images/favicon/favicon.ico">
-  <section class="preloader">
-    <style>.preloader{position:fixed;z-index:1000;width:100%;height:100vh;left:0;right:0;top:0;bottom:0;background-color:#CEB499;opacity:1;transition:all .3s ease;display:flex;align-items:center;justify-content:center}.preloader.hide{opacity:0;transition:all .3s ease}.preloader.none{display:none}#loading{z-index:5;opacity:1;display:inline-block;width:50px;height:50px;border:3px solid rgba(255,255,255,.3);border-radius:50%;border-top-color:#fff;animation:spin 1s ease-in-out infinite;-webkit-animation:spin 1s ease-in-out infinite}@keyframes spin{to{-webkit-transform:rotate(360deg)}}@-webkit-keyframes spin{to{-webkit-transform:rotate(360deg)}}</style>
-    <div id="loading"></div>
-  </section>
-  <body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>L-UA</title>
+    <link rel="icon" sizes="32x32" type="image/x-icon" href="images/favicon/favicon-32x32.ico">
+    <link rel="icon" sizes="16x16" type="image/x-icon" href="images/favicon/favicon-16x16.ico">
+    <link rel="stylesheet" type="text/css" href="css/lib.min.css">
+    <!--link(rel='stylesheet', type='text/css', href='css/main.min.css')-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!--WARNING: Respond.js doesn't work if you view the page via file://-->
+    <!--if lt IE 9-->
+    <!--  script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')-->
+    <!--  script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')-->
+  </head>
+  <body class="order-page">
     <noscript>
-      <div><strong>Для полной функциональности этого сайта необходимо включить JavaScript. Вот</strong><a href="https://support.google.com/adsense/answer/12654?hl=ru" target="_blank">инструкции,</a>как включить JavaScript в вашем браузере.
+      <div><strong>Для полной функциональности этого сайта необходимо включить JavaScript. Вот</strong><a href="https://artjoker.ua/ru/blog/how-to-enable-javascript/" target="_blank">инструкции,</a>как включить JavaScript в вашем браузере.
         <link rel="stylesheet" type="text/css" href="css/without-js.css">
       </div>
     </noscript>
-    <div class="wrapper order-page">
-      <header class="header header_order">
-        <div class="container">
-          <div class="header__wrapper">
-            <div class="header__logo"><a href="/kariant/index.html" title="main"><img data-src="images/other/logo.svg" alt="kariant" title="kariant"></a></div>
-            <div class="header__info">
-              <div class="header__schedule">Пн-Пт с 9:00 до 18:00</div>
-              <div data-target="phone" class="header__phone icon icon-down"><span class="title">Консультация</span><span>+38 (067) 434 23 64</span></div>
+    <!--if lte IE 8-->
+    <!--  p.off-js-->
+    <!--    | Ваш браузер устарел, пожалуйста-->
+    <!--    b обновите-->
+    <!--    |  его.-->
+    <!--wrapper start-->
+    <div class="wrapper">
+      <!-- header SECTION-->
+      <section class="preloader">
+        <style>
+          .preloader {
+              position: fixed;
+              z-index: 1000;
+              width: 100%;
+              height: 100vh;
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              background-color: #F1F1F1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              opacity: 1;
+              transition: all .3s ease;
+          }
+          .preloader.hide {
+              opacity: 0;
+              transition: all .3s ease;
+          }
+          .preloader.none {
+              display: none;
+          }
+          .sk-rotating-plane {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            background-color: #23364B;
+            animation: sk-rotating-plane 1.2s infinite ease-in-out;
+          }
+          
+          @keyframes sk-rotating-plane {
+            0% {
+              transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            }
+            50% {
+              transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+            }
+            100% {
+              transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            }
+          }
+          
+          @media only screen and (max-width: 993px) {
+              @keyframes sk-rotating-plane {
+                  0% {
+                      transform: perspective(80px) rotateX(0deg) rotateY(0deg);
+                  }
+                  50% {
+                      transform: perspective(80px) rotateX(-180.1deg) rotateY(0deg);
+                  }
+                  100% {
+                      transform: perspective(80px) rotateX(-180deg) rotateY(-179.9deg);
+                  }
+              }
+          }
+        </style>
+        <div class="sk-rotating-plane"></div>
+      </section>
+      <header class="header">
+        <div class="header__line"></div>
+        <div class="header__wrapper">
+          <div class="header__catalog">
+                  <button type="submit" class="btn btn-small"><span>Каталог</span></button>
+          </div>
+          <div class="header__burger">
+            <div class="burger"><span></span><span></span><span></span></div>
+          </div>
+          <div class="header__search-icon">
+            <div class="icon-search icon"></div>
+          </div>
+          <nav class="header__main">
+            <ul class="header__main-list">
+              <li class="header__main-item"><a href="/l-ua/about.html" class="header__main-item-link header__main-link">О Liebherr</a></li>
+              <li class="header__main-item"><a href="/l-ua/technology.html" class="header__main-item-link header__main-link">Технологии</a></li>
+              <li class="header__main-item"><a href="/l-ua/content-page.html" class="header__main-item-link header__main-link">Гарантия</a></li>
+              <li class="header__main-item"><a href="/l-ua/content-page.html" class="header__main-item-link header__main-link">Оплата</a></li>
+              <li class="header__main-item"><a href="/l-ua/content-page.html" class="header__main-item-link header__main-link">Доставка</a></li>
+              <li class="header__main-item"><a href="/l-ua/content-page2.html" class="header__main-item-link header__main-link">Обзоры</a></li>
+              <li class="header__main-item"><a href="/l-ua/news.html" class="header__main-item-link header__main-link">Новости</a></li>
+              <li class="header__main-item"><a href="/l-ua/FAQ.html" class="header__main-item-link header__main-link">Вопросы-ответы</a></li>
+              <li class="header__main-item"><a href="/l-ua/partners.html" class="header__main-item-link header__main-link">Партнеры</a></li>
+              <li class="header__main-item active"><a href="/l-ua/contacts.html" class="header__main-item-link header__main-link">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="header__lang">
+            <ul class="header__lang-list">
+              <li class="header__lang-item"><a href="#" class="header__lang-item-link header__main-link">Укр</a></li>
+              <li class="header__lang-item active"><a href="#" class="header__lang-item-link header__main-link">Рус</a></li>
+            </ul>
+          </div>
+          <div class="header__logo"><a href="#"><img data-src="images/logo.svg" alt="Liebherr" title="Liebherr">
+              <div class="anim-wrapper">
+                <svg width="22" height="25" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <lineargradient id="linear-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="1" stop-color="#E5E5E5">
+                        <animate attributename="offset" values="1;1;1;1;1;0;0;0;0;0" dur="16s" begin="8s;grayEnd.end+8s;" id="gray" repeatCount="indefinite"></animate>
+                      </stop>
+                      <stop offset="0.5" stop-color="#4D60C4">
+                        <animate attributename="offset" values="0.5;1;" dur="8s" begin="gray.end" id="blue" repeatCount="indefinite"></animate>
+                      </stop>
+                      <stop offset="0" stop-color="#FFCE45">
+                        <animate attributename="offset" values="0;0.5;" dur="8s" begin="blue.end" id="yellow" repeatCount="indefinite"></animate>
+                      </stop>
+                    </lineargradient>
+                  </defs>
+                  <path d="M5.016 12.176C7.032 12.176 8.952 10.592 8.952 7.792C8.952 4.96 7.016 3.376 5.016 3.376C3.656 3.376 2.776 4.08 2.152 4.96V0.32H0.216V12H2.152V10.688C2.744 11.472 3.624 12.176 5.016 12.176ZM4.568 10.496C3.256 10.496 2.104 9.424 2.104 7.792C2.104 6.144 3.256 5.056 4.568 5.056C5.88 5.056 6.984 6.128 6.984 7.76C6.984 9.456 5.896 10.496 4.568 10.496ZM13.9268 12.144C14.6467 12.144 15.1908 11.984 15.6708 11.712V10.128C15.2868 10.32 14.9028 10.416 14.4707 10.416C13.8147 10.416 13.4308 10.112 13.4308 9.36V5.216H15.7028V3.552H13.4308V1.232H11.4947V3.552H10.4227V5.216H11.4947V9.664C11.4947 11.52 12.5027 12.144 13.9268 12.144Z" fill="url(#linear-gradient)"></path>
+                </svg>
+              </div></a></div>
+          <div class="header__phone">
+            <div class="header__phone-wrapper icon icon-phone js__phone-dropdown">
+              <div class="header__phone-header icon icon-normal_arr"><a href="tel:044 257 65 99" class="header__phone-header-link">(044) 257 65 99</a></div>
+              <ul style="display: none;" class="header__phone-dropdown">
+                <li class="header__phone-item"><a href="tel:044 257 65 99" class="header__phone-link">(044) 257 65 99</a></li>
+                <li class="header__phone-item"><a href="tel:044 257 65 99" class="header__phone-link">(044) 257 65 99</a></li>
+                <li class="header__phone-item"><a href="tel:044 257 65 99" class="header__phone-link">(044) 257 65 99</a></li>
+              </ul>
             </div>
           </div>
+          <div class="header__call">
+                  <button type="submit" class="btn btn-link" data-target="call"><span>Перезвоните мне</span></button>
+          </div>
+          <div class="header__search">
+            <form class="search js_validate">
+              <div class="input-container">
+                <input type="text" placeholder="Поиск..." name="search" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="search__input validate">
+                <div class="delete"></div>
+                <div class="text-error">Поле  не заполнено</div>
+              </div>
+                          <button type="submit" class="btn icon-search icon btn-reset"><span></span></button>
+            </form>
+          </div><a href="/l-ua/favorites.html" class="header__favorite"><span class="text header__main-link">Избранное</span>
+            <div class="icon icon-like label-link">
+              <div class="value">1</div>
+            </div></a><a href="/l-ua/compare-prod.html" class="header__comparison disabled btn btn-link"><span class="text header__main-link">Сравнение</span>
+            <div class="icon icon-comparison label-link">
+              <div class="value">1</div>
+            </div></a><a href="#" data-target="cart-in" class="header__cart btn btn-link">
+            <div class="icon icon-cart2 label-link active">
+              <div class="value">1</div>
+            </div></a>
+          <nav class="header__menu">
+            <ul class="header__menu-list header__menu-list-main"><span class="header__menu-list-main-header">
+                <div class="icon icon-small-right"></div><span class="header__main-link">Каталог товаров</span></span>
+              <li class="header__menu-item header__menu-item-main"><a href="/l-ua/subcategory.html" class="header__menu-item-link header__main-link">Холодильники, морозильные камеры</a>
+                <ul class="header__menu-list header__menu-list-sub">
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image5.jpg" alt="Холодильники" title="Холодильники"></div><span>Холодильники</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image1.jpg" alt="Встраиваемые холодильники" title="Встраиваемые холодильники"></div><span>Встраиваемые холодильники</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image2.jpg" alt="Морозильные камеры" title="Морозильные камеры"></div><span>Морозильные камеры</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image3.jpg" alt="Встраиваемые морозильные камеры" title="Встраиваемые морозильные камеры"></div><span>Встраиваемые морозильные камеры</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image4.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image0.jpg" alt="Аксессуары" title="Аксессуары"></div><span>Аксессуары</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image6.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image7.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image8.jpg" alt="Категория в категории" title="Категория в категории"></div><span>Категория в категории</span></a>
+                    <ul class="header__menu-list header__menu-list-sub">
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image5.jpg" alt="Холодильники" title="Холодильники"></div><span>Холодильники</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image1.jpg" alt="Встраиваемые холодильники" title="Встраиваемые холодильники"></div><span>Встраиваемые холодильники</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image2.jpg" alt="Морозильные камеры" title="Морозильные камеры"></div><span>Морозильные камеры</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image3.jpg" alt="Встраиваемые морозильные камеры" title="Встраиваемые морозильные камеры"></div><span>Встраиваемые морозильные камеры</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image4.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image0.jpg" alt="Аксессуары" title="Аксессуары"></div><span>Аксессуары</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image6.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image7.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__menu-item header__menu-item-main"><a href="/l-ua/subcategory.html" class="header__menu-item-link header__main-link">Винные шкафы, хьюмидор</a>
+                <ul class="header__menu-list header__menu-list-sub">
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image5.jpg" alt="Холодильники" title="Холодильники"></div><span>Холодильники</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image1.jpg" alt="Встраиваемые холодильники" title="Встраиваемые холодильники"></div><span>Встраиваемые холодильники</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image2.jpg" alt="Морозильные камеры" title="Морозильные камеры"></div><span>Морозильные камеры</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image3.jpg" alt="Встраиваемые морозильные камеры" title="Встраиваемые морозильные камеры"></div><span>Встраиваемые морозильные камеры</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image4.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image0.jpg" alt="Аксессуары" title="Аксессуары"></div><span>Аксессуары</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image6.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image7.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image8.jpg" alt="Категория в категории" title="Категория в категории"></div><span>Категория в категории</span></a>
+                    <ul class="header__menu-list header__menu-list-sub">
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image5.jpg" alt="Холодильники" title="Холодильники"></div><span>Холодильники</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image1.jpg" alt="Встраиваемые холодильники" title="Встраиваемые холодильники"></div><span>Встраиваемые холодильники</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image2.jpg" alt="Морозильные камеры" title="Морозильные камеры"></div><span>Морозильные камеры</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image3.jpg" alt="Встраиваемые морозильные камеры" title="Встраиваемые морозильные камеры"></div><span>Встраиваемые морозильные камеры</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image4.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image0.jpg" alt="Аксессуары" title="Аксессуары"></div><span>Аксессуары</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image6.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image7.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__menu-item header__menu-item-main"><a href="/l-ua/subcategory.html" class="header__menu-item-link header__main-link">Профессиональное оборудование</a>
+                <ul class="header__menu-list header__menu-list-sub">
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image5.jpg" alt="Холодильники" title="Холодильники"></div><span>Холодильники</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image1.jpg" alt="Встраиваемые холодильники" title="Встраиваемые холодильники"></div><span>Встраиваемые холодильники</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image2.jpg" alt="Морозильные камеры" title="Морозильные камеры"></div><span>Морозильные камеры</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image3.jpg" alt="Встраиваемые морозильные камеры" title="Встраиваемые морозильные камеры"></div><span>Встраиваемые морозильные камеры</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image4.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image0.jpg" alt="Аксессуары" title="Аксессуары"></div><span>Аксессуары</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image6.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image7.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                  <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                      <div class="header__menu-item-sub-img"><img data-src="images/catalog/image8.jpg" alt="Категория в категории" title="Категория в категории"></div><span>Категория в категории</span></a>
+                    <ul class="header__menu-list header__menu-list-sub">
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image5.jpg" alt="Холодильники" title="Холодильники"></div><span>Холодильники</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image1.jpg" alt="Встраиваемые холодильники" title="Встраиваемые холодильники"></div><span>Встраиваемые холодильники</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image2.jpg" alt="Морозильные камеры" title="Морозильные камеры"></div><span>Морозильные камеры</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image3.jpg" alt="Встраиваемые морозильные камеры" title="Встраиваемые морозильные камеры"></div><span>Встраиваемые морозильные камеры</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image4.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image0.jpg" alt="Аксессуары" title="Аксессуары"></div><span>Аксессуары</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image6.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                      <li class="header__menu-item header__menu-item-sub"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">
+                          <div class="header__menu-item-sub-img"><img data-src="images/catalog/image7.jpg" alt="Морозильные лари бытовые" title="Морозильные лари бытовые"></div><span>Морозильные лари бытовые</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__menu-item header__menu-item-main header__menu-item-main_stock"><a href="/l-ua/stock.html" class="header__menu-item-sub-link header__main-link">Акции</a></li>
+              <li class="header__menu-item header__menu-item-main header__menu-item-main_new"><a href="/l-ua/subcategory.html" class="header__menu-item-sub-link header__main-link">Новинки</a></li>
+            </ul>
+          </nav>
         </div>
       </header>
+      <!-- header SECTION-->
       <main class="main">
-        <section class="order">
+        <section class="page__header">
           <div class="container">
-            <div class="order-wrapper">
-              <section class="order_content">
-                <section class="order_content__title">
-                  <h2 class="title">Оформление заказа</h2>
-                  <div class="order_content__subtitle">
-                    <div class="block-title"><span class="value icon icon-check"></span>
-                      <h6 class="title">Контактная информация</h6>
-                    </div><a href="/order-page1.html" class="btn btn-link"><span>Изменить</span></a>
-                  </div>
-                  <div class="order_content__contacts order_content__form"><span class="name">Александр Золочевский,</span><span class="email">post@gmail.com,</span><span class="phone">+38 099 999 44 24</span></div>
-                </section>
-                <section class="order_content__step2">
-                  <div class="order_content__subtitle">
-                    <div class="block-title"><span class="value">2</span>
-                      <h6 class="title">Доставка и оплата</h6>
-                    </div>
-                  </div>
-                  <div class="order_content__form">
-                    <form action="#" class="order order_delivery js_validate">
-                      <div class="order_content__wrapper order_content__city">
-                        <div class="input-container js_valid_select input-container_select">
-                                                    <div class="dropdown dropdown_select">
-                                                      <div class="dropdown__wrapper">
-                                                        <label for="sort-city">Ваш город</label>
-                                                        <select id="sort-city" required="required" data-validate="select2" class="select icon icon-down">
-                                                          <option></option>
-                                                          <option value="CH">Черкассы</option>
-                                                          <option value="KV">Киев</option>
-                                                          <option value="TA">Тель Авив</option>
-                                                          <option value="VI">Винница</option>
-                                                          <option value="KR">Кропивницкий (Кировоград)</option>
-                                                          <option value="PT">Полтава</option>
-                                                          <option value="KH">Харьков</option>
-                                                          <option value="DP">Днепр (Днепропетровск)</option>
-                                                          <option value="LG">Луганск</option>
-                                                          <option value="RO">Ровно</option>
-                                                          <option value="KHE">Херсон</option>
-                                                          <option value="DN">Донецк</option>
-                                                          <option value="CI">Луцк</option>
-                                                          <option value="KH">Симферополь</option>
-                                                          <option value="ZH">Хмельницкий</option>
-                                                          <option value="LV">Житомир</option>
-                                                          <option value="">Львов</option>
-                                                        </select>
-                                                      </div>
-                                                    </div>
-                          <div class="text-error">Поле  не заполнено</div>
-                        </div>
-                        <div class="order_content__city-buttons">
-                                <button type="submit" class="btn btn-link js-programmatic-sort-city" data-id="CH"><span>Черкассы</span>
-                                </button>
-                                <button type="submit" class="btn btn-link js-programmatic-sort-city" data-id="KV"><span>Киев</span>
-                                </button>
-                                <button type="submit" class="btn btn-link js-programmatic-sort-city" data-id="TA"><span>Тель Авив</span>
-                                </button>
-                                <button type="submit" class="btn btn-link js-programmatic-sort-city" data-id="VI"><span>Винница</span>
-                                </button>
-                                <button type="submit" class="btn btn-link js-programmatic-sort-city" data-id="KR"><span>Кропивницкий (Кировоград)</span>
-                                </button>
-                        </div>
-                      </div>
-                      <div class="order_content__wrapper order_content__delivery">
-                        <div class="form-group-radio">
-                          <div class="subtitle">Способы доставки</div>
-                          <div class="radio-container active">
-                            <label>
-                              <div class="input">
-                                <input type="radio" name="group1" checked class="js__delivery-postoffice">“Новая Почта” в отделение
-                              </div>
-                              <div class="price">75 грн</div>
-                            </label>
-                            <div class="order_content__delivery-item delivery-postoffice">
-                              <div class="input-container input-container_select">
-                                <div class="label">Отделение</div>
-                                                                <div class="dropdown dropdown_select">
-                                                                  <div class="dropdown__wrapper">
-                                                                    <select id="sort-np" required="required" data-validate="select2" class="select icon icon-down dropdown-menu">
-                                                                      <option value="0">Отделение №1, ул. Полевая, д. 67</option>
-                                                                      <option value="1">Отделение №2, ул. Луговая, д. 135</option>
-                                                                      <option value="2">Отделение №3, ул. Цветочная, д. 28</option>
-                                                                    </select>
-                                                                  </div>
-                                                                </div>
-                                <div class="text-error">Поле  не заполнено</div>
-                              </div>
+            <div class="page__header-wrapper">
+                            <div class="breadcrumbs">
+                              <ul class="breadcrumbs__wrapper">
+                                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link icon icon-home"></a></li>
+                                <li class="breadcrumbs__item icon icon-small-right"><a href="#" class="breadcrumbs__link">Каталог1</a></li>
+                                <li class="breadcrumbs__item icon icon-small-right"><a href="#" class="breadcrumbs__link">Каталог2</a></li>
+                                <li class="breadcrumbs__item icon icon-small-right"><a href="#" class="breadcrumbs__link">Каталог3</a></li>
+                                <li class="breadcrumbs__item icon icon-small-right active"><a href="#" class="breadcrumbs__link">Оформление заказа</a></li>
+                              </ul>
                             </div>
-                          </div>
-                          <div class="radio-container">
-                            <label>
-                              <div class="input">
-                                <input type="radio" name="group1" class="js__delivery-courier">“Новая Почта” курьером
-                              </div>
-                              <div class="price">125 грн</div>
-                            </label>
-                            <div class="order_content__delivery-item delivery-courier">
-                              <div class="input-container">
-                                <label for="streetNP" class="req">улица</label>
-                                <input type="text" name="street" id="streetNP" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Улица» не заполнено</div>
-                              </div>
-                              <div class="input-container">
-                                <label for="houseNP" class="req">№ дома</label>
-                                <input type="text" name="house" id="houseNP" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="1-15 символов" data-minsign="1" data-maxsign="15" class="validate">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Дом» не заполнено</div>
-                              </div>
-                              <div class="input-container">
-                                <label for="apartmentNP">квартира</label>
-                                <input type="text" name="apartment" id="apartmentNP" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Квартира» не заполнено</div>
-                              </div>
-                              <div class="input-container">
-                                <label for="entranceNP">подьезд</label>
-                                <input type="text" name="entrance" id="entranceNP" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Подьезд» не заполнено</div>
-                              </div>
-                              <div class="input-container">
-                                <label for="floorNP">этаж</label>
-                                <input type="text" name="floor" id="floorNP" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Этаж» не заполнено</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="radio-container">
-                            <label>
-                              <div class="input">
-                                <input type="radio" name="group1" class="js__delivery-postoffice">“Justin” в отделение
-                              </div>
-                              <div class="price">25 грн</div>
-                            </label>
-                            <div class="order_content__delivery-item delivery-postoffice">
-                              <div class="input-container input-container_select">
-                                <div class="label">Отделение</div>
-                                                                <div class="dropdown dropdown_select">
-                                                                  <div class="dropdown__wrapper">
-                                                                    <select id="sort-js" required="required" data-validate="select2" class="select icon icon-down dropdown-menu">
-                                                                      <option value="0">Отделение №1, ул. Полевая, д. 67</option>
-                                                                      <option value="1">Отделение №2, ул. Луговая, д. 135</option>
-                                                                      <option value="2">Отделение №3, ул. Цветочная, д. 28</option>
-                                                                    </select>
-                                                                  </div>
-                                                                </div>
-                                <div class="text-error">Поле  не заполнено</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="radio-container">
-                            <label>
-                              <div class="input">
-                                <input type="radio" name="group1" class="js__delivery-courier">“Интайм” курьером
-                              </div>
-                              <div class="price">25 грн</div>
-                            </label>
-                            <div class="order_content__delivery-item delivery-courier">
-                              <div class="input-container">
-                                <label for="streetIN" class="req">улица</label>
-                                <input type="text" name="street" id="streetIN" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Улица» не заполнено</div>
-                              </div>
-                              <div class="input-container">
-                                <label for="houseIN" class="req">№ дома</label>
-                                <input type="text" name="house" id="houseIN" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="1-15 символов" data-minsign="1" data-maxsign="15" class="validate">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Дом» не заполнено</div>
-                              </div>
-                              <div class="input-container">
-                                <label for="apartmentIN">квартира</label>
-                                <input type="text" name="apartment" id="apartmentIN" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Квартира» не заполнено</div>
-                              </div>
-                              <div class="input-container">
-                                <label for="entranceIN">подьезд</label>
-                                <input type="text" name="entrance" id="entranceIN" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Подьезд» не заполнено</div>
-                              </div>
-                              <div class="input-container">
-                                <label for="floorIN">этаж</label>
-                                <input type="text" name="floor" id="floorIN" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Этаж» не заполнено</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="radio-container">
-                            <label>
-                              <div class="input">
-                                <input type="radio" name="group1" class="js__delivery-courier">“УкрПочта” курьером
-                              </div>
-                              <div class="price">Бесплатно</div>
-                            </label>
-                            <div class="order_content__delivery-item delivery-courier">
-                              <div class="input-container">
-                                <label for="streetUK" class="req">улица</label>
-                                <input type="text" name="street" id="streetUK" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Улица» не заполнено</div>
-                              </div>
-                              <div class="input-container">
-                                <label for="houseUK" class="req">№ дома</label>
-                                <input type="text" name="house" id="houseUK" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="1-15 символов" data-minsign="1" data-maxsign="15" class="validate">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Дом» не заполнено</div>
-                              </div>
-                              <div class="input-container">
-                                <label for="apartmentUK">квартира</label>
-                                <input type="text" name="apartment" id="apartmentUK" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Квартира» не заполнено</div>
-                              </div>
-                              <div class="input-container">
-                                <label for="entranceUK">подьезд</label>
-                                <input type="text" name="entrance" id="entranceUK" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Подьезд» не заполнено</div>
-                              </div>
-                              <div class="input-container">
-                                <label for="floorUK">этаж</label>
-                                <input type="text" name="floor" id="floorUK" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100">
-                                <div class="delete"></div>
-                                <div class="text-error">Поле «Этаж» не заполнено</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="order_content__wrapper order_content__payment">
-                        <div class="subtitle">Способы оплаты</div>
-                        <div class="form-group-radio">
-                          <div class="radio-container">
-                            <label>
-                              <input type="radio" name="group2" checked>Наличными
-                            </label>
-                          </div>
-                          <div class="radio-container">
-                            <label>
-                              <input type="radio" name="group2">Картой на сайте
-                            </label>
-                          </div>
-                          <div class="radio-container">
-                            <label>
-                              <input type="radio" name="group2">Приват24
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="order_content__wrapper order_content__comment"><span class="comment">Добавить комментарий</span>
-                        <div class="input-container textarea">
-                          <textarea name="comment" id="comment" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate"></textarea>
-                          <label for="comment">Сообщение</label>
-                          <div class="text-error">Введите сообщение</div>
-                        </div>
-                      </div>
-                            <button type="submit" class="btn"><span>Оформить заказ</span>
-                            </button>
-                    </form>
-                    <p class="order_content__terms">Нажимая кнопку «Оформить заказ», я соглашаюсь с<a href="#" title="условия">условиями</a>предоставления персональных данных интернет-магазина «Kariant»</p>
-                  </div>
-                </section>
-              </section>
-              <aside class="order__sidebar">
-                <div class="order__sidebar-main">
-                  <div class="order__sidebar-title">
-                    <div class="title icon-cart-empty icon"><span>Ваш заказ (5)</span></div>
-                                  <button type="submit" class="btn btn-link" onClick="history.back()"><span>Редактировать</span>
-                                  </button>
-                  </div>
-                  <div class="order__sidebar-info">
-                    <div class="order__sidebar-info-discount">
-                      <div class="title">У меня есть промокод</div>
-                      <form action="#" class="discount js_validate">
-                        <div class="input-container">
-                          <label for="promo" class="req">Ваш промокод</label>
-                          <input type="text" name="promo" id="promo" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
-                          <div class="delete"></div>
-                          <div class="text-error">Поле  не заполнено</div>
-                        </div>
-                                      <button type="submit" class="btn"><span>Применить</span>
-                                      </button>
-                      </form>
-                    </div>
-                    <div class="order__sidebar-info-total">
-                      <div class="quantity"><span class="value">400</span><span class="goods">товаров</span><span>на сумму</span></div>
-                      <div class="total"><span class="value">34200</span><span class="currency">грн</span></div>
-                    </div>
-                    <div class="order__sidebar-info-delivery">
-                      <div class="quantity"><span>Доставка</span></div>
-                      <div class="total"><span>Не выбрано</span></div>
-                    </div>
-                    <div class="order__sidebar-total">
-                      <div class="title">Итого</div>
-                      <div class="total"><span class="value">27360</span><span class="currency">грн</span></div>
-                    </div>
-                  </div>
-                  <div class="order__sidebar-products"><a href="/card.html" class="basket-item">
-                                    <div class="basket-item__img"><img src="images/products/5.jpg" alt="Тренч Stimma Джеси 4153 S Пудра" title="Тренч Stimma Джеси 4153 S Пудра" class="image"></div>
-                                    <div class="basket-item__info-wrapper">
-                                      <div class="basket-item__info">
-                                        <div class="basket-item__name">
-                                          <h3 class="title">Тренч Stimma Джеси 4153 S Пудра</h3>
-                                        </div>
-                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">42</span></div>
-                                      </div>
-                                      <div class="basket-item__price"><span class="value">142 402</span><span class="currency">грн</span></div>
-                                    </div>
-                                    <div class="basket-item__controls">
-                                      <div data-target="product-delete" class="basket-item__remove">
-                                        <div class="icon icon-close"></div>
-                                      </div>
-                                                    <div class="input-number">
-                                                      <div class="input-number_arrow prev"></div>
-                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                                      <div class="input-number_arrow next"></div>
-                                                    </div>
-                                    </div></a><a href="/card.html" class="basket-item">
-                                    <div class="basket-item__img"><img src="images/products/6.jpg" alt="Тренч Stimma Джеси 4151 Xs Графитовый" title="Тренч Stimma Джеси 4151 Xs Графитовый" class="image"></div>
-                                    <div class="basket-item__info-wrapper">
-                                      <div class="basket-item__info">
-                                        <div class="basket-item__name">
-                                          <h3 class="title">Тренч Stimma Джеси 4151 Xs Графитовый</h3>
-                                        </div>
-                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">45</span></div>
-                                      </div>
-                                      <div class="basket-item__price"><span class="value">297</span><span class="currency">грн</span></div>
-                                    </div>
-                                    <div class="basket-item__controls">
-                                      <div data-target="product-delete" class="basket-item__remove">
-                                        <div class="icon icon-close"></div>
-                                      </div>
-                                                    <div class="input-number">
-                                                      <div class="input-number_arrow prev"></div>
-                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                                      <div class="input-number_arrow next"></div>
-                                                    </div>
-                                    </div></a><a href="/card.html" class="basket-item">
-                                    <div class="basket-item__img"><img src="images/products/7.jpg" alt="Куртка Stimma Кортика 3968 Xs Графитовый" title="Куртка Stimma Кортика 3968 Xs Графитовый" class="image"></div>
-                                    <div class="basket-item__info-wrapper">
-                                      <div class="basket-item__info">
-                                        <div class="basket-item__name">
-                                          <h3 class="title">Куртка Stimma Кортика 3968 Xs Графитовый</h3>
-                                        </div>
-                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">34</span></div>
-                                      </div>
-                                      <div class="basket-item__price"><span class="value">4579</span><span class="currency">грн</span></div>
-                                    </div>
-                                    <div class="basket-item__controls">
-                                      <div data-target="product-delete" class="basket-item__remove">
-                                        <div class="icon icon-close"></div>
-                                      </div>
-                                                    <div class="input-number">
-                                                      <div class="input-number_arrow prev"></div>
-                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                                      <div class="input-number_arrow next"></div>
-                                                    </div>
-                                    </div></a><a href="/card.html" class="basket-item">
-                                    <div class="basket-item__img"><img src="images/products/8.jpg" alt="Куртка Stimma Карелия 4181 Xs Серебряный" title="Куртка Stimma Карелия 4181 Xs Серебряный" class="image"></div>
-                                    <div class="basket-item__info-wrapper">
-                                      <div class="basket-item__info">
-                                        <div class="basket-item__name">
-                                          <h3 class="title">Куртка Stimma Карелия 4181 Xs Серебряный</h3>
-                                        </div>
-                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">38</span></div>
-                                      </div>
-                                      <div class="basket-item__price"><span class="value">25 742</span><span class="currency">грн</span></div>
-                                    </div>
-                                    <div class="basket-item__controls">
-                                      <div data-target="product-delete" class="basket-item__remove">
-                                        <div class="icon icon-close"></div>
-                                      </div>
-                                                    <div class="input-number">
-                                                      <div class="input-number_arrow prev"></div>
-                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                                      <div class="input-number_arrow next"></div>
-                                                    </div>
-                                    </div></a><a href="/card.html" class="basket-item">
-                                    <div class="basket-item__img"><img src="images/products/9.jpg" alt="Женская куртка Stimma Веста 4799 L Шоколадный" title="Женская куртка Stimma Веста 4799 L Шоколадный" class="image"></div>
-                                    <div class="basket-item__info-wrapper">
-                                      <div class="basket-item__info">
-                                        <div class="basket-item__name">
-                                          <h3 class="title">Женская куртка Stimma Веста 4799 L Шоколадный</h3>
-                                        </div>
-                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">44</span></div>
-                                      </div>
-                                      <div class="basket-item__price"><span class="value">142</span><span class="currency">грн</span></div>
-                                    </div>
-                                    <div class="basket-item__controls">
-                                      <div data-target="product-delete" class="basket-item__remove">
-                                        <div class="icon icon-close"></div>
-                                      </div>
-                                                    <div class="input-number">
-                                                      <div class="input-number_arrow prev"></div>
-                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                                      <div class="input-number_arrow next"></div>
-                                                    </div>
-                                    </div></a><a href="/card.html" class="basket-item">
-                                    <div class="basket-item__img"><img src="images/products/10.jpg" alt="Женская куртка Stimma Веста 4800 Xs Черный" title="Женская куртка Stimma Веста 4800 Xs Черный" class="image"></div>
-                                    <div class="basket-item__info-wrapper">
-                                      <div class="basket-item__info">
-                                        <div class="basket-item__name">
-                                          <h3 class="title">Женская куртка Stimma Веста 4800 Xs Черный</h3>
-                                        </div>
-                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">46</span></div>
-                                      </div>
-                                      <div class="basket-item__price"><span class="value">852</span><span class="currency">грн</span></div>
-                                    </div>
-                                    <div class="basket-item__controls">
-                                      <div data-target="product-delete" class="basket-item__remove">
-                                        <div class="icon icon-close"></div>
-                                      </div>
-                                                    <div class="input-number">
-                                                      <div class="input-number_arrow prev"></div>
-                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                                      <div class="input-number_arrow next"></div>
-                                                    </div>
-                                    </div></a><a href="/card.html" class="basket-item">
-                                    <div class="basket-item__img"><img src="images/products/11.jpg" alt="Пуховик ПВ-849 (и/м) Лаке Тон 573" title="Пуховик ПВ-849 (и/м) Лаке Тон 573" class="image"></div>
-                                    <div class="basket-item__info-wrapper">
-                                      <div class="basket-item__info">
-                                        <div class="basket-item__name">
-                                          <h3 class="title">Пуховик ПВ-849 (и/м) Лаке Тон 573</h3>
-                                        </div>
-                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">40</span></div>
-                                      </div>
-                                      <div class="basket-item__price"><span class="value">226</span><span class="currency">грн</span></div>
-                                    </div>
-                                    <div class="basket-item__controls">
-                                      <div data-target="product-delete" class="basket-item__remove">
-                                        <div class="icon icon-close"></div>
-                                      </div>
-                                                    <div class="input-number">
-                                                      <div class="input-number_arrow prev"></div>
-                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                                      <div class="input-number_arrow next"></div>
-                                                    </div>
-                                    </div></a><a href="/card.html" class="basket-item">
-                                    <div class="basket-item__img"><img src="images/products/12.jpg" alt="Парка демисезонная с нашивками" title="Парка демисезонная с нашивками" class="image"></div>
-                                    <div class="basket-item__info-wrapper">
-                                      <div class="basket-item__info">
-                                        <div class="basket-item__name">
-                                          <h3 class="title">Парка демисезонная с нашивками</h3>
-                                        </div>
-                                        <div class="basket-item__size"><span class="size">Размер:</span><span class="value">50</span></div>
-                                      </div>
-                                      <div class="basket-item__price"><span class="value">14 999</span><span class="currency">грн</span></div>
-                                    </div>
-                                    <div class="basket-item__controls">
-                                      <div data-target="product-delete" class="basket-item__remove">
-                                        <div class="icon icon-close"></div>
-                                      </div>
-                                                    <div class="input-number">
-                                                      <div class="input-number_arrow prev"></div>
-                                                      <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                                      <div class="input-number_arrow next"></div>
-                                                    </div>
-                                    </div></a>
-                  </div>
-                </div>
-              </aside>
+              <h2 class="title page__header-title">Оформление заказа</h2>
             </div>
           </div>
         </section>
+        <section class="order-wrapper">
+          <div class="container">
+            <div class="order order_delivery">
+              <section class="order_content">
+                <div class="order_content__title block-title active"><span class="value"><strong>01</strong>/02</span><span class="subtitle">Контактные данные</span><a href="/l-ua/order-page1.html" class="btn btn-link"><span>Редактировать</span></a>
+                </div>
+                <div class="order_content__title block-title"><span class="value"><strong>02</strong>/02</span><span class="subtitle">Выбор способов доставки и оплаты</span></div>
+                <div class="order_content__form">
+                  <form action="#" class="delivery js_validate">
+                    <div class="order_content__wrapper order_content__delivery">
+                      <div class="subtitle">
+                        <div class="card-info__sidebar-item"><span class="title">Доставка в</span>
+                                  <div class="dropdown dropdown_select">
+                                    <div class="dropdown__wrapper"><span></span>
+                                      <select id="sort-town" class="select icon icon-normal_arr">
+                                        <option>Ивано-Франковск</option>
+                                        <option>Киев</option>
+                                        <option>Харьков</option>
+                                        <option>Одесса</option>
+                                        <option>Львов</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                        </div>
+                      </div>
+                      <div class="form-group-radio">
+                        <div class="radio-container">
+                          <label>
+                            <input type="radio" name="group1" checked class="js__delivery-pickup">Самовывоз из магазина
+                          </label>
+                        </div>
+                        <div class="radio-container">
+                          <label>
+                            <input type="radio" name="group1" class="js__delivery-postoffice">Самовывоз из Новой Почты
+                          </label>
+                        </div>
+                        <div class="radio-container">
+                          <label>
+                            <input type="radio" name="group1" class="js__delivery-courier">Доставка на дом
+                          </label>
+                        </div>
+                        <div class="radio-container">
+                          <label>
+                            <input type="radio" name="group1" class="js__delivery-storage">Бесплатное хранение
+                          </label>
+                        </div>
+                      </div>
+                      <div style="display: block;" class="order_content__delivery-item delivery-pickup">
+                        <div class="delivery-adress">г.<span class="city">Киев</span>,<span class="street">Длинное Название Улицы</span>,<span class="build">100</span>
+                                  <button type="button" class="btn btn-link js__map-toggle"><span>Показать на карте</span></button>
+                        </div>
+                        <div style="display: none;" class="delivery-map">
+                          <!--.contacts-map#map-pickup(data-coords='50.550207, 30.232715')-->
+                          <div class="contacts-map">
+                            <iframe width="100%" height="435" src="https://maps.google.com/maps?width=100%&amp;height=435&amp;hl=en&amp;q=%D0%9A%D0%B8%D0%B5%D0%B2%2C%20%D1%83%D0%BB.%20%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2030+(Liebherr)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Create route map</a></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="display: none;" class="order_content__delivery-item delivery-postoffice">
+                        <div class="input-container js_valid_select">
+                                                    <div class="dropdown dropdown_select">
+                                                      <div class="dropdown__wrapper"><span></span>
+                                                        <select id="sort-city" required="required" class="select icon icon-normal_arr dropdown-menu">
+                                                          <option value="0" disabled="disabled" selected="selected">Город*</option>
+                                                          <option value="1">Черкассы</option>
+                                                          <option value="2">Киев</option>
+                                                          <option value="3">Тель Авив</option>
+                                                        </select>
+                                                      </div>
+                                                    </div>
+                        </div>
+                        <div class="input-container js_valid_select">
+                                                    <div class="dropdown dropdown_select">
+                                                      <div class="dropdown__wrapper"><span></span>
+                                                        <select id="sort-np" required="required" class="select icon icon-normal_arr dropdown-menu">
+                                                          <option value="0" disabled="disabled" selected="selected">Выбор отделения*</option>
+                                                          <option value="1">Отделение №1, ул. Полевая, д. 67</option>
+                                                          <option value="2">Отделение №2, ул. Луговая, д. 135</option>
+                                                          <option value="3">Отделение №3, ул. Цветочная, д. 28</option>
+                                                        </select>
+                                                      </div>
+                                                    </div>
+                        </div>
+                      </div>
+                      <div style="display: none;" class="order_content__delivery-item delivery-courier">
+                        <div class="input-container js_valid_select">
+                                                    <div class="dropdown dropdown_select">
+                                                      <div class="dropdown__wrapper"><span></span>
+                                                        <select id="sort-city-courier" required="required" class="select icon icon-normal_arr dropdown-menu">
+                                                          <option value="0" disabled="disabled" selected="selected">Город*</option>
+                                                          <option value="1">Черкассы</option>
+                                                          <option value="2">Киев</option>
+                                                          <option value="3">Тель Авив</option>
+                                                        </select>
+                                                      </div>
+                                                    </div>
+                        </div>
+                        <div class="input-container">
+                          <label for="street" class="req">Улица</label>
+                          <input type="text" name="street" id="street" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
+                          <div class="delete"></div>
+                          <div class="text-error">Поле «Улица» не заполнено</div>
+                        </div>
+                        <div class="input-container">
+                          <label for="house" class="req">Дом</label>
+                          <input type="text" name="house" id="house" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (1-100)" data-minsign="1" data-maxsign="100" class="validate">
+                          <div class="delete"></div>
+                          <div class="text-error">Поле «Дом» не заполнено</div>
+                        </div>
+                        <div class="input-container">
+                          <label for="apartment">Квартира</label>
+                          <input type="text" name="apartment" id="apartment" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100">
+                          <div class="delete"></div>
+                          <div class="text-error">Поле «Квартира» не заполнено</div>
+                        </div>
+                      </div>
+                      <div style="display: none;" class="order_content__delivery-item delivery-storage"></div>
+                    </div>
+                    <div class="order_content__wrapper order_content__payment">
+                      <div class="subtitle">Оплата</div>
+                      <div class="form-group-radio">
+                        <div class="radio-container">
+                          <label>
+                            <input type="radio" name="group2" checked>Наличными
+                          </label>
+                        </div>
+                        <div class="radio-container">
+                          <label>
+                            <input type="radio" name="group2">Наложенный платеж
+                          </label>
+                        </div>
+                        <div class="radio-container">
+                          <label>
+                            <input type="radio" name="group2">Безналичный расчет
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+              <section class="order_sidebar">
+                <div class="basket-wrap">
+                  <div class="basket-content"><a href="/l-ua/card.html" class="basket-item product-item basket-item_number-val">
+                                        <div class="basket-item__wrapper">
+                                          <div class="basket-item__img"><img src="images/catalog/image8.jpg" alt="Холодильник Liebherr CNP 4858" title="Холодильник Liebherr CNP 4858" class="image"></div>
+                                          <div class="basket-item__name">
+                                            <h3 class="subtitle">Холодильник Liebherr CNP 4858</h3>
+                                          </div>
+                                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value"></span></div>
+                                          <div class="basket-item__price product-item__price"><span class="value">25 335</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">26 375</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__quantity">
+                                                              <div class="input-number">
+                                                                <div class="input-number_arrow prev"></div>
+                                                                <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                                                <div class="input-number_arrow next"></div>
+                                                              </div>
+                                          </div>
+                                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value"></span></div>
+                                          <div class="basket-item__all product-item__price"><span class="value">25 335</span><span class="currency">грн</span></div>
+                                          <div data-target="product-delete" class="basket-item__remove">
+                                            <div class="icon icon-delete"></div>
+                                          </div>
+                                        </div></a><a href="/l-ua/card.html" class="basket-item product-item basket-item_number-val basket-item_old-price">
+                                        <div class="basket-item__wrapper">
+                                          <div class="basket-item__img"><img src="images/catalog/image2.jpg" alt="Морозильная камера Liebherr G 1223" title="Морозильная камера Liebherr G 1223" class="image"></div>
+                                          <div class="basket-item__name">
+                                            <h3 class="subtitle">Морозильная камера Liebherr G 1223</h3>
+                                          </div>
+                                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value"></span></div>
+                                          <div class="basket-item__price product-item__price"><span class="value">224 880</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">228 180</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__quantity">
+                                                              <div class="input-number">
+                                                                <div class="input-number_arrow prev"></div>
+                                                                <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                                                <div class="input-number_arrow next"></div>
+                                                              </div>
+                                          </div>
+                                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">14b23f</span></div>
+                                          <div class="basket-item__all product-item__price"><span class="value">224 880</span><span class="currency">грн</span></div>
+                                          <div data-target="product-delete" class="basket-item__remove">
+                                            <div class="icon icon-delete"></div>
+                                          </div>
+                                        </div></a><a href="/l-ua/card.html" class="basket-item product-item basket-item_number-val">
+                                        <div class="basket-item__wrapper">
+                                          <div class="basket-item__img"><img src="images/catalog/image0.jpg" alt="Воздушный фильтр FreshAir" title="Воздушный фильтр FreshAir" class="image"></div>
+                                          <div class="basket-item__name">
+                                            <h3 class="subtitle">Воздушный фильтр FreshAir</h3>
+                                          </div>
+                                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value"></span></div>
+                                          <div class="basket-item__price product-item__price"><span class="value">226</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">234</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__quantity">
+                                                              <div class="input-number">
+                                                                <div class="input-number_arrow prev"></div>
+                                                                <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                                                <div class="input-number_arrow next"></div>
+                                                              </div>
+                                          </div>
+                                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">GG-jdbn-31f</span></div>
+                                          <div class="basket-item__all product-item__price"><span class="value">226</span><span class="currency">грн</span></div>
+                                          <div data-target="product-delete" class="basket-item__remove">
+                                            <div class="icon icon-delete"></div>
+                                          </div>
+                                        </div></a><a href="/l-ua/card.html" class="basket-item product-item basket-item_number-val basket-item_old-price">
+                                        <div class="basket-item__wrapper">
+                                          <div class="basket-item__img"><img src="images/catalog/image13.jpg" alt="Встраиваемый комплект холодильников Side by Side Liebherr ICUN 3324 + ICBN 3324" title="Встраиваемый комплект холодильников Side by Side Liebherr ICUN 3324 + ICBN 3324" class="image"></div>
+                                          <div class="basket-item__name">
+                                            <h3 class="subtitle">Встраиваемый комплект холодильников Side by Side Liebherr ICUN 3324 + ICBN 3324</h3>
+                                          </div>
+                                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value">Ультрафиолет</span></div>
+                                          <div class="basket-item__price product-item__price"><span class="value">234 870</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">255 270</span><span class="currency">грн</span></div>
+                                          <div class="basket-item__quantity">
+                                                              <div class="input-number">
+                                                                <div class="input-number_arrow prev"></div>
+                                                                <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                                                <div class="input-number_arrow next"></div>
+                                                              </div>
+                                          </div>
+                                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">15431f-hy</span></div>
+                                          <div class="basket-item__all product-item__price"><span class="value">234 870</span><span class="currency">грн</span></div>
+                                          <div data-target="product-delete" class="basket-item__remove">
+                                            <div class="icon icon-delete"></div>
+                                          </div>
+                                        </div></a>
+                  </div>
+                  <div class="basket-sidebar">
+                    <div class="basket-sidebar__item"><span class="title">Стоимость</span><span class="value">25 044 010</span><span class="currency">грн</span></div>
+                    <div class="basket-sidebar__item"><span class="title">Скидка</span><span class="value">44 010</span><span class="currency">грн</span></div>
+                    <div class="basket-sidebar__item basket-sidebar__final"><span class="title">К оплате</span><span class="value">25 000 000</span><span class="currency">грн</span></div>
+                                      <button type="submit" class="btn btn_buy"><span>Оформить заказ</span></button><a href="/l-ua/catalog.html" class="btn btn-link btn-basket-more"><span>Продолжить покупки</span></a>
+                                      <button type="submit" class="btn btn-link btn-basket-edit" data-target="cart-in"><span>Редактировать заказ</span></button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+        <div class="partners">
+          <div class="partners__header">Партнёр</div>
+          <ul class="partners__list">
+            <li class="partners__li"><a href="#partners.html" target="_blank" class="partners__link"><img data-src="images/partners/logo1.svg" alt="Best" title="Best"></a></li>
+            <li class="partners__li"><a href="#partners.html" target="_blank" class="partners__link"><img data-src="images/partners/logo4.svg" alt="Denon" title="Denon"></a></li>
+            <li class="partners__li"><a href="#partners.html" target="_blank" class="partners__link"><img data-src="images/partners/logo3.svg" alt="Blanco" title="Blanco"></a></li>
+          </ul>
+        </div>
       </main>
-      <footer class="footer footer-order">
+      <!--footer-->
+      <footer class="footer">
         <div class="container">
-          <div class="footer__wrapper"><span class="footer__dates">© 2010-2020 Украинский производитель одежды Kariant</span></div>
+          <div class="card-gallery"></div>
+          <div class="go-to-top"></div>
+          <div class="footer__wrapper">
+            <div class="footer__logo"><a href="#"><img data-src="images/logo-white.svg" alt="Liebherr" title="Liebherr">
+                <div class="anim-wrapper">
+                  <svg width="22" height="25" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <lineargradient id="linear-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="1" stop-color="#E5E5E5">
+                          <animate attributename="offset" values="1;1;1;1;1;0;0;0;0;0" dur="16s" begin="0s;grayEnd.end+8s;" id="gray" repeatCount="indefinite"></animate>
+                        </stop>
+                        <stop offset="0.5" stop-color="#4D60C4">
+                          <animate attributename="offset" values="0.5;1;" dur="8s" begin="gray.end" id="blue" repeatCount="indefinite"></animate>
+                        </stop>
+                        <stop offset="0" stop-color="#FFCE45">
+                          <animate attributename="offset" values="0;0.5;" dur="8s" begin="blue.end" id="yellow" repeatCount="indefinite"></animate>
+                        </stop>
+                      </lineargradient>
+                    </defs>
+                    <path d="M5.016 12.176C7.032 12.176 8.952 10.592 8.952 7.792C8.952 4.96 7.016 3.376 5.016 3.376C3.656 3.376 2.776 4.08 2.152 4.96V0.32H0.216V12H2.152V10.688C2.744 11.472 3.624 12.176 5.016 12.176ZM4.568 10.496C3.256 10.496 2.104 9.424 2.104 7.792C2.104 6.144 3.256 5.056 4.568 5.056C5.88 5.056 6.984 6.128 6.984 7.76C6.984 9.456 5.896 10.496 4.568 10.496ZM13.9268 12.144C14.6467 12.144 15.1908 11.984 15.6708 11.712V10.128C15.2868 10.32 14.9028 10.416 14.4707 10.416C13.8147 10.416 13.4308 10.112 13.4308 9.36V5.216H15.7028V3.552H13.4308V1.232H11.4947V3.552H10.4227V5.216H11.4947V9.664C11.4947 11.52 12.5027 12.144 13.9268 12.144Z" fill="url(#linear-gradient)"></path>
+                  </svg>
+                </div></a></div>
+            <div class="footer__phone header__phone">
+              <div class="header__phone-wrapper icon icon-phone js__phone-dropdown">
+                <div class="header__phone-header icon icon-normal_arr"><a href="tel:044 257 65 99" class="header__phone-header-link">(044) 257 65 99</a></div>
+                <ul style="display: none;" class="header__phone-dropdown">
+                  <li class="header__phone-item"><a href="tel:044 257 65 99" class="header__phone-link">(044) 257 65 99</a></li>
+                  <li class="header__phone-item"><a href="tel:044 257 65 99" class="header__phone-link">(044) 257 65 99</a></li>
+                  <li class="header__phone-item"><a href="tel:044 257 65 99" class="header__phone-link">(044) 257 65 99</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__social">
+              <ul class="social-list">
+                <li class="social-item"><a href="https://www.facebook.com/" target="_blank" rel="nofollow" class="icon-fb icon"></a></li>
+                <li class="social-item"><a href="https://www.instagram.com/" target="_blank" rel="nofollow" class="icon-insta icon"></a></li>
+                <li class="social-item"><a href="https://youtobe.com/" target="_blank" rel="nofollow" class="icon-youtube icon"></a></li>
+              </ul>
+            </div>
+            <div class="footer__contact">
+              <div class="footer__contact-title subtitle">График работы:</div>
+              <div class="footer__contact-item"><span>Пн-Пт:</span><span>9:00 - 19:00</span></div>
+              <div class="footer__contact-item"><span>Суббота:</span><span>10:00 - 17:00</span></div>
+              <div class="footer__contact-item"><span>Воскресенье:</span><span>Выходной</span></div>
+            </div>
+            <div class="footer__content">
+              <nav class="footer__content-nav">
+                <ul class="footer__content-wrapper">
+                  <li class="footer__content-item"><span class="footer__content-title subtitle">Оборудование</span>
+                    <ul class="footer__content-list">
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Холодильники, морозильные камеры</a></li>
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Винные шкафы, хьюмидор</a></li>
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Профессиональное оборудование</a></li>
+                    </ul>
+                  </li>
+                  <li class="footer__content-item"><span class="footer__content-title subtitle">Покупателю</span>
+                    <ul class="footer__content-list">
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Холодильники, морозильные камеры</a></li>
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Винные шкафы, хьюмидор</a></li>
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Профессиональное оборудование</a></li>
+                    </ul>
+                  </li>
+                  <li class="footer__content-item"><span class="footer__content-title subtitle">О компании</span>
+                    <ul class="footer__content-list">
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Холодильники, морозильные камеры</a></li>
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Винные шкафы, хьюмидор</a></li>
+                      <li class="footer__content-li"><a href="/l-ua/subcategory.html" class="footer__content-link">Профессиональное оборудование</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__copyright">© 2019 Liebherr</div>
+            <div class="footer__dev">
+              <div class="text">Разработка и поддержка сайта -</div><a href="https://artjoker.ua/" target="_blank" rel="nofollow" class="icon icon-artj-logo"></a>
+            </div>
+            <div class="footer__adaptive"><span data-text="Показать полную версию сайта" data-hidden="Показать мобильную версию сайта">Показать полную версию сайта</span></div>
+          </div>
         </div>
       </footer>
+      <!--include _popup-->
       <!-- popup SECTION-->
       <div class="popup-overlay">
         <div data-target="popup-order" class="popup popup__order">
           <div class="popup-header">
-            <h4 class="title">Ваш заказ успешно оформлен!</h4>
+            <div class="subtitle">Ваш заказ успешно оформлен!</div>
           </div>
           <div class="popup-content">
             <div class="content">В ближайшее время мы свяжемся с Вами</div>
@@ -519,66 +671,44 @@
         </div>
         <div data-target="popup-cart" class="popup popup__cart">
           <div class="popup-header">
-            <h4 class="title">Спасибо!</h4>
+            <div class="subtitle">Спасибо!</div>
           </div>
           <div class="popup-content">
-            <div class="content">Товар<a href="/card.html" class="btn btn-link" title="Осенняя утепленная куртка Plus Size"><span>Осенняя утепленная куртка Plus Size</span></a>добавлен
-                    <button type="submit" class="btn btn-link" title="корзина" data-target="cart-in"><span>в корзину</span>
-                    </button>
+            <div class="content">Товар добавлен
+                    <button type="submit" class="btn btn-link" data-target="cart-in"><span>в корзину</span></button>
             </div>
           </div>
-          <div class="close-btn close">
-            <div class="close-container">
-              <div class="leftright"></div>
-              <div class="rightleft"></div>
-              <div class="text">закрыть</div>
-            </div>
-          </div>
+          <div class="close-btn icon icon-close"></div>
         </div>
         <div data-target="popup-favorite" class="popup popup__favorite">
           <div class="popup-header">
-            <h4 class="title">Спасибо!</h4>
+            <div class="subtitle">Спасибо!</div>
           </div>
           <div class="popup-content">
-            <div class="content">Товар<a href="/card.html" class="btn btn-link" title="Осенняя утепленная куртка Plus Size"><span>Осенняя утепленная куртка Plus Size</span></a>добавлен<a href="/favorite.html" class="btn btn-link" title="избранное"><span>в избранное</span></a>
+            <div class="content">Товар добавлен<a href="/l-ua/favorites.html" class="btn btn-link"><span>в избранное</span></a>
             </div>
           </div>
-          <div class="close-btn close">
-            <div class="close-container">
-              <div class="leftright"></div>
-              <div class="rightleft"></div>
-              <div class="text">закрыть</div>
-            </div>
-          </div>
+          <div class="close-btn icon icon-close"></div>
         </div>
-        <div data-target="popup-favorite-del" class="popup popup__favorite-del">
+        <div data-target="popup-comparison" class="popup popup__comparison">
           <div class="popup-header">
-            <h4 class="title">Товар<a href="/card.html" class="btn btn-link" title="Осенняя утепленная куртка Plus Size"><span>Осенняя утепленная куртка Plus Size</span></a>
-            </h4>
+            <div class="subtitle">Спасибо!</div>
           </div>
           <div class="popup-content">
-            <div class="content">удален из<a href="/favorite.html" class="btn btn-link" title="избранное"><span>избранного</span></a>
+            <div class="content">Товар добавлен на<a href="/l-ua/compare-prod.html" class="btn btn-link"><span>страницу сравнения</span></a>
             </div>
           </div>
-          <div class="close-btn close">
-            <div class="close-container">
-              <div class="leftright"></div>
-              <div class="rightleft"></div>
-              <div class="text">закрыть</div>
-            </div>
-          </div>
+          <div class="close-btn icon icon-close"></div>
         </div>
         <div data-target="popup-product-delete" class="popup popup__product-delete">
           <div class="popup-header">
-            <h4 class="title">Удаление товара</h4>
+            <div class="subtitle">Удаление товара</div>
           </div>
           <div class="popup-content">
-            <div class="content">Товар<a href="/card.html" class="btn btn-link" title="Осенняя утепленная куртка Plus Size"><span>Осенняя утепленная куртка Plus Size</span></a>
+            <div class="content">Данный товар будет удален
               <div class="popup-buttons">
-                      <button type="submit" class="btn js__product-delete btn-transparent btn-small"><span>удалить</span>
-                      </button>
-                      <button type="submit" class="btn js__product-delete-reset btn-small"><span>не удалять</span>
-                      </button>
+                      <button type="submit" class="btn js__product-delete btn-transparent btn-small"><span>удалить</span></button>
+                      <button type="submit" class="btn js__product-delete-reset btn-small"><span>не удалять</span></button>
               </div>
             </div>
           </div>
@@ -586,357 +716,201 @@
         <div data-target="popup-call" class="popup popup__call">
           <form class="popup-content js_validate">
             <div class="popup-header">
-              <h4 class="title">В ближайшее время мы Вам перезвоним</h4>
-            </div>
-            <div class="input-container">
-              <label for="name-call" class="req">Имя</label>
-              <input type="text" name="name" id="name-call" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
-              <div class="text-error">Поле  не заполнено</div>
-            </div>
-            <div class="input-container input-phone">
-              <label for="phone" class="req">Ваш номер телефона</label>
-              <input type="tel" id="phone" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)" class="validate">
-              <div class="text-error">Поле  не заполнено</div>
-            </div>
-                  <button type="submit" class="btn"><span>перезвоните мне</span>
-                  </button>
-          </form>
-          <div class="close-btn close">
-            <div class="close-container">
-              <div class="leftright"></div>
-              <div class="rightleft"></div>
-              <div class="text">закрыть</div>
-            </div>
-          </div>
-        </div>
-        <div data-target="popup-one-click" class="popup popup__one-click">
-          <form class="popup-content js_validate">
-            <div class="popup-header">
-              <h4 class="title">Заказать товар</h4><a href="/card.html" class="btn btn-link" title="Осенняя утепленная куртка Plus Size"><span>Осенняя утепленная куртка Plus Size</span></a>
-            </div>
-            <div class="input-container">
-              <label for="name-one-click" class="req">Имя</label>
-              <input type="text" name="name" id="name-one-click" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
-              <div class="text-error">Поле  не заполнено</div>
-            </div>
-            <div class="input-container">
-              <label for="email-one-click" class="req">Email</label>
-              <input type="email" name="email" id="email-one-click" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" class="validate">
-              <div class="text-error">Поле «Email» не заполнено</div>
-            </div>
-            <div class="input-container input-phone">
-              <label for="phone-one-click" class="req">Ваш номер телефона</label>
-              <input type="tel" id="phone-one-click" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)" class="validate">
-              <div class="text-error">Поле  не заполнено</div>
-            </div>
-                  <button type="submit" class="btn"><span>оформить заказ</span>
-                  </button>
-          </form>
-          <div class="close-btn close">
-            <div class="close-container">
-              <div class="leftright"></div>
-              <div class="rightleft"></div>
-              <div class="text">закрыть</div>
-            </div>
-          </div>
-        </div>
-        <div data-target="popup-missing" class="popup popup__missing">
-          <form class="popup-content js_validate">
-            <div class="popup-header">
-              <h4 class="title">В ближайшее время мы пришлём Вам уведомление о наличии</h4>
-            </div>
-            <div class="popup-content">
-              <div class="content">Пожалуйста, оставьте свой контактный e-mail.</div>
-              <div class="content">Мы оповестим вас о наличии интересующего вас товара, как только данный товар поступит на склад.</div>
+              <div class="subtitle">В ближайшее время мы Вам перезвоним</div>
             </div>
             <div class="input-container">
               <label for="name" class="req">Имя</label>
               <input type="text" name="name" id="name" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
+              <div class="delete"></div>
+              <div class="text-error">Поле  не заполнено</div>
+            </div>
+            <div class="input-container">
+              <label for="phone" class="req">Телефон</label>
+              <input type="tel" id="phone" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)" class="validate">
+              <div class="delete"></div>
+              <div class="text-error">Поле  не заполнено</div>
+            </div>
+                  <button type="submit" class="btn"><span>перезвоните мне</span></button>
+          </form>
+          <div class="close-btn icon icon-close"></div>
+        </div>
+        <div data-target="popup-call-mobile" class="popup popup__call-mobile">
+          <form class="popup-content js_validate">
+            <div class="popup-header"><a href="tel:044 257 65 99">(044) 257 65 99</a><a href="tel:044 257 65 99">(044) 257 65 99</a><a href="tel:044 257 65 99">(044) 257 65 99</a></div>
+            <div class="popup-body">
+              <div class="input-container">
+                <label for="phone" class="req">Ваш телефон</label>
+                <input type="tel" id="phone" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)" class="validate">
+                <div class="delete"></div>
+                <div class="text-error">Поле  не заполнено</div>
+              </div>
+                    <button type="submit" class="btn"><span>перезвоните мне</span></button>
+            </div>
+          </form>
+          <div class="close-btn icon icon-close"></div>
+        </div>
+        <div data-target="popup-missing" class="popup popup__call">
+          <form class="popup-content js_validate">
+            <div class="popup-header">
+              <div class="subtitle">В ближайшее время мы пришлём Вам уведомление о наличии</div>
+            </div>
+            <div class="popup-content">
+              <div class="content">Пожалуйста, оставьте свой контактный<br>e-mail.</div>
+              <div class="content">Мы оповестим вас о наличии интересующего вас товара, как только данный товар поступит на склад.</div>
+            </div>
+            <div class="input-container">
+              <label for="name2" class="req">Имя</label>
+              <input type="text" name="name" id="name2" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
+              <div class="delete"></div>
               <div class="text-error">Поле  не заполнено</div>
             </div>
             <div class="input-container">
               <label for="email" class="req">Email</label>
-              <input type="email" name="email" id="email" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" class="validate">
+              <input type="email" name="email" id="email" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" data-error-min="Email: не менее 6 символов" data-error-max="Email: не более 30 символов" class="validate">
+              <div class="delete"></div>
               <div class="text-error">Поле «Email» не заполнено</div>
             </div>
-                  <button type="submit" class="btn"><span>сообщите мне о наличии товара</span>
-                  </button>
+                  <button type="submit" class="btn"><span>сообщите мне о наличии товара</span></button>
           </form>
-          <div class="close-btn close">
-            <div class="close-container">
-              <div class="leftright"></div>
-              <div class="rightleft"></div>
-              <div class="text">закрыть</div>
+          <div class="close-btn icon icon-close"></div>
+        </div>
+        <div data-target="popup-order" class="popup popup__call">
+          <form class="popup-content js_validate">
+            <div class="popup-header">
+              <div class="subtitle">Ваш заказ оформлен.<br>В ближайшее время мы Вам перезвоним</div>
             </div>
-          </div>
+            <div class="input-container">
+              <label for="phone2" class="req">Телефон</label>
+              <input type="tel" id="phone2" required="required" data-validate="phone" data-error-wrong="Поле «Телефон» заполнено не верно" data-error-empty="Введите колличество символов(11)" class="validate">
+              <div class="delete"></div>
+              <div class="text-error">Поле  не заполнено</div>
+            </div>
+                  <button type="submit" class="btn"><span>перезвоните мне</span></button>
+          </form>
+          <div class="close-btn icon icon-close"></div>
         </div>
         <div data-target="popup-mail" class="popup popup__mail">
           <div class="popup-header">
-            <h4 class="title">Спасибо!</h4>
+            <div class="subtitle">Спасибо!</div>
           </div>
           <div class="popup-content">
             <div class="content">Ваше сообщение отправлено успешно!</div>
           </div>
-          <div class="close-btn close">
-            <div class="close-container">
-              <div class="leftright"></div>
-              <div class="rightleft"></div>
-              <div class="text">закрыть</div>
-            </div>
-          </div>
+          <div class="close-btn icon icon-close"></div>
         </div>
-        <div data-target="popup-phone" class="popup popup__phone">
+        <div data-target="popup-cart-in" style="display: none;" class="popup popup__cart-in">
+          <div class="popup-wrapper"></div>
           <div class="popup-header">
-            <h4 class="title">Контактные телефоны</h4>
+            <div class="subtitle">Сейчас в корзине</div>
           </div>
           <div class="popup-content">
-            <div class="subtitle">Консультации и заказ по телефонам</div><a href="tel:+380676236049" class="btn-link-unline">+ 38 067 623 60 49</a><a href="tel:+380507396878" class="btn-link-unline">+ 38 050 739 68 78</a><a href="tel:+380931704799" class="btn-link-unline">+ 38 093 170 47 99</a><a href="tel:+380443347863" class="btn-link-unline">+ 38 044 334 78 63</a>
-          </div>
-          <div class="popup-content">
-            <div class="subtitle">График работы интернет-магазина</div>
-            <ul>
-              <li>ПН-ПТ</li>
-              <li><span>с</span><span>9:00</span><span>до</span><span>18:00</span></li>
-            </ul>
-          </div>
-          <div class="close-btn close">
-            <div class="close-container">
-              <div class="leftright"></div>
-              <div class="rightleft"></div>
-              <div class="text">закрыть</div>
-            </div>
-          </div>
-        </div>
-        <div data-target="popup-recover" class="popup popup__recover">
-          <div class="popup-header">
-            <h4 class="title">Забыли пароль?</h4>
-          </div>
-          <form class="popup-content js_validate">
-            <div class="content">Введите email, на который зарегестрирован ваш профиль и мы вышлем вам новый пароль.</div>
-            <div class="input-container">
-              <label for="email2" class="req">Email</label>
-              <input type="email" name="email" id="email2" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" class="validate">
-              <div class="text-error">Поле «Email» не заполнено</div>
-            </div>
-                  <button type="submit" class="btn"><span>Получить новый пароль</span>
-                  </button>
-          </form>
-          <div class="close-btn close">
-            <div class="close-container">
-              <div class="leftright"></div>
-              <div class="rightleft"></div>
-              <div class="text">закрыть</div>
-            </div>
-          </div>
-        </div>
-        <div data-target="popup-cart-in" class="popup popup__cart-in">
-          <div class="popup-holder">
-            <div class="popup-wrapper">
-              <div class="popup-header">
-                <div class="close-btn close icon icon-left"></div>
-                <h4 class="title">Корзина<span>(5)</span></h4>
-              </div>
-              <div class="popup-content"><a href="/card.html" class="basket-item">
-                        <div class="basket-item__img"><img src="images/products/5.jpg" alt="Тренч Stimma Джеси 4153 S Пудра" title="Тренч Stimma Джеси 4153 S Пудра" class="image"></div>
-                        <div class="basket-item__info-wrapper">
-                          <div class="basket-item__info">
-                            <div class="basket-item__name">
-                              <h3 class="title">Тренч Stimma Джеси 4153 S Пудра</h3>
-                            </div>
-                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">42</span></div>
+            <div class="basket-wrap">
+              <div class="basket-content"><a href="/l-ua/card.html" class="basket-item product-item basket-item_number-val basket-item_all-price">
+                        <div class="basket-item__wrapper">
+                          <div class="basket-item__img"><img src="images/catalog/image8.jpg" alt="Холодильник Liebherr CNP 4858" title="Холодильник Liebherr CNP 4858" class="image"></div>
+                          <div class="basket-item__name">
+                            <h3 class="subtitle">Холодильник Liebherr CNP 4858</h3>
                           </div>
-                          <div class="basket-item__price"><span class="value">142 402</span><span class="currency">грн</span></div>
-                        </div>
-                        <div class="basket-item__controls">
+                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value"></span></div>
+                          <div class="basket-item__price product-item__price"><span class="value">25 335</span><span class="currency">грн</span></div>
+                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">26 375</span><span class="currency">грн</span></div>
+                          <div class="basket-item__quantity">
+                                  <div class="input-number">
+                                    <div class="input-number_arrow prev"></div>
+                                    <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                    <div class="input-number_arrow next"></div>
+                                  </div>
+                          </div>
+                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value"></span></div>
+                          <div class="basket-item__all product-item__price"><span class="value">25 335</span><span class="currency">грн</span></div>
                           <div data-target="product-delete" class="basket-item__remove">
-                            <div class="icon icon-close"></div>
+                            <div class="icon icon-delete"></div>
                           </div>
-                                <div class="input-number">
-                                  <div class="input-number_arrow prev"></div>
-                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                  <div class="input-number_arrow next"></div>
-                                </div>
-                        </div></a><a href="/card.html" class="basket-item">
-                        <div class="basket-item__img"><img src="images/products/6.jpg" alt="Тренч Stimma Джеси 4151 Xs Графитовый" title="Тренч Stimma Джеси 4151 Xs Графитовый" class="image"></div>
-                        <div class="basket-item__info-wrapper">
-                          <div class="basket-item__info">
-                            <div class="basket-item__name">
-                              <h3 class="title">Тренч Stimma Джеси 4151 Xs Графитовый</h3>
-                            </div>
-                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">45</span></div>
+                        </div></a><a href="/l-ua/card.html" class="basket-item product-item basket-item_number-val basket-item_all-price basket-item_old-price">
+                        <div class="basket-item__wrapper">
+                          <div class="basket-item__img"><img src="images/catalog/image2.jpg" alt="Морозильная камера Liebherr G 1223" title="Морозильная камера Liebherr G 1223" class="image"></div>
+                          <div class="basket-item__name">
+                            <h3 class="subtitle">Морозильная камера Liebherr G 1223</h3>
                           </div>
-                          <div class="basket-item__price"><span class="value">297</span><span class="currency">грн</span></div>
-                        </div>
-                        <div class="basket-item__controls">
+                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value"></span></div>
+                          <div class="basket-item__price product-item__price"><span class="value">224 880</span><span class="currency">грн</span></div>
+                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">228 180</span><span class="currency">грн</span></div>
+                          <div class="basket-item__quantity">
+                                  <div class="input-number">
+                                    <div class="input-number_arrow prev"></div>
+                                    <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                    <div class="input-number_arrow next"></div>
+                                  </div>
+                          </div>
+                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">14b23f</span></div>
+                          <div class="basket-item__all product-item__price"><span class="value">224 880</span><span class="currency">грн</span></div>
                           <div data-target="product-delete" class="basket-item__remove">
-                            <div class="icon icon-close"></div>
+                            <div class="icon icon-delete"></div>
                           </div>
-                                <div class="input-number">
-                                  <div class="input-number_arrow prev"></div>
-                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                  <div class="input-number_arrow next"></div>
-                                </div>
-                        </div></a><a href="/card.html" class="basket-item">
-                        <div class="basket-item__img"><img src="images/products/7.jpg" alt="Куртка Stimma Кортика 3968 Xs Графитовый" title="Куртка Stimma Кортика 3968 Xs Графитовый" class="image"></div>
-                        <div class="basket-item__info-wrapper">
-                          <div class="basket-item__info">
-                            <div class="basket-item__name">
-                              <h3 class="title">Куртка Stimma Кортика 3968 Xs Графитовый</h3>
-                            </div>
-                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">34</span></div>
+                        </div></a><a href="/l-ua/card.html" class="basket-item product-item basket-item_number-val basket-item_all-price">
+                        <div class="basket-item__wrapper">
+                          <div class="basket-item__img"><img src="images/catalog/image0.jpg" alt="Воздушный фильтр FreshAir" title="Воздушный фильтр FreshAir" class="image"></div>
+                          <div class="basket-item__name">
+                            <h3 class="subtitle">Воздушный фильтр FreshAir</h3>
                           </div>
-                          <div class="basket-item__price"><span class="value">4579</span><span class="currency">грн</span></div>
-                        </div>
-                        <div class="basket-item__controls">
+                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value"></span></div>
+                          <div class="basket-item__price product-item__price"><span class="value">226</span><span class="currency">грн</span></div>
+                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">234</span><span class="currency">грн</span></div>
+                          <div class="basket-item__quantity">
+                                  <div class="input-number">
+                                    <div class="input-number_arrow prev"></div>
+                                    <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                    <div class="input-number_arrow next"></div>
+                                  </div>
+                          </div>
+                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">GG-jdbn-31f</span></div>
+                          <div class="basket-item__all product-item__price"><span class="value">226</span><span class="currency">грн</span></div>
                           <div data-target="product-delete" class="basket-item__remove">
-                            <div class="icon icon-close"></div>
+                            <div class="icon icon-delete"></div>
                           </div>
-                                <div class="input-number">
-                                  <div class="input-number_arrow prev"></div>
-                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                  <div class="input-number_arrow next"></div>
-                                </div>
-                        </div></a><a href="/card.html" class="basket-item">
-                        <div class="basket-item__img"><img src="images/products/8.jpg" alt="Куртка Stimma Карелия 4181 Xs Серебряный" title="Куртка Stimma Карелия 4181 Xs Серебряный" class="image"></div>
-                        <div class="basket-item__info-wrapper">
-                          <div class="basket-item__info">
-                            <div class="basket-item__name">
-                              <h3 class="title">Куртка Stimma Карелия 4181 Xs Серебряный</h3>
-                            </div>
-                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">38</span></div>
+                        </div></a><a href="/l-ua/card.html" class="basket-item product-item basket-item_number-val basket-item_all-price basket-item_old-price">
+                        <div class="basket-item__wrapper">
+                          <div class="basket-item__img"><img src="images/catalog/image13.jpg" alt="Встраиваемый комплект холодильников Side by Side Liebherr ICUN 3324 + ICBN 3324" title="Встраиваемый комплект холодильников Side by Side Liebherr ICUN 3324 + ICBN 3324" class="image"></div>
+                          <div class="basket-item__name">
+                            <h3 class="subtitle">Встраиваемый комплект холодильников Side by Side Liebherr ICUN 3324 + ICBN 3324</h3>
                           </div>
-                          <div class="basket-item__price"><span class="value">25 742</span><span class="currency">грн</span></div>
-                        </div>
-                        <div class="basket-item__controls">
+                          <div class="basket-item__color"><span class="title">Цвет:</span><span class="value">Ультрафиолет</span></div>
+                          <div class="basket-item__price product-item__price"><span class="value">234 870</span><span class="currency">грн</span></div>
+                          <div class="basket-item__old-price product-item__price product-item__price_old"><span class="value">255 270</span><span class="currency">грн</span></div>
+                          <div class="basket-item__quantity">
+                                  <div class="input-number">
+                                    <div class="input-number_arrow prev"></div>
+                                    <input type="number" readonly min="1" max="99" value="1" step="1" class="input-number_input">
+                                    <div class="input-number_arrow next"></div>
+                                  </div>
+                          </div>
+                          <div class="basket-item__vendor-code"><span class="title">Артикул:</span><span class="value">15431f-hy</span></div>
+                          <div class="basket-item__all product-item__price"><span class="value">234 870</span><span class="currency">грн</span></div>
                           <div data-target="product-delete" class="basket-item__remove">
-                            <div class="icon icon-close"></div>
+                            <div class="icon icon-delete"></div>
                           </div>
-                                <div class="input-number">
-                                  <div class="input-number_arrow prev"></div>
-                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                  <div class="input-number_arrow next"></div>
-                                </div>
-                        </div></a><a href="/card.html" class="basket-item">
-                        <div class="basket-item__img"><img src="images/products/9.jpg" alt="Женская куртка Stimma Веста 4799 L Шоколадный" title="Женская куртка Stimma Веста 4799 L Шоколадный" class="image"></div>
-                        <div class="basket-item__info-wrapper">
-                          <div class="basket-item__info">
-                            <div class="basket-item__name">
-                              <h3 class="title">Женская куртка Stimma Веста 4799 L Шоколадный</h3>
-                            </div>
-                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">44</span></div>
-                          </div>
-                          <div class="basket-item__price"><span class="value">142</span><span class="currency">грн</span></div>
-                        </div>
-                        <div class="basket-item__controls">
-                          <div data-target="product-delete" class="basket-item__remove">
-                            <div class="icon icon-close"></div>
-                          </div>
-                                <div class="input-number">
-                                  <div class="input-number_arrow prev"></div>
-                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                  <div class="input-number_arrow next"></div>
-                                </div>
-                        </div></a><a href="/card.html" class="basket-item">
-                        <div class="basket-item__img"><img src="images/products/10.jpg" alt="Женская куртка Stimma Веста 4800 Xs Черный" title="Женская куртка Stimma Веста 4800 Xs Черный" class="image"></div>
-                        <div class="basket-item__info-wrapper">
-                          <div class="basket-item__info">
-                            <div class="basket-item__name">
-                              <h3 class="title">Женская куртка Stimma Веста 4800 Xs Черный</h3>
-                            </div>
-                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">46</span></div>
-                          </div>
-                          <div class="basket-item__price"><span class="value">852</span><span class="currency">грн</span></div>
-                        </div>
-                        <div class="basket-item__controls">
-                          <div data-target="product-delete" class="basket-item__remove">
-                            <div class="icon icon-close"></div>
-                          </div>
-                                <div class="input-number">
-                                  <div class="input-number_arrow prev"></div>
-                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                  <div class="input-number_arrow next"></div>
-                                </div>
-                        </div></a><a href="/card.html" class="basket-item">
-                        <div class="basket-item__img"><img src="images/products/11.jpg" alt="Пуховик ПВ-849 (и/м) Лаке Тон 573" title="Пуховик ПВ-849 (и/м) Лаке Тон 573" class="image"></div>
-                        <div class="basket-item__info-wrapper">
-                          <div class="basket-item__info">
-                            <div class="basket-item__name">
-                              <h3 class="title">Пуховик ПВ-849 (и/м) Лаке Тон 573</h3>
-                            </div>
-                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">40</span></div>
-                          </div>
-                          <div class="basket-item__price"><span class="value">226</span><span class="currency">грн</span></div>
-                        </div>
-                        <div class="basket-item__controls">
-                          <div data-target="product-delete" class="basket-item__remove">
-                            <div class="icon icon-close"></div>
-                          </div>
-                                <div class="input-number">
-                                  <div class="input-number_arrow prev"></div>
-                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                  <div class="input-number_arrow next"></div>
-                                </div>
-                        </div></a><a href="/card.html" class="basket-item">
-                        <div class="basket-item__img"><img src="images/products/12.jpg" alt="Парка демисезонная с нашивками" title="Парка демисезонная с нашивками" class="image"></div>
-                        <div class="basket-item__info-wrapper">
-                          <div class="basket-item__info">
-                            <div class="basket-item__name">
-                              <h3 class="title">Парка демисезонная с нашивками</h3>
-                            </div>
-                            <div class="basket-item__size"><span class="size">Размер:</span><span class="value">50</span></div>
-                          </div>
-                          <div class="basket-item__price"><span class="value">14 999</span><span class="currency">грн</span></div>
-                        </div>
-                        <div class="basket-item__controls">
-                          <div data-target="product-delete" class="basket-item__remove">
-                            <div class="icon icon-close"></div>
-                          </div>
-                                <div class="input-number">
-                                  <div class="input-number_arrow prev"></div>
-                                  <input type="number" min="1" max="99" value="1" step="1" readonly class="input-number_input">
-                                  <div class="input-number_arrow next"></div>
-                                </div>
                         </div></a>
               </div>
-            </div>
-            <div class="popup-footer">
-              <div class="value"><span class="final">Итого:</span><span class="sum">4 850 грн</span></div><a href="/order-page1.html" class="btn"><span>Оформить заказ</span></a>
-            </div>
-          </div>
-        </div>
-        <div data-target="popup-log" class="popup popup__log">
-          <form class="popup-content js_validate">
-            <div class="popup-header">
-              <h4 class="title">Авторизируйтесь</h4>
-            </div>
-            <div class="input-container">
-              <label for="email-one-click" class="req">Email</label>
-              <input type="email" name="email" id="email-log" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" class="validate">
-              <div class="text-error">Поле «Email» не заполнено</div>
-            </div>
-            <div class="input-container">
-              <label for="password" class="req">Пароль</label>
-              <input id="password" type="password" name="password" required="required" data-validate="pass" data-error-wrong="Поле заполнено не верно" data-error-empty="Поле не заполнено" data-error-min="Пароль: не менее 6 символов" data-error-max="Пароль: не более 20 символов" class="validate password">
-              <div class="text-error">Поле не заполнено</div>
-            </div>
-                  <button type="submit" class="btn"><span>войти</span>
-                  </button>
-          </form>
-          <div class="close-btn close">
-            <div class="close-container">
-              <div class="leftright"></div>
-              <div class="rightleft"></div>
-              <div class="text">закрыть</div>
+              <div class="basket-sidebar">
+                <div class="basket-sidebar__item"><span class="title">Стоимость</span><span class="value">25 044 010</span><span class="currency">грн</span></div>
+                <div class="basket-sidebar__item"><span class="title">Скидка</span><span class="value">44 010</span><span class="currency">грн</span></div>
+                <div class="basket-sidebar__item basket-sidebar__final"><span class="title">К оплате</span><span class="value">25 000 000</span><span class="currency">грн</span></div>
+                              <button type="submit" class="btn btn_buy"><span>Оформить заказ</span></button><a href="/l-ua/catalog.html" class="btn btn-link btn-basket-more"><span>Продолжить покупки</span></a>
+                              <button type="submit" class="btn btn-link btn-basket-edit" data-target="cart-in"><span>Редактировать заказ</span></button>
+              </div>
             </div>
           </div>
+          <div class="close-btn icon icon-close"></div>
         </div>
       </div>
+      <!--include _popup-->
+      <!--footer-->
     </div>
-    <link rel="stylesheet" type="text/css" href="css/lib.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!--link(rel='stylesheet', type='text/css', href='css/main.min.css')-->
     <script type="text/javascript" src="js/lib.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNAljGFFDKq6W69dSVoW52nEhHtQ8nV78&amp;language=ru"></script>
+    <!--script(type='text/javascript', src='js/main.min.js')-->
+    <!--script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.js')-->
+    <!--script(type='text/javascript', src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js")-->
     <script type="text/javascript" src="js/main.js"></script>
-    <!--script(type='text/javascript', src='js/main.min.js') разкоментить по окончанию разработки, закомментить в админке main.js-->
   </body>
 </html>

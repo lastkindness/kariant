@@ -1,0 +1,174 @@
+.news-one {
+  &-grid {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include respond-to(tablet-1030) {
+      flex-wrap: wrap;
+    }
+  }
+  &__container {
+    margin-right: 30px;
+    margin-bottom: 0;
+    width: calc(80% - 30px);
+    @include respond-to(tablet-1030) {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    @include respond-to(sm) {
+      margin-right: 0px;
+      margin-bottom: 20px;
+    }
+  }
+  &__sidebar {
+    width: 20%;
+    margin-bottom: 0;
+    order: 2;
+    @include respond-to(tablet-1030) {
+      width: 100%;
+    }
+  }
+  &__content {
+    margin-bottom: 50px;
+    color: $textGray;
+    img {
+      width: 100%;
+      max-width: 100%;
+      text-align: left;
+    }
+    h2 {
+      margin: 50px 0 30px;
+      color: $text;
+      @include respond-to(sm) {
+        margin: 20px 0 10px;
+      }
+    }
+    p {
+      color: $textGray;
+      margin: 20px 0;
+    }
+    ul, ol {
+      margin: 15px 0;
+      color: $textGray;
+    }
+    ul {
+      li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 140%;
+        @include respond-to(md){
+          font-size: 14px;
+          line-height: 120%;
+        }
+        &:before {
+          content: "●";
+          position: absolute;
+          color: $text;
+          left: 0;
+          top: 0;
+          background-color: unset;
+        }
+      }
+    }
+    ol {
+      padding-left: 40px;
+    }
+    @include respond-to(sm) {
+      margin-bottom: 20px;
+    }
+  }
+  &__header {
+    margin-bottom: 20px;
+    .news-item__date {
+      padding: 0;
+      color: $textGray;
+    }
+    .title {
+      margin: 0 0 20px;
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding: 20px 0;
+    border-top: 2px solid $lines;
+    @include respond-to(xs-600) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn-link {
+      text-decoration: none;
+      color: $text;
+      font-size: 14px;
+      display: flex;
+      align-items: center;justify-content: space-between;
+      @include anim;
+      span {
+        color: $text;
+        @include anim;
+      }
+      &:before {
+        color: transparent;
+        @include anim;
+        @include respond-to(xs-600) {
+          color: $text;
+        }
+      }
+      &:first-child {
+        @include respond-to(xs-600) {
+          justify-content: flex-start;
+        }
+        &:before {
+          order: 0;
+          margin-left: 0;
+          margin-right: 10px;
+        }
+      }
+      &:last-child {
+        @include respond-to(xs-600) {
+          justify-content: flex-end;
+        }
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        span {
+          color: $elements;
+          @include anim;
+        }
+        &:before {
+          color: $text;
+          @include anim;
+        }
+      }
+      @include respond-to(xs-600) {
+        width: 100% !important;
+        margin-bottom: 15px;
+        justify-content: center;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &-page {
+    .page__header {
+      margin-bottom: 0;
+    }
+  }
+  &__sidebar {
+    .news-item {
+      margin-bottom: 30px;
+      @include respond-to(sm) {
+        margin-bottom: 15px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
