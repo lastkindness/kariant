@@ -9416,7 +9416,13 @@ footer {
       text-align: center; } }
   .error__text .title {
     color: #CFC6C3;
-    margin: 0; }
+    margin: 0;
+    font-size: 100px;
+    font-family: 'ProximaNova', sans-serif;
+    font-weight: 700;
+    -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    line-height: 1em; }
   .error__text .subtitle {
     color: #CFC6C3;
     margin: 0;

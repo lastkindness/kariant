@@ -45,6 +45,9 @@
     .title {
       color: $elements;
       margin: 0;
+      font-size: 100px;
+      @include fb;
+      line-height: 1em;
     }
     .subtitle {
       color: $elements;
