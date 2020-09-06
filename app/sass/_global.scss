@@ -425,6 +425,12 @@ a {
   &_new {
     color: $select;
   }
+  &_sale {
+    color: $attention;
+  }
+  &_top {
+    color: $accent;
+  }
 }
 
 .label-link {
@@ -972,9 +978,10 @@ section {
     order: 2;
   }
   &.page__header {
-    margin: 12px 0 36px;
+    padding: 12px 0 36px;
+    margin: 0;
     @include respond-to(sm) {
-      margin: 24px 0 32px;
+      padding: 24px 0 32px;
     }
   }
   @include respond-to(md) {
@@ -1362,6 +1369,143 @@ section {
 .back {
   display: inline-flex;
   align-items: center;
+}
+
+.share {
+  text-transform: uppercase;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: $black;
+  @include fm;
+  .icon {
+    font-size: 20px;
+    margin-right: 11px;
+  }
+}
+
+/* * Pure CSS star rating that works without reversing order * of inputs * ------------------------------------------------------- * NOTE: For the styling to work, there needs to be a radio * input selected by default. There also needs to be a * radio input before the first star, regardless of * whether you offer a 'no rating' or 0 stars option * * This codepen uses FontAwesome icons */
+#full-stars-example-two {
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .rating-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    &:hover {
+      .rating__label {
+        .rating__icon--star {
+          color: $accent;
+        }
+      }
+    }
+  }
+  .rating {
+    &__icon {
+      pointer-events: none;
+    }
+    &__input {
+      position: absolute !important;
+      left: -9999px !important;
+      &--none {
+        display: none;
+      }
+    }
+    &__label {
+      cursor: pointer;
+      padding: 0 0.1em;
+      font-size: 2rem;
+      position: static;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: unset;
+      span {
+        font-size: 13px;
+        line-height: 24px;
+        color: $textDark;
+      }
+    }
+  }
+}
+
+#full-stars-example-two .rating__icon--star {
+  color: $accent;
+}
+#full-stars-example-two .rating__input:checked ~ .rating__label .rating__icon--star {
+  color: $gray3;
+}
+#full-stars-example-two .rating-group:hover .rating__label .rating__icon--star {
+  color: $accent;
+}
+#full-stars-example-two .rating__input:hover ~ .rating__label .rating__icon--star {
+  color: $gray3;
+}
+
+.star-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 20px;
+  .star {
+    margin: 0 5px 0 0;
+    font-size: 16px;
+    color: $elements;
+    opacity: 0.8;
+    i {
+      margin: 0;
+    }
+    &.active {
+      color: $accent;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  span {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    line-height: 16px;
+    color: $text;
+    border-bottom: 1px dashed $text;
+  }
+}
+
+.reviews {
+  &__item {
+    display: flex;
+    &-content {
+      //width: calc(100% - 140px);
+      //padding: 48px 0;
+      .star-list {
+        margin-bottom: 11px;
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
 
 // general end

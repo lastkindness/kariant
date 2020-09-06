@@ -1,90 +1,625 @@
 include ../../components/_button
+include ../../components/_button
 include ../../components/_input-number
 section.card-info
-    .card-sidebar
-        .card-sidebar__wrapper
-            .card-sidebar__image
-                .card__image_loupe
-                    .card__image_slider-small
-                        .card__image_slider-small-slide
-                            img(data-src='images/keys/key1.jpeg', title='PK RENAULT NE72 2кн', alt='PK RENAULT NE72 2кн', data-image-index='1')
-                        .card__image_slider-small-slide
-                            img(data-src='images/keys/key2.jpeg', title='CLA3G JMA', alt='CLA3G JMA', data-image-index='2')
-                        .card__image_slider-small-slide
-                            img(data-src='images/keys/key3.jpeg', title='PK MERCEDES BENZ 3КН ЧЕРНЫЙ ДО 1998Г С МЕХАНИЧЕСКИЙ КЛЮЧОМ', alt='PK MERCEDES BENZ 3КН ЧЕРНЫЙ ДО 1998Г С МЕХАНИЧЕСКИЙ КЛЮЧОМ', data-image-index='3')
-                        .card__image_slider-small-slide
-                            img(data-src='images/keys/key4.jpeg', title='PK RENAULT VAC102 3КН NO LOGO', alt='PK RENAULT VAC102 3КН NO LOGO', data-image-index='4')
-                        .card__image_slider-small-slide
-                            img(data-src='images/keys/key5.jpeg', title='Выкидной Ключ HYUNDAI i20,i30 3кн ID60(6F) 433MHz RKE-4F04 с 2012г', alt='Выкидной Ключ HYUNDAI i20,i30 3кн ID60(6F) 433MHz RKE-4F04 с 2012г', data-image-index='5')
-                        .card__image_slider-small-slide.card-info__image_video
-                            img(data-src='images/keys/key6.jpeg', title='Ключ CHEVROLET LACHETI 3кн ID60 434MHz', alt='Ключ CHEVROLET LACHETI 3кн ID60 434MHz', data-image-index='6')
+    .container
+        .card-title
+            h1.title.main-title Тренч Лилия Бежевый
+            .vendor
+                span.title Код товара:
+                span.value 124256
+            .missing
+                .icon.icon-check
+                | Товар в наличии
+            .stars
+                ul.star-list
+                    li.star.active
+                        i.fa.fa-star
+                    li.star.active
+                        i.fa.fa-star
+                    li.star.active
+                        i.fa.fa-star
+                    li.star.active
+                        i.fa.fa-star
+                    li.star
+                        i.fa.fa-star
+                span 4 отзыва
+        .card-sidebar
+            .card-sidebar__wrapper
+                .card-sidebar__image
+                    .card-sidebar__image_loupe.active
+                        .card__image_slider-small
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/23.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='1')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/18.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='2')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/19.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='3')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/20.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='4')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/21.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='5')
+                            .card__image_slider-small-slide.card-info__image_video
+                                img(data-src='images/products/22.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='6')
 
-                    .card__image_slider-big.gallery-images
-                        a(href='images/keys/key1.jpeg', data-fancybox="gallery", data-title='PK RENAULT NE72 2кн')
-                            .card__image_slider-big-slide
-                                img(data-src='images/keys/key1.jpeg', title='PK RENAULT NE72 2кн', alt='PK RENAULT NE72 2кн', id="image-1", data-zoom-image='images/keys/key1.jpeg').product-image
-                        a(href='images/keys/key2.jpeg', data-fancybox="gallery", data-title='CLA3G JMA')
-                            .card__image_slider-big-slide
-                                img(data-src='images/keys/key2.jpeg', title='CLA3G JMA', alt='CLA3G JMA', id="image-2", data-zoom-image='images/keys/key2.jpeg').product-image
-                        a(href='images/keys/item-image2.jpeg', data-fancybox="gallery", data-title='PK MERCEDES BENZ 3КН ЧЕРНЫЙ ДО 1998Г С МЕХАНИЧЕСКИЙ КЛЮЧОМ')
-                            .card__image_slider-big-slide
-                                img(data-src='images/keys/key3.jpeg', title='PK MERCEDES BENZ 3КН ЧЕРНЫЙ ДО 1998Г С МЕХАНИЧЕСКИЙ КЛЮЧОМ', alt='PK MERCEDES BENZ 3КН ЧЕРНЫЙ ДО 1998Г С МЕХАНИЧЕСКИЙ КЛЮЧОМ', id="image-3", data-zoom-image='images/keys/key3.jpeg').product-image
-                        a(href='images/keys/item-image3.jpeg', data-fancybox="gallery", data-title='PK RENAULT VAC102 3КН NO LOGO')
-                            .card__image_slider-big-slide
-                                img(data-src='images/keys/key4.jpeg', title='PK RENAULT VAC102 3КН NO LOGO', alt='PK RENAULT VAC102 3КН NO LOGO', id="image-4", data-zoom-image='images/keys/key4.jpeg').product-image
-                        a(href='images/keys/key5.jpeg', data-fancybox="gallery", data-title='Выкидной Ключ HYUNDAI i20,i30 3кн ID60(6F) 433MHz RKE-4F04 с 2012г')
-                            .card__image_slider-big-slide
-                                img(data-src='images/keys/key5.jpeg', title='Выкидной Ключ HYUNDAI i20,i30 3кн ID60(6F) 433MHz RKE-4F04 с 2012г', alt='Выкидной Ключ HYUNDAI i20,i30 3кн ID60(6F) 433MHz RKE-4F04 с 2012г', id="image-5", data-zoom-image='images/keys/key5.jpeg').product-image
-                        a(href='https://youtu.be/u5H8FdfZihE', data-fancybox="gallery", data-title='Выкидной Ключ HYUNDAI i20,i30 3кн ID60(6F) 433MHz RKE-4F04 с 2012г')
-                            .card__image_slider-big-slide.card-info__image_video
-                                img(data-src='images/keys/key6.jpeg', title='Ключ CHEVROLET LACHETI 3кн ID60 434MHz', alt='Ключ CHEVROLET LACHETI 3кн ID60 434MHz', id="image-6").product-image
-    .card-info__wrapper
-        h1.title.main-title PK RENAULT NE72 2кн
-        .card-info__descr
-            .card-info__descr-item
-                span.title Артикул:
-                span.value 50618
-            .card-info__descr-item
-                span.title Производитель:
-                span.value Renault
-            .product-item__missing-title.product-item__missing-title_false
-                .subtitle
-                    | товар отсутствует
-                .icon.icon-car
-        .card-info__characteristic
-            table
-                caption Характеристики товара
-                tbody
-                    tr
-                        th Тип
-                        td Заготовка под ключ
-                    tr
-                        th Тип ключа
-                        td Автомобильный
-                    tr
-                        th
-                        td
-                    tr
-                        th
-                        td
-                    tr
-                        th
-                        td
+                        .card__image_slider-main
+                            .card__image_slider-status
+                                .product-item__label-list
+                                    .product-item__label
+                                        // если есть скидка - выводим этот блок
+                                        .label-status.label-status_sale
+                                            .value -20
+                                            .perc %
+                                    .product-item__label
+                                        // если есть новинка - выводим этот блок
+                                        .label-status.label-status_new new
+                                    .product-item__label
+                                        // если есть топ - выводим этот блок
+                                        .label-status.label-status_top top
+                                .product-item__favorite
+                                    .icon.icon-wishlist-empty.label-link
+                            .card__image_slider-big.gallery-images
+                                a(href='images/products/23.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/23.jpg', title='Тренч Лилия Бежевый', id="image-1", data-zoom-image='images/products/23.jpg').product-image
+                                a(href='images/products/18.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/18.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-2", data-zoom-image='images/products/18.jpg').product-image
+                                a(href='images/products/19.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/19.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-3", data-zoom-image='images/products/19.jpg').product-image
+                                a(href='images/products/20.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/20.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-4", data-zoom-image='images/products/20.jpg').product-image
+                                a(href='images/products/21.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/21.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-5", data-zoom-image='images/products/21.jpg').product-image
+                                a(href='https://youtu.be/eUsJ9cJfkZg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide.card-info__image_video
+                                        img(data-src='images/products/22.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-6").product-image
+                    .card-sidebar__image_loupe
+                        .card__image_slider-small
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/5.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='7')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/6.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='8')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/7.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='9')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/8.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='10')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/9.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='11')
+                            .card__image_slider-small-slide.card-info__image_video
+                                img(data-src='images/products/10.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='12')
 
-        //.card-info__content
-        //    span.title Описание
-        //    p
-        //        | Контейнера и выкидушки к авто RENAULT.
-        //        span Заготовка для ключей.
-    .card-info__sidebar
-        .card-info__sidebar-item
-            .card-info__price-wrapper
-                .card-info__price
-                    span.price 85.50
-                    span.currency грн.
-            .card-info__missing
-                span.subtitle Нет в наличии
-        .card-info__sidebar-item
-            .card-info__buttons
-                +button('Сообщить, когда появится', 'button')(class="icon icon-mail")(data-target="missing")
+                        .card__image_slider-main
+                            .card__image_slider-status
+                                .product-item__label-list
+                                    .product-item__label
+                                        // если есть скидка - выводим этот блок
+                                        .label-status.label-status_sale
+                                            .value -20
+                                            .perc %
+                                    .product-item__label
+                                        // если есть новинка - выводим этот блок
+                                        .label-status.label-status_new new
+                                    .product-item__label
+                                        // если есть топ - выводим этот блок
+                                        .label-status.label-status_top top
+                                .product-item__favorite
+                                    .icon.icon-wishlist-empty.label-link
+                            .card__image_slider-big.gallery-images
+                                a(href='images/products/5.jpg', data-fancybox="gallery1", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/5.jpg', title='Тренч Лилия Бежевый', id="image-7", data-zoom-image='images/products/5.jpg').product-image
+                                a(href='images/products/6.jpg', data-fancybox="gallery1", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/6.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-8", data-zoom-image='images/products/6.jpg').product-image
+                                a(href='images/products/7.jpg', data-fancybox="gallery1", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/7.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-9", data-zoom-image='images/products/7.jpg').product-image
+                                a(href='images/products/20.jpg', data-fancybox="gallery1", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/8.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-10", data-zoom-image='images/products/8.jpg').product-image
+                                a(href='images/products/8.jpg', data-fancybox="gallery1", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/9.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-11", data-zoom-image='images/products/9.jpg').product-image
+                                a(href='https://youtu.be/eUsJ9cJfkZg', data-fancybox="gallery1", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide.card-info__image_video
+                                        img(data-src='images/products/10.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-12").product-image
+                    .card-sidebar__image_loupe
+                        .card__image_slider-small
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/11.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='13')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/12.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='14')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/8.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='15')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/14.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='16')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/12.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='17')
+                            .card__image_slider-small-slide.card-info__image_video
+                                img(data-src='images/products/16.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='18')
+
+                        .card__image_slider-main
+                            .card__image_slider-status
+                                .product-item__label-list
+                                    .product-item__label
+                                        // если есть скидка - выводим этот блок
+                                        .label-status.label-status_sale
+                                            .value -20
+                                            .perc %
+                                    .product-item__label
+                                        // если есть новинка - выводим этот блок
+                                        .label-status.label-status_new new
+                                    .product-item__label
+                                        // если есть топ - выводим этот блок
+                                        .label-status.label-status_top top
+                                .product-item__favorite
+                                    .icon.icon-wishlist-empty.label-link
+                            .card__image_slider-big.gallery-images
+                                a(href='images/products/11.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/11.jpg', title='Тренч Лилия Бежевый', id="image-13", data-zoom-image='images/products/11.jpg').product-image
+                                a(href='images/products/12.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/12.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-14", data-zoom-image='images/products/12.jpg').product-image
+                                a(href='images/products/8.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/8.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-15", data-zoom-image='images/products/8.jpg').product-image
+                                a(href='images/products/14.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/14.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-16", data-zoom-image='images/products/14.jpg').product-image
+                                a(href='images/products/12.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/12.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-17", data-zoom-image='images/products/12.jpg').product-image
+                                a(href='https://youtu.be/eUsJ9cJfkZg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide.card-info__image_video
+                                        img(data-src='images/products/16.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-18").product-image
+                    .card-sidebar__image_loupe
+                        .card__image_slider-small
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/23.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='1')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/18.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='2')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/19.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='3')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/20.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='4')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/21.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='5')
+                            .card__image_slider-small-slide.card-info__image_video
+                                img(data-src='images/products/22.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='6')
+
+                        .card__image_slider-main
+                            .card__image_slider-status
+                                .product-item__label-list
+                                    .product-item__label
+                                        // если есть скидка - выводим этот блок
+                                        .label-status.label-status_sale
+                                            .value -20
+                                            .perc %
+                                    .product-item__label
+                                        // если есть новинка - выводим этот блок
+                                        .label-status.label-status_new new
+                                    .product-item__label
+                                        // если есть топ - выводим этот блок
+                                        .label-status.label-status_top top
+                                .product-item__favorite
+                                    .icon.icon-wishlist-empty.label-link
+                            .card__image_slider-big.gallery-images
+                                a(href='images/products/23.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/23.jpg', title='Тренч Лилия Бежевый', id="image-1", data-zoom-image='images/products/23.jpg').product-image
+                                a(href='images/products/18.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/18.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-2", data-zoom-image='images/products/18.jpg').product-image
+                                a(href='images/products/19.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/19.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-3", data-zoom-image='images/products/19.jpg').product-image
+                                a(href='images/products/20.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/20.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-4", data-zoom-image='images/products/20.jpg').product-image
+                                a(href='images/products/21.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/21.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-5", data-zoom-image='images/products/21.jpg').product-image
+                                a(href='https://youtu.be/eUsJ9cJfkZg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide.card-info__image_video
+                                        img(data-src='images/products/22.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-6").product-image
+                    .card-sidebar__image_loupe
+                        .card__image_slider-small
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/5.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='7')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/6.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='8')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/7.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='9')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/8.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='10')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/9.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='11')
+                            .card__image_slider-small-slide.card-info__image_video
+                                img(data-src='images/products/10.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='12')
+
+                        .card__image_slider-main
+                            .card__image_slider-status
+                                .product-item__label-list
+                                    .product-item__label
+                                        // если есть скидка - выводим этот блок
+                                        .label-status.label-status_sale
+                                            .value -20
+                                            .perc %
+                                    .product-item__label
+                                        // если есть новинка - выводим этот блок
+                                        .label-status.label-status_new new
+                                    .product-item__label
+                                        // если есть топ - выводим этот блок
+                                        .label-status.label-status_top top
+                                .product-item__favorite
+                                    .icon.icon-wishlist-empty.label-link
+                            .card__image_slider-big.gallery-images
+                                a(href='images/products/5.jpg', data-fancybox="gallery1", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/5.jpg', title='Тренч Лилия Бежевый', id="image-7", data-zoom-image='images/products/5.jpg').product-image
+                                a(href='images/products/6.jpg', data-fancybox="gallery1", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/6.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-8", data-zoom-image='images/products/6.jpg').product-image
+                                a(href='images/products/7.jpg', data-fancybox="gallery1", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/7.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-9", data-zoom-image='images/products/7.jpg').product-image
+                                a(href='images/products/20.jpg', data-fancybox="gallery1", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/8.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-10", data-zoom-image='images/products/8.jpg').product-image
+                                a(href='images/products/8.jpg', data-fancybox="gallery1", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/9.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-11", data-zoom-image='images/products/9.jpg').product-image
+                                a(href='https://youtu.be/eUsJ9cJfkZg', data-fancybox="gallery1", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide.card-info__image_video
+                                        img(data-src='images/products/10.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-12").product-image
+                    .card-sidebar__image_loupe
+                        .card__image_slider-small
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/11.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='13')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/12.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='14')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/8.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='15')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/14.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='16')
+                            .card__image_slider-small-slide
+                                img(data-src='images/products/12.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='17')
+                            .card__image_slider-small-slide.card-info__image_video
+                                img(data-src='images/products/16.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', data-image-index='18')
+
+                        .card__image_slider-main
+                            .card__image_slider-status
+                                .product-item__label-list
+                                    .product-item__label
+                                        // если есть скидка - выводим этот блок
+                                        .label-status.label-status_sale
+                                            .value -20
+                                            .perc %
+                                    .product-item__label
+                                        // если есть новинка - выводим этот блок
+                                        .label-status.label-status_new new
+                                    .product-item__label
+                                        // если есть топ - выводим этот блок
+                                        .label-status.label-status_top top
+                                .product-item__favorite
+                                    .icon.icon-wishlist-empty.label-link
+                            .card__image_slider-big.gallery-images
+                                a(href='images/products/11.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/11.jpg', title='Тренч Лилия Бежевый', id="image-13", data-zoom-image='images/products/11.jpg').product-image
+                                a(href='images/products/12.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/12.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-14", data-zoom-image='images/products/12.jpg').product-image
+                                a(href='images/products/8.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/8.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-15", data-zoom-image='images/products/8.jpg').product-image
+                                a(href='images/products/14.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/14.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-16", data-zoom-image='images/products/14.jpg').product-image
+                                a(href='images/products/12.jpg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide
+                                        img(data-src='images/products/12.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-17", data-zoom-image='images/products/12.jpg').product-image
+                                a(href='https://youtu.be/eUsJ9cJfkZg', data-fancybox="gallery", data-title='Тренч Лилия Бежевый')
+                                    .card__image_slider-big-slide.card-info__image_video
+                                        img(data-src='images/products/16.jpg', title='Тренч Лилия Бежевый', alt='Тренч Лилия Бежевый', id="image-18").product-image
+                .card-info__buy
+                    .card-info__slider
+                        .color
+                            span Цвет:
+                            span Бежевый
+                        .slider
+                            .slider-img
+                                img(data-src='images/products/23.jpg', title='Тренч Лилия Бежевый')
+                            .slider-img
+                                img(data-src='images/products/21.jpg', title='Тренч Лилия Бежевый')
+                            .slider-img
+                                img(data-src='images/products/22.jpg', title='Тренч Лилия Бежевый')
+                            .slider-img
+                                img(data-src='images/products/23.jpg', title='Тренч Лилия Бежевый')
+                            .slider-img
+                                img(data-src='images/products/21.jpg', title='Тренч Лилия Бежевый')
+                            .slider-img
+                                img(data-src='images/products/22.jpg', title='Тренч Лилия Бежевый')
+                    .product-item__sizes
+                        span.subtitle
+                            span Размер:
+                            span Не выбрано
+                        .btn.btn-link(data-target="tablet") Таблица размеров
+                        .product-item__sizes-box
+                            button(class='btn-link' title='Амалия Фиолетовый 42') 42
+                            button(class='btn-link' title='Амалия Фиолетовый 44') 44
+                            button(class='btn-link' title='Амалия Фиолетовый 46') 46
+                            button(class='btn-link' title='Амалия Фиолетовый 48') 48
+                            button(class='btn-link disabled' title='Амалия Фиолетовый 50') 50
+                            button(class='btn-link disabled' title='Амалия Фиолетовый 52') 52
+                            button(class='btn-link active' title='Амалия Фиолетовый 54') 54
+                            button(class='btn-link' title='Амалия Фиолетовый 56') 56
+                    .card-info__price
+                        .price-wholesale
+                            .price-item
+                                span.price 1 010
+                                span.currency грн.
+                            span Опт: от 5 единиц
+                        .price-retail
+                            .price-item
+                                span.price 1 255
+                                span.currency грн.
+                            .price-item.price_old
+                                span.price 1 500
+                                span.currency грн.
+                            span Розница
+                    .card-info__buttons
+                        +button('Сообщить когда появится', 'button')(class="icon icon-cart btn-missing" data-target="missing")
+                    .card-info__tabs
+                        .tab-block
+                            .tab_filter
+                                ul.tab_header
+                                    li.title.active
+                                        .icon.icon-car
+                                        span Доставка
+                                    li.title
+                                        .icon.icon-card
+                                        span Оплата
+                                    li.title
+                                        .icon.icon-arr-corner
+                                        span Возврат
+                            .main_cont
+                                .tab_body(style='display: block;')
+                                    ul
+                                        li Доставка в отделение Новой Почты
+                                        li Курьером по Украине
+                                        li Интайм
+                                        li УкрПочта (бесплатно)
+                                .tab_body(style='display: none;')
+                                    ul
+                                        li Доставка в отделение Новой Почты2
+                                        li Курьером по Украине2
+                                        li Интайм2
+                                        li УкрПочта (бесплатно)2
+                                .tab_body(style='display: none;')
+                                    ul
+                                        li Доставка в отделение Новой Почты3
+                                        li Курьером по Украине3
+                                        li Интайм3
+                                        li УкрПочта (бесплатно)3
+
+        .card-characteristic
+            .card-characteristic__info
+                .card-characteristic__info-item
+                    .text
+                        h4 Состав
+                        p Хлопок 85%, вискоза 8%, полиэстер 7%
+                    .expand Развернуть
+                .card-characteristic__info-item
+                    .text
+                        h4 Описание
+                        p Зимняя парка с натуральным мехом. Верхний материал – ветронепродуваемая и непромокаемая плотная ткань-смесь хлопка с нейлоном, утеплитель  – слимтекс, подкладка куртки – 100% полиэстер в цвет изделию, фигурно простеганная, мех подстежки – натуральный мех финской чернобурки. Парка «фиштейл» удлиненного Зимняя парка с натуральным мехом. Верхний материал – ветронепродуваемая и непромокаемая плотная ткань-смесь хлопка с нейлоном, утеплитель  – слимтекс, подкладка куртки – 100% полиэстер в цвет изделию, фигурно простеганная, мех подстежки – натуральный мех финской чернобурки. Парка «фиштейл» удлиненного. Зимняя парка с натуральным мехом. Верхний материал – ветронепродуваемая и непромокаемая плотная ткань-смесь хлопка с нейлоном, утеплитель  – слимтекс, подкладка куртки – 100% полиэстер в цвет изделию, фигурно простеганная, мех подстежки – натуральный мех финской чернобурки. Парка «фиштейл» удлиненного Зимняя парка с натуральным мехом. Верхний материал – ветронепродуваемая и непромокаемая плотная ткань-смесь хлопка с нейлоном, утеплитель  – слимтекс, подкладка куртки – 100% полиэстер в цвет изделию, фигурно простеганная, мех подстежки – натуральный мех финской чернобурки. Парка «фиштейл» удлиненного
+                    .expand Развернуть
+                .card-characteristic__info-item.characteristic
+                    .text
+                        h4 Характеристики
+                        ul
+                            li
+                                span Название характеристики
+                                span Параметр
+                            li
+                                span Название характеристики
+                                span Название параметра
+                            li
+                                span Название характеристики
+                                span Параметр
+                            li
+                                span Название характеристики
+                                span Название параметра
+                            li
+                                span Название характеристики
+                                span Параметр
+                            li
+                                span Название характеристики
+                                span Название параметра
+                            li
+                                span Название характеристики
+                                span Параметр
+                            li
+                                span Название характеристики
+                                span Название параметра
+                            li
+                                span Название характеристики
+                                span Параметр
+                            li
+                                span Название характеристики
+                                span Название параметра
+                            li
+                                span Название характеристики
+                                span Параметр
+                            li
+                                span Название характеристики
+                                span Название параметра
+                    .expand Развернуть
+                .card-characteristic__info-item
+                    .text
+                        table
+                            caption Характеристики товара
+                            tbody
+                                tr
+                                    th Тип
+                                    td Название характеристики
+                                tr
+                                    th Параметр
+                                    td Название характеристики
+                                tr
+                                    th Тип
+                                    td Название характеристики
+                                tr
+                                    th Тип
+                                    td Название характеристики
+                                tr
+                                    th Тип
+                                    td Название характеристики
+                    .expand Развернуть
+                .card-characteristic__info-item
+                    .text
+                        h4 Характеристики2
+                        ul
+                            li
+                                span Название характеристики
+                                span Параметр
+                            li
+                                span Название характеристики
+                                span Название параметра
+                            li
+                                span Название характеристики
+                                span Параметр
+                            li
+                                span Название характеристики
+                                span Название параметра
+                            li
+                                span Название характеристики
+                                span Параметр
+                            li
+                                span Название характеристики
+                                span Название параметра
+                            li
+                                span Название характеристики
+                                span Параметр
+                            li
+                                span Название характеристики
+                                span Название параметра
+                            li
+                                span Название характеристики
+                                span Параметр
+                            li
+                                span Название характеристики
+                                span Название параметра
+                            li
+                                span Название характеристики
+                                span Параметр
+                            li
+                                span Название характеристики
+                                span Название параметра
+                    .expand Развернуть
+            .card-characteristic__reviews
+                .reviews
+                    h4 Отзывы
+                    .reviews__header
+                        .title
+                            .stars
+                                .appraisal 5.0
+                                ul.star-list
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star
+                                        i.fa.fa-star
+                            .subtitle На основании 4 отзывов
+                        +button('написать отзыв', 'button')(class="icon icon-cart" data-target="review")
+                    .reviews__list
+                        .reviews__item
+                            .reviews__item-content
+                                ul.star-list
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star
+                                        i.fa.fa-star
+                                    li.star
+                                        i.fa.fa-star
+                                .data 15 апреля 2020 г.
+                                .text
+                                    p
+                                        | Ношу 46 размер, заказала L.Прекрасно! Ношу с удовольствием.Качество отличное.Пришла упакованная. Ношу 46 размер, заказала L.Прекрасно! Ношу с удовольствием.Качество отличное.Пришла упакованная
+                                .title
+                                    h6 Анастасия
+
+                        .reviews__item
+                            .reviews__item-content
+                                ul.star-list
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star
+                                        i.fa.fa-star
+                                    li.star
+                                        i.fa.fa-star
+                                .data 15 апреля 2020 г.
+                                .text
+                                    p
+                                        | Ношу 46 размер, заказала L.Прекрасно! Ношу с удовольствием.Качество отличное.Пришла упакованная
+                                .title
+                                    h6 Анастасия
+                        .reviews__item
+                            .reviews__item-content
+                                ul.star-list
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star
+                                        i.fa.fa-star
+                                    li.star
+                                        i.fa.fa-star
+                                .data 15 апреля 2020 г.
+                                .text
+                                    p
+                                        | Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:
+                                .title
+                                    h6 Tom Hardy
+                        .reviews__item
+                            .reviews__item-content
+                                ul.star-list
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star.active
+                                        i.fa.fa-star
+                                    li.star
+                                        i.fa.fa-star
+                                    li.star
+                                        i.fa.fa-star
+                                .data 15 апреля 2020 г.
+                                .text
+                                    p
+                                        | Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:
+                                .title
+                                    h6 Tom Hardy
+
 

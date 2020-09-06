@@ -94,6 +94,7 @@ gulp.task('css', function () {
         [
             './node_modules/swiper/css/swiper.min.css',
             './node_modules/jquery-ui-dist/jquery-ui.min.css',
+            './node_modules/slick-carousel/slick/slick-theme.css',
             './node_modules/Select2/select2.css',
             './node_modules/jquery-ui-slider/jquery-ui.min.css',
             './node_modules/jqueryui/jquery-ui.min.css',
@@ -135,6 +136,7 @@ gulp.task('concat', function () {
         [
             './node_modules/jquery/dist/jquery.min.js',
             './node_modules/swiper/js/swiper.min.js',
+            './node_modules/slick-carousel/slick/slick.min.js',
             './node_modules/jquery-ui-slider/jquery-ui.min.js',
             './node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
             './node_modules/jquery-ui-dist/jquery-ui.min.js',

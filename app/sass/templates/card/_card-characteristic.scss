@@ -1,0 +1,130 @@
+.card-characteristic {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 64px;
+  h4 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  &__info-item {
+    margin-bottom: 44px;
+    .expand {
+      font-size: 12px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: $textDark;
+      border-bottom: 1px dashed $textDark;
+      @include fb;
+      cursor: pointer;
+      margin-top: 30px;
+      display: inline-block;
+      opacity: 0;
+      @include anim5;
+    }
+    .text {
+      max-height: 151px;
+      overflow: hidden;
+      @include anim5;
+    }
+    &.active {
+      .text {
+        max-height: 10000px;
+        @include anim5;
+      }
+    }
+    &.expand-more {
+      .expand {
+        opacity: 1;
+        @include anim5;
+      }
+    }
+    &.characteristic {
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        overflow: hidden;
+        margin-bottom: 15px;
+        &:after {
+          content: '............................................................................................................................................................................................................................................................................................................................................';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 0;
+        }
+        &:before {
+          display: none;
+        }
+        span {
+          background-color: $white;
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+  }
+  &__reviews {
+    color: $text;
+    width: calc(100% - 586px + 130px);
+    @include respond-to(lg-1250) {
+      width: calc(100% - 586px);
+    }
+    h4 {
+      margin-bottom: 10px;
+      color: $textDark;
+    }
+    .reviews__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      .appraisal {
+        font-size: 24px;
+        line-height: 28px;
+        @include fb;
+        text-transform: uppercase;
+        margin-right: 15px;
+      }
+      .subtitle {
+        text-transform: none;
+        color: $textLight;
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+    .reviews {
+      &__item {
+        margin-bottom: 24px;
+        &-content {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          .data {
+            display: inline;
+          }
+          .text {
+            width: 100%;
+          }
+          .title,
+          h6 {
+            color: $textDark;
+            text-transform: none;
+            font-size: 15px;
+            @include fb;
+          }
+        }
+      }
+    }
+  }
+  &__info {
+    width: 586px;
+    margin-right: 130px;
+    @include respond-to(lg-1250) {
+      margin-right: 30px;
+    }
+  }
+}

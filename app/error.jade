@@ -25,6 +25,39 @@ html
                                     include components/_button
                                     +button('Перейти на главную', 'a')(href="http://html.myapp.com.ua/vashkluch/index.html")
 
+                            section
+                                .stars
+                                    ul.star-list
+                                        li.star.active
+                                            i.fa.fa-star
+                                        li.star.active
+                                            i.fa.fa-star
+                                        li.star.active
+                                            i.fa.fa-star
+                                        li.star.active
+                                            i.fa.fa-star
+                                        li.star
+                                            i.fa.fa-star
+
+                                #full-stars-example-two
+                                    .rating-group
+                                        input#rating3-none.rating__input.rating__input--none(disabled='', checked='', name='rating3', value='0', type='radio')
+                                        label.rating__label(aria-label='1 star', for='rating3-1')
+                                            i.rating__icon.rating__icon--star.fa.fa-star
+                                        input#rating3-1.rating__input(name='rating3', value='1', type='radio')
+                                        label.rating__label(aria-label='2 stars', for='rating3-2')
+                                            i.rating__icon.rating__icon--star.fa.fa-star
+                                        input#rating3-2.rating__input(name='rating3', value='2', type='radio')
+                                        label.rating__label(aria-label='3 stars', for='rating3-3')
+                                            i.rating__icon.rating__icon--star.fa.fa-star
+                                        input#rating3-3.rating__input(name='rating3', value='3', type='radio')
+                                        label.rating__label(aria-label='4 stars', for='rating3-4')
+                                            i.rating__icon.rating__icon--star.fa.fa-star
+                                        input#rating3-4.rating__input(name='rating3', value='4', type='radio')
+                                        label.rating__label(aria-label='5 stars', for='rating3-5')
+                                            i.rating__icon.rating__icon--star.fa.fa-star
+                                        input#rating3-5.rating__input(name='rating3', value='5', type='radio')
+
             include components/_footer
             include components/_popup
         include components/_footer-include

@@ -956,9 +956,10 @@ section {
     order: 2;
   }
   &.page__header {
-    margin: 12px 0 36px;
+    padding: 12px 0 36px;
+    margin: 0;
     @include respond-to(sm) {
-      margin: 24px 0 32px;
+      padding: 24px 0 32px;
     }
   }
   @include respond-to(md) {
