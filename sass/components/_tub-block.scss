@@ -1,7 +1,25 @@
-.tub {
+.tab {
   &_header {
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .title {
+      display: flex;
+      align-items: center;
+      text-transform: unset;
+      cursor: pointer;
+      margin-bottom: 0;
+      @include fb;
+      padding-bottom: 12px;
+      &:before {
+        display: none;
+      }
+      .icon {
+        margin-right: 10px;
+      }
+    }
   }
   &_filter {
     margin-bottom: 20px;

@@ -293,17 +293,23 @@
             </div>
           </div>
           <div class="card-info__price">
-            <div class="price-wholesale">
-              <div class="price-item"><span class="price">1 010</span><span class="currency">грн.</span></div><span>Опт: от 5 единиц</span>
-            </div>
             <div class="price-retail">
               <div class="price-item"><span class="price">1 255</span><span class="currency">грн.</span></div>
               <div class="price-item price_old"><span class="price">1 500</span><span class="currency">грн.</span></div><span>Розница</span>
             </div>
           </div>
           <div class="card-info__buttons">
-            <button type="submit" class="btn icon icon-cart btn-missing" data-target="missing"><span>Сообщить когда появится</span>
+            <button type="submit" class="btn icon icon-cart" data-target="cart"><span>Добавить в корзину</span>
             </button>
+            <div class="input-number">
+              <div class="input-number_arrow prev"></div>
+              <input type="number" min="1" max="99" value="1" step="1" readonly="readonly" class="input-number_input"/>
+              <div class="input-number_arrow next"></div>
+            </div>
+            <div class="one-click">
+              <button type="submit" class="btn btn-link" data-target="one-click"><span>купить в один клик</span>
+              </button>
+            </div>
           </div>
           <div class="card-info__tabs">
             <div class="tab-block">

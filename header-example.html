@@ -797,8 +797,96 @@
             </div>
           </div>
         </div>
+        <div data-target="popup-tablet" class="popup popup__tablet">
+          <div class="popup-header">
+            <h4 class="title">Таблица размеров</h4>
+          </div>
+          <div class="popup-content">
+            <table>
+              <caption>Английская размерная таблица</caption>
+              <tbody>
+                <tr>
+                  <th>XS</th>
+                  <td>Название характеристики</td>
+                </tr>
+                <tr>
+                  <th>S</th>
+                  <td>Название характеристики</td>
+                </tr>
+                <tr>
+                  <th>M</th>
+                  <td>Название характеристики</td>
+                </tr>
+                <tr>
+                  <th>L</th>
+                  <td>Название характеристики</td>
+                </tr>
+                <tr>
+                  <th>XL</th>
+                  <td>Название характеристики</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="close-btn close">
+            <div class="close-container">
+              <div class="leftright"></div>
+              <div class="rightleft"></div>
+              <div class="text">закрыть</div>
+            </div>
+          </div>
+        </div>
+        <div data-target="popup-review" class="popup popup__review">
+          <form class="popup-content js_validate">
+            <div class="popup-header">
+              <h4 class="title">Написать отзыв</h4>
+            </div>
+            <div id="full-stars-example-two">
+              <div class="rating-group">
+                <input id="rating3-none" disabled="" checked="" name="rating3" value="0" type="radio" class="rating__input rating__input--none">
+                <label aria-label="1 star" for="rating3-1" class="rating__label"><i class="rating__icon rating__icon--star fa fa-star"></i><span>Плохой</span></label>
+                <input id="rating3-1" name="rating3" value="1" type="radio" class="rating__input">
+                <label aria-label="2 stars" for="rating3-2" class="rating__label"><i class="rating__icon rating__icon--star fa fa-star"></i><span>Так себе</span></label>
+                <input id="rating3-2" name="rating3" value="2" type="radio" class="rating__input">
+                <label aria-label="3 stars" for="rating3-3" class="rating__label"><i class="rating__icon rating__icon--star fa fa-star"></i><span>Нормальный</span></label>
+                <input id="rating3-3" name="rating3" value="3" type="radio" class="rating__input">
+                <label aria-label="4 stars" for="rating3-4" class="rating__label"><i class="rating__icon rating__icon--star fa fa-star"></i><span>Хороший</span></label>
+                <input id="rating3-4" name="rating3" value="4" type="radio" class="rating__input">
+                <label aria-label="5 stars" for="rating3-5" class="rating__label"><i class="rating__icon rating__icon--star fa fa-star"></i><span>Отличный</span></label>
+                <input id="rating3-5" name="rating3" value="5" type="radio" class="rating__input">
+              </div>
+            </div>
+            <div class="input-container">
+              <label for="text-review" class="req">Комментарий</label>
+              <textarea id="text-review" type="text" required="required" data-validate="text" data-error-wrong="Поле «Отзыв» заполнено не верно" data-error-empty="Введите колличество символов (2-500)" data-minsign="2" data-maxsign="500" class="validate"></textarea>
+              <div class="text-error">Поле  не заполнено</div>
+            </div>
+            <div class="input-container">
+              <label for="name-review" class="req">Имя</label>
+              <input id="name-review" type="text" name="name" required="required" data-validate="text" data-error-wrong="Недопустимые символы" data-error-empty="Введите колличество символов (2-100)" data-minsign="2" data-maxsign="100" class="validate">
+              <div class="text-error">Поле  не заполнено</div>
+            </div>
+            <div class="input-container">
+              <label for="email-review" class="req">Email</label>
+              <input type="email" name="email" id="email-review" required="required" data-validate="email" data-error-wrong="Поле «Email» заполнено не верно" data-error-empty="Поле «Email» не заполнено" class="validate">
+              <div class="text-error">Поле «Email» не заполнено</div>
+            </div>
+            <div class="popup-buttons">
+              <button class="btn btn-link"><span>Отменить</span></button>
+              <button type="submit" class="btn"><span>Оставить отзыв</span></button>
+            </div>
+          </form>
+          <div class="close-btn close">
+            <div class="close-container">
+              <div class="leftright"></div>
+              <div class="rightleft"></div>
+              <div class="text">закрыть</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/lib.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--link(rel='stylesheet', type='text/css', href='css/main.min.css')-->
